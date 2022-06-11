@@ -40,7 +40,6 @@ alert ("Hello Code World!");
 | onkeydown: _key is pressed down_        |
 | onmouseover: _mouse moves over element_ |
 | onsubmit: _submission is triggered_     |
-|                                         |
 
 <br>
 
