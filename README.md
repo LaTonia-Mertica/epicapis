@@ -1,4 +1,60 @@
-# Getting Started with Create React App
+# EVENT LISTENERS 101
+
+- basic single event syntax:<br> `element.addEventListener(event, function, useCapture);`
+- basic multi event syntax:<br> `element.addEventListener("click", myFunction); element.addEventListener("click", mySecondFunction);`
+  <br>
+  <br>
+
+**EXAMPLE: ONLICK EVENT**<br>
+
+element.addEventListener("click", myFunction);
+
+```json
+function myFunction() {
+alert ("Hello Code World!");
+}
+```
+
+###### [w3schools outlines capabilities and options in solid detail](https://www.w3schools.com/js/js_htmldom_eventlistener.asp)
+
+###### [mdn web docs has solid info re: eventTarget.addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+
+###### [event reference, event index, and more helpful information](https://developer.mozilla.org/en-US/docs/Web/Events)
+
+<br>
+
+**_Simply Stated_**<br>
+'You can add many event handlers to one element. You can add many event handlers of the same type to one element, i.e two "click" events. You can add event listeners to any DOM object not only HTML elements. i.e the window object.' <br>
+
+###### | _definition courtesy general online search_
+
+<br>
+<br>
+
+| COMMON HTML / JS EVENTS (A FEW)         |
+| --------------------------------------- |
+| onblur: _element blurs_                 |
+| onclick: _element is clicked_           |
+| onchange: _specified change occurs_     |
+| onfocus: _specified focus is active_    |
+| onkeydown: _key is pressed down_        |
+| onmouseover: _mouse moves over element_ |
+| onsubmit: _submission is triggered_     |
+|                                         |
+
+<br>
+
+**_Simply Stated_**<br>
+'You can name custom events anything you want, but as a best practice, you should use all lowercase characters. Event names are case-sensitive, and the property names on elements are case-insensitive and converted to lowercase by the browser. This can create conflicts if uses on\* listeners on elements.<br>
+
+###### | _definition courtesy general online search_
+
+  <br>
+  <br>
+
+---
+
+# **REACT APP:** START YOUR OWN
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
