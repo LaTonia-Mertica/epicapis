@@ -1,4 +1,4 @@
-# EVENT LISTENERS 101
+# **EVENT LISTENERS 101**
 
 - basic single event syntax:<br> `element.addEventListener(event, function, useCapture);`
 - basic multi event syntax:<br> `element.addEventListener("click", myFunction); element.addEventListener("click", mySecondFunction);`
@@ -15,11 +15,11 @@ alert ("Hello Code World!");
 }
 ```
 
-###### [w3schools outlines capabilities and options in solid detail](https://www.w3schools.com/js/js_htmldom_eventlistener.asp)
+###### [- w3schools outlines capabilities and options in solid detail](https://www.w3schools.com/js/js_htmldom_eventlistener.asp)
 
-###### [mdn web docs has solid info re: eventTarget.addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+###### [- mdn web docs has solid info re: eventTarget.addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
 
-###### [event reference, event index, and more helpful information](https://developer.mozilla.org/en-US/docs/Web/Events)
+###### [- event reference, event index, and more helpful information](https://developer.mozilla.org/en-US/docs/Web/Events)
 
 <br>
 
@@ -47,6 +47,24 @@ alert ("Hello Code World!");
 'You can name custom events anything you want, but as a best practice, you should use all lowercase characters. Event names are case-sensitive, and the property names on elements are case-insensitive and converted to lowercase by the browser. This can create conflicts if uses on\* listeners on elements.<br>
 
 ###### | _definition courtesy general online search_
+
+<br>
+
+# **APIS OF EPICAPIS**
+
+### <p><span style="color: lime">AGIFY:</span> age guess per provided name</p>
+
+### <p><span style="color: lime">CHUCK NORRIS:</span> jokes re: legendary bad\*ss</p>
+
+### <p><span style="color: lime">FOAAS:</span> f\*\*\* off statements</p>
+
+### <p><span style="color: lime">MARVEL:</span> library of comics info</p>
+
+### <p><span style="color: lime">RON SWANSON:</span> 'because (he) is a hero'</p>
+
+### <p><span style="color: lime">STAR WARS:</span> unparalleled universe</p>
+
+### <p><span style="color: lime">TRONALD DUMP:</span> dummest things said</p>
 
   <br>
   <br>
