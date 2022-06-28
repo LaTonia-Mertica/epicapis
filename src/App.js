@@ -1,58 +1,114 @@
-import React, { useEffect, useState } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import Button from "@mui/material/Button";
-import Modal from "@mui/material/Modal";
-import Box from "@mui/material/Box";
+import React from "react";
+import ReactDOM from "react-dom";
+import styles from "./App.css";
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
+import epicapisLogo from "./images/epicapisLogo.png";
+import chuck from "./images/chuck.png";
+import pokemon from "./images/pokemon.png";
+import ronSwanson from "./images/ronSwanson.png";
+import starWars from "./images/starWars.png";
+import owen from "./images/owen.png";
+import marvel from "./images/marvel.jpg";
+import trump from "./images/trump.png";
+import OwenWilson from "./owen wilson/OwenWilson";
+import { Route } from "@mui/icons-material";
 
 function App() {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-  const [movie, setMovie] = useState();
-
-  useEffect(() => {
-    (async () => {
-      const data = await fetch(
-        `https://owen-wilson-wow-api.herokuapp.com/wows/random`
-      );
-      const json = await data.json();
-      setMovie(json[0]);
-    })();
-  }, []);
-
   return (
-    <>
-      <Button onClick={handleOpen}>Open modal</Button>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
-          {movie && (
-            <div>
-              {movie.movie}
-              <video controls src={movie.video["480p"]} />
-            </div>
-          )}
-        </Box>
-      </Modal>
-    </>
+    <main>
+      <a href="#">
+        <img
+          src={epicapisLogo}
+          alt="Epic Apis Logo"
+          width="500px"
+          height="500px"
+          id="epicapislogo"
+        ></img>
+      </a>
+      <nav>
+        <ul className="unorderedList">
+          <li>
+            <a href="https://trello.com/b/YLTdkWTR/epicapis">
+              <span className="listWordFont listWordColor">trello</span> board
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/LaTonia-Mertica/epicapis">
+              <span className="listWordColor">repo</span>sitory
+            </a>
+          </li>
+          <li>
+            <a href="https://www.latoniamertica.dev/">
+              <span className="listWordFont listWordColor">dot dev</span> site
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <section className="imgSection row">
+        <section className="col-xs">
+          <img
+            src={owen}
+            alt="Owen Wilson Logo"
+            width="258px"
+            height="259px"
+            className="logo owen box"
+          ></img>
+          <img
+            src={chuck}
+            alt="Chuck Norris Logo"
+            width="183px"
+            height="162px"
+            className="logo chuck box"
+          ></img>
+          <img
+            src={trump}
+            alt="Donald Trump Logo"
+            width="188px"
+            height="191px"
+            className="logo trump box"
+          ></img>
+          <img
+            src={starWars}
+            alt="Star Wars Logo"
+            width="247px"
+            height="128px"
+            className="logo starwars box"
+          ></img>
+          <img
+            src={pokemon}
+            alt="Pokemon Logo"
+            width="266px"
+            height="109px"
+            className="logo pokemon box"
+          ></img>
+          <img
+            src={marvel}
+            alt="Marvel Comics Logo"
+            width="140px"
+            height="206px"
+            className="logo marvel box"
+          ></img>
+          <img
+            src={ronSwanson}
+            alt="Ron Swanson Logo"
+            width="286px"
+            height="160px"
+            className="logo swanson box"
+          ></img>
+        </section>
+      </section>
+      <footer className="copyrightText">
+        &copy;
+        <a href="https://www.latoniamertica.dev/" className="listWordColor">
+          La'Tonia Mertica
+        </a>
+      </footer>
+    </main>
   );
 }
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 
 export default App;

@@ -1,0 +1,54 @@
+body {
+  background-color: whitesmoke;
+}
+#epicapislogo {
+  width: 11rem;
+  height: 100%;
+  margin-left: 1.5%;
+}
+ul {
+  margin-top: -2.5rem;
+  margin-left: -1%;
+}
+ul > li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+
+  color: greenyellow;
+  text-shadow: black 0.025rem 0.025rem;
+  font-family: "Courier New", Courier, monospace;
+}
+.listWordFont {
+  font-family: cursive;
+}
+.listWordColor {
+  color: #545454;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.logo {
+  height: auto;
+}
+.chuck {
+  width: 11rem;
+}
+.swanson,
+.marvel {
+  width: 13.75rem;
+  border-radius: 1.5rem;
+}
+.trump,
+.owen {
+  width: 10rem;
+}
+footer {
+  margin-top: 2.25rem !important;
+
+  margin: auto;
+  width: 50%;
+}
