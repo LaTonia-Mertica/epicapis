@@ -56,9 +56,15 @@ alert ("Hello Code World!");
 
 ### <p><span style="color: lime">CHUCK NORRIS:</span> jokes re: legendary bad\*ss</p>
 
+### <p><span style="color: lime">COCKTAILS:</span> info re: mature drinks</p>
+
 ### <p><span style="color: lime">FOAAS:</span> f\*\*\* off statements</p>
 
 ### <p><span style="color: lime">MARVEL:</span> library of comics info</p>
+
+### <p><span style="color: lime">OWEN WILSON:</span> spontaneous wow moments</p>
+
+### <p><span style="color: lime">POKEMON:</span> extra-galactical world</p>
 
 ### <p><span style="color: lime">RON SWANSON:</span> 'because (he) is a hero'</p>
 
