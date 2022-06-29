@@ -1,17 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import styles from "./App.css";
+import { Route } from "@mui/icons-material";
 
 import epicapisLogo from "./images/epicapisLogo.png";
+import agify from "./images/agify.png";
 import chuck from "./images/chuck.png";
+import cocktails from "./images/cocktails.png";
+import foaas from "./images/foaas.png";
+import marvel from "./images/marvel.jpg";
+import owen from "./images/owen.png";
 import pokemon from "./images/pokemon.png";
 import ronSwanson from "./images/ronSwanson.png";
 import starWars from "./images/starWars.png";
-import owen from "./images/owen.png";
-import marvel from "./images/marvel.jpg";
 import trump from "./images/trump.png";
-import OwenWilson from "./owen wilson/OwenWilson";
-import { Route } from "@mui/icons-material";
 
 function App() {
   return (
@@ -61,20 +63,11 @@ function App() {
             height="162px"
             className="logo chuck box"
           ></img>
-          <img
-            src={trump}
-            alt="Donald Trump Logo"
-            width="188px"
-            height="191px"
-            className="logo trump box"
-          ></img>
-          <img
-            src={starWars}
-            alt="Star Wars Logo"
-            width="247px"
-            height="128px"
-            className="logo starwars box"
-          ></img>
+        </section>
+      </section>
+
+      <section className="imgSection row">
+        <section className="col-xs">
           <img
             src={pokemon}
             alt="Pokemon Logo"
@@ -83,12 +76,55 @@ function App() {
             className="logo pokemon box"
           ></img>
           <img
-            src={marvel}
-            alt="Marvel Comics Logo"
-            width="140px"
-            height="206px"
-            className="logo marvel box"
+            src={starWars}
+            alt="Star Wars Logo"
+            width="247px"
+            height="128px"
+            className="logo starwars box"
           ></img>
+        </section>
+      </section>
+
+      <section className="imgSection row">
+        <section className="col-xs">
+          <img
+            src={cocktails}
+            alt="Cocktails Logo"
+            width="500px"
+            height="500px"
+            className="logo cocktails box"
+          ></img>
+          <img
+            src={foaas}
+            alt="Fuck Off As A Service Logo"
+            width="500px"
+            height="500px"
+            className="logo foaas box"
+          ></img>
+        </section>
+      </section>
+
+      <section className="imgSection row">
+        <section className="col-xs">
+          <img
+            src={agify}
+            alt="Agify Logo"
+            width="500px"
+            height="500px"
+            className="logo agify box"
+          ></img>
+          <img
+            src={trump}
+            alt="Donald Trump Logo"
+            width="188px"
+            height="191px"
+            className="logo trump box"
+          ></img>
+        </section>
+      </section>
+
+      <section className="imgSection row">
+        <section className="col-xs">
           <img
             src={ronSwanson}
             alt="Ron Swanson Logo"
@@ -96,8 +132,16 @@ function App() {
             height="160px"
             className="logo swanson box"
           ></img>
+          <img
+            src={marvel}
+            alt="Marvel Comics Logo"
+            width="140px"
+            height="206px"
+            className="logo marvel box"
+          ></img>
         </section>
       </section>
+
       <footer className="copyrightText">
         &copy;
         <a href="https://www.latoniamertica.dev/" className="listWordColor">

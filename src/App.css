@@ -34,17 +34,30 @@ a {
 .logo {
   height: auto;
 }
+.agify,
+.cocktails,
+.foaas,
+.trump,
+.owen {
+  width: 10rem;
+}
 .chuck {
   width: 11rem;
 }
-.swanson,
 .marvel {
   width: 13.75rem;
   border-radius: 1.5rem;
 }
-.trump,
-.owen {
-  width: 10rem;
+.pokemon {
+  width: 13rem;
+}
+.swanson {
+  width: 13.25rem;
+  border-radius: 1.5rem;
+  margin-right: 1rem;
+}
+.starwars {
+  width: 12rem;
 }
 footer {
   margin-top: 2.25rem !important;
