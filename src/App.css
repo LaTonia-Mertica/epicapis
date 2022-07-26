@@ -35,30 +35,21 @@ a {
   height: auto;
 }
 .agify,
+.chuck,
 .cocktails,
 .foaas,
+.marvel,
+.owen,
+.pokemon,
+.starwars,
+.swanson,
 .trump,
-.owen {
+.semanticFillerImg {
   width: 10rem;
+  height: auto;
+  margin-left: 0.25rem;
 }
-.chuck {
-  width: 11rem;
-}
-.marvel {
-  width: 13.75rem;
-  border-radius: 1.5rem;
-}
-.pokemon {
-  width: 13rem;
-}
-.swanson {
-  width: 13.25rem;
-  border-radius: 1.5rem;
-  margin-right: 1rem;
-}
-.starwars {
-  width: 12rem;
-}
+
 footer {
   margin-top: 2.25rem !important;
 
@@ -74,12 +65,10 @@ footer {
 }
 
 /* masonry code */
-
 .my-masonry-grid {
   display: -webkit-box; /* Not needed if autoprefixing */
   display: -ms-flexbox; /* Not needed if autoprefixing */
   display: flex;
-  margin-left: -30px; /* gutter size offset */
   width: auto;
 }
 .my-masonry-grid_column {

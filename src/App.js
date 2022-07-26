@@ -11,12 +11,23 @@ import agify from "./images/agify.png";
 import chuck from "./images/chuck.png";
 import cocktails from "./images/cocktails.png";
 import foaas from "./images/foaas.png";
-import marvel from "./images/marvel.jpg";
+import marvel from "./images/marvel.png";
 import owen from "./images/owen.png";
 import pokemon from "./images/pokemon.png";
 import ronSwanson from "./images/ronSwanson.png";
 import starWars from "./images/starWars.png";
 import trump from "./images/trump.png";
+
+import badassest from "./images/badassest-on-tv.png";
+import best from "./images/best-age-to-be.png";
+import funnyest from "./images/funnyest-ever.png";
+import greatest from "./images/greatest-fantasy.png";
+import grittiest from "./images/grittiest-army.png";
+import last from "./images/last-thing-need.png";
+import prettiest from "./images/prettiest-drink.png";
+import rampantest from "./images/rampantest-lip-wig.png";
+import say from "./images/say-this-neva.png";
+import sexiest from "./images/sexiest-alter-ego.png";
 
 function App() {
   return (
@@ -52,7 +63,7 @@ function App() {
 
       <Masonry
         className="my-masonry-grid"
-        columnClassName="my-masonry-grid_column"
+        columnClassName="my-masonry-grid_row"
       >
         <img
           src={owen}
@@ -62,12 +73,28 @@ function App() {
           className="logo owen box"
         ></img>
         <img
+          src={funnyest}
+          alt="Funnyest Ever Img"
+          width="500px"
+          height="500px"
+          className="funnyest semanticFillerImg"
+        ></img>
+
+        <img
           src={chuck}
           alt="Chuck Norris Logo"
           width="183px"
           height="162px"
           className="logo chuck box"
         ></img>
+        <img
+          src={badassest}
+          alt="Badassest On Tv Img"
+          width="500px"
+          height="500px"
+          className="badassest semanticFillerImg"
+        ></img>
+
         <img
           src={pokemon}
           alt="Pokemon Logo"
@@ -76,12 +103,28 @@ function App() {
           className="logo pokemon box"
         ></img>
         <img
+          src={greatest}
+          alt="Greatest Fantasy Img"
+          width="500px"
+          height="500px"
+          className="greatest semanticFillerImg"
+        ></img>
+
+        <img
           src={starWars}
           alt="Star Wars Logo"
           width="247px"
           height="128px"
           className="logo starwars box"
         ></img>
+        <img
+          src={grittiest}
+          alt="Grittiest Army Img"
+          width="500px"
+          height="500px"
+          className="grittiest semanticFillerImg"
+        ></img>
+
         <img
           src={cocktails}
           alt="Cocktails Logo"
@@ -90,12 +133,28 @@ function App() {
           className="logo cocktails box"
         ></img>
         <img
+          src={prettiest}
+          alt="Prettiest Drink Img"
+          width="500px"
+          height="500px"
+          className="prettiest semanticFillerImg"
+        ></img>
+
+        <img
           src={trump}
           alt="Donald Trump Logo"
           width="188px"
           height="191px"
           className="logo trump box"
         ></img>
+        <img
+          src={say}
+          alt="Say This Neva Img"
+          width="500px"
+          height="500px"
+          className="say semanticFillerImg"
+        ></img>
+
         <img
           src={agify}
           alt="Agify Logo"
@@ -104,12 +163,28 @@ function App() {
           className="logo agify box"
         ></img>
         <img
+          src={best}
+          alt="Best Age To Be Img"
+          width="500px"
+          height="500px"
+          className="best semanticFillerImg"
+        ></img>
+
+        <img
           src={foaas}
           alt="Fuck Off As A Service Logo"
           width="500px"
           height="500px"
           className="logo foaas box"
         ></img>
+        <img
+          src={last}
+          alt="Last Thing Need Img"
+          width="500px"
+          height="500px"
+          className="last semanticFillerImg"
+        ></img>
+
         <img
           src={ronSwanson}
           alt="Ron Swanson Logo"
@@ -118,11 +193,26 @@ function App() {
           className="logo swanson box"
         ></img>
         <img
+          src={rampantest}
+          alt="Rampantest Lip Wig Img"
+          width="500px"
+          height="500px"
+          className="rampantest semanticFillerImg"
+        ></img>
+
+        <img
           src={marvel}
           alt="Marvel Comics Logo"
           width="140px"
           height="206px"
           className="logo marvel box"
+        ></img>
+        <img
+          src={sexiest}
+          alt="Sexiest Alter Ego Img"
+          width="500px"
+          height="500px"
+          className="sexiest semanticFillerImg"
         ></img>
       </Masonry>
 
