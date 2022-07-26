@@ -73,6 +73,9 @@ alert ("Hello Code World!");
 ### <p><span style="color: lime">TRONALD DUMP:</span> dummest things said</p>
 
   <br>
+
+###### [- quality placeholder content courtesy dummyjs.com](https://www.npmjs.com/package/dummyjs)
+
   <br>
 
 ---
