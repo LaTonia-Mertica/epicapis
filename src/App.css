@@ -109,12 +109,12 @@ a.listWordColor {
   opacity: 1;
   transform: scale(1);
 }
-footer {
+/* footer {
   margin-top: 2.25rem !important;
 
   margin: auto;
   width: 50%;
-}
+} */
 
 /* masonry code */
 /* Do Not need either display below (webkit; flexbox) if autoprefixing */
