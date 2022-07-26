@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import styles from "./App.css";
+import Masonry from "react-masonry-css";
 import { Route } from "@mui/icons-material";
 
 import epicapisLogo from "./images/epicapisLogo.png";
@@ -47,100 +48,106 @@ function App() {
         </ul>
       </nav>
 
-      <section className="imgSection row">
-        <section className="col-xs">
-          <img
-            src={owen}
-            alt="Owen Wilson Logo"
-            width="258px"
-            height="259px"
-            className="logo owen box"
-          ></img>
-          <img
-            src={chuck}
-            alt="Chuck Norris Logo"
-            width="183px"
-            height="162px"
-            className="logo chuck box"
-          ></img>
-        </section>
-      </section>
+      <Masonry
+        // breakpointCols={3}
+        className="my-masonry-grid"
+        columnClassName="my-masonry-grid_column"
+      >
+        {/* <section className="imgSection row"> */}
+        {/* <section className="col-xs"> */}
+        <img
+          src={owen}
+          alt="Owen Wilson Logo"
+          width="258px"
+          height="259px"
+          className="logo owen box"
+        ></img>
+        <img
+          src={chuck}
+          alt="Chuck Norris Logo"
+          width="183px"
+          height="162px"
+          className="logo chuck box"
+        ></img>
+        {/* </section> */}
+        {/* </section> */}
 
-      <section className="imgSection row">
-        <section className="col-xs">
-          <img
-            src={pokemon}
-            alt="Pokemon Logo"
-            width="266px"
-            height="109px"
-            className="logo pokemon box"
-          ></img>
-          <img
-            src={starWars}
-            alt="Star Wars Logo"
-            width="247px"
-            height="128px"
-            className="logo starwars box"
-          ></img>
-        </section>
-      </section>
+        {/* <section className="imgSection row"> */}
+        {/* <section className="col-xs"> */}
+        <img
+          src={pokemon}
+          alt="Pokemon Logo"
+          width="266px"
+          height="109px"
+          className="logo pokemon box"
+        ></img>
+        <img
+          src={starWars}
+          alt="Star Wars Logo"
+          width="247px"
+          height="128px"
+          className="logo starwars box"
+        ></img>
+        {/* </section> */}
+        {/* </section> */}
 
-      <section className="imgSection row">
-        <section className="col-xs">
-          <img
-            src={cocktails}
-            alt="Cocktails Logo"
-            width="500px"
-            height="500px"
-            className="logo cocktails box"
-          ></img>
-          <img
-            src={foaas}
-            alt="Fuck Off As A Service Logo"
-            width="500px"
-            height="500px"
-            className="logo foaas box"
-          ></img>
-        </section>
-      </section>
+        {/* <section className="imgSection row"> */}
+        {/* <section className="col-xs"> */}
 
-      <section className="imgSection row">
-        <section className="col-xs">
-          <img
-            src={agify}
-            alt="Agify Logo"
-            width="500px"
-            height="500px"
-            className="logo agify box"
-          ></img>
-          <img
-            src={trump}
-            alt="Donald Trump Logo"
-            width="188px"
-            height="191px"
-            className="logo trump box"
-          ></img>
-        </section>
-      </section>
+        <img
+          src={cocktails}
+          alt="Cocktails Logo"
+          width="500px"
+          height="500px"
+          className="logo cocktails box"
+        ></img>
+        <img
+          src={trump}
+          alt="Donald Trump Logo"
+          width="188px"
+          height="191px"
+          className="logo trump box"
+        ></img>
+        {/* </section> */}
+        {/* </section> */}
+        <img
+          src={agify}
+          alt="Agify Logo"
+          width="500px"
+          height="500px"
+          className="logo agify box"
+        ></img>
+        {/* <section className="imgSection row"> */}
+        {/* <section className="col-xs"> */}
+        <img
+          src={foaas}
+          alt="Fuck Off As A Service Logo"
+          width="500px"
+          height="500px"
+          className="logo foaas box"
+        ></img>
+        {/* </section> */}
+        {/* </section> */}
 
-      <section className="imgSection row">
-        <section className="col-xs">
-          <img
-            src={ronSwanson}
-            alt="Ron Swanson Logo"
-            width="286px"
-            height="160px"
-            className="logo swanson box"
-          ></img>
-          <img
-            src={marvel}
-            alt="Marvel Comics Logo"
-            width="140px"
-            height="206px"
-            className="logo marvel box"
-          ></img>
-        </section>
-      </section>
+        {/* <section className="imgSection row"> */}
+        {/* <section className="col-xs"> */}
+        <img
+          src={ronSwanson}
+          alt="Ron Swanson Logo"
+          width="286px"
+          height="160px"
+          className="logo swanson box"
+        ></img>
+        <img
+          src={marvel}
+          alt="Marvel Comics Logo"
+          width="140px"
+          height="206px"
+          className="logo marvel box"
+        ></img>
+        {/* </section> */}
+        {/* </section> */}
+      </Masonry>
 
       <footer className="copyrightText">
         &copy;
