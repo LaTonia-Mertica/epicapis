@@ -29,6 +29,10 @@ import rampantest from "./images/rampantest-lip-wig.png";
 import say from "./images/say-this-neva.png";
 import sexiest from "./images/sexiest-alter-ego.png";
 
+import green from "./images/ea-green.png";
+import gray from "./images/ea-gray.png";
+import purple from "./images/ea-purple.png";
+
 function App() {
   return (
     <main>
@@ -59,6 +63,25 @@ function App() {
             </a>
           </li>
         </ul>
+        <ul>
+          <section className="copyrightContent">
+            &copy;
+            <a
+              href={epicapisposter}
+              className="epicapisCopyrightText listWordColor"
+              target="_blank"
+            >
+              EPIC<strong className="apisOfEpicapis">APIS</strong>
+            </a>
+            <a
+              href="https://www.latoniamertica.dev/"
+              className="myName listWordColor"
+              target="_blank"
+            >
+              La'Tonia Mertica
+            </a>
+          </section>
+        </ul>
       </nav>
 
       <Masonry
@@ -70,7 +93,7 @@ function App() {
           alt="Owen Wilson Logo"
           width="258px"
           height="259px"
-          className="logo owen box"
+          className="owen box"
         ></img>
         <img
           src={funnyest}
@@ -85,7 +108,7 @@ function App() {
           alt="Chuck Norris Logo"
           width="183px"
           height="162px"
-          className="logo chuck box"
+          className="chuck box"
         ></img>
         <img
           src={badassest}
@@ -100,7 +123,7 @@ function App() {
           alt="Pokemon Logo"
           width="266px"
           height="109px"
-          className="logo pokemon box"
+          className="pokemon box"
         ></img>
         <img
           src={greatest}
@@ -115,7 +138,7 @@ function App() {
           alt="Star Wars Logo"
           width="247px"
           height="128px"
-          className="logo starwars box"
+          className="starwars box"
         ></img>
         <img
           src={grittiest}
@@ -130,7 +153,7 @@ function App() {
           alt="Cocktails Logo"
           width="500px"
           height="500px"
-          className="logo cocktails box"
+          className="cocktails box"
         ></img>
         <img
           src={prettiest}
@@ -145,7 +168,7 @@ function App() {
           alt="Donald Trump Logo"
           width="188px"
           height="191px"
-          className="logo trump box"
+          className="trump box"
         ></img>
         <img
           src={say}
@@ -160,7 +183,7 @@ function App() {
           alt="Agify Logo"
           width="500px"
           height="500px"
-          className="logo agify box"
+          className="agify box"
         ></img>
         <img
           src={best}
@@ -175,7 +198,7 @@ function App() {
           alt="Fuck Off As A Service Logo"
           width="500px"
           height="500px"
-          className="logo foaas box"
+          className="foaas box"
         ></img>
         <img
           src={last}
@@ -190,7 +213,7 @@ function App() {
           alt="Ron Swanson Logo"
           width="286px"
           height="160px"
-          className="logo swanson box"
+          className="swanson box"
         ></img>
         <img
           src={rampantest}
@@ -205,7 +228,7 @@ function App() {
           alt="Marvel Comics Logo"
           width="140px"
           height="206px"
-          className="logo marvel box"
+          className="marvel box"
         ></img>
         <img
           src={sexiest}
@@ -214,10 +237,14 @@ function App() {
           height="500px"
           className="sexiest semanticFillerImg"
         ></img>
+
+        <section className="grayColorBlock semanticFillerImg">
+          <p>wowza</p>
+        </section>
       </Masonry>
 
       <footer className="copyrightText">
-        &copy;
+        {/* &copy;
         <a
           href={epicapisposter}
           className="epicapisCopyrightText listWordColor"
@@ -231,7 +258,7 @@ function App() {
           target="_blank"
         >
           La'Tonia Mertica
-        </a>
+        </a> */}
       </footer>
     </main>
   );

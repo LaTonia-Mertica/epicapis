@@ -26,14 +26,33 @@ a {
 .listWordColor {
   color: #545454;
 }
-.row {
+.copyrightContent {
+  margin-top: 3rem;
+}
+a.listWordColor {
+  color: #5ce1e6;
+}
+.myName {
+  font-size: 0.64rem;
+  display: block;
+}
+.epicapisCopyrightText {
+  letter-spacing: 0.15rem;
+  margin-top: 5rem;
+}
+.apisOfEpicapis {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+}
+
+/* .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 .logo {
   height: auto;
-}
+} */
 .agify,
 .chuck,
 .cocktails,
@@ -49,36 +68,71 @@ a {
   height: auto;
   margin-left: 0.25rem;
 }
+.agify:hover,
+.chuck:hover,
+.cocktails:hover,
+.foaas:hover,
+.marvel:hover,
+.owen:hover,
+.pokemon:hover,
+.starwars:hover,
+.swanson:hover,
+.trump:hover,
+.semanticFillerImg:hover {
+  transform: scale(1.05);
+}
+.grayColorBlock {
+  /* width: 63.5%; */
+  margin-left: 0.25rem;
 
+  transition: 0.5s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/ea-gray.png);
+  background-position: center;
+  background-size: cover;
+}
+.grayColorBlock p {
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.8s;
+  font-variant: small-caps;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.25rem;
+  color: greenyellow;
+}
+/* .grayColorBlock:hover {
+  box-shadow: 000 150px rgba(0, 0, 0, 0.9) inset;
+} */
+.grayColorBlock:hover p {
+  opacity: 1;
+  transform: scale(1);
+}
 footer {
   margin-top: 2.25rem !important;
 
   margin: auto;
   width: 50%;
 }
-.epicapisCopyrightText {
-  letter-spacing: 0.15rem;
-}
-.apisOfEpicapis {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: small;
-}
 
 /* masonry code */
+/* Do Not need either display below (webkit; flexbox) if autoprefixing */
 .my-masonry-grid {
-  display: -webkit-box; /* Not needed if autoprefixing */
-  display: -ms-flexbox; /* Not needed if autoprefixing */
+  /* display: -webkit-box; 
+  display: -ms-flexbox;  */
   display: flex;
   width: auto;
 }
-.my-masonry-grid_column {
-  padding-left: 30px; /* gutter size */
+/* padding-left is the gutter size */
+/* .my-masonry-grid_column {
+  padding-left: 30px;
   background-clip: padding-box;
-}
+} */
 
 /* Style your items */
-.my-masonry-grid_column > div {
-  /* change div to reference your elements you put in <Masonry> */
+/* change div below to reference your elements you put in <Masonry> */
+/* .my-masonry-grid_column > div {
   background: grey;
   margin-bottom: 30px;
-}
+} */
