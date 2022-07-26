@@ -65,6 +65,9 @@ footer {
   margin: auto;
   width: 50%;
 }
+.epicapisCopyrightText {
+  letter-spacing: 0.15rem;
+}
 
 /* masonry code */
 

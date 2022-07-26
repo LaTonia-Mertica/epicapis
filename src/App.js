@@ -128,8 +128,12 @@ function App() {
 
       <footer className="copyrightText">
         &copy;
-        <a href={epicapisposter} className="epicapisPoster" target="_blank">
-          EPICAPIS
+        <a
+          href={epicapisposter}
+          className="epicapisCopyrightText listWordColor"
+          target="_blank"
+        >
+          EPIC<strong className="apisOfEpicapis">APIS</strong>
         </a>{" "}
         <a
           href="https://www.latoniamertica.dev/"
