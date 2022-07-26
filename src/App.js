@@ -5,6 +5,8 @@ import Masonry from "react-masonry-css";
 import { Route } from "@mui/icons-material";
 
 import epicapisLogo from "./images/epicapisLogo.png";
+import epicapisposter from "./images/epicapisposter.pdf";
+
 import agify from "./images/agify.png";
 import chuck from "./images/chuck.png";
 import cocktails from "./images/cocktails.png";
@@ -49,12 +51,9 @@ function App() {
       </nav>
 
       <Masonry
-        // breakpointCols={3}
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column"
       >
-        {/* <section className="imgSection row"> */}
-        {/* <section className="col-xs"> */}
         <img
           src={owen}
           alt="Owen Wilson Logo"
@@ -69,11 +68,6 @@ function App() {
           height="162px"
           className="logo chuck box"
         ></img>
-        {/* </section> */}
-        {/* </section> */}
-
-        {/* <section className="imgSection row"> */}
-        {/* <section className="col-xs"> */}
         <img
           src={pokemon}
           alt="Pokemon Logo"
@@ -88,12 +82,6 @@ function App() {
           height="128px"
           className="logo starwars box"
         ></img>
-        {/* </section> */}
-        {/* </section> */}
-
-        {/* <section className="imgSection row"> */}
-        {/* <section className="col-xs"> */}
-
         <img
           src={cocktails}
           alt="Cocktails Logo"
@@ -108,8 +96,6 @@ function App() {
           height="191px"
           className="logo trump box"
         ></img>
-        {/* </section> */}
-        {/* </section> */}
         <img
           src={agify}
           alt="Agify Logo"
@@ -117,8 +103,6 @@ function App() {
           height="500px"
           className="logo agify box"
         ></img>
-        {/* <section className="imgSection row"> */}
-        {/* <section className="col-xs"> */}
         <img
           src={foaas}
           alt="Fuck Off As A Service Logo"
@@ -126,11 +110,6 @@ function App() {
           height="500px"
           className="logo foaas box"
         ></img>
-        {/* </section> */}
-        {/* </section> */}
-
-        {/* <section className="imgSection row"> */}
-        {/* <section className="col-xs"> */}
         <img
           src={ronSwanson}
           alt="Ron Swanson Logo"
@@ -145,13 +124,18 @@ function App() {
           height="206px"
           className="logo marvel box"
         ></img>
-        {/* </section> */}
-        {/* </section> */}
       </Masonry>
 
       <footer className="copyrightText">
         &copy;
-        <a href="https://www.latoniamertica.dev/" className="listWordColor">
+        <a href={epicapisposter} className="epicapisPoster" target="_blank">
+          EPICAPIS
+        </a>{" "}
+        <a
+          href="https://www.latoniamertica.dev/"
+          className="listWordColor"
+          target="_blank"
+        >
           La'Tonia Mertica
         </a>
       </footer>
