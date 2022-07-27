@@ -17,6 +17,8 @@ import pokemon from "./images/pokemon.png";
 import ronSwanson from "./images/ronSwanson.png";
 import starWars from "./images/starWars.png";
 import trump from "./images/trump.png";
+import epic from "./images/epic.png";
+import api from "./images/api.png";
 
 import badassest from "./images/badassest-on-tv.png";
 import best from "./images/best-age-to-be.png";
@@ -28,10 +30,8 @@ import prettiest from "./images/prettiest-drink.png";
 import rampantest from "./images/rampantest-lip-wig.png";
 import say from "./images/say-this-neva.png";
 import sexiest from "./images/sexiest-alter-ego.png";
-
-import green from "./images/ea-green.png";
-import gray from "./images/ea-gray.png";
-import purple from "./images/ea-purple.png";
+import beautiful from "./images/beautiful-code.png";
+import dangerous from "./images/dangerous-code.png";
 
 function App() {
   return (
@@ -85,162 +85,191 @@ function App() {
       </nav>
 
       <Masonry
+        breakpointCols={1}
         className="my-masonry-grid"
-        columnClassName="my-masonry-grid_row"
+        columnClassName="my-masonry-grid_column"
       >
-        <img
-          src={owen}
-          alt="Owen Wilson Logo"
-          width="258px"
-          height="259px"
-          className="owen box"
-        ></img>
-        <img
-          src={funnyest}
-          alt="Funnyest Ever Img"
-          width="500px"
-          height="500px"
-          className="funnyest semanticFillerImg"
-        ></img>
+        <div className="apiImgDiv">
+          <img
+            src={owen}
+            alt="Owen Wilson Logo"
+            width="258px"
+            height="259px"
+            className="owen box"
+          ></img>
+          <img
+            src={funnyest}
+            alt="Funnyest Ever Img"
+            width="500px"
+            height="500px"
+            className="funnyest semanticFillerImg"
+          ></img>
 
-        <img
-          src={chuck}
-          alt="Chuck Norris Logo"
-          width="183px"
-          height="162px"
-          className="chuck box"
-        ></img>
-        <img
-          src={badassest}
-          alt="Badassest On Tv Img"
-          width="500px"
-          height="500px"
-          className="badassest semanticFillerImg"
-        ></img>
+          <img
+            src={chuck}
+            alt="Chuck Norris Logo"
+            width="183px"
+            height="162px"
+            className="chuck box"
+          ></img>
+          <img
+            src={badassest}
+            alt="Badassest On Tv Img"
+            width="500px"
+            height="500px"
+            className="badassest semanticFillerImg"
+          ></img>
 
-        <img
-          src={pokemon}
-          alt="Pokemon Logo"
-          width="266px"
-          height="109px"
-          className="pokemon box"
-        ></img>
-        <img
-          src={greatest}
-          alt="Greatest Fantasy Img"
-          width="500px"
-          height="500px"
-          className="greatest semanticFillerImg"
-        ></img>
+          <img
+            src={pokemon}
+            alt="Pokemon Logo"
+            width="266px"
+            height="109px"
+            className="pokemon box"
+          ></img>
+          <img
+            src={greatest}
+            alt="Greatest Fantasy Img"
+            width="500px"
+            height="500px"
+            className="greatest semanticFillerImg"
+          ></img>
 
-        <img
-          src={starWars}
-          alt="Star Wars Logo"
-          width="247px"
-          height="128px"
-          className="starwars box"
-        ></img>
-        <img
-          src={grittiest}
-          alt="Grittiest Army Img"
-          width="500px"
-          height="500px"
-          className="grittiest semanticFillerImg"
-        ></img>
+          <img
+            src={starWars}
+            alt="Star Wars Logo"
+            width="247px"
+            height="128px"
+            className="starwars box"
+          ></img>
+          <img
+            src={grittiest}
+            alt="Grittiest Army Img"
+            width="500px"
+            height="500px"
+            className="grittiest semanticFillerImg"
+          ></img>
 
-        <img
-          src={cocktails}
-          alt="Cocktails Logo"
-          width="500px"
-          height="500px"
-          className="cocktails box"
-        ></img>
-        <img
-          src={prettiest}
-          alt="Prettiest Drink Img"
-          width="500px"
-          height="500px"
-          className="prettiest semanticFillerImg"
-        ></img>
+          <img
+            src={cocktails}
+            alt="Cocktails Logo"
+            width="500px"
+            height="500px"
+            className="cocktails box"
+          ></img>
+          <img
+            src={prettiest}
+            alt="Prettiest Drink Img"
+            width="500px"
+            height="500px"
+            className="prettiest semanticFillerImg"
+          ></img>
 
-        <img
-          src={trump}
-          alt="Donald Trump Logo"
-          width="188px"
-          height="191px"
-          className="trump box"
-        ></img>
-        <img
-          src={say}
-          alt="Say This Neva Img"
-          width="500px"
-          height="500px"
-          className="say semanticFillerImg"
-        ></img>
+          <img
+            src={trump}
+            alt="Donald Trump Logo"
+            width="188px"
+            height="191px"
+            className="trump box"
+          ></img>
+          <img
+            src={say}
+            alt="Say This Neva Img"
+            width="500px"
+            height="500px"
+            className="say semanticFillerImg"
+          ></img>
 
-        <img
-          src={agify}
-          alt="Agify Logo"
-          width="500px"
-          height="500px"
-          className="agify box"
-        ></img>
-        <img
-          src={best}
-          alt="Best Age To Be Img"
-          width="500px"
-          height="500px"
-          className="best semanticFillerImg"
-        ></img>
+          <img
+            src={agify}
+            alt="Agify Logo"
+            width="500px"
+            height="500px"
+            className="agify box"
+          ></img>
+          <img
+            src={best}
+            alt="Best Age To Be Img"
+            width="500px"
+            height="500px"
+            className="best semanticFillerImg"
+          ></img>
 
-        <img
-          src={foaas}
-          alt="Fuck Off As A Service Logo"
-          width="500px"
-          height="500px"
-          className="foaas box"
-        ></img>
-        <img
-          src={last}
-          alt="Last Thing Need Img"
-          width="500px"
-          height="500px"
-          className="last semanticFillerImg"
-        ></img>
+          <img
+            src={foaas}
+            alt="Fuck Off As A Service Logo"
+            width="500px"
+            height="500px"
+            className="foaas box"
+          ></img>
+          <img
+            src={last}
+            alt="Last Thing Need Img"
+            width="500px"
+            height="500px"
+            className="last semanticFillerImg"
+          ></img>
 
-        <img
-          src={ronSwanson}
-          alt="Ron Swanson Logo"
-          width="286px"
-          height="160px"
-          className="swanson box"
-        ></img>
-        <img
-          src={rampantest}
-          alt="Rampantest Lip Wig Img"
-          width="500px"
-          height="500px"
-          className="rampantest semanticFillerImg"
-        ></img>
+          <img
+            src={ronSwanson}
+            alt="Ron Swanson Logo"
+            width="286px"
+            height="160px"
+            className="swanson box"
+          ></img>
+          <img
+            src={rampantest}
+            alt="Rampantest Lip Wig Img"
+            width="500px"
+            height="500px"
+            className="rampantest semanticFillerImg"
+          ></img>
 
-        <img
-          src={marvel}
-          alt="Marvel Comics Logo"
-          width="140px"
-          height="206px"
-          className="marvel box"
-        ></img>
-        <img
-          src={sexiest}
-          alt="Sexiest Alter Ego Img"
-          width="500px"
-          height="500px"
-          className="sexiest semanticFillerImg"
-        ></img>
+          <img
+            src={marvel}
+            alt="Marvel Comics Logo"
+            width="140px"
+            height="206px"
+            className="marvel box"
+          ></img>
+          <img
+            src={sexiest}
+            alt="Sexiest Alter Ego Img"
+            width="500px"
+            height="500px"
+            className="sexiest semanticFillerImg"
+          ></img>
 
-        <section className="grayColorBlock semanticFillerImg">
-          <p>wowza</p>
-        </section>
+          <img
+            src={epic}
+            alt="Epic Img"
+            width="500px"
+            height="500px"
+            className="epic semanticFillerImg"
+          ></img>
+          <img
+            src={beautiful}
+            alt="Beautiful Img"
+            width="500px"
+            height="500px"
+            className="beautiful semanticFillerImg"
+          ></img>
+
+          <img
+            src={api}
+            alt="Api Img"
+            width="500px"
+            height="500px"
+            className="api semanticFillerImg"
+          ></img>
+          <img
+            src={dangerous}
+            alt="Dangerous Img"
+            width="500px"
+            height="500px"
+            className="dangerous semanticFillerImg"
+          ></img>
+        </div>
       </Masonry>
 
       <footer className="copyrightText">
