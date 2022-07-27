@@ -1,5 +1,5 @@
 body {
-  background-color: whitesmoke;
+  background-color: white;
 }
 #epicapislogo {
   width: 11rem;
@@ -57,7 +57,7 @@ a.listWordColor {
 .semanticFillerImg {
   width: 10rem;
   height: auto;
-  margin-left: 0.25rem;
+  margin-left: 0.3rem;
 }
 .agify:hover,
 .chuck:hover,
@@ -90,9 +90,12 @@ a.listWordColor {
 }
 /* padding-left is the gutter size */
 .my-masonry-grid_column {
-  padding-left: 30px;
   background-clip: padding-box;
 }
 .my-masonry-grid_column > div {
   margin-bottom: 1rem;
+}
+.apiImgDiv {
+  margin-top: 3rem;
+  text-align: center;
 }
