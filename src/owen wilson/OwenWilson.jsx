@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
+import "./OwenWilson.scss";
 
 const style = {
   position: "absolute",
@@ -15,10 +16,7 @@ const style = {
   p: 4,
 };
 
-function OwenWilson() {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+function OwenWilson({ openModal, onClose }) {
   const [movie, setMovie] = useState();
 
   useEffect(() => {
@@ -33,14 +31,14 @@ function OwenWilson() {
 
   return (
     <main>
-      <Button onClick={handleOpen}>Open modal</Button>
       <Modal
-        open={open}
-        onClose={handleClose}
+        open={openModal === "OwenWilson"}
+        onClose={onClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box sx={style} className="owensCard">
+          <button onClick={onClose}>close me</button>
           {movie && (
             <div>
               {movie.movie}

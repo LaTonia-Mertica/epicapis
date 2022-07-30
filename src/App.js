@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import styles from "./App.css";
+import styles from "./App.scss";
 import Masonry from "react-masonry-css";
 import { Route } from "@mui/icons-material";
 
@@ -32,8 +32,14 @@ import say from "./images/say-this-neva.png";
 import sexiest from "./images/sexiest-alter-ego.png";
 import beautiful from "./images/beautiful-code.png";
 import dangerous from "./images/dangerous-code.png";
+import OwenWilson from "./owen wilson/OwenWilson";
 
 function App() {
+  const [openModal, setOpenModal] = useState();
+  const closeModal = () => {
+    setOpenModal(false);
+  };
+
   return (
     <main>
       <a href="#">
@@ -96,6 +102,9 @@ function App() {
             width="258px"
             height="259px"
             className="owen box"
+            onClick={() => {
+              setOpenModal("OwenWilson");
+            }}
           ></img>
           <img
             src={funnyest}
@@ -271,6 +280,8 @@ function App() {
           ></img>
         </div>
       </Masonry>
+
+      <OwenWilson openModal={openModal} onClose={closeModal} />
 
       <footer className="copyrightText">
         {/* &copy;
