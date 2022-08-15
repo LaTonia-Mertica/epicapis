@@ -2,18 +2,24 @@ import React, { useEffect, useState } from "react";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
+
 import "./OwenWilson.scss";
 
 const style = {
   position: "absolute",
+  outline: 0,
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
+  width: "87%",
+  bgcolor: "background.transparent",
+  border: ".05rem solid #fff",
+  boxShadow: 23,
+  p: 1.15,
+
+  color: "#fff",
+  fontSize: "1.15rem",
+  fontFamily: "Arial, Helvetica, sans-serif",
 };
 
 function OwenWilson({ openModal, onClose }) {
@@ -38,11 +44,15 @@ function OwenWilson({ openModal, onClose }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="owensCard">
-          <button onClick={onClose}>close me</button>
+          <button onClick={onClose}>&#x274C;</button>
           {movie && (
             <div>
-              {movie.movie}
-              <video controls src={movie.video["480p"]} />
+              <video autoplay controls loop src={movie.video["480p"]} />
+              <br />
+              <br />
+              {movie.full_line}
+              <br />
+              <br />
             </div>
           )}
         </Box>

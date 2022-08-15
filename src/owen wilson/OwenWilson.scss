@@ -1,3 +1,13 @@
+@import "../variables.module.scss";
+
 .owensCard {
-  padding: 20px;
+  @include card-space;
+
+  button {
+    @include button-space;
+  }
+
+  button:hover {
+    @include button-hover;
+  }
 }
