@@ -1,0 +1,99 @@
+// CARD
+@mixin card-space {
+  text-align: center;
+  padding-bottom: "4rem";
+}
+
+// COLOR
+$ea-black: black;
+$ea-blue: #5ce1e6;
+$ea-red: crimson;
+$ea-gray-dark: #545454;
+$ea-gray-light: #c8c4bd;
+$ea-green: #c9e265;
+$ea-purple: #5e17eb;
+$ea-white: #fff;
+
+// FONT
+$font-align: center;
+$font-style-serif: cursive;
+$font-style-sans: Arial, Helvetica, sans-serif;
+
+// SIZE/SPACE
+$space-xsm: 0.15rem;
+$space-sm: 1rem;
+$space-md: 3rem;
+$space-lg: 5rem;
+
+// ANCHOR STYLE SET
+@mixin a-style {
+  text-decoration: none;
+
+  color: greenyellow;
+  text-shadow: black 0.025rem 0.025rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+// AUTHOR STYLE SET
+@mixin author-space {
+  font-size: 0.64rem;
+  display: block;
+}
+
+// BUTTON STYLE SET
+@mixin button-hover {
+  cursor: pointer;
+  transform: scale(1.25);
+}
+
+@mixin button-space {
+  margin: 1.5rem 0;
+  border: none;
+  background-color: transparent;
+}
+
+// MASONRY STYLE SET
+@mixin masonry-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+}
+
+@mixin masonry-grid-column {
+  background-clip: padding-box;
+}
+
+// LIST STYLE SET
+@mixin list-word {
+  font-family: cursive;
+  color: #545454;
+}
+
+// LOGO STYLE SET
+@mixin logo-space {
+  width: 11rem;
+  height: 100%;
+  margin-left: 1.5%;
+}
+
+// LIST STYLE SET
+@mixin ul-space {
+  margin-top: -2.5rem;
+  margin-left: -1%;
+}
+
+@mixin ul-li {
+  list-style: none;
+}
+
+// SEMANTIC FILLER STYLE SET
+@mixin sem-fill-space {
+  width: 10rem;
+  height: auto;
+  margin-left: 0.3rem;
+}
+
+@mixin sem-fill-hover {
+  transform: scale(1.05);
+}
