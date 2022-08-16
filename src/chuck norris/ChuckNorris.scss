@@ -12,6 +12,9 @@
   }
 
   .jokeText {
-    text-shadow: 0.25rem 0.05rem 0.25rem #000;
+    text-shadow: 0.05rem 0.05rem orangered;
+    font-family: $font-bangers;
+    font-size: 3.5rem;
+    padding: 0 $space-md;
   }
 }
