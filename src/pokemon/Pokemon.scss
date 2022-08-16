@@ -1,0 +1,13 @@
+@import "../variables.module.scss";
+
+.pokemonsCard {
+  @include card-space;
+
+  button {
+    @include button-space;
+  }
+
+  button:hover {
+    @include button-hover;
+  }
+}
