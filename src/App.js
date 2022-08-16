@@ -35,6 +35,10 @@ import dangerous from "./images/dangerous-code.png";
 
 import OwenWilson from "./owen wilson/OwenWilson";
 import ChuckNorris from "./chuck norris/ChuckNorris";
+import Pokemon from "./pokemon/Pokemon";
+import Funnyest from "./funnyest/Funnyest";
+import Badassest from "./badassest/Badassest";
+import Greatest from "./greatest/Greatest";
 
 function App() {
   const [openModal, setOpenModal] = useState();
@@ -114,6 +118,9 @@ function App() {
             width="500px"
             height="500px"
             className="funnyest semanticFillerImg"
+            onClick={() => {
+              setOpenModal("Funnyest");
+            }}
           ></img>
 
           <img
@@ -132,6 +139,9 @@ function App() {
             width="500px"
             height="500px"
             className="badassest semanticFillerImg"
+            onClick={() => {
+              setOpenModal("Badassest");
+            }}
           ></img>
 
           <img
@@ -140,6 +150,9 @@ function App() {
             width="266px"
             height="109px"
             className="pokemon box"
+            onClick={() => {
+              setOpenModal("Pokemon");
+            }}
           ></img>
           <img
             src={greatest}
@@ -147,6 +160,9 @@ function App() {
             width="500px"
             height="500px"
             className="greatest semanticFillerImg"
+            onClick={() => {
+              setOpenModal("Greatest");
+            }}
           ></img>
 
           <img
@@ -288,6 +304,10 @@ function App() {
 
       <OwenWilson openModal={openModal} onClose={closeModal} />
       <ChuckNorris openModal={openModal} onClose={closeModal} />
+      <Pokemon openModal={openModal} onClose={closeModal} />
+      <Funnyest openModal={openModal} onClose={closeModal} />
+      <Badassest openModal={openModal} onClose={closeModal} />
+      <Greatest openModal={openModal} onClose={closeModal} />
 
       <footer className="copyrightText">
         {/* &copy;
