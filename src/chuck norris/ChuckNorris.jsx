@@ -34,11 +34,11 @@ function ChuckNorris({ openModal, onClose }) {
   }, []);
 
   const getData = async () => {
-    const output = await axios.get(`https://api.chucknorris.io/jokes/random`);
+    const data = await axios.get(`https://api.chucknorris.io/jokes/random`);
 
     setJoke({
       ...joke,
-      joke: output.data.value,
+      joke: data.data.value,
     });
   };
 
