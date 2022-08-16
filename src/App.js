@@ -32,7 +32,9 @@ import say from "./images/say-this-neva.png";
 import sexiest from "./images/sexiest-alter-ego.png";
 import beautiful from "./images/beautiful-code.png";
 import dangerous from "./images/dangerous-code.png";
+
 import OwenWilson from "./owen wilson/OwenWilson";
+import ChuckNorris from "./chuck norris/ChuckNorris";
 
 function App() {
   const [openModal, setOpenModal] = useState();
@@ -120,6 +122,9 @@ function App() {
             width="183px"
             height="162px"
             className="chuck box"
+            onClick={() => {
+              setOpenModal("ChuckNorris");
+            }}
           ></img>
           <img
             src={badassest}
@@ -282,6 +287,7 @@ function App() {
       </Masonry>
 
       <OwenWilson openModal={openModal} onClose={closeModal} />
+      <ChuckNorris openModal={openModal} onClose={closeModal} />
 
       <footer className="copyrightText">
         {/* &copy;

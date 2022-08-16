@@ -1,0 +1,17 @@
+@import "../variables.module.scss";
+
+.chucksCard {
+  @include card-space;
+
+  button {
+    @include button-space;
+  }
+
+  button:hover {
+    @include button-hover;
+  }
+
+  .jokeText {
+    text-shadow: 0.25rem 0.05rem 0.25rem #000;
+  }
+}
