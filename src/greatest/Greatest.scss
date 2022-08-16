@@ -1,0 +1,17 @@
+@import "../variables.module.scss";
+
+.greatestCard {
+  @include card-space;
+
+  button {
+    @include button-space;
+  }
+
+  button:hover {
+    @include button-hover;
+  }
+
+  .greatestPara {
+    text-align: left;
+  }
+}
