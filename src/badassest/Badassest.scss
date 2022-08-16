@@ -1,0 +1,17 @@
+@import "../variables.module.scss";
+
+.badassestCard {
+  @include card-space;
+
+  button {
+    @include button-space;
+  }
+
+  button:hover {
+    @include button-hover;
+  }
+
+  .badassestPara {
+    text-align: left;
+  }
+}
