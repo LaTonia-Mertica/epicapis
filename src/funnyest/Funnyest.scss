@@ -1,0 +1,13 @@
+@import "../variables.module.scss";
+
+.funnyestCard {
+  @include card-space;
+
+  button {
+    @include button-space;
+  }
+
+  button:hover {
+    @include button-hover;
+  }
+}
