@@ -10,4 +10,13 @@
   button:hover {
     @include button-hover;
   }
+
+  .contextText {
+    font-variant: small-caps;
+  }
+
+  .wowText {
+    font-size: 2rem;
+    font-family: $font-amatic-sc;
+  }
 }

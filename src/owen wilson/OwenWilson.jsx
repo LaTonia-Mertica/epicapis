@@ -18,7 +18,6 @@ const style = {
   p: 1.15,
 
   color: "#fff",
-  fontSize: "1.15rem",
   fontFamily: "Arial, Helvetica, sans-serif",
 };
 
@@ -50,7 +49,8 @@ function OwenWilson({ openModal, onClose }) {
               <video autoPlay controls loop src={movie.video["480p"]} />
               <br />
               <br />
-              {movie.full_line}
+              <span className="contextText">context: </span>
+              <span className="wowText">{movie.full_line}</span>
               <br />
               <br />
             </div>
