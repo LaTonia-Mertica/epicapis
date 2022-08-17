@@ -66,7 +66,9 @@ function Badassest({ openModal, onClose }) {
                 <label htmlFor="thebride">The Bride</label>
               </p>
             </fieldset>
-            <button type="button">submit</button>
+            <button type="button" className="submitBtn">
+              submit
+            </button>
           </div>
         </Box>
       </Modal>

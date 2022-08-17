@@ -36,15 +36,19 @@ function Funnyest({ openModal, onClose }) {
             <fieldset>
               <p>
                 <select name="funnyest" id="funnyest">
-                  <option value="whoopigoldberg">Whoopi Goldberg</option>
-                  <option value="davidmann">David Mann</option>
-                  <option value="lawandapage">LaWanda Page</option>
-                  <option value="wandasykes">Wanda Sykes</option>
-                  <option value="roberttownsend">Robert Townsend</option>
+                  <option value="whoopigoldberg">Whoopi Goldberg🤭</option>
+                  <option value="davidmann">David Mann😝</option>
+                  <option value="lawandapage">LaWanda Page🤣</option>
+                  <option value="wandasykes" selected>
+                    Wanda Sykes😜
+                  </option>
+                  <option value="roberttownsend">Robert Townsend😂</option>
                 </select>
               </p>
             </fieldset>
-            <button type="button">submit</button>
+            <button type="button" className="submitBtn">
+              submit
+            </button>
           </div>
         </Box>
       </Modal>

@@ -80,7 +80,9 @@ function Greatest({ openModal, onClose }) {
                 <label htmlFor="theprincessbride">The Princess Bride</label>
               </p>
             </fieldset>
-            <button type="button">submit</button>
+            <button type="button" className="submitBtn">
+              submit
+            </button>
           </div>
         </Box>
       </Modal>

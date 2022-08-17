@@ -11,7 +11,30 @@
     @include button-hover;
   }
 
+  fieldset {
+    border: $space-border-none-all;
+  }
+
+  input[type="checkbox"] {
+    width: 25%;
+    height: 2rem;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
   .greatestPara {
     text-align: left;
+    font-size: $space-md;
+    font-family: $font-rubik-dirt;
+  }
+
+  .greatestPara {
+    text-align: left;
+  }
+
+  .submitBtn {
+    @include button-submit-badassest;
   }
 }

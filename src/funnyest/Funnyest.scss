@@ -10,4 +10,19 @@
   button:hover {
     @include button-hover;
   }
+
+  fieldset {
+    border: $space-border-none-all;
+  }
+
+  .submitBtn {
+    @include button-submit-funnyest;
+  }
+
+  #funnyest {
+    outline: none;
+    border-left: 0.25rem solid $ea-white;
+    @include border-none;
+    @include select-option;
+  }
 }

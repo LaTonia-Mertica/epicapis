@@ -11,7 +11,27 @@
     @include button-hover;
   }
 
+  fieldset {
+    border: $space-border-none-all;
+    margin-left: 17rem;
+  }
+
+  input[type="radio"] {
+    width: 25%;
+    height: 2rem;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
   .badassestPara {
     text-align: left;
+    font-size: $space-md;
+    font-family: $font-rubik-dirt;
+  }
+
+  .submitBtn {
+    @include button-submit-badassest;
   }
 }

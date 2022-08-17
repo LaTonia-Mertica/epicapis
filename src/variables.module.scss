@@ -13,17 +13,22 @@ $ea-gray-light: #c8c4bd;
 $ea-green: #c9e265;
 $ea-purple: #5e17eb;
 $ea-white: #fff;
+$ea-transparent: transparent;
 
 // FONT
 $font-align: center;
 $font-style-serif: cursive;
 $font-style-sans: Arial, Helvetica, sans-serif;
-$font-rubik-dirt: Rubik Dirt;
-$font-bangers: Bangers;
+
 $font-amatic-sc: Amatic SC;
+$font-bangers: Bangers;
+$font-rubik-dirt: Rubik Dirt;
+$font-rubik-puddles: Rubik Puddles;
 
 // SIZE/SPACE
 $space-xsm: 0.15rem;
+$space-border-none-all: 0;
+$space-border-radius-sm: 0.5rem;
 $space-sm: 1rem;
 $space-md: 3.5rem;
 $space-lg: 5rem;
@@ -49,10 +54,31 @@ $space-lg: 5rem;
   transform: scale(1.25);
 }
 
+// BUTTON SUBMIT STYLE SET
+@mixin button-submit-funnyest {
+  color: $ea-red;
+  font-size: 2.5rem;
+  font-family: $font-rubik-puddles;
+  text-shadow: 0.15rem 0.15rem 0.15rem $ea-black;
+}
+
+@mixin button-submit-badassest {
+  color: $ea-red;
+  font-size: 2rem;
+  font-family: $font-rubik-dirt;
+}
+
 @mixin button-space {
   margin: 1.5rem 0;
   border: none;
   background-color: transparent;
+}
+
+// BORDER TRB STYLE SET
+@mixin border-none {
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
 }
 
 // MASONRY STYLE SET
@@ -88,6 +114,18 @@ $space-lg: 5rem;
 
 @mixin ul-li {
   list-style: none;
+}
+
+// SELECT STYLE SET
+@mixin select-option {
+  background-color: $ea-transparent;
+  border-radius: $space-border-radius-sm;
+  width: 27rem;
+  padding: $space-sm;
+
+  color: $ea-white;
+  font-size: 2.25rem;
+  font-family: "Rubik Dirt";
 }
 
 // SEMANTIC FILLER STYLE SET
