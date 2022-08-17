@@ -21,7 +21,11 @@ const style = {
   fontFamily: "Arial, Helvetica, sans-serif",
 };
 
-function Funnyest({ openModal, onClose }) {
+function Funnyest({ openModal, onClose, funnyest, setFunnyest }) {
+  const submit = () => {
+    console.log(funnyest);
+  };
+
   return (
     <main>
       <Modal
@@ -35,7 +39,14 @@ function Funnyest({ openModal, onClose }) {
           <div>
             <fieldset>
               <p>
-                <select name="funnyest" id="funnyest">
+                <select
+                  name="funnyest"
+                  id="funnyest"
+                  value={funnyest}
+                  onChange={(evt) => {
+                    setFunnyest(evt.target.value);
+                  }}
+                >
                   <option value="whoopigoldberg">Whoopi Goldberg🤭</option>
                   <option value="davidmann">David Mann😝</option>
                   <option value="lawandapage">LaWanda Page🤣</option>
@@ -46,7 +57,7 @@ function Funnyest({ openModal, onClose }) {
                 </select>
               </p>
             </fieldset>
-            <button type="button" className="submitBtn">
+            <button type="button" className="submitBtn" onClick={submit}>
               submit
             </button>
           </div>

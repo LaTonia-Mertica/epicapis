@@ -72,6 +72,25 @@ a.listWordColor {
 .semanticFillerImg:hover {
   transform: scale(1.05);
 }
+.selectionsDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.selectionsInput {
+  width: 50%;
+  border-color: #545454;
+  border-radius: 0.25rem;
+  padding: 0.15rem;
+}
+.selectionsInput:focus {
+  background-color: #c9e265;
+}
+Button.selectionsSubmitBtn {
+  color: #c9e265;
+  font-size: large;
+  text-shadow: 0.025rem 0.025rem 0.025rem #000;
+}
 
 /* footer {
   margin-top: 2.25rem !important;

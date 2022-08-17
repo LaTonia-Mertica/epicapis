@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+
 import styles from "./App.scss";
 import Masonry from "react-masonry-css";
+import Button from "@mui/material/Button";
 import { Route } from "@mui/icons-material";
 
 import epicapisLogo from "./images/epicapisLogo.png";
@@ -45,6 +47,8 @@ function App() {
   const closeModal = () => {
     setOpenModal(false);
   };
+
+  const [funnyestSelection, setFunnyestSelection] = useState("wandasykes");
 
   return (
     <main>
@@ -305,9 +309,35 @@ function App() {
       <OwenWilson openModal={openModal} onClose={closeModal} />
       <ChuckNorris openModal={openModal} onClose={closeModal} />
       <Pokemon openModal={openModal} onClose={closeModal} />
-      <Funnyest openModal={openModal} onClose={closeModal} />
+      <Funnyest
+        openModal={openModal}
+        onClose={closeModal}
+        funnyest={funnyestSelection}
+        setFunnyest={setFunnyestSelection}
+      />
       <Badassest openModal={openModal} onClose={closeModal} />
       <Greatest openModal={openModal} onClose={closeModal} />
+
+      <div className="selectionsDiv">
+        <input type="email" className="selectionsInput" />
+        <Button
+          onClick={() => {
+            console.log(funnyestSelection);
+            fetch(`http://localhost:3001/sendEmail`, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                //add email and form selections here
+              }),
+            });
+          }}
+          className="selectionsSubmitBtn"
+        >
+          email selections
+        </Button>
+      </div>
 
       <footer className="copyrightText">
         {/* &copy;
