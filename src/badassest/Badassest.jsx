@@ -32,14 +32,19 @@ function Badassest({ openModal, onClose }) {
       >
         <Box sx={style} className="badassestCard">
           <button onClick={onClose}>&#x274C;</button>
-          <div>
+          <div className="radioFieldsetDiv">
             <fieldset className="badassestFieldset">
               <p className="badassestPara">
-                <input type="radio" name="badassest" id="alice" value="alice" />
-                <label htmlFor="alice">Alice</label>
+                <input
+                  type="radio"
+                  name="badassest"
+                  id="aliceparks"
+                  value="aliceparks"
+                />
+                <label htmlFor="aliceparks">Alice Parks</label>
                 <br />
                 <input type="radio" name="badassest" id="marv" value="marv" />
-                <label htmlFor="marv">Marv</label>
+                <label htmlFor="marv">Marv 💥😖</label>
                 <br />
                 <input
                   type="radio"

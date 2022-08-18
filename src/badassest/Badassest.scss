@@ -13,16 +13,22 @@
 
   fieldset {
     border: $space-border-none-all;
-    margin-left: 17rem;
+    flex-direction: column;
+    align-items: center;
   }
 
   input[type="radio"] {
-    width: 25%;
-    height: 2rem;
+    width: 37%;
+    height: 4rem;
   }
 
   label {
     cursor: pointer;
+  }
+
+  p.badassestPara {
+    display: flex;
+    justify-content: center;
   }
 
   .badassestPara {
