@@ -8,6 +8,7 @@ import axios from "axios";
 
 import pikachuhi from "./images/pikachuhi.gif";
 import { bgcolor } from "@mui/system";
+import { ManOutlined } from "@mui/icons-material";
 
 // mui
 const style = {

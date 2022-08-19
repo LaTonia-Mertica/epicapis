@@ -6,6 +6,7 @@
   button {
     color: $ea-red;
     @include button-space;
+    @include button-submit;
   }
 
   button:hover {

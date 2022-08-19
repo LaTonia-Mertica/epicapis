@@ -5,6 +5,7 @@
 
   button {
     @include button-space;
+    @include button-submit;
   }
 
   button:hover {

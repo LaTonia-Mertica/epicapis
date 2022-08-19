@@ -55,17 +55,12 @@ $space-lg: 5rem;
 }
 
 // BUTTON SUBMIT STYLE SET
-@mixin button-submit-funnyest {
+@mixin button-submit {
   color: $ea-red;
   font-size: 2.5rem;
-  font-family: $font-rubik-puddles;
-  text-shadow: 0.15rem 0.15rem 0.15rem $ea-black;
-}
-
-@mixin button-submit-badassest {
-  color: $ea-red;
-  font-size: 2rem;
+  text-transform: uppercase;
   font-family: $font-rubik-dirt;
+  text-shadow: 0.15rem 0.15rem 0.15rem $ea-black;
 }
 
 @mixin button-space {

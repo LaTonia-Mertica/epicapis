@@ -5,6 +5,7 @@
 
   button {
     @include button-space;
+    @include button-submit;
   }
 
   button:hover {
@@ -38,6 +39,6 @@
   }
 
   .submitBtn {
-    @include button-submit-badassest;
+    @include button-submit;
   }
 }
