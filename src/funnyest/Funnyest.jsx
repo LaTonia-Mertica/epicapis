@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 
 import "./Funnyest.scss";
 
+// mui
 const style = {
   position: "absolute",
   outline: 0,
@@ -35,7 +36,7 @@ function Funnyest({ openModal, onClose, funnyest, setFunnyest }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="funnyestCard">
-          <button onClick={onClose}>&#x274C;</button>
+          <Button onClick={onClose}>&#x274C;</Button>
           <div>
             <fieldset>
               <p>
@@ -57,9 +58,9 @@ function Funnyest({ openModal, onClose, funnyest, setFunnyest }) {
                 </select>
               </p>
             </fieldset>
-            <button type="button" className="submitBtn" onClick={submit}>
+            <Button type="button" className="submitBtn" onClick={submit}>
               submit
-            </button>
+            </Button>
           </div>
         </Box>
       </Modal>

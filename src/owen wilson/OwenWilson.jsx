@@ -5,6 +5,7 @@ import Box from "@mui/material/Box";
 
 import "./OwenWilson.scss";
 
+// mui
 const style = {
   position: "absolute",
   outline: 0,
@@ -43,7 +44,7 @@ function OwenWilson({ openModal, onClose }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="owensCard">
-          <button onClick={onClose}>&#x274C;</button>
+          <Button onClick={onClose}>&#x274C;</Button>
           {movie && (
             <div>
               <video autoPlay controls loop src={movie.video["480p"]} />

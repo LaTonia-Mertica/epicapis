@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 
 import "./Badassest.scss";
 
+// mui
 const style = {
   position: "absolute",
   outline: 0,
@@ -31,7 +32,7 @@ function Badassest({ openModal, onClose }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="badassestCard">
-          <button onClick={onClose}>&#x274C;</button>
+          <Button onClick={onClose}>&#x274C;</Button>
           <div className="radioFieldsetDiv">
             <fieldset className="badassestFieldset">
               <p className="badassestPara">

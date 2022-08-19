@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 
 import "./Greatest.scss";
 
+// mui
 const style = {
   position: "absolute",
   outline: 0,
@@ -31,7 +32,7 @@ function Greatest({ openModal, onClose }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="greatestCard">
-          <button onClick={onClose}>&#x274C;</button>
+          <Button onClick={onClose}>&#x274C;</Button>
           <div>
             <fieldset className="greatestFieldset">
               <p className="greatestPara">
@@ -80,9 +81,9 @@ function Greatest({ openModal, onClose }) {
                 <label htmlFor="theprincessbride">The Princess Bride</label>
               </p>
             </fieldset>
-            <button type="button" className="submitBtn">
+            <Button type="button" className="submitBtn">
               submit
-            </button>
+            </Button>
           </div>
         </Box>
       </Modal>

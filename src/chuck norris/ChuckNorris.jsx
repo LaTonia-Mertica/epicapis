@@ -6,6 +6,7 @@ import Box from "@mui/material/Box";
 
 import "./ChuckNorris.scss";
 
+// mui
 const style = {
   position: "absolute",
   outline: 0,
@@ -31,6 +32,8 @@ function ChuckNorris({ openModal, onClose }) {
 
   useEffect(() => {
     getData();
+    // disable rule
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getData = async () => {
@@ -51,7 +54,7 @@ function ChuckNorris({ openModal, onClose }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="chucksCard">
-          <button onClick={onClose}>&#x274C;</button>
+          <Button onClick={onClose}>&#x274C;</Button>
           <div>
             <p className="jokeText">{joke.joke}</p>
           </div>
