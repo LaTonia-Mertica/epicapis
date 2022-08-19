@@ -4,10 +4,55 @@
   @include card-space;
 
   button {
+    color: $ea-red;
     @include button-space;
   }
 
   button:hover {
     @include button-hover;
+  }
+
+  input {
+    width: 50%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border-color: transparent;
+
+    text-transform: lowercase;
+  }
+
+  input[type="text"]::placeholder {
+    color: $ea-gray-light;
+    font-size: x-small;
+    padding-left: $space-xsm;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 5rem;
+  }
+
+  .gif {
+    margin-top: 1.5rem;
+  }
+
+  .pokemonImg {
+    margin: -7.5rem 0;
+    width: 15rem;
+  }
+
+  section {
+    display: flex;
+    justify-content: space-evenly;
+    word-spacing: 0.25rem;
+  }
+
+  span {
+    font-size: x-large;
+    font-variant: small-caps;
+  }
+
+  h2 {
+    font-size: 3.5rem;
   }
 }
