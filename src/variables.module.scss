@@ -133,3 +133,8 @@ $space-lg: 5rem;
 @mixin sem-fill-hover {
   transform: scale(1.05);
 }
+
+// BADASSEST HOVER STYLE SET
+@mixin baddies-hover {
+  font-size: 1.25rem;
+}
