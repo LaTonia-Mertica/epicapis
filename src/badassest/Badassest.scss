@@ -19,8 +19,8 @@
   }
 
   input[type="radio"] {
-    width: 37%;
-    height: 4rem;
+    width: 5%;
+    height: 0.95rem;
   }
 
   label {
@@ -34,8 +34,17 @@
 
   .badassestPara {
     text-align: left;
-    font-size: $space-md;
+    font-size: 2rem;
     font-family: $font-rubik-dirt;
+  }
+
+  .baddies {
+    color: $ea-gray-light;
+    font-size: x-small;
+  }
+
+  .baddies:hover {
+    @include baddies-hover;
   }
 
   .submitBtn {

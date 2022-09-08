@@ -36,40 +36,53 @@ function Badassest({ openModal, onClose }) {
           <div className="radioFieldsetDiv">
             <fieldset className="badassestFieldset">
               <p className="badassestPara">
+                <input type="radio" name="badassest" id="alice" value="alice" />
+                <label htmlFor="alice">
+                  Alice
+                  <br />
+                  <span className="baddies">resident evil</span>
+                </label>
+                <br />
+
                 <input
                   type="radio"
                   name="badassest"
-                  id="aliceparks"
-                  value="aliceparks"
+                  id="michonne"
+                  value="michonne"
                 />
-                <label htmlFor="aliceparks">Alice Parks</label>
+                <label htmlFor="michonne">
+                  Michonne
+                  <br />
+                  <span className="baddies">the walking dead</span>
+                </label>
                 <br />
-                <input type="radio" name="badassest" id="marv" value="marv" />
-                <label htmlFor="marv">Marv 💥😖</label>
+
+                <input type="radio" name="badassest" id="ellen" value="ellen" />
+                <label htmlFor="ellen">
+                  Ellen <br />
+                  <span className="baddies">predator</span>
+                </label>
                 <br />
+
                 <input
                   type="radio"
                   name="badassest"
-                  id="johnrambo"
-                  value="johnrambo"
+                  id="gamora"
+                  value="gamora"
                 />
-                <label htmlFor="johnrambo">John Rambo</label>
+                <label htmlFor="gamora">
+                  Gamora <br />
+                  <span className="baddies">guardians of the galaxy</span>
+                </label>
                 <br />
-                <input
-                  type="radio"
-                  name="badassest"
-                  id="ellenripley"
-                  value="ellenripley"
-                />
-                <label htmlFor="ellenripley">Ellen Ripley</label>
+
+                <input type="radio" name="badassest" id="sarah" value="sarah" />
+                <label htmlFor="sarah">
+                  Sarah
+                  <br />
+                  <span className="baddies">terminator</span>
+                </label>
                 <br />
-                <input
-                  type="radio"
-                  name="badassest"
-                  id="thebride"
-                  value="thebride"
-                />
-                <label htmlFor="thebride">The Bride</label>
               </p>
             </fieldset>
             <button type="button" className="submitBtn">
