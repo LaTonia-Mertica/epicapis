@@ -16,14 +16,45 @@
     border: $space-border-none-all;
   }
 
-  .submitBtn {
-    @include button-submit;
+  .funnyestFieldset {
+    margin-left: 8.75rem;
   }
 
-  #funnyest {
-    outline: none;
-    border-left: 0.25rem solid $ea-white;
-    @include border-none;
-    @include select-option;
+  p {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input[type="checkbox"] {
+    width: 22%;
+    height: 1.5rem;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  .funnyestPara {
+    text-align: left;
+    font-size: 1.5rem;
+    font-family: $font-rubik-dirt;
+  }
+
+  .funnyestPara {
+    text-align: left;
+  }
+
+  .para1 {
+    float: left;
+    width: 50%;
+  }
+
+  .para2 {
+    float: right;
+    width: 50%;
+  }
+
+  .submitBtn {
+    @include button-submit;
   }
 }

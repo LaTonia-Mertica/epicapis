@@ -38,25 +38,112 @@ function Funnyest({ openModal, onClose, funnyest, setFunnyest }) {
         <Box sx={style} className="funnyestCard">
           <Button onClick={onClose}>&#x274C;</Button>
           <div>
-            <fieldset>
-              <p>
-                <select
-                  name="funnyest"
-                  id="funnyest"
-                  value={funnyest}
-                  onChange={(evt) => {
-                    setFunnyest(evt.target.value);
-                  }}
-                >
-                  <option value="whoopigoldberg">Whoopi Goldberg🤭</option>
-                  <option value="davidmann">David Mann😝</option>
-                  <option value="lawandapage">LaWanda Page🤣</option>
-                  <option value="wandasykes" selected>
-                    Wanda Sykes😜
-                  </option>
-                  <option value="roberttownsend">Robert Townsend😂</option>
-                </select>
-              </p>
+            <fieldset
+              className="funnyestFieldset"
+              name="funnyest"
+              id="funnyest"
+              value={funnyest}
+              onChange={(evt) => {
+                setFunnyest(evt.target.value);
+              }}
+            >
+              <span>
+                <p className="funnyestPara para1">
+                  <input
+                    type="checkbox"
+                    name="funnyest"
+                    id="anthonyanderson"
+                    value="anthonyanderson"
+                  />
+                  <label htmlFor="anthonyanderson">Anthony Anderson</label>
+                  <br />
+
+                  <input
+                    type="checkbox"
+                    name="funnyest"
+                    id="cedrictheentertainer"
+                    value="cedrictheentertainer"
+                  />
+                  <label htmlFor="cedrictheentertainer">
+                    Cedric 'The Entertainer'
+                  </label>
+                  <br />
+
+                  <input
+                    type="checkbox"
+                    name="funnyest"
+                    id="whoopigoldberg"
+                    value="whoopigoldberg"
+                  />
+                  <label htmlFor="whoopigoldberg">Whoopi Goldberg</label>
+                  <br />
+
+                  <input
+                    type="checkbox"
+                    name="funnyest"
+                    id="orlandojones"
+                    value="orlandojones"
+                  />
+                  <label htmlFor="orlandojones">Orlando Jones</label>
+                  <br />
+
+                  <input
+                    type="checkbox"
+                    name="funnyest"
+                    id="berniemac"
+                    value="berniemac"
+                  />
+                  <label htmlFor="berniemac">Bernie Mac</label>
+                  <br />
+                </p>
+
+                <p className="funnyestPara para2">
+                  <input
+                    type="checkbox"
+                    name="funnyest"
+                    id="davidmann"
+                    value="davidmann"
+                  />
+                  <label htmlFor="davidmann">David Mann</label>
+                  <br />
+
+                  <input
+                    type="checkbox"
+                    name="funnyest"
+                    id="eddiemurphy"
+                    value="eddiemurphy"
+                  />
+                  <label htmlFor="eddiemurphy">Eddie Murphy</label>
+                  <br />
+
+                  <input
+                    type="checkbox"
+                    name="funnyest"
+                    id="lawandapage"
+                    value="lawandapage"
+                  />
+                  <label htmlFor="lawandapage">LaWanda Page</label>
+                  <br />
+
+                  <input
+                    type="checkbox"
+                    name="funnyest"
+                    id="wandasykes"
+                    value="wandasykes"
+                  />
+                  <label htmlFor="wandasykes">Wanda Sykes</label>
+                  <br />
+
+                  <input
+                    type="checkbox"
+                    name="funnyest"
+                    id="roberttownsend"
+                    value="roberttownsend"
+                  />
+                  <label htmlFor="roberttownsend">Robert Townsend</label>
+                  <br />
+                </p>
+              </span>
             </fieldset>
             <Button type="button" className="submitBtn" onClick={submit}>
               submit
