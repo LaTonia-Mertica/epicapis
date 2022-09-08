@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+
+  user-select: none;
+}
 body {
   background-color: white;
 }
@@ -71,6 +76,7 @@ a.listWordColor {
 .trump:hover,
 .semanticFillerImg:hover {
   transform: scale(1.05);
+  transition: 0.75s;
 }
 .selectionsDiv {
   display: flex;
