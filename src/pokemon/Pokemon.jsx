@@ -79,8 +79,8 @@ function Pokemon({ openModal, onClose }) {
               <img
                 src={pikachuhi}
                 alt="Pikachu Hi"
-                width="11%"
-                height="7%"
+                width="25%"
+                height="auto"
                 className="gif"
               ></img>
             ) : (
@@ -88,16 +88,10 @@ function Pokemon({ openModal, onClose }) {
             )}
           </div>
 
-          <img src={pokemon.image} alt="Pokemon" className="pokemonImg" />
+          <img src={pokemon.image} alt="" className="pokemonImg" />
           <section>
-            <h2>
-              <span>species: </span>
-              {pokemon.species}
-            </h2>
-            <h2>
-              <span>variety: </span>
-              {pokemon.type}
-            </h2>
+            <h2>{pokemon.species}</h2>
+            <h2>{pokemon.type}</h2>
           </section>
           <Button onClick={searchPokemon}>Search Pokemon</Button>
         </Box>
