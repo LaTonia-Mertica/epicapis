@@ -16,14 +16,18 @@
     border: $space-border-none-all;
   }
 
+  .greatestFieldset {
+    margin-left: 5rem;
+  }
+
   p {
     flex-direction: column;
     align-items: center;
   }
 
   input[type="checkbox"] {
-    width: 25%;
-    height: 2rem;
+    width: 22%;
+    height: 1.5rem;
   }
 
   label {
@@ -32,12 +36,22 @@
 
   .greatestPara {
     text-align: left;
-    font-size: $space-md;
+    font-size: 1.5rem;
     font-family: $font-rubik-dirt;
   }
 
   .greatestPara {
     text-align: left;
+  }
+
+  .para1 {
+    float: left;
+    width: 50%;
+  }
+
+  .para2 {
+    float: right;
+    width: 50%;
   }
 
   .submitBtn {
