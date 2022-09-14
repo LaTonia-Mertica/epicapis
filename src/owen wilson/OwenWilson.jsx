@@ -61,5 +61,4 @@ function OwenWilson({ openModal, onClose }) {
     </main>
   );
 }
-
 export default OwenWilson;
