@@ -39,48 +39,36 @@ function Last({ openModal, onClose }) {
                   <input
                     type="checkbox"
                     name="last"
-                    id="negativebalance"
-                    value="negativebalance"
+                    id="chance"
+                    value="chance"
                   />
-                  <label htmlFor="negativebalance">Not Be Given a Chance</label>
+                  <label htmlFor="chance">Not Be Given a Chance</label>
                   <br />
 
                   <input
                     type="checkbox"
                     name="last"
-                    id="brokenvehicle"
-                    value="brokenvehicle"
+                    id="promises"
+                    value="promises"
                   />
-                  <label htmlFor="brokenvehicle">
-                    Learn Nothing I Do Matters
-                  </label>
+                  <label htmlFor="promises">Empty Promises</label>
+                  <br />
+
+                  <input type="checkbox" name="last" id="quit" value="quit" />
+                  <label htmlFor="quit">Another Reason to Quit</label>
                   <br />
 
                   <input
                     type="checkbox"
                     name="last"
-                    id="migraine"
-                    value="migraine"
+                    id="matters"
+                    value="matters"
                   />
-                  <label htmlFor="migraine">Empty Promises</label>
+                  <label htmlFor="matters">Nothing I Do Matters</label>
                   <br />
 
-                  <input
-                    type="checkbox"
-                    name="last"
-                    id="youscreaming"
-                    value="youscreaming"
-                  />
-                  <label htmlFor="youscreaming">Another Reason to Quit</label>
-                  <br />
-
-                  <input
-                    type="checkbox"
-                    name="last"
-                    id="newaddiction"
-                    value="newaddiction"
-                  />
-                  <label htmlFor="newaddiction">Be Alone in The World</label>
+                  <input type="checkbox" name="last" id="alone" value="alone" />
+                  <label htmlFor="alone">Be Alone in The World</label>
                   <br />
                 </p>
 
@@ -88,46 +76,36 @@ function Last({ openModal, onClose }) {
                   <input
                     type="checkbox"
                     name="last"
-                    id="hopelost"
-                    value="hopelost"
+                    id="helplessness"
+                    value="helplessness"
                   />
-                  <label htmlFor="hopelost">Lose Sight of Hope</label>
+                  <label htmlFor="helplessness">Help Less Ness</label>
                   <br />
 
                   <input
                     type="checkbox"
                     name="last"
-                    id="crunchyknees"
-                    value="crunchyknees"
+                    id="illintent"
+                    value="illintent"
                   />
-                  <label htmlFor="crunchyknees">Horrible Surprises</label>
+                  <label htmlFor="illintent">Ill Intent Against Me</label>
+                  <br />
+
+                  <input type="checkbox" name="last" id="time" value="time" />
+                  <label htmlFor="time">Time Wasted</label>
+                  <br />
+
+                  <input type="checkbox" name="last" id="hope" value="hope" />
+                  <label htmlFor="hope">Lose Sight of Hope</label>
                   <br />
 
                   <input
                     type="checkbox"
                     name="last"
-                    id="falsepromises"
-                    value="falsepromises"
+                    id="surprises"
+                    value="surprises"
                   />
-                  <label htmlFor="falsepromises">Help Less Ness</label>
-                  <br />
-
-                  <input
-                    type="checkbox"
-                    name="last"
-                    id="eternaldamnation"
-                    value="eternaldamnation"
-                  />
-                  <label htmlFor="eternaldamnation">Lose My Independence</label>
-                  <br />
-
-                  <input
-                    type="checkbox"
-                    name="last"
-                    id="chronicpain"
-                    value="chronicpain"
-                  />
-                  <label htmlFor="chronicpain">Waste Time</label>
+                  <label htmlFor="surprises">Horrible Surprises</label>
                   <br />
                 </p>
               </span>
