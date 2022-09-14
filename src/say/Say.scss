@@ -1,0 +1,50 @@
+@import "../variables.module.scss";
+
+.sayCard {
+  @include card-space;
+
+  button {
+    @include button-space;
+    @include button-submit;
+  }
+
+  button:hover {
+    @include button-hover;
+  }
+
+  fieldset {
+    border: $space-border-none-all;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  input[type="text"] {
+    width: 33%;
+    padding-left: 0.5rem;
+  }
+
+  input[type="text"]::placeholder {
+    color: $ea-gray-light;
+    font-size: x-small;
+    padding-left: $space-xsm;
+  }
+
+  p.sayPara {
+    display: flex;
+    justify-content: center;
+  }
+
+  .sayPara {
+    text-align: left;
+    font-size: 2rem;
+    font-family: $font-rubik-dirt;
+  }
+
+  .submitBtn {
+    @include button-submit;
+  }
+}
