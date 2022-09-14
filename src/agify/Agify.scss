@@ -1,0 +1,58 @@
+@import "../variables.module.scss";
+
+.agifyCard {
+  @include card-space;
+
+  button {
+    color: $ea-red;
+    @include button-space;
+    @include button-submit;
+  }
+
+  button:hover {
+    @include button-hover;
+  }
+
+  input {
+    width: 50%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border-color: transparent;
+
+    caret-color: $ea-red;
+
+    text-transform: lowercase;
+  }
+
+  input[type="text"]::placeholder {
+    color: $ea-gray-light;
+    font-size: x-small;
+    padding-left: $space-xsm;
+  }
+
+  input[type="text"]::selection {
+    background: $ea-white;
+    color: #c9e265;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 5rem;
+  }
+
+  section {
+    display: flex;
+    justify-content: space-evenly;
+    word-spacing: 0.25rem;
+  }
+
+  img {
+    float: right;
+    margin-top: -10rem;
+    padding-right: 9rem;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+  }
+}
