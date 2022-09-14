@@ -36,11 +36,29 @@ import beautiful from "./images/beautiful-code.png";
 import dangerous from "./images/dangerous-code.png";
 
 import OwenWilson from "./owen wilson/OwenWilson";
-import ChuckNorris from "./chuck norris/ChuckNorris";
-import Pokemon from "./pokemon/Pokemon";
 import Funnyest from "./funnyest/Funnyest";
+import ChuckNorris from "./chuck norris/ChuckNorris";
 import Badassest from "./badassest/Badassest";
+import Pokemon from "./pokemon/Pokemon";
 import Greatest from "./greatest/Greatest";
+import StarWars from "./star wars/StarWars";
+import Grittiest from "./grittiest/Grittiest";
+import Cocktails from "./cocktails/Cocktails";
+import Prettiest from "./prettiest/Prettiest";
+import DonaldTrump from "./donald trump/DonaldTrump";
+import Say from "./say/Say";
+import Agify from "./agify/Agify";
+import Best from "./best/Best";
+import FOAAS from "./foaas/FOAAS";
+import Last from "./last/Last";
+import RonSwanson from "./ron swanson/RonSwanson";
+import Rampantest from "./rampantest/Rampantest";
+import Marvel from "./marvel/Marvel";
+import Sexiest from "./sexiest/Sexiest";
+import Epic from "./epic/Epic";
+import Beautiful from "./beautiful/Beautiful";
+import Api from "./api/Api";
+import Dangerous from "./dangerous/Dangerous";
 
 function App() {
   const [openModal, setOpenModal] = useState();
@@ -48,7 +66,8 @@ function App() {
     setOpenModal(false);
   };
 
-  const [funnyestSelection, setFunnyestSelection] = useState("wandasykes");
+  // arrange elements for email
+  // const [funnyestSelection, setFunnyestSelection] = useState("");
 
   return (
     <main>
@@ -175,6 +194,9 @@ function App() {
             width="247px"
             height="128px"
             className="starwars box"
+            onClick={() => {
+              setOpenModal("StarWars");
+            }}
           ></img>
           <img
             src={grittiest}
@@ -182,6 +204,9 @@ function App() {
             width="500px"
             height="500px"
             className="grittiest semanticFillerImg"
+            onClick={() => {
+              setOpenModal("Grittiest");
+            }}
           ></img>
 
           <img
@@ -190,6 +215,9 @@ function App() {
             width="500px"
             height="500px"
             className="cocktails box"
+            onClick={() => {
+              setOpenModal("Cocktails");
+            }}
           ></img>
           <img
             src={prettiest}
@@ -197,6 +225,9 @@ function App() {
             width="500px"
             height="500px"
             className="prettiest semanticFillerImg"
+            onClick={() => {
+              setOpenModal("Prettiest");
+            }}
           ></img>
 
           <img
@@ -205,6 +236,9 @@ function App() {
             width="188px"
             height="191px"
             className="trump box"
+            onClick={() => {
+              setOpenModal("DonaldTrump");
+            }}
           ></img>
           <img
             src={say}
@@ -212,6 +246,9 @@ function App() {
             width="500px"
             height="500px"
             className="say semanticFillerImg"
+            onClick={() => {
+              setOpenModal("Say");
+            }}
           ></img>
 
           <img
@@ -220,6 +257,9 @@ function App() {
             width="500px"
             height="500px"
             className="agify box"
+            onClick={() => {
+              setOpenModal("Agify");
+            }}
           ></img>
           <img
             src={best}
@@ -227,6 +267,9 @@ function App() {
             width="500px"
             height="500px"
             className="best semanticFillerImg"
+            onClick={() => {
+              setOpenModal("Best");
+            }}
           ></img>
 
           <img
@@ -235,6 +278,9 @@ function App() {
             width="500px"
             height="500px"
             className="foaas box"
+            onClick={() => {
+              setOpenModal("FOAAS");
+            }}
           ></img>
           <img
             src={last}
@@ -242,6 +288,9 @@ function App() {
             width="500px"
             height="500px"
             className="last semanticFillerImg"
+            onClick={() => {
+              setOpenModal("Last");
+            }}
           ></img>
 
           <img
@@ -250,6 +299,9 @@ function App() {
             width="286px"
             height="160px"
             className="swanson box"
+            onClick={() => {
+              setOpenModal("RonSwanson");
+            }}
           ></img>
           <img
             src={rampantest}
@@ -257,6 +309,9 @@ function App() {
             width="500px"
             height="500px"
             className="rampantest semanticFillerImg"
+            onClick={() => {
+              setOpenModal("Rampantest");
+            }}
           ></img>
 
           <img
@@ -265,6 +320,9 @@ function App() {
             width="140px"
             height="206px"
             className="marvel box"
+            onClick={() => {
+              setOpenModal("Marvel");
+            }}
           ></img>
           <img
             src={sexiest}
@@ -272,6 +330,9 @@ function App() {
             width="500px"
             height="500px"
             className="sexiest semanticFillerImg"
+            onClick={() => {
+              setOpenModal("Sexiest");
+            }}
           ></img>
 
           <img
@@ -280,6 +341,9 @@ function App() {
             width="500px"
             height="500px"
             className="epic semanticFillerImg"
+            onClick={() => {
+              setOpenModal("Epic");
+            }}
           ></img>
           <img
             src={beautiful}
@@ -287,6 +351,9 @@ function App() {
             width="500px"
             height="500px"
             className="beautiful semanticFillerImg"
+            onClick={() => {
+              setOpenModal("Beautiful");
+            }}
           ></img>
 
           <img
@@ -295,6 +362,9 @@ function App() {
             width="500px"
             height="500px"
             className="api semanticFillerImg"
+            onClick={() => {
+              setOpenModal("Api");
+            }}
           ></img>
           <img
             src={dangerous}
@@ -302,33 +372,68 @@ function App() {
             width="500px"
             height="500px"
             className="dangerous semanticFillerImg"
+            onClick={() => {
+              setOpenModal("Dangerous");
+            }}
           ></img>
         </div>
       </Masonry>
 
       <OwenWilson openModal={openModal} onClose={closeModal} />
-      <ChuckNorris openModal={openModal} onClose={closeModal} />
-      <Pokemon openModal={openModal} onClose={closeModal} />
       <Funnyest
         openModal={openModal}
         onClose={closeModal}
-        funnyest={funnyestSelection}
-        setFunnyest={setFunnyestSelection}
+        // arrange elements for email
+        // funnyest={funnyestSelection}
+        // setFunnyest={setFunnyestSelection}
       />
+
+      <ChuckNorris openModal={openModal} onClose={closeModal} />
       <Badassest openModal={openModal} onClose={closeModal} />
+
+      <Pokemon openModal={openModal} onClose={closeModal} />
       <Greatest openModal={openModal} onClose={closeModal} />
+
+      <StarWars openModal={openModal} onClose={closeModal} />
+      <Grittiest openModal={openModal} onClose={closeModal} />
+
+      <Cocktails openModal={openModal} onClose={closeModal} />
+      <Prettiest openModal={openModal} onClose={closeModal} />
+
+      <DonaldTrump openModal={openModal} onClose={closeModal} />
+      <Say openModal={openModal} onClose={closeModal} />
+
+      <Agify openModal={openModal} onClose={closeModal} />
+      <Best openModal={openModal} onClose={closeModal} />
+
+      <FOAAS openModal={openModal} onClose={closeModal} />
+      <Last openModal={openModal} onClose={closeModal} />
+
+      <RonSwanson openModal={openModal} onClose={closeModal} />
+      <Rampantest openModal={openModal} onClose={closeModal} />
+
+      <Marvel openModal={openModal} onClose={closeModal} />
+      <Sexiest openModal={openModal} onClose={closeModal} />
+
+      <Epic openModal={openModal} onClose={closeModal} />
+      <Beautiful openModal={openModal} onClose={closeModal} />
+
+      <Api openModal={openModal} onClose={closeModal} />
+      <Dangerous openModal={openModal} onClose={closeModal} />
 
       <div className="selectionsDiv">
         <input type="email" className="selectionsInput" />
         <Button
           onClick={() => {
-            console.log(funnyestSelection);
+            // arrange elements for email
+            // console.log(funnyestSelection);
             fetch(`http://localhost:3001/sendEmail`, {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
               },
               body: JSON.stringify({
+                // arrange elements for email
                 //add email and form selections here
               }),
             });
