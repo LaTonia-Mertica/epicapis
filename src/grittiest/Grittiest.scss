@@ -1,0 +1,56 @@
+@import "../variables.module.scss";
+
+.grittiestCard {
+  @include card-space;
+
+  button {
+    @include button-space;
+    @include button-submit;
+  }
+
+  button:hover {
+    @include button-hover;
+  }
+
+  fieldset {
+    border: $space-border-none-all;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  p.grittiestPara {
+    display: flex;
+    justify-content: center;
+  }
+
+  .grittiestPara {
+    text-align: left;
+    font-size: 2rem;
+    font-family: $font-rubik-dirt;
+  }
+
+  .decade,
+  .grittiestArmy {
+    padding: 0.25rem;
+  }
+
+  .decade {
+    width: 5%;
+    cursor: default none;
+    text-align: center;
+    margin-right: 0.75rem;
+  }
+
+  input.decade {
+    font-size: x-small;
+  }
+
+  .grittiestArmy {
+    width: 33%;
+    font-size: x-small;
+  }
+
+  .submitBtn {
+    @include button-submit;
+  }
+}
