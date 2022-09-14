@@ -44,6 +44,7 @@
   }
 
   .baddies:hover {
+    color: $ea-red;
     @include baddies-hover;
   }
 
