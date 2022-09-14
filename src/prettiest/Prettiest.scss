@@ -1,0 +1,57 @@
+@import "../variables.module.scss";
+
+.prettiestCard {
+  @include card-space;
+
+  button {
+    @include button-space;
+    @include button-submit;
+  }
+
+  button:hover {
+    @include button-hover;
+  }
+
+  fieldset {
+    border: $space-border-none-all;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input[type="radio"] {
+    width: 5%;
+    height: 0.95rem;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  p.prettiestPara {
+    display: flex;
+    justify-content: center;
+  }
+
+  .prettiestPara {
+    text-align: left;
+    font-size: 2rem;
+    font-family: $font-rubik-dirt;
+  }
+
+  .pretties {
+    color: $ea-gray-light;
+    font-size: x-small;
+  }
+
+  .pretties:hover {
+    @include baddies-hover;
+
+    i {
+      color: $ea-red;
+    }
+  }
+
+  .submitBtn {
+    @include button-submit;
+  }
+}
