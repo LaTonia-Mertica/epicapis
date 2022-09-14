@@ -1,14 +1,11 @@
 import React, { useState } from "react";
+import axios from "axios";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 
 import "./Pokemon.scss";
-import axios from "axios";
-
 import pikachuhi from "./images/pikachuhi.gif";
-import { bgcolor } from "@mui/system";
-import { ManOutlined } from "@mui/icons-material";
 
 // mui
 const style = {
@@ -73,6 +70,7 @@ function Pokemon({ openModal, onClose }) {
               }}
             />
           </div>
+
           {/* gif credit: tenor.com */}
           <div>
             {!pokemonShow ? (
@@ -93,6 +91,7 @@ function Pokemon({ openModal, onClose }) {
             <h2>{pokemon.species}</h2>
             <h2>{pokemon.type}</h2>
           </section>
+
           <Button onClick={searchPokemon}>Search Pokemon</Button>
         </Box>
       </Modal>

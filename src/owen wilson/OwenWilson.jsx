@@ -47,7 +47,7 @@ function OwenWilson({ openModal, onClose }) {
           <Button onClick={onClose}>&#x274C;</Button>
           {movie && (
             <div>
-              <video autoPlay controls loop src={movie.video["480p"]} />
+              <video src={movie.video["480p"]} autoPlay controls loop />
               <br />
               <br />
               <span className="contextText">context: </span>
