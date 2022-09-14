@@ -1,0 +1,54 @@
+@import "../variables.module.scss";
+
+.bestCard {
+  @include card-space;
+
+  button {
+    @include button-space;
+    @include button-submit;
+  }
+
+  button:hover {
+    @include button-hover;
+  }
+
+  fieldset {
+    border: $space-border-none-all;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input[type="radio"] {
+    width: 5%;
+    height: 0.95rem;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  p.bestPara {
+    display: flex;
+    justify-content: center;
+  }
+
+  .bestPara {
+    text-align: left;
+    font-size: 2rem;
+    font-family: $font-rubik-dirt;
+  }
+
+  .besties {
+    color: $ea-gray-light;
+    font-size: x-small;
+  }
+
+  .besties:hover {
+    @include baddies-hover;
+    color: $ea-red;
+  }
+
+  .submitBtn {
+    @include button-submit;
+  }
+}
