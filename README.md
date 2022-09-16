@@ -52,25 +52,25 @@ alert ("Hello Code World!");
 
 # **APIS OF EPICAPIS**
 
-### <p><span style="color: lime">AGIFY:</span> age guess per provided name</p>
+### <p>[AGIFY:](https://agify.io/) age guess per provided name</p>
 
-### <p><span style="color: lime">CHUCK NORRIS:</span> jokes re: legendary bad\*ss</p>
+### <p>[CHUCK NORRIS:](https://api.chucknorris.io/) jokes re: legendary bad\*ss</p>
 
-### <p><span style="color: lime">COCKTAILS:</span> info re: mature drinks</p>
+### <p>[COCKTAILS:](https://www.thecocktaildb.com/) info re: mature drinks</p>
 
-### <p><span style="color: lime">FOAAS:</span> f\*\*\* off statements</p>
+### <p>FOAAS: f\*\*\* off statements</p>
 
-### <p><span style="color: lime">MARVEL:</span> library of comics info</p>
+### <p>MARVEL: library of comics info</p>
 
-### <p><span style="color: lime">OWEN WILSON:</span> spontaneous wow moments</p>
+### <p>[OWEN WILSON:](https://owen-wilson-wow-api.herokuapp.com/) spontaneous wow moments</p>
 
-### <p><span style="color: lime">POKEMON:</span> extra-galactical world</p>
+### <p>[POKEMON:](https://pokeapi.co/) extra-galactical world</p>
 
-### <p><span style="color: lime">RON SWANSON:</span> 'because (he) is a hero'</p>
+### <p>RON SWANSON: 'because (he) is a hero'</p>
 
-### <p><span style="color: lime">STAR WARS:</span> unparalleled universe</p>
+### <p>[STAR WARS:](https://swapi.dev/) unparalleled universe</p>
 
-### <p><span style="color: lime">TRONALD DUMP:</span> dummest things said</p>
+### <p>TRONALD DUMP: dummest things said</p>
 
   <br>
 
