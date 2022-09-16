@@ -33,8 +33,10 @@ function Pokemon({ openModal, onClose }) {
     type: "",
     image: "",
   });
+  const [error, setError] = useState();
 
-  const searchPokemon = () => {
+  const searchPokemon = (event) => {
+    event.preventDefault();
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/` + pokemonName)
       .then((response) => {
@@ -44,8 +46,13 @@ function Pokemon({ openModal, onClose }) {
           type: response.data.types[0].type.name,
           image: response.data.sprites.front_default,
         });
+        setError(null);
+        setPokemonShow(true);
+      })
+      .catch((error) => {
+        console.error(error);
+        setError("Pokemon doesn't exist");
       });
-    setPokemonShow(true);
   };
 
   return (
@@ -58,7 +65,7 @@ function Pokemon({ openModal, onClose }) {
       >
         <Box sx={style} className="pokemonsCard">
           <button onClick={onClose}>&#x274C;</button>
-          <div>
+          <form onSubmit={searchPokemon}>
             <input
               type="text"
               name="pokemonname"
@@ -69,30 +76,38 @@ function Pokemon({ openModal, onClose }) {
                 setPokemonName(event.target.value.toLowerCase());
               }}
             />
-          </div>
 
-          {/* gif credit: tenor.com */}
-          <div>
-            {!pokemonShow ? (
-              <img
-                src={pikachuhi}
-                alt="Pikachu Hi"
-                width="25%"
-                height="auto"
-                className="gif"
-              ></img>
-            ) : (
-              <h1>{pokemonName}</h1>
-            )}
-          </div>
+            <Button type="submit" onClick={searchPokemon} className="searchBtn">
+              Search Pokemon
+            </Button>
+          </form>
+          {error ? (
+            <h1>{error}</h1>
+          ) : (
+            <>
+              <div>
+                {!pokemonShow ? (
+                  <img
+                    src={pikachuhi}
+                    alt="Pikachu Hi"
+                    width="25%"
+                    height="auto"
+                    className="gif"
+                  ></img>
+                ) : (
+                  <h1>{pokemonName}</h1>
+                )}
+              </div>
 
-          <img src={pokemon.image} alt="" className="pokemonImg" />
-          <section>
-            <h2>{pokemon.species}</h2>
-            <h2>{pokemon.type}</h2>
-          </section>
+              {/* gif credit: tenor.com */}
 
-          <Button onClick={searchPokemon}>Search Pokemon</Button>
+              <img src={pokemon.image} alt="" className="pokemonImg" />
+              <section>
+                <h2>{pokemon.species}</h2>
+                <h2>{pokemon.type}</h2>
+              </section>
+            </>
+          )}
         </Box>
       </Modal>
     </main>
