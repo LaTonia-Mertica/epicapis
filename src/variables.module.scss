@@ -120,6 +120,18 @@ $font-rubik-puddles: Rubik Puddles;
   font-size: 5rem;
 }
 
+// IMAGE STYLE SET
+@mixin img-basic-structure {
+  float: left;
+  top: 50%;
+  @include no-border-box-shadow;
+}
+
+@mixin img-basic-structure-hover {
+  transform: scale((1.03));
+  background-color: $ea-green;
+}
+
 // INPUT STYLE SET
 @mixin input-basic-format {
   width: 25%;

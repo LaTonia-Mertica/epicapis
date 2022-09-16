@@ -1,0 +1,30 @@
+@import "../variables.module.scss";
+
+.dangerousCard {
+  @include card-space;
+
+  button {
+    @include button-space;
+    @include button-submit;
+  }
+
+  button:hover {
+    @include button-hover;
+  }
+
+  section {
+    @include section-centered;
+  }
+
+  img {
+    @include img-basic-structure;
+  }
+
+  img:hover {
+    @include img-basic-structure-hover;
+  }
+
+  .submitBtn {
+    @include button-submit;
+  }
+}
