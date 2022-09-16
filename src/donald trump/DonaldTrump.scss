@@ -1,0 +1,14 @@
+@import "../variables.module.scss";
+
+.donaldsCard {
+  @include card-space;
+
+  button {
+    @include button-space;
+    @include button-submit;
+  }
+
+  button:hover {
+    @include button-hover;
+  }
+}
