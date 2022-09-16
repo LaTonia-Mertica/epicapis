@@ -15,7 +15,7 @@
   .jokeText {
     text-shadow: 0.05rem 0.05rem orangered;
     font-family: $font-bangers;
-    font-size: 3.5rem;
+    font-size: $space-md;
     padding: 0 $space-md;
   }
 }
