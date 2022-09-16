@@ -4,6 +4,11 @@ import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 
 import "./Prettiest.scss";
+import lowball from "./images/lowball.gif";
+import manhattan from "./images/manhattan.gif";
+import martini from "./images/martini.gif";
+import mimosa from "./images/mimosa.gif";
+import tomcollins from "./images/tomcollins.gif";
 
 // mui
 const style = {
@@ -99,8 +104,25 @@ function Prettiest({ openModal, onClose }) {
                 </label>
                 <br />
               </p>
+
+              <p>
+                <img
+                  src={tomcollins}
+                  alt="Alcoholic Drink"
+                  width=""
+                  height=""
+                />
+
+                <img src={manhattan} alt="Alcoholic Drink" width="" height="" />
+
+                <img src={lowball} alt="Alcoholic Drink" width="" height="" />
+
+                <img src={martini} alt="Alcoholic Drink" width="" height="" />
+
+                <img src={mimosa} alt="Alcoholic Drink" width="" height="" />
+              </p>
             </fieldset>
-            <button type="button" className="submitBtn">
+            <button type="submit" className="submitBtn">
               submit
             </button>
           </div>

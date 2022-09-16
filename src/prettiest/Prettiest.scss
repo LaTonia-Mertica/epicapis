@@ -13,8 +13,7 @@
   }
 
   fieldset {
-    border: $space-border-none-all;
-    flex-direction: column;
+    @include fieldset-basic-structure;
     align-items: center;
   }
 
@@ -28,23 +27,19 @@
   }
 
   p.prettiestPara {
-    display: flex;
-    justify-content: center;
+    @include p-character-para-center;
   }
 
   .prettiestPara {
-    text-align: left;
-    font-size: 2rem;
-    font-family: $font-rubik-dirt;
+    @include character-para-md;
   }
 
   .pretties {
-    color: $ea-gray-light;
-    font-size: x-small;
+    @include character-subheads;
   }
 
   .pretties:hover {
-    @include baddies-hover;
+    @include characters-hover;
 
     i {
       color: $ea-red;
