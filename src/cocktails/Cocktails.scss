@@ -1,0 +1,37 @@
+@import "../variables.module.scss";
+
+.cocktailsCard {
+  @include card-space;
+
+  button {
+    @include button-space;
+    @include button-submit;
+  }
+
+  button:hover {
+    @include button-hover;
+  }
+
+  .lemonadeVideo {
+    width: 44%;
+  }
+
+  .detailsDiv {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  h2 {
+    font-size: $space-md;
+  }
+
+  h3 {
+    font-size: $space-xsm;
+    text-align: left;
+  }
+
+  h3:hover {
+    font-size: $space-sm;
+  }
+}
