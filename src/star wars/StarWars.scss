@@ -1,0 +1,63 @@
+@import "../variables.module.scss";
+
+.starWarsCard {
+  @include card-space;
+
+  button {
+    color: $ea-red;
+    @include button-space;
+    @include button-submit-input-inline;
+  }
+
+  button:hover {
+    @include button-hover;
+  }
+
+  Button.searchBtn {
+    @include button-search-submit-block-display;
+  }
+
+  input {
+    @include input-basic-format;
+  }
+
+  input[type="text"]::placeholder {
+    @include input-text-placeholder;
+  }
+
+  input[type="text"]::selection {
+    @include input-text-selection;
+  }
+
+  img.imgStarship {
+    float: right;
+    padding-top: 1.25rem;
+    padding-right: 2rem;
+  }
+
+  img.stormtrooperImg {
+    float: left;
+    margin-top: -$space-md;
+    padding-left: 13.5rem;
+  }
+
+  caption {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+
+    font-size: 0.5rem;
+  }
+
+  h1 {
+    @include text-uppercase;
+  }
+
+  section {
+    @include section-basic-format;
+  }
+
+  h2 {
+    font-size: $space-md;
+  }
+}
