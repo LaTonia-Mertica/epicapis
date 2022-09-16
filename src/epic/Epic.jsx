@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
@@ -22,7 +22,26 @@ const style = {
   fontFamily: "Arial, Helvetica, sans-serif",
 };
 
-function Epic({}) {
-  <></>;
+function Epic({ openModal, onClose }) {
+  return (
+    <main>
+      <Modal
+        open={openModal === "Epic"}
+        onClose={onClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style} className="epicCard">
+          <Button onClick={onClose}>&#x274C;</Button>
+          <div>
+            <p>TEST</p>
+            <Button type="button" className="submitBtn">
+              submit
+            </Button>
+          </div>
+        </Box>
+      </Modal>
+    </main>
+  );
 }
 export default Epic;

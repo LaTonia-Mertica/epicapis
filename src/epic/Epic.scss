@@ -1,0 +1,18 @@
+@import "../variables.module.scss";
+
+.epicCard {
+  @include card-space;
+
+  button {
+    @include button-space;
+    @include button-submit;
+  }
+
+  button:hover {
+    @include button-hover;
+  }
+
+  .submitBtn {
+    @include button-submit;
+  }
+}
