@@ -32,7 +32,7 @@ function Last({ openModal, onClose }) {
       >
         <Box sx={style} className="lastCard">
           <Button onClick={onClose}>&#x274C;</Button>
-          <div>
+          <div className="lastDiv">
             <fieldset>
               <span>
                 <p className="lastPara para1">
@@ -110,7 +110,7 @@ function Last({ openModal, onClose }) {
                 </p>
               </span>
             </fieldset>
-            <button type="button" className="submitBtn">
+            <button type="submit" className="submitBtn">
               submit
             </button>
           </div>

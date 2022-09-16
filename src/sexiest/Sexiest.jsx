@@ -42,28 +42,28 @@ function Sexiest({ openModal, onClose }) {
                 <input
                   type="radio"
                   name="categories"
-                  id="Wonder Woman"
-                  value="Wonder Woman"
+                  id="catwoman"
+                  value="catwoman"
                 />
-                <label htmlFor="Wonder Woman">Wonder Woman</label>
+                <label htmlFor="catwoman">Catwoman</label>
               </p>
               <p className="sexiestPara para1">
                 <input
                   type="radio"
                   name="categories"
-                  id="mrsincredible"
-                  value="mrsincredible"
+                  id="shera"
+                  value="shera"
                 />
-                <label htmlFor="mrsincredible">Mrs. Incredible</label>
+                <label htmlFor="shera">She-Ra</label>
               </p>
               <p className="sexiestPara para1">
                 <input
                   type="radio"
                   name="categories"
-                  id="blacksheba"
-                  value="blacksheba"
+                  id="wonderwoman"
+                  value="wonderwoman"
                 />
-                <label htmlFor="blacksheba">Black Sheba</label>
+                <label htmlFor="wonderwoman">Wonder Woman</label>
               </p>
             </fieldset>
 
@@ -75,20 +75,20 @@ function Sexiest({ openModal, onClose }) {
                 <input
                   type="radio"
                   name="categories"
-                  id="shaft"
-                  value="shaft"
+                  id="batman"
+                  value="batman"
                 />
-                <label htmlFor="shaft">Shaft</label>
+                <label htmlFor="batman">Batman</label>
                 <br />
               </p>
               <p className="sexiestPara para2">
                 <input
                   type="radio"
                   name="categories"
-                  id="dolemite"
-                  value="dolemite"
+                  id="spiderman"
+                  value="spiderman"
                 />
-                <label htmlFor="dolemite">Dolemite</label>
+                <label htmlFor="spiderman">Spider-Man</label>
                 <br />
               </p>
               <p className="sexiestPara para2">
@@ -98,7 +98,7 @@ function Sexiest({ openModal, onClose }) {
                   id="superman"
                   value="superman"
                 />
-                <label htmlFor="superman">Super Man</label>
+                <label htmlFor="superman">Superman</label>
                 <br />
               </p>
             </fieldset>
@@ -139,7 +139,7 @@ function Sexiest({ openModal, onClose }) {
               </p>
             </fieldset>
           </div>
-          <button type="button" className="submitBtn">
+          <button type="submit" className="submitBtn">
             submit
           </button>
         </Box>

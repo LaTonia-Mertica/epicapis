@@ -13,20 +13,16 @@
   }
 
   fieldset {
-    border: $space-border-none-all;
-    flex-direction: column;
+    @include fieldset-basic-structure;
     align-items: center;
   }
 
   p.rampantestPara {
-    display: flex;
-    justify-content: center;
+    @include p-character-para-center;
   }
 
   .rampantestPara {
-    text-align: left;
-    font-size: 2rem;
-    font-family: $font-rubik-dirt;
+    @include character-para-md;
   }
 
   .decade,

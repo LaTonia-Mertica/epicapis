@@ -43,8 +43,8 @@ function Funnyest({ openModal, onClose, funnyest, setFunnyest }) {
               name="funnyest"
               id="funnyest"
               value={funnyest}
-              onChange={(evt) => {
-                setFunnyest(evt.target.value);
+              onChange={(event) => {
+                setFunnyest(event.target.value);
               }}
             >
               <span>
@@ -145,7 +145,7 @@ function Funnyest({ openModal, onClose, funnyest, setFunnyest }) {
                 </p>
               </span>
             </fieldset>
-            <Button type="button" className="submitBtn" onClick={submit}>
+            <Button type="submit" className="submitBtn" onClick={submit}>
               submit
             </Button>
           </div>

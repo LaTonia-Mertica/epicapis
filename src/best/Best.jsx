@@ -38,7 +38,8 @@ function Best({ openModal, onClose }) {
               <p className="bestPara">
                 <input type="radio" name="young" id="young" value="young" />
                 <label htmlFor="young">
-                  young(er)'ish
+                  young<span className="parens">(</span>er
+                  <span className="parens">)</span>-ish
                   <br />
                   <span className="besties">just starting out</span>
                 </label>
@@ -61,14 +62,15 @@ function Best({ openModal, onClose }) {
 
                 <input type="radio" name="old" id="old" value="old" />
                 <label htmlFor="old">
-                  old(er)'ish
+                  old<span className="parens">(</span>er
+                  <span className="parens">)</span>-ish
                   <br />
                   <span className="besties">getting on in years</span>
                 </label>
                 <br />
               </p>
             </fieldset>
-            <button type="button" className="submitBtn">
+            <button type="submit" className="submitBtn">
               submit
             </button>
           </div>

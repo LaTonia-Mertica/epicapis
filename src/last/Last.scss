@@ -12,17 +12,20 @@
     @include button-hover;
   }
 
+  .lastDiv {
+    margin-left: 9rem;
+  }
+
   fieldset {
     border: $space-border-none-all;
   }
 
   .lastFieldset {
-    margin-left: 5rem;
+    margin-left: $space-lg;
   }
 
   p {
-    flex-direction: column;
-    align-items: center;
+    @include paragraph-basic;
   }
 
   input[type="checkbox"] {
@@ -35,9 +38,7 @@
   }
 
   .lastPara {
-    text-align: left;
-    font-size: 1.5rem;
-    font-family: $font-rubik-dirt;
+    @include character-para-xsm;
   }
 
   .lastPara {

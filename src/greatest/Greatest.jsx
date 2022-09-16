@@ -139,7 +139,7 @@ function Greatest({ openModal, onClose }) {
                 </p>
               </span>
             </fieldset>
-            <Button type="button" className="submitBtn">
+            <Button type="submit" className="submitBtn">
               submit
             </Button>
           </div>

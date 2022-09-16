@@ -21,8 +21,7 @@
   }
 
   p {
-    flex-direction: column;
-    align-items: center;
+    @include paragraph-basic;
   }
 
   input[type="checkbox"] {
@@ -35,9 +34,7 @@
   }
 
   .funnyestPara {
-    text-align: left;
-    font-size: 1.5rem;
-    font-family: $font-rubik-dirt;
+    @include character-para-xsm;
   }
 
   .funnyestPara {

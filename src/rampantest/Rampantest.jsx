@@ -36,7 +36,7 @@ function Rampantest({ openModal, onClose }) {
           <div>
             <fieldset>
               <p className="rampantestPara">
-                <label htmlFor="decade">Rampantest Decade:&nbsp;&nbsp;</label>
+                <label htmlFor="decade">rampantest decade :&nbsp;&nbsp;</label>
                 <input
                   type="number"
                   name="decade"
@@ -56,7 +56,7 @@ function Rampantest({ openModal, onClose }) {
                 />
               </p>
             </fieldset>
-            <button type="button" className="submitBtn">
+            <button type="submit" className="submitBtn">
               submit
             </button>
           </div>

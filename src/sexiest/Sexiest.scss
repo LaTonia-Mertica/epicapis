@@ -13,15 +13,11 @@
   }
 
   .fieldsetDiv {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    padding-right: 3.25rem;
+    @include fieldset-div-basic-structure;
   }
 
   fieldset {
-    border: $space-border-none-all;
-    flex-direction: column;
+    @include fieldset-basic-structure;
     align-items: left;
   }
 
@@ -30,14 +26,11 @@
   }
 
   p.sexiestPara {
-    display: flex;
-    justify-content: left;
+    @include p-character-para-left;
   }
 
   .sexiestPara {
-    text-align: left;
-    font-size: 1.75rem;
-    font-family: $font-rubik-dirt;
+    @include character-para-sm;
   }
 
   .feminineLegend,
@@ -62,7 +55,7 @@
   .para3,
   .nonbinaryLegend {
     text-align: left;
-    margin-left: 5rem;
+    margin-left: $space-lg;
   }
 
   .submitBtn {

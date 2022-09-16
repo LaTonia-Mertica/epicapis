@@ -4,6 +4,7 @@ import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 
 import "./Grittiest.scss";
+
 // mui
 const style = {
   position: "absolute",
@@ -35,7 +36,7 @@ function Grittiest({ openModal, onClose }) {
           <div className="grittiestFieldsetDiv">
             <fieldset className="grittiestFieldset">
               <p className="grittiestPara">
-                <label htmlFor="decade">Grittiest Decade:&nbsp;&nbsp;</label>
+                <label htmlFor="decade">grittiest decade :&nbsp;&nbsp;</label>
                 <input
                   type="number"
                   name="decade"
@@ -55,7 +56,7 @@ function Grittiest({ openModal, onClose }) {
                 />
               </p>
             </fieldset>
-            <button type="button" className="submitBtn">
+            <button type="submit" className="submitBtn">
               submit
             </button>
           </div>

@@ -40,7 +40,7 @@ function Badassest({ openModal, onClose }) {
                 <label htmlFor="alice">
                   Alice
                   <br />
-                  <span className="baddies">resident evil</span>
+                  <span className="characters">resident evil</span>
                 </label>
                 <br />
 
@@ -53,14 +53,14 @@ function Badassest({ openModal, onClose }) {
                 <label htmlFor="michonne">
                   Michonne
                   <br />
-                  <span className="baddies">the walking dead</span>
+                  <span className="characters">the walking dead</span>
                 </label>
                 <br />
 
                 <input type="radio" name="badassest" id="ellen" value="ellen" />
                 <label htmlFor="ellen">
                   Ellen <br />
-                  <span className="baddies">predator</span>
+                  <span className="characters">predator</span>
                 </label>
                 <br />
 
@@ -72,7 +72,7 @@ function Badassest({ openModal, onClose }) {
                 />
                 <label htmlFor="gamora">
                   Gamora <br />
-                  <span className="baddies">guardians of the galaxy</span>
+                  <span className="characters">guardians of the galaxy</span>
                 </label>
                 <br />
 
@@ -80,12 +80,12 @@ function Badassest({ openModal, onClose }) {
                 <label htmlFor="sarah">
                   Sarah
                   <br />
-                  <span className="baddies">terminator</span>
+                  <span className="characters">terminator</span>
                 </label>
                 <br />
               </p>
             </fieldset>
-            <button type="button" className="submitBtn">
+            <button type="submit" className="submitBtn">
               submit
             </button>
           </div>

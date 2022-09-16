@@ -36,7 +36,8 @@ function Say({ openModal, onClose }) {
           <div>
             <fieldset>
               <p className="sayPara">
-                <label htmlFor="neversay">Never Say:&nbsp;&nbsp;</label>
+                <label htmlFor="neversay">never say :&nbsp;&nbsp;</label>
+
                 <input
                   type="text"
                   name="neversay"
@@ -90,7 +91,7 @@ function Say({ openModal, onClose }) {
                 </datalist>
               </p>
             </fieldset>
-            <button type="button" className="submitBtn">
+            <button type="submit" className="submitBtn">
               submit
             </button>
           </div>
