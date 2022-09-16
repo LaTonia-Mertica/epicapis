@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import axios from "axios";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 
 import "./Agify.scss";
-import bluefairygodmother from "./images/blue-fairy-godmother.gif";
 
 // mui
 const style = {
@@ -25,25 +23,27 @@ const style = {
 };
 
 function Agify({ openModal, onClose }) {
-  const self = this;
-
-  const [ageShow, setAgeShow] = useState("");
+  const [name, setName] = useState("");
   const [ageByName, setAgeByName] = useState({
     age: "",
     name: "",
+    count: "",
   });
+  const [error, setError] = useState();
 
-  const getAgeByName = () => {
-    axios
-      .get(`https://api.agify.io?name`)
-      .then((response) => {
-        self.setAgeByName({
-          age: response.data.age,
-          name: response.data.name,
-        });
-      })
-      .catch((error) => console.log(error));
-    setAgeShow(true);
+  const getAgeMyName = async (event) => {
+    event.preventDefault();
+    const response = await fetch(`https://api.agify.io?name=${name}`);
+    setError(null);
+    const data = await response.json();
+    setAgeByName({
+      age: data.age,
+      name: data.name,
+      count: data.count,
+    }).catch((error) => {
+      console.error(error);
+      setError("No listing for that name, apologies!");
+    });
   };
 
   return (
@@ -56,39 +56,33 @@ function Agify({ openModal, onClose }) {
       >
         <Box sx={style} className="agifyCard">
           <button onClick={onClose}>&#x274C;</button>
-          <div>
+          <form onSubmit={getAgeMyName}>
             <input
               type="text"
               name="agify"
               id="agify"
               placeholder="enter name"
               autoComplete="off"
+              value={name}
               onChange={(event) => {
-                setAgeByName(event.target.value.toLowerCase());
+                setName(event.target.value.toLowerCase());
               }}
             />
-          </div>
+            <Button type="submit" onClick={getAgeMyName} className="searchBtn">
+              Get Age by Name
+            </Button>
+          </form>
 
-          {/* img credit: tenor.com */}
           <div>
-            {!ageShow ? (
-              <img
-                src={bluefairygodmother}
-                alt="Blue Fairy Godmother"
-                width="13%"
-                height="auto"
-                className="imgBlueFairyGodmother"
-              ></img>
+            {error ? (
+              <h1>{error}</h1>
             ) : (
-              <h1>{ageByName}</h1>
+              <>
+                <h1>{ageByName.name}</h1>
+                <p>{ageByName.age}</p>
+              </>
             )}
           </div>
-
-          <section>
-            <h1>{ageByName.name}</h1>
-          </section>
-
-          <Button onClick={getAgeByName}>Get Age By Name</Button>
         </Box>
       </Modal>
     </main>

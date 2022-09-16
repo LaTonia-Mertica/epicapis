@@ -6,53 +6,34 @@
   button {
     color: $ea-red;
     @include button-space;
-    @include button-submit;
+    @include button-submit-input-inline;
   }
 
   button:hover {
     @include button-hover;
   }
 
+  Button.searchBtn {
+    @include button-search-submit-block-display;
+  }
+
   input {
-    width: 50%;
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-    border-color: transparent;
-
-    caret-color: $ea-red;
-
-    text-transform: lowercase;
+    @include input-basic-format;
   }
 
   input[type="text"]::placeholder {
-    color: $ea-gray-light;
-    font-size: x-small;
-    padding-left: $space-xsm;
+    @include input-text-placeholder;
   }
 
   input[type="text"]::selection {
-    background: $ea-white;
-    color: #c9e265;
+    @include input-text-selection;
   }
 
   h1 {
-    text-transform: uppercase;
-    font-size: 5rem;
+    @include text-uppercase;
   }
 
-  section {
-    display: flex;
-    justify-content: space-evenly;
-    word-spacing: 0.25rem;
-  }
-
-  img {
-    float: right;
-    margin-top: -10rem;
-    padding-right: 9rem;
-  }
-
-  h2 {
-    font-size: 3.5rem;
+  p {
+    font-size: $space-md;
   }
 }
