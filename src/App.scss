@@ -78,11 +78,18 @@ a.listWordColor {
   transform: scale(1.05);
   transition: 0.75s;
 }
-.selectionsDiv {
+.selectionsForm {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+input[type="email"]::placeholder {
+  color: #c8c4bd;
+  font-size: x-small;
+  padding: 0.25rem 0.5rem;
+}
+
 .selectionsInput {
   width: 50%;
   border-color: #545454;

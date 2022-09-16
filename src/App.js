@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
+// styles import necessary for jsx and scss files
 import styles from "./App.scss";
 import Masonry from "react-masonry-css";
 import Button from "@mui/material/Button";
+// route import necessary for jsx and scss files
 import { Route } from "@mui/icons-material";
 
 import epicapisLogo from "./images/epicapisLogo.png";
@@ -66,6 +68,22 @@ function App() {
     setOpenModal(false);
   };
 
+  const state = {
+    email: {
+      to: "",
+      from: "",
+      subject: "",
+      html: "",
+    },
+  };
+
+  const sendEmail = (event) => {
+    event.preventDefault();
+    const { email } = this.state;
+    fetch(
+      `http://localhost:3001/send-email?to-${email.to}&from-&${email.from}&subject-${email.subject}&html-${email.html}`
+    ).catch((error) => console.log(error));
+  };
   // arrange elements for email
   // const [funnyestSelection, setFunnyestSelection] = useState("");
 
@@ -105,6 +123,7 @@ function App() {
               href={epicapisposter}
               className="epicapisCopyrightText listWordColor"
               target="_blank"
+              rel="noreferrer"
             >
               EPIC<strong className="apisOfEpicapis">APIS</strong>
             </a>
@@ -112,6 +131,7 @@ function App() {
               href="https://www.latoniamertica.dev/"
               className="myName listWordColor"
               target="_blank"
+              rel="noreferrer"
             >
               La'Tonia Mertica
             </a>
@@ -421,9 +441,21 @@ function App() {
       <Api openModal={openModal} onClose={closeModal} />
       <Dangerous openModal={openModal} onClose={closeModal} />
 
-      <div className="selectionsDiv">
-        <input type="email" className="selectionsInput" />
+      <form className="selectionsForm">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="enter email address"
+          autoComplete="off"
+          className="selectionsInput"
+          onChange={(event) => {
+            sendEmail(event.target.value);
+          }}
+        />
         <Button
+          type="submit"
+          // onClick={sendEmail}
           onClick={() => {
             // arrange elements for email
             // console.log(funnyestSelection);
@@ -434,7 +466,10 @@ function App() {
               },
               body: JSON.stringify({
                 // arrange elements for email
-                //add email and form selections here
+                to: state.email.to,
+                from: state.email.from,
+                subject: state.email.subject,
+                html: state.email.html,
               }),
             });
           }}
@@ -442,21 +477,21 @@ function App() {
         >
           email selections
         </Button>
-      </div>
+      </form>
 
       <footer className="copyrightText">
         {/* &copy;
         <a
           href={epicapisposter}
           className="epicapisCopyrightText listWordColor"
-          target="_blank"
+          target="_blank"  rel="noreferrer"
         >
           EPIC<strong className="apisOfEpicapis">APIS</strong>
         </a>{" "}
         <a
           href="https://www.latoniamertica.dev/"
           className="listWordColor"
-          target="_blank"
+          target="_blank"  rel="noreferrer"
         >
           La'Tonia Mertica
         </a> */}

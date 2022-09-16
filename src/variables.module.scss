@@ -1,38 +1,3 @@
-// CARD
-@mixin card-space {
-  text-align: center;
-  padding-bottom: "4rem";
-}
-
-// COLOR
-$ea-black: black;
-$ea-blue: #5ce1e6;
-$ea-red: crimson;
-$ea-gray-dark: #545454;
-$ea-gray-light: #c8c4bd;
-$ea-green: #c9e265;
-$ea-purple: #5e17eb;
-$ea-white: #fff;
-$ea-transparent: transparent;
-
-// FONT
-$font-align: center;
-$font-style-serif: cursive;
-$font-style-sans: Arial, Helvetica, sans-serif;
-
-$font-amatic-sc: Amatic SC;
-$font-bangers: Bangers;
-$font-rubik-dirt: Rubik Dirt;
-$font-rubik-puddles: Rubik Puddles;
-
-// SIZE/SPACE
-$space-xsm: 0.15rem;
-$space-border-none-all: 0;
-$space-border-radius-sm: 0.5rem;
-$space-sm: 1rem;
-$space-md: 3.5rem;
-$space-lg: 5rem;
-
 // ANCHOR STYLE SET
 @mixin a-style {
   text-decoration: none;
@@ -48,13 +13,25 @@ $space-lg: 5rem;
   display: block;
 }
 
-// BUTTON STYLE SET
-@mixin button-hover {
-  cursor: pointer;
-  transform: scale(1.25);
+// BORDER REMOVE BORDER STYLE SET
+@mixin border-none {
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
 }
 
-// BUTTON SUBMIT STYLE SET
+@mixin border-box-shadow {
+  border: $space-xsm $ea-red solid;
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2),
+    0 0.375rem 1.25rem 0 rgba(0, 0, 0, 0.19);
+}
+
+@mixin no-border-box-shadow {
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2),
+    0 0.375rem 1.25rem 0 rgba(0, 0, 0, 0.19);
+}
+
+// BUTTON STYLE SET
 @mixin button-submit {
   color: $ea-red;
   font-size: 2.5rem;
@@ -63,17 +40,129 @@ $space-lg: 5rem;
   text-shadow: 0.15rem 0.15rem 0.15rem $ea-black;
 }
 
+@mixin button-submit-input-inline {
+  color: $ea-red;
+  font-size: 1.5rem;
+  margin: 1% 25%;
+  text-transform: uppercase;
+  font-family: $font-rubik-dirt;
+  text-shadow: 0.15rem 0.15rem 0.15rem $ea-black;
+}
+
+@mixin button-search-submit-block-display {
+  display: block;
+  margin: 0% auto;
+}
+
 @mixin button-space {
   margin: 1.5rem 0;
   border: none;
   background-color: transparent;
 }
 
-// BORDER TRB STYLE SET
-@mixin border-none {
-  border-top: 0;
-  border-right: 0;
-  border-bottom: 0;
+@mixin button-hover {
+  cursor: pointer;
+  transform: scale(1.25);
+}
+
+// CARD
+@mixin card-space {
+  text-align: center;
+  padding-bottom: "4rem";
+}
+
+// CHARACTERS HOVER STYLE SET
+@mixin characters-hover {
+  font-size: 1.25rem;
+}
+
+@mixin characters-red-text-hover {
+  color: $ea-red;
+  @include characters-hover;
+}
+
+// COLOR
+$ea-black: black;
+$ea-blue: #5ce1e6;
+$ea-red: crimson;
+$ea-gray-dark: #545454;
+$ea-gray-light: #c8c4bd;
+$ea-green: #c9e265;
+$ea-purple: #5e17eb;
+$ea-white: #fff;
+$ea-transparent: transparent;
+
+// FIELDSET STYLE SET
+@mixin fieldset-div-basic-structure {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding-right: 3.25rem;
+}
+
+@mixin fieldset-basic-structure {
+  border: $space-border-none-all;
+  flex-direction: column;
+}
+
+// FONT
+$font-align: center;
+$font-style-serif: cursive;
+$font-style-sans: Arial, Helvetica, sans-serif;
+
+$font-amatic-sc: Amatic SC;
+$font-bangers: Bangers;
+$font-rubik-dirt: Rubik Dirt;
+$font-rubik-puddles: Rubik Puddles;
+
+@mixin text-uppercase {
+  text-transform: uppercase;
+  font-size: 5rem;
+}
+
+// INPUT STYLE SET
+@mixin input-basic-format {
+  width: 25%;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border-color: transparent;
+
+  caret-color: $ea-red;
+
+  text-transform: lowercase;
+}
+
+@mixin input-text-placeholder {
+  color: $ea-gray-light;
+  font-size: x-small;
+  padding-left: $space-xsm;
+}
+
+@mixin input-text-selection {
+  background: $ea-white;
+  color: #c9e265;
+}
+
+// LIST STYLE SET
+@mixin list-word {
+  font-family: cursive;
+  color: #545454;
+}
+
+@mixin ul-space {
+  margin-top: -2.5rem;
+  margin-left: -1%;
+}
+
+@mixin ul-li {
+  list-style: none;
+}
+
+// LOGO STYLE SET
+@mixin logo-space {
+  width: 11rem;
+  height: 100%;
+  margin-left: 1.5%;
 }
 
 // MASONRY STYLE SET
@@ -88,27 +177,61 @@ $space-lg: 5rem;
   background-clip: padding-box;
 }
 
-// LIST STYLE SET
-@mixin list-word {
-  font-family: cursive;
-  color: #545454;
+// PARAGRAPH STYLE SET
+@mixin paragraph-basic {
+  flex-direction: column;
+  align-items: center;
 }
 
-// LOGO STYLE SET
-@mixin logo-space {
-  width: 11rem;
-  height: 100%;
-  margin-left: 1.5%;
+@mixin p-character-para-center {
+  display: flex;
+  justify-content: center;
 }
 
-// LIST STYLE SET
-@mixin ul-space {
-  margin-top: -2.5rem;
-  margin-left: -1%;
+@mixin p-character-para-left {
+  display: flex;
+  justify-content: left;
 }
 
-@mixin ul-li {
-  list-style: none;
+@mixin p-character-para-right {
+  display: flex;
+  justify-content: right;
+}
+
+@mixin character-para-xsm {
+  text-align: left;
+  font-size: 1.5rem;
+  font-family: $font-rubik-dirt;
+}
+
+@mixin character-para-sm {
+  text-align: left;
+  font-size: 1.75rem;
+  font-family: $font-rubik-dirt;
+}
+
+@mixin character-para-md {
+  text-align: left;
+  font-size: 2rem;
+  font-family: $font-rubik-dirt;
+}
+
+@mixin character-subheads {
+  color: $ea-gray-light;
+  font-size: x-small;
+}
+
+// SECTION STYLE SET
+@mixin section-basic-format {
+  display: flex;
+  justify-content: space-evenly;
+  word-spacing: 0.25rem;
+}
+
+@mixin section-centered {
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 // SELECT STYLE SET
@@ -134,7 +257,11 @@ $space-lg: 5rem;
   transform: scale(1.05);
 }
 
-// BADASSEST HOVER STYLE SET
-@mixin baddies-hover {
-  font-size: 1.25rem;
-}
+// SIZE/SPACE
+$space-xsm: 0.15rem;
+$space-sm: 1rem;
+$space-md: 3.5rem;
+$space-lg: 5rem;
+
+$space-border-none-all: 0;
+$space-border-radius-sm: 0.5rem;
