@@ -90,7 +90,7 @@ function Pokemon({ openModal, onClose }) {
                   <img
                     src={pikachuhi}
                     alt="Pikachu Hi"
-                    width="25%"
+                    width="20%"
                     height="auto"
                     className="gif"
                   ></img>
