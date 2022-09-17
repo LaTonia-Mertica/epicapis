@@ -50,23 +50,23 @@ function Beautiful({ openModal, onClose }) {
           <Button onClick={onClose}>&#x274C;</Button>
           <div>
             <section>
-              <img src={appropriate} alt="" width="13%" height="auto" />
-              <img src={bold} alt="" width="13%" height="auto" />
-              <img src={clean} alt="" width="13%" height="auto" />
-              <img src={clear} alt="" width="13%" height="auto" />
-              <img src={comfy} alt="" width="13%" height="auto" />
-              <img src={consistent} alt="" width="13%" height="auto" />
-              <img src={efficient} alt="" width="13%" height="auto" />
+              <img src={appropriate} alt="" width="9%" height="auto" />
+              <img src={bold} alt="" width="9%" height="auto" />
+              <img src={clean} alt="" width="9%" height="auto" />
+              <img src={clear} alt="" width="9%" height="auto" />
+              <img src={comfy} alt="" width="9%" height="auto" />
+              <img src={consistent} alt="" width="9%" height="auto" />
+              <img src={efficient} alt="" width="9%" height="auto" />
             </section>
 
             <section>
-              <img src={elegant} alt="" width="13%" height="auto" />
-              <img src={fun} alt="" width="13%" height="auto" />
-              <img src={functional} alt="" width="13%" height="auto" />
-              <img src={modular} alt="" width="13%" height="auto" />
-              <img src={sensible} alt="" width="13%" height="auto" />
-              <img src={simple} alt="" width="13%" height="auto" />
-              <img src={testseasy} alt="" width="13%" height="auto" />
+              <img src={elegant} alt="" width="9%" height="auto" />
+              <img src={fun} alt="" width="9%" height="auto" />
+              <img src={functional} alt="" width="9%" height="auto" />
+              <img src={modular} alt="" width="9%" height="auto" />
+              <img src={sensible} alt="" width="9%" height="auto" />
+              <img src={simple} alt="" width="9%" height="auto" />
+              <img src={testseasy} alt="" width="9%" height="auto" />
             </section>
 
             <Button type="button" className="submitBtn">
