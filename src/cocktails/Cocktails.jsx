@@ -5,7 +5,6 @@ import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 
 import "./Cocktails.scss";
-// import lemonade from "./videos/lemonade.mp4";
 
 // mui
 const style = {
@@ -38,7 +37,8 @@ function Cocktails({ openModal, onClose }) {
       );
 
       const json = await data.json();
-      console.log(json);
+      // test
+      // console.log(json);
       setCocktail(json.drinks[0]);
     })();
   }, []);
@@ -54,38 +54,36 @@ function Cocktails({ openModal, onClose }) {
         <Box sx={style} className="cocktailsCard">
           <Button onClick={onClose}>&#x274C;</Button>
 
-          {/* gif credit: tenor.com */}
-
           {cocktail && (
             <div className="detailsDiv">
+              <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
               <h2>{cocktail.strDrink}</h2>
               <h3>
-                <span className="detailHeaders">category:</span>
+                <span className="detailHeaders">type:</span>
                 <br />
                 {cocktail.strCategory}
-              </h3>
-              <h3>
-                <span className="detailHeaders">alcoholic:</span>
-                <br />
-                {cocktail.strAlcoholic}
               </h3>
               <h3>
                 <span className="detailHeaders"> dressing:</span>
                 <br />
                 {cocktail.strGlass}
               </h3>
-              {/* <h3>drinkThumb: {cocktail.strDrinkThumb}</h3> */}
               <h3>
-                <span className="detailHeaders">ingredient1:</span>
+                <span className="detailHeaders">part:</span>
                 <br />
                 {cocktail.strIngredient1}
               </h3>
               <h3>
-                <span className="detailHeaders"> ingredient2:</span>
+                <span className="detailHeaders"> part:</span>
                 <br />
                 {cocktail.strIngredient2}
               </h3>
               <h3>
+                <span className="detailHeaders"> part:</span>
+                <br />
+                {cocktail.strIngredient3}
+              </h3>
+              <h3 className="ellipsis">
                 <span className="detailHeaders"> instructions:</span>
                 <br />
                 {cocktail.strInstructions}

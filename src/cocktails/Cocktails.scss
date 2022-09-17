@@ -12,26 +12,61 @@
     @include button-hover;
   }
 
-  .lemonadeVideo {
-    width: 44%;
+  img {
+    width: 13%;
+    height: auto;
+    margin-left: 1.75rem;
+    margin-right: -1rem;
+    margin-bottom: 1.75rem;
+    @include border-box-shadow;
   }
 
   .detailsDiv {
-    display: flex;
-    align-content: center;
-    justify-content: center;
+    width: 99%;
+    @include section-centered;
   }
 
   h2 {
     font-size: $space-md;
+    padding-left: 3rem;
   }
 
   h3 {
-    font-size: $space-xsm;
+    font-size: 0.55rem;
     text-align: left;
+    margin-left: 1.25rem;
+    margin-top: 2.025rem;
+    text-shadow: 0.15rem 0.15rem 0.15rem $ea-black;
+
+    animation: glow 1.5s ease-in-out infinite;
+  }
+
+  .detailHeaders {
+    color: $ea-red;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 20px crimson;
+      }
+      to {
+        text-shadow: 0 0 30px crimson, 0 0 10px crimson;
+      }
+    }
   }
 
   h3:hover {
-    font-size: $space-sm;
+    font-size: 1.75rem;
+  }
+
+  .ellipsis {
+    white-space: nowrap;
+    width: 5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  div h3.ellipsis:hover {
+    overflow: visible;
   }
 }
