@@ -5,7 +5,6 @@ import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 
 import "./StarWars.scss";
-import starshipimg from "./images/starship.jpeg";
 import stormtrooper from "./images/stormtrooper.gif";
 
 // mui
@@ -118,26 +117,13 @@ function StarWars({ openModal, onClose }) {
               Search Starships
             </Button>
           </form>
-
-          {/* img credit: starship / inverse.com */}
           {/* img credit: stormtrooper / tenor.com */}
-
           <div>
             {error ? (
               <h1>{error}</h1>
             ) : (
               <>
                 <h1>{starshipName}</h1>
-
-                <img
-                  src={starshipimg}
-                  alt="Starship"
-                  width="25%"
-                  height="auto"
-                  className="imgStarship"
-                ></img>
-
-                <caption>image may not reflect starship searched</caption>
 
                 <img
                   src={stormtrooper}
@@ -153,22 +139,63 @@ function StarWars({ openModal, onClose }) {
           <section>
             {!!setStarship ? (
               <div>
-                <h2>{starship.model}</h2>
-                <h2>{starship.manufacturer}</h2>
-                <h3>{starship.class}</h3>
-                <h3>{starship.manufacturer}</h3>
-                <h3>{starship.created}</h3>
-                <h3>{starship.cost}</h3>
-                <h3>{starship.length}</h3>
-                <h3>{starship.pilots}</h3>
-                <h3>{starship.crew}</h3>
-                <h3>{starship.consumables}</h3>
-                <h3>{starship.capacityPassengers}</h3>
-                <h3>{starship.capacityCargo}</h3>
-                <h3>{starship.speed}</h3>
-                <h3>{starship.hyperdrive}</h3>
-                <h3>{starship.megalights}</h3>
-                <h3>{starship.films}</h3>
+                <h3>model: {starship.model}</h3>
+                <h3 className="classH3">class: {starship.class}</h3>
+                <h3>manufacturer: {starship.manufacturer}</h3>
+
+                <h5>
+                  <span className="specificationsText">cost in credits: </span>
+                  {starship.cost}
+                </h5>
+                <h5>
+                  <span className="specificationsText">length: </span>
+                  {starship.length}
+                </h5>
+                <h5>
+                  <span className="specificationsText">pilots: </span>
+                  {starship.pilots}
+                </h5>
+                <h5>
+                  <span className="specificationsText">crew: </span>
+                  {starship.crew}
+                </h5>
+                <h5>
+                  <span className="specificationsText">consumables: </span>
+                  {starship.consumables}
+                </h5>
+                <h5>
+                  <span className="specificationsText">
+                    passenger capacity:{" "}
+                  </span>
+                  {starship.capacityPassengers}
+                </h5>
+                <h5>
+                  <span className="specificationsText">cargo capacity: </span>
+                  {starship.capacityCargo}
+                </h5>
+                <h5>
+                  <span className="specificationsText">
+                    max atmosphering speed:{" "}
+                  </span>
+                  {starship.speed}
+                </h5>
+                <h5>
+                  <span className="specificationsText">hyperdrive: </span>
+                  {starship.hyperdrive}
+                </h5>
+                <h5>
+                  <span className="specificationsText">megalights: </span>
+                  {starship.megalights}
+                </h5>
+                <h5>
+                  <span className="specificationsText">created: </span>
+                  {starship.created}
+                </h5>
+
+                <h5>
+                  <span className="specificationsText">films: </span>
+                  {starship.films}
+                </h5>
               </div>
             ) : (
               invalidInput

@@ -29,35 +29,41 @@
     @include input-text-selection;
   }
 
-  img.imgStarship {
-    float: right;
-    padding-top: 1.25rem;
-    padding-right: 2rem;
-  }
-
   img.stormtrooperImg {
     float: left;
     margin-top: -$space-md;
     padding-left: 13.5rem;
   }
 
-  caption {
-    position: absolute;
-    bottom: 0.5rem;
-    right: 0.5rem;
+  section {
+    @include section-basic-format;
+  }
 
-    font-size: 0.5rem;
+  div {
+    margin-bottom: 2.25rem;
   }
 
   h1 {
     @include text-uppercase;
   }
 
-  section {
-    @include section-basic-format;
+  .classH3 {
+    margin: -0.75rem 0;
   }
 
-  h2 {
-    font-size: $space-md;
+  h3,
+  h3.classH3,
+  h5 {
+    margin-left: -11.5rem;
+    text-align: left;
+    text-shadow: 0.15rem 0.15rem 0.15rem $ea-black;
+  }
+
+  h5 {
+    margin-bottom: -1.25rem;
+  }
+
+  .specificationsText {
+    color: $ea-red;
   }
 }
