@@ -11,4 +11,11 @@
   button:hover {
     @include button-hover;
   }
+
+  .quoteText {
+    text-shadow: 0.05rem 0.05rem yellow;
+    font-family: $font-luckiest-guy;
+    font-size: 2.5rem;
+    padding: 0 $space-md;
+  }
 }
