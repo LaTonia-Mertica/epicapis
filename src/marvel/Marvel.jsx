@@ -22,7 +22,33 @@ const style = {
   fontFamily: "Arial, Helvetica, sans-serif",
 };
 
-function Marvel({}) {
-  <></>;
+function Marvel({ openModal, onClose }) {
+  const [marvel, setMarvel] = useState();
+
+  useEffect(() => {
+    (async () => {
+      const data = await fetch(`http(s)://gateway.marvel.com/`);
+      const json = await data.json();
+      setMarvel(json[0]);
+    })();
+  }, []);
+
+  return (
+    <main>
+      <Modal
+        open={openModal === "Marvel"}
+        onClose={onClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style} className="marvelCard">
+          <Button onClick={onClose}>&#x274C;</Button>
+          <div>
+            <p>{marvel}</p>
+          </div>
+        </Box>
+      </Modal>
+    </main>
+  );
 }
 export default Marvel;
