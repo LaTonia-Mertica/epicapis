@@ -32,6 +32,7 @@ function Pokemon({ openModal, onClose }) {
     species: "",
     type: "",
     image: "",
+    image_back: "",
   });
   const [error, setError] = useState();
 
@@ -45,6 +46,7 @@ function Pokemon({ openModal, onClose }) {
           species: response.data.species.name,
           type: response.data.types[0].type.name,
           image: response.data.sprites.front_default,
+          image_back: response.data.sprites.back_default,
         });
         setError(null);
         setPokemonShow(true);
@@ -54,6 +56,12 @@ function Pokemon({ openModal, onClose }) {
         setError("Pokemon doesn't exist");
       });
   };
+
+  // **note:** reasons this api uses axios:
+
+  // axios is included for illustration and practice in case in a position requiring knowledge of axios
+
+  // fetch is the more modern and preferred method re: api calls
 
   return (
     <main>
@@ -102,6 +110,8 @@ function Pokemon({ openModal, onClose }) {
               {/* gif credit: tenor.com */}
 
               <img src={pokemon.image} alt="" className="pokemonImg" />
+              <img src={pokemon.image_back} alt="" className="pokemonImg" />
+
               <section>
                 <h2>{pokemon.species}</h2>
                 <h2>{pokemon.type}</h2>
