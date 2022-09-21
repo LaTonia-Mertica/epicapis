@@ -109,17 +109,37 @@ function Prettiest({ openModal, onClose }) {
                 <img
                   src={tomcollins}
                   alt="Alcoholic Drink"
-                  width=""
-                  height=""
+                  width="67rem"
+                  height="auto"
                 />
 
-                <img src={manhattan} alt="Alcoholic Drink" width="" height="" />
+                <img
+                  src={manhattan}
+                  alt="Alcoholic Drink"
+                  width="67rem"
+                  height="auto"
+                />
 
-                <img src={lowball} alt="Alcoholic Drink" width="" height="" />
+                <img
+                  src={lowball}
+                  alt="Alcoholic Drink"
+                  width="67rem"
+                  height="auto"
+                />
 
-                <img src={martini} alt="Alcoholic Drink" width="" height="" />
+                <img
+                  src={martini}
+                  alt="Alcoholic Drink"
+                  width="67rem"
+                  height="auto"
+                />
 
-                <img src={mimosa} alt="Alcoholic Drink" width="" height="" />
+                <img
+                  src={mimosa}
+                  alt="Alcoholic Drink"
+                  width="67rem"
+                  height="auto"
+                />
               </p>
             </fieldset>
             <button type="submit" className="submitBtn">
