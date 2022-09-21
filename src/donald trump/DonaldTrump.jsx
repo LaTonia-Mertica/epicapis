@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 
 import "./DonaldTrump.scss";
-import axios from "axios";
 
 // mui
 const style = {
@@ -36,12 +36,17 @@ function DonaldTrump({ openModal, onClose }) {
 
   const getData = async () => {
     const data = await axios.get(`https://api.tronalddump.io/random/quote`);
-
     setQuote({
       ...quote,
       quote: data.data.value,
     });
   };
+
+  // **note:** reasons this api uses axios:
+
+  // axios is included for illustration and practice in case in a position requiring knowledge of axios
+
+  // fetch is the more modern and preferred method re: api calls
 
   return (
     <main>

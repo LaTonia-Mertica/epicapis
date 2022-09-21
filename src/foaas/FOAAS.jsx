@@ -1,10 +1,10 @@
 import React from "react";
+import axios from "axios";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 
 import "./FOAAS.scss";
-import axios from "axios";
 
 // mui
 const style = {
@@ -29,6 +29,12 @@ function FOAAS({ openModal, onClose }) {
     const response = await axios(`${url}${input}`);
     console.log(`${response.data.message} ${response.data.subtitle}`);
   }
+
+  // **note:** reasons this api uses axios:
+
+  // axios is included for illustration and practice in case in a position requiring knowledge of axios
+
+  // fetch is the more modern and preferred method re: api calls
 
   // foaas("/ahole/La'Tonia Mertica");
 

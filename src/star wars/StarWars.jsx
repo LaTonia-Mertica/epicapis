@@ -88,6 +88,12 @@ function StarWars({ openModal, onClose }) {
       });
   };
 
+  // **note:** reasons this api uses axios:
+
+  // axios is included for illustration and practice in case in a position requiring knowledge of axios
+
+  // fetch is the more modern and preferred method re: api calls
+
   return (
     <main>
       <Modal
