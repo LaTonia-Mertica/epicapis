@@ -20,6 +20,9 @@ const style = {
 
   color: "#fff",
   fontFamily: "Arial, Helvetica, sans-serif",
+
+  maxHeight: "90vh",
+  overflow: "scroll",
 };
 
 function Greatest({ openModal, onClose }) {

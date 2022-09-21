@@ -23,6 +23,9 @@ const style = {
   fontSize: "1.5rem",
   textTransform: "lowercase",
   fontFamily: "Arial, Helvetica, sans-serif",
+
+  maxHeight: "90vh",
+  overflow: "scroll",
 };
 
 function Cocktails({ openModal, onClose }) {

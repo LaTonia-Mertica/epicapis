@@ -22,6 +22,9 @@ const style = {
 
   color: "#fff",
   fontFamily: "Arial, Helvetica, sans-serif",
+
+  maxHeight: "90vh",
+  overflow: "scroll",
 };
 
 function Pokemon({ openModal, onClose }) {

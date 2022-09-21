@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import md5 from "js-md5";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
@@ -20,18 +21,43 @@ const style = {
 
   color: "#fff",
   fontFamily: "Arial, Helvetica, sans-serif",
+
+  maxHeight: "90vh",
+  overflow: "scroll",
 };
 
 function Marvel({ openModal, onClose }) {
   const [marvel, setMarvel] = useState();
+  const ts = require("./ts");
+  const apiKey = require("./apiKey");
+  const privateApiKey = require("./privateApiKey");
+  const hash = md5(ts + apiKey + privateApiKey);
 
   useEffect(() => {
     (async () => {
-      const data = await fetch(`http(s)://gateway.marvel.com/`);
+      const data = await fetch(
+        `http://gateway.marvel.com/v1/public/creators?ts=${ts}&apiKey=${apiKey}&hash=${hash}`,
+        {
+          Method: "GET",
+          Params: {
+            apikey: "apiKey",
+            privateApiKey: "privateApiKey",
+            ts: "ts",
+            hash: "hash",
+          },
+          Headers: {
+            "Content-Type": "application/json",
+            Accept: "*/*",
+          },
+        }
+      );
+      console.log(data);
       const json = await data.json();
       setMarvel(json[0]);
     })();
-  }, []);
+  }, [ts, apiKey, privateApiKey, hash]);
+
+  // "Data provided by Marvel. © 2014 Marvel"
 
   return (
     <main>
