@@ -138,7 +138,6 @@ function App() {
           </section>
         </ul>
       </nav>
-
       <Masonry
         breakpointCols={1}
         className="my-masonry-grid"
@@ -398,7 +397,6 @@ function App() {
           ></img>
         </div>
       </Masonry>
-
       <OwenWilson openModal={openModal} onClose={closeModal} />
       <Funnyest
         openModal={openModal}
@@ -407,40 +405,28 @@ function App() {
         // funnyest={funnyestSelection}
         // setFunnyest={setFunnyestSelection}
       />
-
       <ChuckNorris openModal={openModal} onClose={closeModal} />
       <Badassest openModal={openModal} onClose={closeModal} />
-
       <Pokemon openModal={openModal} onClose={closeModal} />
       <Greatest openModal={openModal} onClose={closeModal} />
-
       <StarWars openModal={openModal} onClose={closeModal} />
       <Grittiest openModal={openModal} onClose={closeModal} />
-
       <Cocktails openModal={openModal} onClose={closeModal} />
       <Prettiest openModal={openModal} onClose={closeModal} />
-
       <DonaldTrump openModal={openModal} onClose={closeModal} />
       <Say openModal={openModal} onClose={closeModal} />
-
       <Agify openModal={openModal} onClose={closeModal} />
       <Best openModal={openModal} onClose={closeModal} />
-
       <FOAAS openModal={openModal} onClose={closeModal} />
       <Last openModal={openModal} onClose={closeModal} />
-
       <RonSwanson openModal={openModal} onClose={closeModal} />
       <Rampantest openModal={openModal} onClose={closeModal} />
-
       <Marvel openModal={openModal} onClose={closeModal} />
       <Sexiest openModal={openModal} onClose={closeModal} />
-
       <Epic openModal={openModal} onClose={closeModal} />
       <Beautiful openModal={openModal} onClose={closeModal} />
-
       <Api openModal={openModal} onClose={closeModal} />
       <Dangerous openModal={openModal} onClose={closeModal} />
-
       <form className="selectionsForm">
         <input
           type="email"
@@ -478,7 +464,6 @@ function App() {
           email selections
         </Button>
       </form>
-
       <footer className="copyrightText">
         {/* &copy;
         <a
