@@ -90,10 +90,9 @@ function StarWars({ openModal, onClose }) {
   };
 
   // **note:** reasons this api uses axios:
-
-  // axios is included for illustration and practice in case in a position requiring knowledge of axios
-
-  // fetch is the more modern and preferred method re: api calls
+  // axios and fetch are used in the epic apis project for practice with both libraries
+  // asycn/await and .then are both used in the epic apis project for familiarity with both types of asynchronous code syntax
+  // fetch and async/await are the more modern and preferred methods
 
   return (
     <main>
