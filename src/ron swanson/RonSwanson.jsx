@@ -46,7 +46,7 @@ function RonSwanson({ openModal, onClose }) {
         <Box sx={style} className="ronsCard">
           <Button onClick={onClose}>&#x274C;</Button>
           <div>
-            <p>{quote}</p>
+            <p>'{quote}'</p>
           </div>
         </Box>
       </Modal>

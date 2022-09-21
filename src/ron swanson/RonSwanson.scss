@@ -11,4 +11,14 @@
   button:hover {
     @include button-hover;
   }
+
+  p {
+    color: $ea-white;
+    text-shadow: dodgerblue 0.05rem 0.05rem;
+    padding-left: $space-lg;
+    padding-right: $space-lg;
+    text-align: justify;
+    font-size: 7rem;
+    font-family: $font-mr-de-haviland;
+  }
 }
