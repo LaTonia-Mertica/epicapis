@@ -49,23 +49,23 @@ function Dangerous({ openModal, onClose }) {
           <Button onClick={onClose}>&#x274C;</Button>
           <div>
             <section>
-              <img src={alienating} alt="" width="13%" height="auto" />
-              <img src={boastful} alt="" width="13%" height="auto" />
-              <img src={boring} alt="" width="13%" height="auto" />
-              <img src={chaotic} alt="" width="13%" height="auto" />
-              <img src={cluttered} alt="" width="13%" height="auto" />
-              <img src={disfunctional} alt="" width="13%" height="auto" />
-              <img src={limiting} alt="" width="13%" height="auto" />
+              <img src={alienating} alt="" width="9%" height="auto" />
+              <img src={boastful} alt="" width="9%" height="auto" />
+              <img src={boring} alt="" width="9%" height="auto" />
+              <img src={chaotic} alt="" width="9%" height="auto" />
+              <img src={cluttered} alt="" width="9%" height="auto" />
+              <img src={disfunctional} alt="" width="9%" height="auto" />
+              <img src={limiting} alt="" width="9%" height="auto" />
             </section>
 
             <section>
-              <img src={malicious} alt="" width="13%" height="auto" />
-              <img src={misleading} alt="" width="13%" height="auto" />
-              <img src={slow} alt="" width="13%" height="auto" />
-              <img src={toonested} alt="" width="13%" height="auto" />
-              <img src={uninspiring} alt="" width="13%" height="auto" />
-              <img src={unrelatable} alt="" width="13%" height="auto" />
-              <img src={unwieldy} alt="" width="13%" height="auto" />
+              <img src={malicious} alt="" width="9%" height="auto" />
+              <img src={misleading} alt="" width="9%" height="auto" />
+              <img src={slow} alt="" width="9%" height="auto" />
+              <img src={toonested} alt="" width="9%" height="auto" />
+              <img src={uninspiring} alt="" width="9%" height="auto" />
+              <img src={unrelatable} alt="" width="9%" height="auto" />
+              <img src={unwieldy} alt="" width="9%" height="auto" />
             </section>
             <Button type="button" className="submitBtn">
               submit
