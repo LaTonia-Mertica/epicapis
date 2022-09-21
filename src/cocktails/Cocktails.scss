@@ -32,7 +32,7 @@
   }
 
   h3 {
-    font-size: 0.55rem;
+    font-size: 0.65rem;
     text-align: left;
     margin-left: 1.25rem;
     margin-top: 2.025rem;
@@ -47,10 +47,10 @@
 
     @keyframes glow {
       from {
-        text-shadow: 0 0 20px crimson;
+        text-shadow: 0 0 20px greenyellow;
       }
       to {
-        text-shadow: 0 0 30px crimson, 0 0 10px crimson;
+        text-shadow: 0 0 30px greenyellow, 0 0 10px greenyellow;
       }
     }
   }
@@ -59,14 +59,12 @@
     font-size: 1.75rem;
   }
 
-  .ellipsis {
-    white-space: nowrap;
-    width: 5rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  .instructions {
+    width: 7rem;
   }
 
-  div h3.ellipsis:hover {
-    overflow: visible;
+  div h3.instructions:hover {
+    font-size: 1.25rem;
+    width: 17%;
   }
 }

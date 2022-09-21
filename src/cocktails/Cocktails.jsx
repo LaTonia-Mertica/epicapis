@@ -41,7 +41,7 @@ function Cocktails({ openModal, onClose }) {
       // console.log(json);
       setCocktail(json.drinks[0]);
     })();
-  }, []);
+  }, [apikey]);
 
   return (
     <main>
@@ -58,35 +58,42 @@ function Cocktails({ openModal, onClose }) {
             <div className="detailsDiv">
               <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
               <h2>{cocktail.strDrink}</h2>
-              <h3>
-                <span className="detailHeaders">type:</span>
+
+              <div>
+                <h3>
+                  <span className="detailHeaders">type:</span>
+                  <br />
+                  {cocktail.strCategory}
+                </h3>
+                <h3>
+                  <span className="detailHeaders"> dressing:</span>
+                  <br />
+                  {cocktail.strGlass}
+                </h3>
+              </div>
+
+              <div>
+                <h3>
+                  <span className="detailHeaders">part:</span>
+                  <br />
+                  {cocktail.strIngredient1}
+                </h3>
+                <h3>
+                  <span className="detailHeaders"> part:</span>
+                  <br />
+                  {cocktail.strIngredient2}
+                </h3>
+                <h3>
+                  <span className="detailHeaders"> part:</span>
+                  <br />
+                  {cocktail.strIngredient3}
+                </h3>
+              </div>
+
+              <h3 className="instructions">
+                <span className="detailHeaders">instructions:</span>
                 <br />
-                {cocktail.strCategory}
-              </h3>
-              <h3>
-                <span className="detailHeaders"> dressing:</span>
-                <br />
-                {cocktail.strGlass}
-              </h3>
-              <h3>
-                <span className="detailHeaders">part:</span>
-                <br />
-                {cocktail.strIngredient1}
-              </h3>
-              <h3>
-                <span className="detailHeaders"> part:</span>
-                <br />
-                {cocktail.strIngredient2}
-              </h3>
-              <h3>
-                <span className="detailHeaders"> part:</span>
-                <br />
-                {cocktail.strIngredient3}
-              </h3>
-              <h3 className="ellipsis">
-                <span className="detailHeaders"> instructions:</span>
-                <br />
-                {cocktail.strInstructions}
+                <span id="instructions">{cocktail.strInstructions}</span>
               </h3>
             </div>
           )}
