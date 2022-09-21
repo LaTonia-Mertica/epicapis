@@ -34,6 +34,10 @@
   }
 
   p {
-    font-size: $space-md;
+    color: $ea-white;
+    margin-top: -5rem;
+    font-size: 11rem;
+    font-family: $font-abril-fatface;
+    text-shadow: $ea-white 0.025rem 0.025rem inset;
   }
 }
