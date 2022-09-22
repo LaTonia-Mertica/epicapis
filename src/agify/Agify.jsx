@@ -32,21 +32,23 @@ function Agify({ openModal, onClose }) {
     name: "",
     count: "",
   });
-  const [error, setError] = useState();
 
   const getAgeMyName = async (event) => {
     event.preventDefault();
+
     const response = await fetch(`https://api.agify.io?name=${name}`);
-    setError(null);
     const data = await response.json();
     setAgeByName({
       age: data.age,
       name: data.name,
       count: data.count,
-    }).catch((error) => {
-      console.error(error);
-      setError("No listing for that name, apologies!");
     });
+
+    const error = () => {
+      if (ageByName.age === null) {
+        console.log("Apologies, no listing!");
+      }
+    };
   };
 
   return (
@@ -77,14 +79,19 @@ function Agify({ openModal, onClose }) {
           </form>
 
           <div>
-            {error ? (
-              <h1>{error}</h1>
-            ) : (
-              <>
-                <h1>{ageByName.name}</h1>
-                <p>{ageByName.age}</p>
-              </>
-            )}
+            <h1>{ageByName.name}</h1>
+            <p>{ageByName.age}</p>
+            <p className="disclaimerPara">
+              <span className="disclaimerSpan">the fine print:&emsp;</span>
+              <span className="disclaimerParaText">
+                agify documentation and/or marketing describes the api as a
+                resource to get the a) age of a name and b) age of a person.
+                while agify may be useful in "analytics, ad segmenting,
+                demographic statistics etc." as stated in the documentation
+                and/or marketing, search results may vary from expected
+                outcomes.
+              </span>
+            </p>
           </div>
         </Box>
       </Modal>

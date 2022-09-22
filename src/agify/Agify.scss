@@ -4,7 +4,6 @@
   @include card-space;
 
   button {
-    color: $ea-red;
     @include button-space;
     @include button-submit-input-inline;
   }
@@ -38,6 +37,31 @@
     margin-top: -5rem;
     font-size: 11rem;
     font-family: $font-abril-fatface;
-    text-shadow: $ea-white 0.025rem 0.025rem inset;
+  }
+
+  .disclaimerPara {
+    width: 15%;
+    font-size: xx-small;
+    text-align: justify;
+    margin-left: $space-sm;
+
+    // opacity effect
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.75rem;
+  }
+
+  span.disclaimerSpan {
+    color: $ea-red;
+    text-shadow: $ea-black 0.025rem 0.025rem;
+  }
+
+  .disclaimerParaText {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .disclaimerPara:hover {
+    transform: scale(1.5);
+    margin-left: 34rem;
+    margin-bottom: 34rem;
   }
 }
