@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 
 import "./RonSwanson.scss";
 
@@ -18,7 +18,6 @@ const style = {
   boxShadow: 23,
   p: 1.15,
 
-  color: "#fff",
   fontFamily: "Arial, Helvetica, sans-serif",
 
   maxHeight: "90vh",
@@ -47,7 +46,8 @@ function RonSwanson({ openModal, onClose }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="ronsCard">
-          <Button onClick={onClose}>&#x274C;</Button>
+          <Button onClick={onClose}>&#x1F167;</Button>
+
           <div>
             <p>'{quote}'</p>
           </div>

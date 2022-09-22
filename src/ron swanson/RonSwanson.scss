@@ -1,11 +1,19 @@
+@import "../App.scss";
 @import "../variables.module.scss";
 
 .ronsCard {
   @include card-space;
+  background-color: rgba(254, 1, 154, 0.3);
 
   button {
     @include button-space;
     @include button-submit;
+  }
+
+  Button {
+    color: #ff1694;
+    font-size: 4rem;
+    margin-bottom: -1.5rem;
   }
 
   button:hover {
@@ -13,12 +21,14 @@
   }
 
   p {
-    color: $ea-white;
-    text-shadow: dodgerblue 0.05rem 0.05rem;
-    padding-left: $space-lg;
-    padding-right: $space-lg;
-    text-align: justify;
-    font-size: 7rem;
-    font-family: $font-mr-de-haviland;
+    color: deeppink;
+    text-shadow: $ea-black 0.15rem 0.15rem;
+    font-size: 2.25rem;
+    text-align: left;
+    line-height: 3rem;
+    font-family: "Aggressive";
+
+    margin-left: $space-lg;
+    margin-right: $space-lg;
   }
 }
