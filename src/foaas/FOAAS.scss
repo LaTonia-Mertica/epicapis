@@ -8,6 +8,11 @@
     @include button-submit;
   }
 
+  Button {
+    // color: #03989e;
+    font-size: $space-xmd;
+  }
+
   button:hover {
     @include button-hover;
   }

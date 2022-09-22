@@ -49,7 +49,7 @@ function FOAAS({ openModal, onClose }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="foaasCard">
-          <Button></Button>
+          <Button onClick={onClose}>&#x1E8A;</Button>
           <div>
             <p className="foaasText">{foaas.message}</p>
           </div>
