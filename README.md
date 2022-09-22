@@ -66,6 +66,8 @@ epic apis provides a unique user experience through a medley of colorful apis
 
 ###### **fun find:** [21 Best FOAAS API Alternatives in 2022](https://www.jsonapi.co/public-api/FOAAS)
 
+###### **another fun find** [pink was once a masculine color](https://en.wikipedia.org/wiki/Pink)
+
 <br>
 
 ---
