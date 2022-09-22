@@ -54,7 +54,7 @@ function Cocktails({ openModal, onClose }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="cocktailsCard">
-          <Button onClick={onClose}>&#x274C;</Button>
+          <Button onClick={onClose}>&#x2620;</Button>
 
           {cocktail && (
             <div className="detailsDiv">

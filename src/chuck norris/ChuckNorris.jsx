@@ -62,7 +62,7 @@ function ChuckNorris({ openModal, onClose }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="chucksCard">
-          <Button onClick={onClose}>&#x274C;</Button>
+          <Button onClick={onClose}>&#x2620;</Button>
           <div>
             <p className="jokeText">{joke.joke}</p>
           </div>

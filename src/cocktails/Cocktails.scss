@@ -8,6 +8,10 @@
     @include button-submit;
   }
 
+  Button {
+    @include button-x-custom-2;
+  }
+
   button:hover {
     @include button-hover;
   }
