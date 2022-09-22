@@ -49,9 +49,6 @@ function StarWars({ openModal, onClose }) {
   });
   const [error, setError] = useState();
 
-  const invalidInput =
-    "Apologies, no starship exists by that name. Please try again.";
-
   const searchStarship = (event) => {
     event.preventDefault();
     axios
@@ -204,7 +201,7 @@ function StarWars({ openModal, onClose }) {
                 </h5>
               </div>
             ) : (
-              invalidInput
+              <></>
             )}
           </section>
         </Box>
