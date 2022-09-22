@@ -65,10 +65,28 @@
   transform: scale(1.25);
 }
 
+@mixin button-x-custom-1 {
+  // circle
+  font-size: $space-xmd;
+  margin-bottom: -1.5rem;
+}
+
+@mixin button-x-custom-2 {
+  // skull
+  font-size: 6.5rem;
+  margin-bottom: -1.5rem;
+}
+
+@mixin button-x-custom-3 {
+  // box
+  font-size: $space-md;
+  margin-bottom: -1.5rem;
+}
+
 // CARD
 @mixin card-space {
   text-align: center;
-  padding-bottom: "4rem";
+  padding-bottom: $space-xmd;
 }
 
 // CHARACTERS HOVER STYLE SET
@@ -274,6 +292,7 @@ $font-rubik-dirt: Rubik Dirt;
 $space-xsm: 0.15rem;
 $space-sm: 1rem;
 $space-md: 3.5rem;
+$space-xmd: 4rem;
 $space-lg: 5rem;
 
 $space-border-none-all: 0;
