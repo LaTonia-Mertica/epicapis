@@ -68,7 +68,7 @@ function Marvel({ openModal, onClose }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="marvelCard">
-          <Button onClick={onClose}>&#x274C;</Button>
+          <Button onClick={onClose}>&#x24E7;</Button>
           <div>
             <p>{marvel}</p>
           </div>

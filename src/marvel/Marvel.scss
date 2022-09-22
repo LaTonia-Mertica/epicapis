@@ -8,6 +8,11 @@
     @include button-submit;
   }
 
+  Button {
+    color: #0bda51;
+    @include button-x-custom-1;
+  }
+
   button:hover {
     @include button-hover;
   }
