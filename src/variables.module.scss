@@ -42,7 +42,7 @@
 
 @mixin button-submit-input-inline {
   color: $ea-red;
-  font-size: 1.5rem;
+  font-size: 2.25rem;
   margin: 1% 25%;
   text-transform: uppercase;
   font-family: $font-rubik-dirt;
@@ -114,12 +114,7 @@ $font-abril-fatface: Abril Fatface;
 $font-amatic-sc: Amatic SC;
 $font-bangers: Bangers;
 $font-luckiest-guy: Luckiest Guy;
-$font-mr-dafoe: Mr Dafoe;
-$font-mr-de-haviland: Mr De Haviland;
-$font-raleway-dots: Raleway Dots;
 $font-rubik-dirt: Rubik Dirt;
-$font-rubik-moonrocks: Rubik Moonrocks;
-$font-rubik-puddles: Rubik Puddles;
 
 @mixin text-uppercase {
   text-transform: uppercase;
