@@ -47,7 +47,7 @@ function OwenWilson({ openModal, onClose }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="owensCard">
-          <Button onClick={onClose}>&#x274C;</Button>
+          <Button onClick={onClose}>&#x2573;</Button>
           {movie && (
             <div>
               <video src={movie.video["480p"]} autoPlay controls loop />
