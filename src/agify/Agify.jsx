@@ -60,7 +60,9 @@ function Agify({ openModal, onClose }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="agifyCard">
-          <button onClick={onClose}>&#x274C;</button>
+          <button onClick={onClose} className="closeBtn">
+            &#x2327;
+          </button>
           <form onSubmit={getAgeMyName}>
             <input
               type="text"

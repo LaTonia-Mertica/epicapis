@@ -5,7 +5,16 @@
 
   button {
     @include button-space;
-    @include button-submit-input-inline;
+    @include button-submit;
+  }
+
+  button.closeBtn {
+    font-size: 3rem;
+  }
+
+  Button {
+    font-size: 1.5rem;
+    margin-bottom: $space-sm;
   }
 
   button:hover {

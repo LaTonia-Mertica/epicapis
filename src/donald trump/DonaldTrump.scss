@@ -8,12 +8,17 @@
     @include button-submit;
   }
 
+  Button {
+    color: #ffdd42;
+    @include button-x-custom-3;
+  }
+
   button:hover {
     @include button-hover;
   }
 
   .quoteText {
-    text-shadow: 0.05rem 0.05rem yellow;
+    text-shadow: 0.05rem 0.05rem #ffdd42;
     font-family: $font-luckiest-guy;
     font-size: 2.5rem;
     padding: 0 $space-md;
