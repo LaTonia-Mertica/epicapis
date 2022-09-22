@@ -92,6 +92,24 @@ function Cocktails({ openModal, onClose }) {
                 </h3>
               </div>
 
+              <div>
+                <h3>
+                  <span className="detailHeaders">measure</span>
+                  <br />
+                  {cocktail.strMeasure1}
+                </h3>
+                <h3>
+                  <span className="detailHeaders">measure</span>
+                  <br />
+                  {cocktail.strMeasure2}
+                </h3>
+                <h3>
+                  <span className="detailHeaders">measure</span>
+                  <br />
+                  {cocktail.strMeasure3}
+                </h3>
+              </div>
+
               <h3 className="instructions">
                 <span className="detailHeaders">instructions:</span>
                 <br />
