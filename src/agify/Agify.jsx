@@ -61,7 +61,7 @@ function Agify({ openModal, onClose }) {
       >
         <Box sx={style} className="agifyCard">
           <button onClick={onClose} className="closeBtn">
-            &#x2327;
+            &#x2612;
           </button>
           <form onSubmit={getAgeMyName}>
             <input
