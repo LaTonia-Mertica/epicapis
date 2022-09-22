@@ -4,7 +4,6 @@
   @include card-space;
 
   button {
-    color: $ea-red;
     @include button-space;
     @include button-submit-input-inline;
   }
@@ -35,7 +34,6 @@
 
   .gif {
     margin-top: 3rem;
-    margin-bottom: -5.5rem;
   }
 
   .pokemonImg {
