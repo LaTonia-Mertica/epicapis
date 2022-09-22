@@ -100,7 +100,7 @@ function StarWars({ openModal, onClose }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="starWarsCard">
-          <Button onClick={onClose}>&#x274C;</Button>
+          <Button onClick={onClose}>&#x24B3;</Button>
           <form onSubmit={searchStarship}>
             <input
               type="text"

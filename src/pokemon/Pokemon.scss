@@ -13,6 +13,7 @@
   }
 
   Button.searchBtn {
+    font-size: 1.5rem;
     @include button-search-submit-block-display;
   }
 

@@ -74,7 +74,7 @@ function Pokemon({ openModal, onClose }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="pokemonsCard">
-          <button onClick={onClose}>&#x274C;</button>
+          <button onClick={onClose}>&#x24B3;</button>
           <form onSubmit={searchPokemon}>
             <input
               type="text"
