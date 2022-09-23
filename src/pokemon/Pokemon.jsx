@@ -5,7 +5,27 @@ import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 
 import "./Pokemon.scss";
+
+import chansey from "./images/chansey.gif";
+import charizardxflying from "./images/charizardxflying.gif";
+import charmeleon from "./images/charmeleon.gif";
+import cinderace from "./images/cinderace.gif";
+import djvulpix from "./images/djvulpix.gif";
+import eevee from "./images/eevee.gif";
+import froakie from "./images/froakie.gif";
+import furret from "./images/furret.gif";
+import garchomp from "./images/garchomp.gif";
+import lucario from "./images/lucario.gif";
+import mewtwo from "./images/mewtwo.gif";
+import nintendo from "./images/nintendo.gif";
 import pikachuhi from "./images/pikachuhi.gif";
+import pikachulove from "./images/pikachulove.gif";
+import pikachumusic from "./images/pikachumusic.gif";
+import squirtle from "./images/squirtle.gif";
+import sylveon from "./images/sylveon.gif";
+import togedemaru from "./images/togedemaru.gif";
+import venomoth from "./images/venomoth.gif";
+import zoroa from "./images/zoroa.gif";
 
 // mui
 const style = {
@@ -39,6 +59,32 @@ function Pokemon({ openModal, onClose }) {
   });
   const [error, setError] = useState();
 
+  const pokemonGifs = [
+    <img src={chansey} alt="Pokemon" />,
+    <img src={charizardxflying} alt="Pokemon" />,
+    <img src={charmeleon} alt="Pokemon" />,
+    <img src={cinderace} alt="Pokemon" />,
+    <img src={djvulpix} alt="Pokemon" />,
+    <img src={eevee} alt="Pokemon" />,
+    <img src={froakie} alt="Pokemon" />,
+    <img src={furret} alt="Pokemon" />,
+    <img src={garchomp} alt="Pokemon" />,
+    <img src={lucario} alt="Pokemon" />,
+    <img src={mewtwo} alt="Pokemon" />,
+    <img src={nintendo} alt="Pokemon" />,
+    <img src={pikachuhi} alt="Pokemon" />,
+    <img src={pikachulove} alt="Pokemon" />,
+    <img src={pikachumusic} alt="Pokemon" />,
+    <img src={squirtle} alt="Pokemon" />,
+    <img src={sylveon} alt="Pokemon" />,
+    <img src={togedemaru} alt="Pokemon" />,
+    <img src={venomoth} alt="Pokemon" />,
+    <img src={zoroa} alt="Pokemon" />,
+  ];
+
+  let randomGif = Math.floor(Math.random() * (pokemonGifs.length + 1));
+  randomGif = pokemonGifs[randomGif];
+
   const searchPokemon = (event) => {
     event.preventDefault();
     axios
@@ -56,7 +102,7 @@ function Pokemon({ openModal, onClose }) {
       })
       .catch((error) => {
         console.error(error);
-        setError("Pokemon doesn't exist");
+        setError("Pokemon Doesn't Exist");
       });
   };
 
@@ -95,19 +141,7 @@ function Pokemon({ openModal, onClose }) {
             <h1>{error}</h1>
           ) : (
             <>
-              <div>
-                {!pokemonShow ? (
-                  <img
-                    src={pikachuhi}
-                    alt="Pikachu Hi"
-                    width="20%"
-                    height="auto"
-                    className="gif"
-                  ></img>
-                ) : (
-                  <h1>{pokemonName}</h1>
-                )}
-              </div>
+              <div>{!pokemonShow ? randomGif : <h1>{pokemonName}</h1>}</div>
 
               {/* gif credit: tenor.com */}
 
