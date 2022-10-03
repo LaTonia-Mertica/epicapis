@@ -39,9 +39,62 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
     <title>EPICAPIS</title>
+
+    <style>
+      body {
+        background-color: #fff;
+      }
+      .dark-mode {
+        background-color: yellowgreen;
+      }
+      .dark-mode .listWordColor {
+        color: #fff;
+        font-size: 1.25rem;
+      }
+      .dark-mode #epicapislogo {
+        filter: drop-shadow(0.15rem 0.15rem 0.15rem #222);
+        width: 17rem;
+      }
+      .dark-mode a,
+      .dark-mode .apisOfEpicapis,
+      .dark-mode .selectionsSubmitBtn {
+        color: black;
+      }
+      .dark-mode .myName {
+        font-size: 0.7rem;
+      }
+      button.epicModeBtn {
+        color: #fff;
+        border: none;
+        border-radius: 1rem;
+        background-color: yellowgreen;
+        text-shadow: black 0.025rem 0.025rem;
+
+        width: 7rem;
+        padding: 0.25rem;
+        margin-top: 1.25rem;
+        margin-left: 1.25rem;
+      }
+      .dark-mode button.epicModeBtn {
+        color: yellowgreen;
+        border: none;
+        border-radius: 1rem;
+        background-color: #fff;
+        text-shadow: black 0.025rem 0.025rem;
+      }
+    </style>
   </head>
 
   <body>
+    <button onClick="darkMode()" class="epicModeBtn">EPIC MODE</button>
+
+    <script>
+      function darkMode() {
+        let element = document.body;
+        element.classList.toggle("dark-mode");
+      }
+    </script>
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>

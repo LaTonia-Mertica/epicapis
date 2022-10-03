@@ -89,55 +89,57 @@ function App() {
 
   return (
     <main>
-      <a href="#">
-        <img
-          src={epicapisLogo}
-          alt="Epic Apis Logo"
-          width="500px"
-          height="500px"
-          id="epicapislogo"
-        ></img>
-      </a>
-      <nav>
-        <ul className="unorderedList">
-          <li>
-            <a href="https://trello.com/b/YLTdkWTR/epicapis">
-              <span className="listWordFont listWordColor">trello</span> board
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/LaTonia-Mertica/epicapis">
-              <span className="listWordColor">repo</span>sitory
-            </a>
-          </li>
-          <li>
-            <a href="https://www.latoniamertica.dev/">
-              <span className="listWordFont listWordColor">dot dev</span> site
-            </a>
-          </li>
-        </ul>
-        <ul>
-          <section className="copyrightContent">
-            &copy;
-            <a
-              href={epicapisposter}
-              className="epicapisCopyrightText listWordColor"
-              target="_blank"
-              rel="noreferrer"
-            >
-              EPIC<strong className="apisOfEpicapis">APIS</strong>
-            </a>
-            <a
-              href="https://www.latoniamertica.dev/"
-              className="myName listWordColor"
-              target="_blank"
-              rel="noreferrer"
-            >
-              La'Tonia Mertica
-            </a>
-          </section>
-        </ul>
-      </nav>
+      <div className="logoAndNavDiv">
+        <a href="#">
+          <img
+            src={epicapisLogo}
+            alt="Epic Apis Logo"
+            width="500px"
+            height="500px"
+            id="epicapislogo"
+          ></img>
+        </a>
+        <nav>
+          <ul className="unorderedList">
+            <li>
+              <a href="https://trello.com/b/YLTdkWTR/epicapis">
+                <span className="listWordFont listWordColor">trello</span> board
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/LaTonia-Mertica/epicapis">
+                <span className="listWordColor repoText">repo</span> sitory
+              </a>
+            </li>
+            <li className="dotDevSiteText">
+              <a href="https://www.latoniamertica.dev/">
+                <span className="listWordFont listWordColor">dot dev</span> site
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <section className="copyrightContent">
+              &copy;
+              <a
+                href={epicapisposter}
+                className="epicapisCopyrightText listWordColor"
+                target="_blank"
+                rel="noreferrer"
+              >
+                EPIC<strong className="apisOfEpicapis">APIS</strong>
+              </a>
+              <a
+                href="https://www.latoniamertica.dev/"
+                className="myName listWordColor"
+                target="_blank"
+                rel="noreferrer"
+              >
+                La'Tonia Mertica
+              </a>
+            </section>
+          </ul>
+        </nav>
+      </div>
       <Masonry
         breakpointCols={1}
         className="my-masonry-grid"
@@ -464,6 +466,7 @@ function App() {
           email selections
         </Button>
       </form>
+
       <footer className="copyrightText">
         {/* &copy;
         <a
