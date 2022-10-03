@@ -1,29 +1,10 @@
 import React from "react";
-import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 
 import "./Say.scss";
-
-// mui
-const style = {
-  position: "absolute",
-  outline: 0,
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: "87%",
-  bgcolor: "background.transparent",
-  border: ".05rem solid #fff",
-  boxShadow: 23,
-  p: 1.15,
-
-  color: "#fff",
-  fontFamily: "Arial, Helvetica, sans-serif",
-
-  maxHeight: "90vh",
-  overflow: "scroll",
-};
+import { style } from "../mui.js";
 
 function Say({ openModal, onClose }) {
   return (
@@ -37,18 +18,119 @@ function Say({ openModal, onClose }) {
         <Box sx={style} className="sayCard">
           <Button onClick={onClose}>&#x274C;</Button>
           <div>
-            <fieldset>
-              <p className="sayPara">
-                <label htmlFor="neversay">never say :&nbsp;&nbsp;</label>
+            <form action="#">
+              <fieldset>
+                <p className="sayPara">
+                  <label htmlFor="neversay"></label>
+                  <select name="neversay" id="neversay">
+                    <optgroup label="DEMOGRAPHICS" className="optgroup1">
+                      <option
+                        value=""
+                        disabled
+                        selected
+                        hidden
+                        className="optionClickPrompt"
+                      >
+                        select what matters most to you
+                      </option>
+                      <option value="age" className="sayTopicText">
+                        age
+                      </option>
+                      <option value="arrest record" className="sayTopicText">
+                        arrest record
+                      </option>
+                      <option
+                        value="audible expression"
+                        className="sayTopicText"
+                      >
+                        audible expression
+                      </option>
+                      <option value="color" className="sayTopicText">
+                        color
+                      </option>
+                      <option
+                        value="conviction record"
+                        className="sayTopicText"
+                      >
+                        conviction record
+                      </option>
+                      <option value="creed" className="sayTopicText">
+                        creed
+                      </option>
+                      <option value="employment" className="sayTopicText">
+                        employment
+                      </option>
+                      <option value="national origin" className="sayTopicText">
+                        national origin
+                      </option>
+                      <option value="race" className="sayTopicText">
+                        race
+                      </option>
+                      <option value="religion" className="sayTopicText">
+                        religion
+                      </option>
+                      <option value="weight" className="sayTopicText">
+                        weight
+                      </option>
+                      <option value="" className="sayTopicText"></option>
+                    </optgroup>
 
-                <input
-                  type="text"
-                  name="neversay"
-                  id="neversay"
-                  list="neversay-list"
-                  placeholder="select your never say top pick"
-                />
-                <datalist id="neversay-list">
+                    <optgroup label="WELLBEING" className="optgroup2">
+                      <option value="disability" className="sayTopicText">
+                        disability
+                      </option>
+                      <option
+                        value="domestic violence victim status"
+                        className="sayTopicText"
+                      >
+                        domestic violence victim status
+                      </option>
+                      <option
+                        value="employment status"
+                        className="sayTopicText"
+                      >
+                        employment status
+                      </option>
+                      <option value="gender identity" className="sayTopicText">
+                        gender identity
+                      </option>
+                      <option
+                        value="gender expression"
+                        className="sayTopicText"
+                      >
+                        gender expression
+                      </option>
+                      <option value="familial status" className="sayTopicText">
+                        familial status
+                      </option>
+                      <option value="marital status" className="sayTopicText">
+                        marital status
+                      </option>
+                      <option
+                        value="mental health status"
+                        className="sayTopicText"
+                      >
+                        mental health status
+                      </option>
+                      <option
+                        value="predisposing genetic characteristics"
+                        className="sayTopicText"
+                      >
+                        predisposing genetic characteristics
+                      </option>
+                      <option value="sex" className="sayTopicText">
+                        sex
+                      </option>
+                      <option
+                        value="sexual orientation"
+                        className="sayTopicText"
+                      >
+                        sexual orientation
+                      </option>
+                    </optgroup>
+                  </select>
+
+                  {/* <datalist id="neversay-list">
                   <option value="age">
                     humanity is dying because of people like you
                   </option>
@@ -91,12 +173,14 @@ function Say({ openModal, onClose }) {
                   <option value="sexual orientation">
                     sure you're gay, you don't look homosexual
                   </option>
-                </datalist>
-              </p>
-            </fieldset>
-            <button type="submit" className="submitBtn">
-              submit
-            </button>
+                </datalist> */}
+                </p>
+              </fieldset>
+
+              <button type="submit" value="submit" className="submitBtn">
+                submit
+              </button>
+            </form>
           </div>
         </Box>
       </Modal>

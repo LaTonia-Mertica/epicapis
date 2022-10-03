@@ -33,19 +33,25 @@
     @include text-uppercase;
   }
 
-  .gif {
-    margin-top: 3rem;
-  }
-
   .pokemonImg {
     width: 11rem;
   }
 
-  section {
-    @include section-basic-format;
+  span {
+    display: flex;
+    justify-content: center;
+  }
+
+  img.pokemonImg {
+    display: flex;
+    justify-content: flex-start;
+
+    margin-left: -3rem;
+    // margin-bottom: -3rem;
   }
 
   h2 {
     font-size: $space-sm;
+    text-align: left;
   }
 }

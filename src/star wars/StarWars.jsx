@@ -1,31 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 
 import "./StarWars.scss";
+import { style } from "../mui.js";
+
 import stormtrooper from "./images/stormtrooper.gif";
-
-// mui
-const style = {
-  position: "absolute",
-  outline: 0,
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: "87%",
-  bgcolor: "background.transparent",
-  border: ".05rem solid #fff",
-  boxShadow: 23,
-  p: 1.15,
-
-  color: "#fff",
-  fontFamily: "Arial, Helvetica, sans-serif",
-
-  maxHeight: "90vh",
-  overflow: "scroll",
-};
 
 function StarWars({ openModal, onClose }) {
   const [starshipName, setStarshipName] = useState("");
@@ -51,6 +33,7 @@ function StarWars({ openModal, onClose }) {
 
   const searchStarship = (event) => {
     event.preventDefault();
+
     axios
       .get(`https://swapi.dev/api/starships/?search=${starshipName}`)
       .then((response) => {
@@ -112,6 +95,7 @@ function StarWars({ openModal, onClose }) {
                 setStarshipName(event.target.value.toLowerCase());
               }}
             />
+
             <Button
               type="submit"
               onClick={searchStarship}
@@ -120,90 +104,88 @@ function StarWars({ openModal, onClose }) {
               Search Starships
             </Button>
           </form>
-          {/* img credit: stormtrooper / tenor.com */}
-          <div>
-            {error ? (
-              <h1>{error}</h1>
-            ) : (
-              <>
-                <h1>{starshipName}</h1>
 
+          {/* img credit: stormtrooper / tenor.com */}
+
+          {error ? (
+            <h1>{error}</h1>
+          ) : (
+            <>
+              {!setStarship ? (
                 <img
                   src={stormtrooper}
                   alt="Stormtrooper"
-                  width="5%"
+                  width="15%"
                   height="auto"
                   className="stormtrooperImg"
                 ></img>
-              </>
-            )}
-          </div>
+              ) : (
+                <>
+                  <h1>{starshipName}</h1>
 
-          <section>
-            {!!setStarship ? (
-              <div>
-                <h3>model: {starship.model}</h3>
-                <h3 className="classH3">class: {starship.class}</h3>
-                <h3>manufacturer: {starship.manufacturer}</h3>
+                  <h3>model: {starship.model}</h3>
+                  <h3 className="classH3">class: {starship.class}</h3>
+                  <h3>manufacturer: {starship.manufacturer}</h3>
 
-                <h5>
-                  <span className="specificationsText">cost in credits: </span>
-                  {starship.cost}
-                </h5>
-                <h5>
-                  <span className="specificationsText">length: </span>
-                  {starship.length}
-                </h5>
-                <h5>
-                  <span className="specificationsText">pilots: </span>
-                  {starship.pilots}
-                </h5>
-                <h5>
-                  <span className="specificationsText">crew: </span>
-                  {starship.crew}
-                </h5>
-                <h5>
-                  <span className="specificationsText">consumables: </span>
-                  {starship.consumables}
-                </h5>
-                <h5>
-                  <span className="specificationsText">
-                    passenger capacity:{" "}
-                  </span>
-                  {starship.capacityPassengers}
-                </h5>
-                <h5>
-                  <span className="specificationsText">cargo capacity: </span>
-                  {starship.capacityCargo}
-                </h5>
-                <h5>
-                  <span className="specificationsText">
-                    max atmosphering speed:{" "}
-                  </span>
-                  {starship.speed}
-                </h5>
-                <h5>
-                  <span className="specificationsText">hyperdrive: </span>
-                  {starship.hyperdrive}
-                </h5>
-                <h5>
-                  <span className="specificationsText">megalights: </span>
-                  {starship.megalights}
-                </h5>
-                <h5>
-                  <span className="specificationsText">created: </span>
-                  {starship.created}
-                </h5>
+                  <h5>
+                    <span className="specificationsText">
+                      cost in credits:{" "}
+                    </span>
+                    {starship.cost}
+                  </h5>
+                  <h5>
+                    <span className="specificationsText">length: </span>
+                    {starship.length}
+                  </h5>
+                  <h5>
+                    <span className="specificationsText">pilots: </span>
+                    {starship.pilots}
+                  </h5>
+                  <h5>
+                    <span className="specificationsText">crew: </span>
+                    {starship.crew}
+                  </h5>
+                  <h5>
+                    <span className="specificationsText">consumables: </span>
+                    {starship.consumables}
+                  </h5>
+                  <h5>
+                    <span className="specificationsText">
+                      passenger capacity:{" "}
+                    </span>
+                    {starship.capacityPassengers}
+                  </h5>
+                  <h5>
+                    <span className="specificationsText">cargo capacity: </span>
+                    {starship.capacityCargo}
+                  </h5>
+                  <h5>
+                    <span className="specificationsText">
+                      max atmosphering speed:{" "}
+                    </span>
+                    {starship.speed}
+                  </h5>
+                  <h5>
+                    <span className="specificationsText">hyperdrive: </span>
+                    {starship.hyperdrive}
+                  </h5>
+                  <h5>
+                    <span className="specificationsText">megalights: </span>
+                    {starship.megalights}
+                  </h5>
+                  <h5>
+                    <span className="specificationsText">created: </span>
+                    {starship.created}
+                  </h5>
 
-                <h5>
-                  <span className="specificationsText">films: </span>
-                  {starship.films}
-                </h5>
-              </div>
-            ) : (
-              <></>
-            )}
-          </section>
+                  <h5>
+                    <span className="specificationsText">films: </span>
+                    {starship.films}
+                  </h5>
+                </>
+              )}
+            </>
+          )}
         </Box>
       </Modal>
     </main>

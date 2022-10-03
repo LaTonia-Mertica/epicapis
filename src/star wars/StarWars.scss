@@ -29,38 +29,8 @@
     @include input-text-selection;
   }
 
-  img.stormtrooperImg {
-    float: left;
-    margin-top: -$space-md;
-    padding-left: 13.5rem;
-  }
-
-  section {
-    @include section-basic-format;
-  }
-
-  div {
-    margin-bottom: 2.25rem;
-  }
-
   h1 {
     @include text-uppercase;
-  }
-
-  .classH3 {
-    margin: -0.75rem 0;
-  }
-
-  h3,
-  h3.classH3,
-  h5 {
-    margin-left: -11.5rem;
-    text-align: left;
-    text-shadow: 0.15rem 0.15rem 0.15rem $ea-black;
-  }
-
-  h5 {
-    margin-bottom: -1.25rem;
   }
 
   .specificationsText {

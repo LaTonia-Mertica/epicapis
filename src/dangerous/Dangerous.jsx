@@ -1,9 +1,11 @@
 import React from "react";
-import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 
 import "./Dangerous.scss";
+import { style } from "../mui.js";
+
 import alienating from "./images/alienating.png";
 import boastful from "./images/boastful.png";
 import boring from "./images/boring.png";
@@ -18,26 +20,6 @@ import toonested from "./images/too-nested.png";
 import uninspiring from "./images/uninspiring.png";
 import unrelatable from "./images/unrelatable.png";
 import unwieldy from "./images/unwieldy.png";
-
-// mui
-const style = {
-  position: "absolute",
-  outline: 0,
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: "87%",
-  bgcolor: "background.transparent",
-  border: ".05rem solid #fff",
-  boxShadow: 23,
-  p: 1.15,
-
-  color: "#fff",
-  fontFamily: "Arial, Helvetica, sans-serif",
-
-  maxHeight: "90vh",
-  overflow: "scroll",
-};
 
 function Dangerous({ openModal, onClose }) {
   return (

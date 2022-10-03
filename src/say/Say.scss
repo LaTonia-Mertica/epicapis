@@ -21,21 +21,17 @@
     cursor: pointer;
   }
 
-  input[type="text"] {
-    width: 33%;
-    padding-left: 0.5rem;
-  }
+  select {
+    color: #c8c4bd;
+    text-align: center;
 
-  input[type="text"]::placeholder {
-    @include input-text-placeholder;
-  }
+    width: 37%;
+    padding: 0.75rem;
 
-  p.sayPara {
-    @include p-character-para-center;
-  }
-
-  .sayPara {
-    @include character-para-md;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: "";
   }
 
   .submitBtn {

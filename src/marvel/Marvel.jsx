@@ -1,61 +1,48 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import md5 from "js-md5";
-import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 
 import "./Marvel.scss";
-
-// mui
-const style = {
-  position: "absolute",
-  outline: 0,
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: "87%",
-  bgcolor: "background.transparent",
-  border: ".05rem solid #fff",
-  boxShadow: 23,
-  p: 1.15,
-
-  color: "#fff",
-  fontFamily: "Arial, Helvetica, sans-serif",
-
-  maxHeight: "90vh",
-  overflow: "scroll",
-};
+import { style } from "../mui.js";
 
 function Marvel({ openModal, onClose }) {
-  const [marvel, setMarvel] = useState();
   const ts = require("./ts");
   const apiKey = require("./apiKey");
   const privateApiKey = require("./privateApiKey");
   const hash = md5(ts + apiKey + privateApiKey);
 
-  useEffect(() => {
-    (async () => {
-      const data = await fetch(
-        `http://gateway.marvel.com/v1/public/creators?ts=${ts}&apiKey=${apiKey}&hash=${hash}`,
-        {
-          Method: "GET",
-          Params: {
-            apikey: "apiKey",
-            privateApiKey: "privateApiKey",
-            ts: "ts",
-            hash: "hash",
-          },
-          Headers: {
-            "Content-Type": "application/json",
-            Accept: "*/*",
-          },
-        }
-      );
-      console.log(data);
-      const json = await data.json();
-      setMarvel(json[0]);
-    })();
-  }, [ts, apiKey, privateApiKey, hash]);
+  // /name=${name}?ts=${ts}&apiKey=${apiKey}&hash=${hash}
+
+  const [name, setName] = useState("");
+  const [creatorByName, setCreatorByName] = useState({
+    name: "",
+  });
+
+  const getCreatorByName = async (event) => {
+    event.preventDefault();
+
+    const response = fetch(
+      `http://gateway.*marvel.com/v1/public?ts=${ts}&apiKey=${apiKey}&hash=${hash}`
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => console.log(data))
+      .catch((error) => console.log("ACCESS ERROR!"));
+
+    if (!response.ok) {
+      throw new Error(`Error! status: ${response.status}`);
+    }
+
+    const data = response.json();
+    setCreatorByName({
+      name: data.name,
+    });
+
+    console.log(data);
+  };
 
   // "Data provided by Marvel. © 2014 Marvel"
 
@@ -68,9 +55,30 @@ function Marvel({ openModal, onClose }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="marvelCard">
-          <Button onClick={onClose}>&#x24E7;</Button>
+          <button onClick={onClose}>&#x24E7;</button>
+          <form onSubmit={getCreatorByName}>
+            <input
+              type="text"
+              name="marvel"
+              id="marvel"
+              placeholder="enter name"
+              autoComplete="off"
+              value={name}
+              onChange={(event) => {
+                setName(event.target.value.toLowerCase());
+              }}
+            />
+            <Button
+              type="submit"
+              onClick={getCreatorByName}
+              className="searchBtn"
+            >
+              Get Creator by Name
+            </Button>
+          </form>
+
           <div>
-            <p>{marvel}</p>
+            <p>{creatorByName.name}</p>
           </div>
         </Box>
       </Modal>
