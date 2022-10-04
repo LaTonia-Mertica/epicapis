@@ -9,11 +9,9 @@ import { style } from "../mui.js";
 
 function Marvel({ openModal, onClose }) {
   const ts = require("./ts");
-  const apiKey = require("./apiKey");
-  const privateApiKey = require("./privateApiKey");
-  const hash = md5(ts + apiKey + privateApiKey);
-
-  // /name=${name}?ts=${ts}&apiKey=${apiKey}&hash=${hash}
+  const apikey = require("./apikey");
+  const privateapikey = require("./privateApikey");
+  const hash = md5(ts + privateapikey + apikey);
 
   const [name, setName] = useState("");
   const [creatorByName, setCreatorByName] = useState({
@@ -24,7 +22,7 @@ function Marvel({ openModal, onClose }) {
     event.preventDefault();
 
     const response = fetch(
-      `http://gateway.*marvel.com/v1/public?ts=${ts}&apiKey=${apiKey}&hash=${hash}`
+      `http://gateway.marvel.com/v1/public/creators?ts=${ts}&apikey=${apikey}&hash=${hash}`
     )
       .then((response) => {
         return response.json();
@@ -78,7 +76,7 @@ function Marvel({ openModal, onClose }) {
           </form>
 
           <div>
-            <p>{creatorByName.name}</p>
+            <p>{name.firstName}</p>
           </div>
         </Box>
       </Modal>

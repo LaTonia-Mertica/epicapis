@@ -10,6 +10,8 @@
 
   Button {
     color: #0bda51;
+    margin-left: 2rem;
+    margin-top: 3rem;
     @include button-x-custom-1;
   }
 
