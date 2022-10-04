@@ -10,7 +10,7 @@ html {
   user-select: none;
 }
 body {
-  margin: 0;
+  margin-bottom: -150rem;
   background-color: white;
 }
 div.logoAndNavDiv {
@@ -112,13 +112,6 @@ Button.selectionsSubmitBtn {
   font-size: large;
   text-shadow: 0.025rem 0.025rem 0.025rem #000;
 }
-
-/* footer {
-  margin-top: 2.25rem !important;
-
-  margin: auto;
-  width: 50%;
-} */
 
 /* masonry code */
 /* Do Not need either display below (webkit; flexbox) if autoprefixing */
