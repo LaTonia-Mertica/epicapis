@@ -6,6 +6,7 @@
   background-color: rgba(254, 1, 154, 0.3);
 
   button {
+    cursor: pointer;
     @include button-space;
     @include button-submit;
   }
@@ -15,8 +16,9 @@
     @include button-x-custom-1;
   }
 
-  button:hover {
-    @include button-hover;
+  .manlyModeBtn {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
   }
 
   p {
@@ -30,5 +32,37 @@
     text-justify: inter-word;
     margin-left: 7rem;
     margin-right: 7rem;
+  }
+}
+
+.manly .ronsCard {
+  background-color: rgba(0, 0, 255, 0.3);
+}
+.manly Button {
+  color: deepskyblue;
+}
+.manly p {
+  color: deepskyblue;
+}
+
+// text effects
+.lineUpEffect {
+  animation: 2.5s anim-lineUp ease-out infinite;
+}
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
   }
 }
