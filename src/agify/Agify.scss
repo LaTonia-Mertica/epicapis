@@ -43,21 +43,20 @@
   }
 
   summary.disclaimerSummary {
+    font-size: x-large;
     color: $ea-red;
     text-shadow: $ea-black 0.025rem 0.025rem;
+    cursor: pointer;
   }
 
   details {
-    // margin-bottom: -10rem;
-    // margin-left: -47rem;
-
     margin-bottom: -10rem;
     margin-left: -64rem;
   }
 
-  details:hover {
-    transform: scale(1.5);
-  }
+  // details:hover {
+  //   transform: scale(1.5);
+  // }
 
   .animate {
     // text-transform: uppercase;
