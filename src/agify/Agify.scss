@@ -38,39 +38,86 @@
   }
 
   h1 {
+    margin-top: 13rem;
     @include text-uppercase;
   }
 
+  summary.disclaimerSummary {
+    color: $ea-red;
+    text-shadow: $ea-black 0.025rem 0.025rem;
+  }
+
+  details {
+    // margin-bottom: -10rem;
+    // margin-left: -47rem;
+
+    margin-bottom: -10rem;
+    margin-left: -64rem;
+  }
+
+  details:hover {
+    transform: scale(1.5);
+  }
+
+  .animate {
+    // text-transform: uppercase;
+    background-image: linear-gradient(
+      -225deg,
+      $ea-white 0%,
+      #fff800 29%,
+      $ea-red 67%,
+      $ea-green 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+  }
+
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+
   p {
-    color: $ea-white;
     margin-top: -5rem;
     font-size: 11rem;
     font-family: $font-abril-fatface;
   }
 
   .disclaimerPara {
-    width: 15%;
-    font-size: xx-small;
+    color: $ea-black;
+    width: 11.5rem;
+    font-size: x-small;
     text-align: justify;
-    margin-left: $space-sm;
+    font-family: Arial, Helvetica, sans-serif;
+
+    position: absolute;
+    left: 1.75rem;
+    top: 7rem;
 
     // opacity effect
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 0.75rem;
+    background-color: rgba(255, 0, 0, 0.7);
+    padding: 1rem;
   }
 
-  span.disclaimerSpan {
-    color: $ea-red;
-    text-shadow: $ea-black 0.025rem 0.025rem;
-  }
+  // .disclaimerPara:hover {
+  //   transform: scale(1.5);
+  //   position: absolute;
+  //   left: $space-md;
+  //   bottom: $space-sm;
+  //   top: 15rem;
+  //   margin-bottom: $space-md;
 
-  .disclaimerParaText {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-  .disclaimerPara:hover {
-    transform: scale(1.5);
-    margin-left: 34rem;
-    margin-bottom: 34rem;
-  }
+  //   background-color: rgba(255, 0, 0, 0.7);
+  //   height: 6rem;
+  //   padding: 1rem;
+  // }
 }

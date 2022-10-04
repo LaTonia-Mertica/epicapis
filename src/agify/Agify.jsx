@@ -54,21 +54,27 @@ function Agify({ openModal, onClose }) {
               Get Age by Name
             </Button>
           </form>
+          <details>
+            <summary className="disclaimerSummary animate">
+              the fine print
+            </summary>
+            <p className="disclaimerPara">
+              documentation and / or marketing describe agify as a resource to{" "}
+              <b>get the age</b> of someone's <b>a) </b>
+              <i>name</i> or <b>b) </b>
+              <i>person</i>.
+              <br />
+              <br />
+              while agify may be useful in "analytics, ad segmenting,
+              demographic statistics etc." as stated in the documentation and /
+              or marketing, <b>search results may vary</b> from expected
+              outcomes.
+            </p>
+          </details>
 
           <div>
             <h1>{ageByName.name}</h1>
             <p>{ageByName.age}</p>
-            <p className="disclaimerPara">
-              <span className="disclaimerSpan">the fine print:&emsp;</span>
-              <span className="disclaimerParaText">
-                agify documentation and/or marketing describes the api as a
-                resource to get the a) age of a name and b) age of a person.
-                while agify may be useful in "analytics, ad segmenting,
-                demographic statistics etc." as stated in the documentation
-                and/or marketing, search results may vary from expected
-                outcomes.
-              </span>
-            </p>
           </div>
         </Box>
       </Modal>
