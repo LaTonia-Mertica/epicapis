@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 
 import "./Say.scss";
 import { style } from "../mui.js";
+import phraseGenerator from "./phraseGenerator";
 
 function Say({ openModal, onClose }) {
+  const [phraseToShow, setPhraseToShow] = useState();
+
+  const valueSelected = (evt) => {
+    phraseGenerator(setPhraseToShow, evt.target.value);
+  };
   return (
     <main>
       <Modal
@@ -22,7 +28,11 @@ function Say({ openModal, onClose }) {
               <fieldset>
                 <p className="sayPara">
                   <label htmlFor="neversay"></label>
-                  <select name="neversay" id="neversay">
+                  <select
+                    name="neversay"
+                    id="neversay"
+                    onChange={valueSelected}
+                  >
                     <optgroup label="DEMOGRAPHICS" className="optgroup1">
                       <option
                         value=""
@@ -33,147 +43,90 @@ function Say({ openModal, onClose }) {
                       >
                         select what matters most to you
                       </option>
-                      <option value="age" className="sayTopicText">
+
+                      <option value="age" id="age">
                         age
                       </option>
-                      <option value="arrest record" className="sayTopicText">
+
+                      <option value="arrest record" id="arrestRecord">
                         arrest record
                       </option>
-                      <option
-                        value="audible expression"
-                        className="sayTopicText"
-                      >
+                      <option value="audible expression" id="audibleExpression">
                         audible expression
                       </option>
-                      <option value="color" className="sayTopicText">
+                      <option value="color" id="color">
                         color
                       </option>
-                      <option
-                        value="conviction record"
-                        className="sayTopicText"
-                      >
+                      <option value="conviction record" id="convictionRecord">
                         conviction record
                       </option>
-                      <option value="creed" className="sayTopicText">
+                      <option value="creed" id="creed">
                         creed
                       </option>
-                      <option value="employment" className="sayTopicText">
+                      <option value="employment" id="employment">
                         employment
                       </option>
-                      <option value="national origin" className="sayTopicText">
+                      <option value="national origin" id="nationalOrigin">
                         national origin
                       </option>
-                      <option value="race" className="sayTopicText">
+                      <option value="race" id="race">
                         race
                       </option>
-                      <option value="religion" className="sayTopicText">
+                      <option value="religion" id="religion">
                         religion
                       </option>
-                      <option value="weight" className="sayTopicText">
+                      <option value="weight" id="weight">
                         weight
                       </option>
-                      <option value="" className="sayTopicText"></option>
+                      <option value=""></option>
                     </optgroup>
 
                     <optgroup label="WELLBEING" className="optgroup2">
-                      <option value="disability" className="sayTopicText">
+                      <option value="disability" id="disability">
                         disability
                       </option>
                       <option
                         value="domestic violence victim status"
-                        className="sayTopicText"
+                        id="domesticViolenceVictimStatus"
                       >
                         domestic violence victim status
                       </option>
-                      <option
-                        value="employment status"
-                        className="sayTopicText"
-                      >
+                      <option value="employment status" id="employmentStatus">
                         employment status
                       </option>
-                      <option value="gender identity" className="sayTopicText">
+                      <option value="gender identity" id="genderIdentity">
                         gender identity
                       </option>
-                      <option
-                        value="gender expression"
-                        className="sayTopicText"
-                      >
+                      <option value="gender expression" id="genderExpression">
                         gender expression
                       </option>
-                      <option value="familial status" className="sayTopicText">
+                      <option value="familial status" id="familialStatus">
                         familial status
                       </option>
-                      <option value="marital status" className="sayTopicText">
+                      <option value="marital status" id="maritalStatus">
                         marital status
                       </option>
                       <option
                         value="mental health status"
-                        className="sayTopicText"
+                        id="mentalHealthStatus"
                       >
                         mental health status
                       </option>
                       <option
                         value="predisposing genetic characteristics"
-                        className="sayTopicText"
+                        id="predisposingGeneticCharacteristics"
                       >
                         predisposing genetic characteristics
                       </option>
-                      <option value="sex" className="sayTopicText">
+                      <option value="sex" id="sex">
                         sex
                       </option>
-                      <option
-                        value="sexual orientation"
-                        className="sayTopicText"
-                      >
+                      <option value="sexual orientation" id="sexualOrientation">
                         sexual orientation
                       </option>
                     </optgroup>
                   </select>
-
-                  {/* <datalist id="neversay-list">
-                  <option value="age">
-                    humanity is dying because of people like you
-                  </option>
-                  <option value="arrest or conviction record">
-                    what'd you do, you violent, should we be worried
-                  </option>
-                  <option value="color">
-                    your skin is really dark, can I touch it
-                  </option>
-                  <option value="creed and/or religion">
-                    they can hardly be called human being so barbaric
-                  </option>
-                  <option value="disability">
-                    are you high-functioning enough for this
-                  </option>
-                  <option value="domestic violence victim status">
-                    why didn't you just leave, you could've anytime
-                  </option>
-                  <option value="employment">
-                    you wouldn't be a good cultural fit here
-                  </option>
-                  <option value="gender identity or expression">
-                    on your birth certificate it tells you what you are
-                  </option>
-                  <option value="familial and/or marital status">
-                    we need dependable folks, how can we know you are
-                  </option>
-                  <option value="national origin">
-                    go back where you came from
-                  </option>
-                  <option value="predisposing genetic characteristics">
-                    wow, you got a bad seed huh - bummer
-                  </option>
-                  <option value="race">
-                    so well spoken - you are a credit to your people
-                  </option>
-                  <option value="sex">
-                    now, of course, it is all your own fault
-                  </option>
-                  <option value="sexual orientation">
-                    sure you're gay, you don't look homosexual
-                  </option>
-                </datalist> */}
+                  <p>{phraseToShow}</p>
                 </p>
               </fieldset>
 
