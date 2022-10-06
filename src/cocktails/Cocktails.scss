@@ -45,6 +45,18 @@
     animation: glow 1.5s ease-in-out infinite;
   }
 
+  span#instructions {
+    overflow: hidden;
+    line-height: 1.25rem;
+    max-height: 7rem;
+    -webkit-box-orient: vertical;
+    display: block;
+    display: -webkit-box;
+    overflow: scroll !important;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 7;
+  }
+
   .detailHeaders {
     color: $ea-red;
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
