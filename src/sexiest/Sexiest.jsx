@@ -25,7 +25,7 @@ function Sexiest({ openModal, onClose }) {
               <p className="sexiestPara para1">
                 <input
                   type="radio"
-                  name="categories"
+                  name="categoriesFeminine"
                   id="catwoman"
                   value="catwoman"
                 />
@@ -34,7 +34,7 @@ function Sexiest({ openModal, onClose }) {
               <p className="sexiestPara para1">
                 <input
                   type="radio"
-                  name="categories"
+                  name="categoriesFeminine"
                   id="shera"
                   value="shera"
                 />
@@ -43,7 +43,7 @@ function Sexiest({ openModal, onClose }) {
               <p className="sexiestPara para1">
                 <input
                   type="radio"
-                  name="categories"
+                  name="categoriesFeminine"
                   id="wonderwoman"
                   value="wonderwoman"
                 />
@@ -58,7 +58,7 @@ function Sexiest({ openModal, onClose }) {
               <p className="sexiestPara para2">
                 <input
                   type="radio"
-                  name="categories"
+                  name="categoriesMasculine"
                   id="batman"
                   value="batman"
                 />
@@ -68,7 +68,7 @@ function Sexiest({ openModal, onClose }) {
               <p className="sexiestPara para2">
                 <input
                   type="radio"
-                  name="categories"
+                  name="categoriesMasculine"
                   id="spiderman"
                   value="spiderman"
                 />
@@ -78,7 +78,7 @@ function Sexiest({ openModal, onClose }) {
               <p className="sexiestPara para2">
                 <input
                   type="radio"
-                  name="categories"
+                  name="categoriesMasculine"
                   id="superman"
                   value="superman"
                 />
@@ -94,7 +94,7 @@ function Sexiest({ openModal, onClose }) {
               <p className="sexiestPara para3">
                 <input
                   type="radio"
-                  name="categories"
+                  name="categoriesNonBinary"
                   id="snowflake"
                   value="snowflake"
                 />
@@ -104,7 +104,7 @@ function Sexiest({ openModal, onClose }) {
               <p className="sexiestPara para3">
                 <input
                   type="radio"
-                  name="categories"
+                  name="categoriesNonBinary"
                   id="brotherken"
                   value="brotherken"
                 />
@@ -114,7 +114,7 @@ function Sexiest({ openModal, onClose }) {
               <p className="sexiestPara para3">
                 <input
                   type="radio"
-                  name="categories"
+                  name="categoriesNonBinary"
                   id="kidquick"
                   value="kidquick"
                 />
