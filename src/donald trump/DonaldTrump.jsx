@@ -40,7 +40,9 @@ function DonaldTrump({ openModal, onClose }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="donaldsCard">
-          <Button onClick={onClose}>&#x2612;</Button>
+          <Button onClick={onClose} className="donaldCloseBtn">
+            &#x2612;
+          </Button>
           <div>
             <p className="quoteText">' {quote.quote}'</p>
           </div>

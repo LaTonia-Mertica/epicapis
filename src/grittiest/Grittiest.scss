@@ -31,14 +31,19 @@
   }
 
   .decade {
-    width: 5%;
-    cursor: default none;
-    text-align: center;
-    margin-right: 0.75rem;
+    @include input-decade;
   }
 
   input.decade {
     font-size: x-small;
+  }
+
+  input[type="text"]::placeholder {
+    color: $ea-white;
+  }
+
+  input[type="text"] {
+    border-bottom: $space-input-border-bottom;
   }
 
   .grittiestArmy {

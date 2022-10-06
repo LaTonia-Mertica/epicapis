@@ -23,6 +23,7 @@
   }
 
   label {
+    color: red;
     cursor: pointer;
   }
 
@@ -36,6 +37,10 @@
 
   .characters {
     @include character-subheads;
+  }
+
+  span.characters {
+    color: lightyellow;
   }
 
   .characters:hover {

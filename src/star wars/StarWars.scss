@@ -21,7 +21,13 @@
     @include input-basic-format;
   }
 
+  input[type="text"] {
+    color: $ea-white;
+    border-bottom: $space-input-border-bottom;
+  }
+
   input[type="text"]::placeholder {
+    color: $ea-white !important;
     @include input-text-placeholder;
   }
 
@@ -33,7 +39,12 @@
     @include text-uppercase;
   }
 
-  .specificationsText {
-    color: $ea-red;
+  h5 {
+    text-align: left;
+    margin-left: 22rem;
   }
+
+  // .specificationsText {
+  //   color: $ea-red;
+  // }
 }

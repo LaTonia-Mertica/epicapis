@@ -30,7 +30,13 @@
   }
 
   input[type="text"]::placeholder {
+    color: $ea-white !important;
     @include input-text-placeholder;
+  }
+
+  input[type="text"] {
+    color: $ea-white;
+    border-bottom: $space-input-border-bottom;
   }
 
   input[type="text"]::selection {
@@ -43,7 +49,7 @@
   }
 
   summary.disclaimerSummary {
-    font-size: x-large;
+    font-size: small;
     color: $ea-red;
     text-shadow: $ea-black 0.025rem 0.025rem;
     cursor: pointer;
@@ -70,7 +76,7 @@
     background-size: auto auto;
     background-clip: border-box;
     background-size: 200% auto;
-    color: #fff;
+    color: $ea-white;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;

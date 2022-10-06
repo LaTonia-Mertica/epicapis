@@ -18,11 +18,17 @@
   }
 
   input {
+    color: $ea-white;
     @include input-basic-format;
   }
 
   input[type="text"]::placeholder {
+    color: $ea-white !important;
     @include input-text-placeholder;
+  }
+
+  input[type="text"] {
+    border-bottom: $space-input-border-bottom;
   }
 
   input[type="text"]::selection {

@@ -35,12 +35,13 @@
   }
 
   .besties {
+    // color: #99edc3 !important;
     @include character-subheads;
   }
 
   .besties:hover {
     @include characters-hover;
-    color: $ea-red;
+    color: $ea-red !important;
   }
 
   .parens {

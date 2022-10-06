@@ -31,6 +31,9 @@
 
   label {
     cursor: pointer;
+    background: -webkit-linear-gradient(45deg, whitesmoke, #00ff95 80%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .greatestPara {

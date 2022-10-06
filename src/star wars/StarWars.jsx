@@ -11,24 +11,7 @@ import stormtrooper from "./images/stormtrooper.gif";
 
 function StarWars({ openModal, onClose }) {
   const [starshipName, setStarshipName] = useState("");
-  const [starship, setStarship] = useState({
-    name: "",
-    model: "",
-    class: "",
-    manufacturer: "",
-    created: "",
-    cost: "",
-    length: "",
-    pilots: "",
-    crew: "",
-    consumables: "",
-    capacityPassengers: "",
-    capacityCargo: "",
-    speed: "",
-    hyperdrive: "",
-    megalights: "",
-    films: [],
-  });
+  const [starship, setStarship] = useState(null);
   const [error, setError] = useState();
 
   const searchStarship = (event) => {
@@ -42,7 +25,7 @@ function StarWars({ openModal, onClose }) {
           model: response.data.results[0].model,
           class: response.data.results[0].starship_class,
           manufacturer: response.data.results[0].manufacturer,
-          created: response.data.results[0].created,
+          // created: response.data.results[0].created,
           cost: response.data.results[0].cost_in_credits,
           length: response.data.results[0].length,
           pilots: response.data.results[0].pilots,
@@ -54,11 +37,11 @@ function StarWars({ openModal, onClose }) {
           hyperdrive: response.data.results[0].hyperdrive_rating,
           megalights: response.data.results[0].MGLT,
           films: [
-            response.data.results[0].films[0].title,
-            response.data.results[0].films[0].opening_crawl,
-            response.data.results[0].films[0].director,
-            response.data.results[0].films[0].producer,
-            response.data.results[0].films[0].release_date,
+            response.data.results[0].films,
+            // response.data.results[0].films[0].opening_crawl,
+            // response.data.results[0].films[0].director,
+            // response.data.results[0].films[0].producer,
+            // response.data.results[0].films[0].release_date,
           ],
         });
         setError(null);
@@ -73,7 +56,7 @@ function StarWars({ openModal, onClose }) {
   // axios and fetch are used in the epic apis project for practice with both libraries
   // asycn/await and .then are both used in the epic apis project for familiarity with both types of asynchronous code syntax
   // fetch and async/await are the more modern and preferred methods
-
+  // console.log(starship);
   return (
     <main>
       <Modal
@@ -111,7 +94,7 @@ function StarWars({ openModal, onClose }) {
             <h1>{error}</h1>
           ) : (
             <>
-              {!setStarship ? (
+              {!starship ? (
                 <img
                   src={stormtrooper}
                   alt="Stormtrooper"
@@ -123,63 +106,69 @@ function StarWars({ openModal, onClose }) {
                 <>
                   <h1>{starshipName}</h1>
 
-                  <h3>model: {starship.model}</h3>
-                  <h3 className="classH3">class: {starship.class}</h3>
-                  <h3>manufacturer: {starship.manufacturer}</h3>
+                  <h5>
+                    model:&nbsp;
+                    {starship.model}
+                  </h5>
+                  <h5>class:&nbsp;{starship.class}</h5>
+                  <h5>manufacturer:&nbsp;{starship.manufacturer}</h5>
 
                   <h5>
                     <span className="specificationsText">
-                      cost in credits:{" "}
+                      cost in credits:&nbsp;
                     </span>
                     {starship.cost}
                   </h5>
                   <h5>
-                    <span className="specificationsText">length: </span>
+                    <span className="specificationsText">length:&nbsp;</span>
                     {starship.length}
                   </h5>
                   <h5>
-                    <span className="specificationsText">pilots: </span>
+                    <span className="specificationsText">pilots:&nbsp;</span>
                     {starship.pilots}
                   </h5>
                   <h5>
-                    <span className="specificationsText">crew: </span>
+                    <span className="specificationsText">crew:&nbsp;</span>
                     {starship.crew}
                   </h5>
                   <h5>
-                    <span className="specificationsText">consumables: </span>
+                    <span className="specificationsText">
+                      consumables:&nbsp;
+                    </span>
                     {starship.consumables}
                   </h5>
                   <h5>
                     <span className="specificationsText">
-                      passenger capacity:{" "}
+                      passenger capacity:&nbsp;
                     </span>
                     {starship.capacityPassengers}
                   </h5>
                   <h5>
-                    <span className="specificationsText">cargo capacity: </span>
+                    <span className="specificationsText">
+                      cargo capacity:&nbsp;
+                    </span>
                     {starship.capacityCargo}
                   </h5>
                   <h5>
                     <span className="specificationsText">
-                      max atmosphering speed:{" "}
+                      max atmosphering speed:&nbsp;
                     </span>
                     {starship.speed}
                   </h5>
                   <h5>
-                    <span className="specificationsText">hyperdrive: </span>
+                    <span className="specificationsText">
+                      hyperdrive:&nbsp;
+                    </span>
                     {starship.hyperdrive}
                   </h5>
                   <h5>
-                    <span className="specificationsText">megalights: </span>
+                    <span className="specificationsText">
+                      megalights:&nbsp;
+                    </span>
                     {starship.megalights}
                   </h5>
                   <h5>
-                    <span className="specificationsText">created: </span>
-                    {starship.created}
-                  </h5>
-
-                  <h5>
-                    <span className="specificationsText">films: </span>
+                    <span className="specificationsText">films:&nbsp;</span>
                     {starship.films}
                   </h5>
                 </>

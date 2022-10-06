@@ -23,6 +23,7 @@
   }
 
   label {
+    color: orangered;
     cursor: pointer;
   }
 
@@ -35,10 +36,12 @@
   }
 
   .pretties {
+    color: yellow !important;
     @include character-subheads;
   }
 
   .pretties:hover {
+    color: $ea-white !important;
     @include characters-hover;
 
     i {

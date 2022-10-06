@@ -8,8 +8,8 @@
     @include button-submit;
   }
 
-  Button {
-    color: #ffdd42;
+  Button.donaldCloseBtn {
+    color: #ffdd42 !important;
     @include button-x-custom-3;
   }
 
@@ -18,6 +18,7 @@
   }
 
   .quoteText {
+    color: $ea-white;
     text-shadow: 0.05rem 0.05rem #ffdd42;
     font-family: $font-luckiest-guy;
     font-size: 2.5rem;

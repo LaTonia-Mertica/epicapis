@@ -56,7 +56,7 @@ function Agify({ openModal, onClose }) {
           </form>
           <details>
             <summary className="disclaimerSummary animate">
-              the fine print
+              read the fine print
             </summary>
             <p className="disclaimerPara">
               documentation and / or marketing describe agify as a resource to{" "}

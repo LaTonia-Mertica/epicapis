@@ -59,7 +59,7 @@ function RonSwanson({ openModal, onClose }) {
                 onClick={() => setManlyMode(!manlyMode)}
                 className="manlyModeBtn lineUpEffect"
               >
-                MANLY MODE&nbsp;&nbsp;|&nbsp;&nbsp;2 VIEWS
+                MANLY MODE&nbsp;&nbsp;|&nbsp;&nbsp;2 THOUGHTS
               </button>
             </p>
           </div>
