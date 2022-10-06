@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 
 import "./Marvel.scss";
 import { style } from "../mui.js";
+import skyline from "./images/skyline.png";
 
 function Marvel({ openModal, onClose }) {
   const ts = require("./ts");
@@ -14,32 +15,28 @@ function Marvel({ openModal, onClose }) {
   const hash = md5(ts + privateapikey + apikey);
 
   const [name, setName] = useState("");
-  const [creatorByName, setCreatorByName] = useState({
-    name: "",
-  });
+  const [creators, setCreators] = useState("");
 
-  const getCreatorByName = async (event) => {
+  const getCreators = async (event) => {
     event.preventDefault();
 
-    const response = fetch(
-      `http://gateway.marvel.com/v1/public/creators?ts=${ts}&apikey=${apikey}&hash=${hash}`
+    // const response =
+    fetch(
+      `http://gateway.marvel.com/v1/public/creators?ts=${ts}&apikey=${apikey}&hash=${hash}&nameStartsWith=${name}&limit=3&orderBy=-lastName`
     )
       .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Error! status: ${response.status}`);
+        }
         return response.json();
       })
-      .then((data) => console.log(data))
+      .then((data) => {
+        console.log(data);
+        setCreators({
+          name: data.name,
+        });
+      })
       .catch((error) => console.log("ACCESS ERROR!"));
-
-    if (!response.ok) {
-      throw new Error(`Error! status: ${response.status}`);
-    }
-
-    const data = response.json();
-    setCreatorByName({
-      name: data.name,
-    });
-
-    console.log(data);
   };
 
   // "Data provided by Marvel. © 2014 Marvel"
@@ -54,30 +51,29 @@ function Marvel({ openModal, onClose }) {
       >
         <Box sx={style} className="marvelCard">
           <button onClick={onClose}>&#x24E7;</button>
-          <form onSubmit={getCreatorByName}>
+          <form onSubmit={getCreators}>
             <input
               type="text"
               name="marvel"
               id="marvel"
-              placeholder="enter name"
+              placeholder="enter creator name"
               autoComplete="off"
               value={name}
               onChange={(event) => {
                 setName(event.target.value.toLowerCase());
               }}
             />
-            <Button
-              type="submit"
-              onClick={getCreatorByName}
-              className="searchBtn"
-            >
-              Get Creator by Name
+            <Button type="submit" onClick={getCreators} className="searchBtn">
+              Get Creator
             </Button>
           </form>
 
           <div>
-            <p>{name.firstName}</p>
+            <p>
+              {creators.firstName} {creators.lastName}
+            </p>
           </div>
+          <img src={skyline} alt="Skyline" className="skyline" />
         </Box>
       </Modal>
     </main>

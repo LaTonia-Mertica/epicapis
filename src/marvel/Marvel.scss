@@ -1,6 +1,7 @@
 @import "../variables.module.scss";
 
 .marvelCard {
+  background-color: deeppink;
   @include card-space;
 
   button {
@@ -9,10 +10,52 @@
   }
 
   Button {
-    color: #0bda51;
+    color: #0bda51 !important;
     margin-left: 2rem;
     margin-top: 3rem;
     @include button-x-custom-1;
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+  }
+
+  input[type="text"] {
+    border-bottom: 0.25rem solid #0bda51;
+    margin-top: 1.5rem;
+  }
+
+  input {
+    color: $ea-white;
+  }
+
+  input[type="text"]::placeholder {
+    color: $ea-white;
+  }
+
+  .searchBtn {
+    font-size: 1rem;
+    margin-top: 0.95rem;
+    margin-left: 0.5rem;
+  }
+
+  .skyline {
+    background-image: url("images/skyline.png"),
+      linear-gradient(
+        to bottom,
+        deeppink 0%,
+        orangered 30%,
+        orange 60%,
+        yellow 80%,
+        $ea-green 100%
+      );
+    background-size: cover, auto;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    width: 89vw;
+    margin-left: -0.65rem;
+    margin-bottom: -1rem;
   }
 
   button:hover {
