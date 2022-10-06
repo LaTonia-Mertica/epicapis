@@ -45,7 +45,13 @@
   }
 
   .parens {
+    color: $ea-red;
     font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .dashIshText {
+    color: $ea-gray-light;
+    text-shadow: 0.25rem 0.25rem black;
   }
 
   .submitBtn {
