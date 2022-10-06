@@ -102,17 +102,20 @@ function App() {
         <nav>
           <ul className="unorderedList">
             <li>
-              <a href="https://trello.com/b/YLTdkWTR/epicapis">
+              <a href="https://trello.com/b/YLTdkWTR/epicapis" target="_blank">
                 <span className="listWordFont listWordColor">trello</span> board
               </a>
             </li>
             <li>
-              <a href="https://github.com/LaTonia-Mertica/epicapis">
+              <a
+                href="https://github.com/LaTonia-Mertica/epicapis"
+                target="_blank"
+              >
                 <span className="listWordColor repoText">repo</span> sitory
               </a>
             </li>
             <li className="dotDevSiteText">
-              <a href="https://www.latoniamertica.dev/">
+              <a href="https://www.latoniamertica.dev/" target="_blank">
                 <span className="listWordFont listWordColor">dot dev</span> site
               </a>
             </li>

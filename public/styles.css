@@ -1,0 +1,77 @@
+body {
+  background-color: #fff;
+}
+.dark-mode {
+  background-color: yellowgreen;
+}
+.dark-mode .listWordColor {
+  color: #fff;
+  font-size: 1.25rem;
+}
+.dark-mode #epicapislogo {
+  filter: drop-shadow(0.15rem 0.15rem 0.15rem #222);
+  width: 17rem;
+}
+.dark-mode a,
+.dark-mode .apisOfEpicapis,
+.dark-mode .selectionsSubmitBtn {
+  color: black !important;
+}
+.dark-mode .myName {
+  font-size: 0.7rem;
+}
+button.epicModeBtn {
+  color: #fff !important;
+  border: none;
+  border-radius: 1rem;
+  background-color: yellowgreen;
+  text-shadow: black 0.025rem 0.025rem;
+
+  width: 7rem;
+  padding: 0.5rem 1rem;
+
+  position: absolute;
+  top: 3rem;
+  left: 1.5rem;
+}
+.dark-mode button.epicModeBtn {
+  color: yellowgreen !important;
+  border: none;
+  border-radius: 1rem;
+  background-color: #fff;
+  text-shadow: black 0.025rem 0.025rem;
+}
+.dark-mode input[type="text"]::placeholder {
+  color: #fff;
+}
+.dark-mode input[type="text"] {
+  border-bottom: 0.05rem solid #fff;
+}
+
+#greetForm {
+  margin-top: 7.5rem;
+  margin-left: 1.5rem;
+}
+p#greet {
+  color: #545454;
+  font-family: Passions Conflict;
+  text-shadow: 0.05rem 0.05rem 0.05rem black;
+  font-size: 3.5rem;
+  margin-bottom: 0;
+}
+input[type="text"] {
+  width: 13.5rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.05rem solid #c8c4bd;
+}
+input[type="text"]::placeholder {
+  color: #c8c4bd;
+  font-size: x-small;
+}
+/* #greetBtn {
+  border: none;
+  width: 7rem;
+  float: left;
+  background-color: transparent;
+} */

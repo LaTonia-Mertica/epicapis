@@ -108,7 +108,7 @@ input[type="email"]::placeholder {
   background-color: #c9e265;
 }
 Button.selectionsSubmitBtn {
-  color: #c9e265;
+  color: #c9e265 !important;
   font-size: large;
   text-shadow: 0.025rem 0.025rem 0.025rem #000;
 }

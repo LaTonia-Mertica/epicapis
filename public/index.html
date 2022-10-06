@@ -10,8 +10,30 @@
       content="Site featuring fun, quirky, odd apis - with emphasis on modals, event listeners, and semantic html. "
     />
 
+    <link rel="stylesheet" href="styles.css" />
+
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" type="image/x-icon" />
 
+    <link
+      rel="stylesheet preconnect"
+      href="https://fonts.googleapis.com/css2?family=Abril Fatface"
+    />
+    <link
+      rel="stylesheet preconnect"
+      href="https://fonts.googleapis.com/css2?family=Amatic SC"
+    />
+    <link
+      rel="stylesheet preconnect"
+      href="https://fonts.googleapis.com/css2?family=Bangers"
+    />
+    <link
+      rel="stylesheet preconnect"
+      href="https://fonts.googleapis.com/css2?family=Luckiest Guy"
+    />
+    <link
+      rel="stylesheet preconnect"
+      href="https://fonts.googleapis.com/css2?family=Passions Conflict"
+    />
     <link
       rel="stylesheet preconnect"
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
@@ -20,80 +42,41 @@
       rel="stylesheet preconnect"
       href="https://fonts.googleapis.com/css2?family=Rubik+Dirt"
     />
-    <link
-      rel="stylesheet preconnect"
-      href="https://fonts.googleapis.com/css2?family=Bangers"
-    />
-    <link
-      rel="stylesheet preconnect"
-      href="https://fonts.googleapis.com/css2?family=Amatic SC"
-    />
-    <link
-      rel="stylesheet preconnect"
-      href="https://fonts.googleapis.com/css2?family=Luckiest Guy"
-    />
-    <link
-      rel="stylesheet preconnect"
-      href="https://fonts.googleapis.com/css2?family=Abril Fatface"
-    />
+
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
     <title>EPICAPIS</title>
-
-    <style>
-      body {
-        background-color: #fff;
-      }
-      .dark-mode {
-        background-color: yellowgreen;
-      }
-      .dark-mode .listWordColor {
-        color: #fff;
-        font-size: 1.25rem;
-      }
-      .dark-mode #epicapislogo {
-        filter: drop-shadow(0.15rem 0.15rem 0.15rem #222);
-        width: 17rem;
-      }
-      .dark-mode a,
-      .dark-mode .apisOfEpicapis,
-      .dark-mode .selectionsSubmitBtn {
-        color: black;
-      }
-      .dark-mode .myName {
-        font-size: 0.7rem;
-      }
-      button.epicModeBtn {
-        color: #fff;
-        border: none;
-        border-radius: 1rem;
-        background-color: yellowgreen;
-        text-shadow: black 0.025rem 0.025rem;
-
-        width: 6rem;
-        padding: 0.25rem;
-
-        position: absolute;
-        top: 3rem;
-        left: 1.5rem;
-      }
-      .dark-mode button.epicModeBtn {
-        color: yellowgreen;
-        border: none;
-        border-radius: 1rem;
-        background-color: #fff;
-        text-shadow: black 0.025rem 0.025rem;
-      }
-    </style>
   </head>
 
   <body>
     <button onClick="darkMode()" class="epicModeBtn">EPIC MODE</button>
 
+    <form id="greetForm" onsubmit="greetUser()">
+      <p id="greet"></p>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        autocomplete="off"
+        placeholder="input name and click enter for custom greeting"
+      />
+      <br /><br />
+      <!-- <button onClick="greetUser()" type="submit" id="greetBtn">SUBMIT</button> -->
+    </form>
+
     <script>
       function darkMode() {
         let element = document.body;
         element.classList.toggle("dark-mode");
+      }
+    </script>
+
+    <script>
+      function greetUser() {
+        event.preventDefault();
+        let name = document.getElementById("name").value;
+        document.getElementById("greet").innerHTML = "Welcome, " + name;
+        document.getElementById("name").value = "";
       }
     </script>
 
