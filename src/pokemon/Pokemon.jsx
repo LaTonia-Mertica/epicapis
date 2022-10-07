@@ -130,7 +130,7 @@ function Pokemon({ openModal, onClose }) {
               name="pokemonname"
               id="pokemonname"
               placeholder="enter pokemon name"
-              autoComplete="off"
+              autoComplete="on"
               onChange={(event) => {
                 setPokemonName(event.target.value.toLowerCase());
               }}
