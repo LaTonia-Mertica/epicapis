@@ -57,7 +57,10 @@ function Agify({ openModal, onClose }) {
             </Button>
           </form>
           <details>
-            <summary className="disclaimerSummary animate">
+            <summary
+              className="disclaimerSummary animate"
+              title="read the fine print"
+            >
               read the fine print
             </summary>
             <p className="disclaimerPara">

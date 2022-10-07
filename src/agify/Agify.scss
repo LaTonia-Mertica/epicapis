@@ -49,23 +49,18 @@
   }
 
   summary.disclaimerSummary {
-    font-size: small;
+    font-size: xx-small;
     color: $ea-red;
     text-shadow: $ea-black 0.025rem 0.025rem;
     cursor: pointer;
   }
 
   details {
-    margin-bottom: -10rem;
-    margin-left: -64rem;
+    margin-top: -2.5rem;
+    margin-right: -20rem;
   }
 
-  // details:hover {
-  //   transform: scale(1.5);
-  // }
-
   .animate {
-    // text-transform: uppercase;
     background-image: linear-gradient(
       -225deg,
       $ea-white 0%,
@@ -113,21 +108,7 @@
     left: 1.75rem;
     top: 7rem;
 
-    // opacity effect
     background-color: rgba(255, 0, 0, 0.7);
     padding: 1rem;
   }
-
-  // .disclaimerPara:hover {
-  //   transform: scale(1.5);
-  //   position: absolute;
-  //   left: $space-md;
-  //   bottom: $space-sm;
-  //   top: 15rem;
-  //   margin-bottom: $space-md;
-
-  //   background-color: rgba(255, 0, 0, 0.7);
-  //   height: 6rem;
-  //   padding: 1rem;
-  // }
 }
