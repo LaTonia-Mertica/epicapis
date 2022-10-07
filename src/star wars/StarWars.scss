@@ -44,7 +44,8 @@
     margin-left: 22rem;
   }
 
-  // .specificationsText {
-  //   color: $ea-red;
-  // }
+  .specificationsText {
+    color: $ea-red;
+    text-shadow: 0.025rem 0.025rem black;
+  }
 }

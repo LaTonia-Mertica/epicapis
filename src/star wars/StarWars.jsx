@@ -107,21 +107,36 @@ function StarWars({ openModal, onClose }) {
                   <h1>{starshipName}</h1>
 
                   <h5>
-                    model:&nbsp;
+                    {" "}
+                    <span className="specificationsText">model:&nbsp;</span>
                     {starship.model}
                   </h5>
-                  <h5>class:&nbsp;{starship.class}</h5>
-                  <h5>manufacturer:&nbsp;{starship.manufacturer}</h5>
+                  <h5>
+                    {" "}
+                    <span className="specificationsText">class:&nbsp;</span>
+                    {starship.class}
+                  </h5>
+                  <h5>
+                    {" "}
+                    <span className="specificationsText">
+                      manufacturer:&nbsp;
+                    </span>
+                    {starship.manufacturer}
+                  </h5>
 
                   <h5>
                     <span className="specificationsText">
                       cost in credits:&nbsp;
                     </span>
-                    {starship.cost}
+                    {starship.cost
+                      .toString()
+                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </h5>
                   <h5>
                     <span className="specificationsText">length:&nbsp;</span>
-                    {starship.length}
+                    {starship.length
+                      .toString()
+                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </h5>
                   <h5>
                     <span className="specificationsText">pilots:&nbsp;</span>
@@ -147,25 +162,33 @@ function StarWars({ openModal, onClose }) {
                     <span className="specificationsText">
                       cargo capacity:&nbsp;
                     </span>
-                    {starship.capacityCargo}
+                    {starship.capacityCargo
+                      .toString()
+                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </h5>
                   <h5>
                     <span className="specificationsText">
                       max atmosphering speed:&nbsp;
                     </span>
-                    {starship.speed}
+                    {starship.speed
+                      .toString()
+                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </h5>
                   <h5>
                     <span className="specificationsText">
                       hyperdrive:&nbsp;
                     </span>
-                    {starship.hyperdrive}
+                    {starship.hyperdrive
+                      .toString()
+                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </h5>
                   <h5>
                     <span className="specificationsText">
                       megalights:&nbsp;
                     </span>
-                    {starship.megalights}
+                    {starship.megalights
+                      .toString()
+                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                   </h5>
                   <h5>
                     <span className="specificationsText">films:&nbsp;</span>
