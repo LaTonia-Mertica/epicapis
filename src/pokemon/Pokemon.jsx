@@ -71,10 +71,12 @@ function Pokemon({ openModal, onClose }) {
     moves: "",
     weight: "",
   });
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
 
   const searchPokemon = (event) => {
     event.preventDefault();
+    setLoading(true);
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/` + pokemonName)
       .then((response) => {
@@ -99,6 +101,7 @@ function Pokemon({ openModal, onClose }) {
         });
         setError(null);
         setPokemonShow(true);
+        setLoading(false);
       })
       .catch((error) => {
         console.error(error);
@@ -134,7 +137,7 @@ function Pokemon({ openModal, onClose }) {
             />
 
             <Button type="submit" onClick={searchPokemon} className="searchBtn">
-              Search Pokemon
+              {loading ? <>loading...</> : <> Search Pokemon</>}
             </Button>
           </form>
 
