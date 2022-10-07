@@ -40,7 +40,16 @@
   }
 
   .pokemonImg {
-    width: 11rem;
+    width: 17rem;
+  }
+
+  .nonMainImages {
+    margin-right: -1rem;
+    margin-bottom: -17rem;
+  }
+
+  .nonMainImages:hover {
+    transform: scale(1.5);
   }
 
   span {
@@ -48,12 +57,11 @@
     justify-content: center;
   }
 
-  img.pokemonImg {
-    display: flex;
-    justify-content: flex-start;
-
-    margin-left: -3rem;
-    // margin-bottom: -3rem;
+  .specDetails {
+    display: inline;
+    color: $ea-red;
+    font-size: x-small;
+    text-align: left;
   }
 
   h2 {

@@ -151,35 +151,59 @@ function Pokemon({ openModal, onClose }) {
                   <span>
                     <section>
                       <img src={pokemon.image} alt="" className="pokemonImg" />
-                      <img
-                        src={pokemon.image_back}
-                        alt=""
-                        className="pokemonImg"
-                      />
                     </section>
 
                     <section>
+                      <h2>
+                        <span className="specDetails">species:&nbsp;</span>
+                        {pokemon.species}
+                      </h2>
+                      <h2>
+                        <span className="specDetails">type:&nbsp;</span>
+                        {pokemon.types}
+                      </h2>
+                      <h2>
+                        <span className="specDetails">ability:&nbsp;</span>
+                        {pokemon.abilities[0]}
+                      </h2>
+                      <h2>
+                        <span className="specDetails">ability:&nbsp;</span>
+                        {pokemon.abilities[1]}
+                      </h2>
+                      <h2>
+                        <span className="specDetails">move:&nbsp;</span>
+                        {pokemon.moves[0]}
+                      </h2>
+                      <h2>
+                        <span className="specDetails">move:&nbsp;</span>
+                        {pokemon.moves[1]}
+                      </h2>
+                      <h2>
+                        <span className="specDetails">move:&nbsp;</span>
+                        {pokemon.moves[2]}
+                      </h2>
+                      <h2>
+                        <span className="specDetails">weight:&nbsp;</span>
+                        {pokemon.weight}
+                      </h2>
+                    </section>
+
+                    <section className="nonMainImagesSection">
                       <img
                         src={pokemon.front_shiny}
                         alt=""
-                        className="pokemonImg"
+                        className="nonMainImages"
+                      />
+                      <img
+                        src={pokemon.image_back}
+                        alt=""
+                        className="nonMainImages"
                       />
                       <img
                         src={pokemon.back_shiny}
                         alt=""
-                        className="pokemonImg"
+                        className="nonMainImages"
                       />
-                    </section>
-
-                    <section>
-                      <h2>species: {pokemon.species}</h2>
-                      <h2>type: {pokemon.types}</h2>
-                      <h2>ability: {pokemon.abilities[0]}</h2>
-                      <h2>ability: {pokemon.abilities[1]}</h2>
-                      <h2>move: {pokemon.moves[0]}</h2>
-                      <h2>move: {pokemon.moves[1]}</h2>
-                      <h2>move: {pokemon.moves[2]}</h2>
-                      <h2>weight: {pokemon.weight}</h2>
                     </section>
                   </span>
                 </>
