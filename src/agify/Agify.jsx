@@ -74,7 +74,7 @@ function Agify({ openModal, onClose }) {
 
           <div>
             <h1>{ageByName.name}</h1>
-            <p>{ageByName.age}</p>
+            <p className="agePara">{ageByName.age}</p>
           </div>
         </Box>
       </Modal>
