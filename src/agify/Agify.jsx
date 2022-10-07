@@ -13,10 +13,11 @@ function Agify({ openModal, onClose }) {
     name: "",
     count: "",
   });
+  const [loading, setLoading] = useState(false);
 
   const getAgeMyName = async (event) => {
     event.preventDefault();
-
+    setLoading(true);
     const response = await fetch(`https://api.agify.io?name=${name}`);
     const data = await response.json();
     setAgeByName({
@@ -24,6 +25,7 @@ function Agify({ openModal, onClose }) {
       name: data.name,
       count: data.count,
     });
+    setLoading(false);
   };
 
   return (
@@ -51,7 +53,7 @@ function Agify({ openModal, onClose }) {
               }}
             />
             <Button type="submit" onClick={getAgeMyName} className="searchBtn">
-              Get Age by Name
+              {loading ? <>loading...</> : <>Get Age by Name</>}
             </Button>
           </form>
           <details>
