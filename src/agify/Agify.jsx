@@ -20,11 +20,18 @@ function Agify({ openModal, onClose }) {
     setLoading(true);
     const response = await fetch(`https://api.agify.io?name=${name}`);
     const data = await response.json();
-    setAgeByName({
-      age: data.age,
-      name: data.name,
-      count: data.count,
-    });
+
+    if (data.age === null) {
+      setAgeByName({
+        age: "Apologies!",
+      });
+    } else {
+      setAgeByName({
+        age: data.age,
+        name: data.name,
+        count: data.count,
+      });
+    }
     setLoading(false);
   };
 
@@ -77,7 +84,7 @@ function Agify({ openModal, onClose }) {
             </p>
           </details>
 
-          <div>
+          <div className="nameAgeDiv">
             <h1>{ageByName.name}</h1>
             <p className="agePara">{ageByName.age}</p>
           </div>
