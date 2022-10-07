@@ -38,11 +38,17 @@
   .pretties {
     color: yellow !important;
     @include character-subheads;
+    font-size: xx-small;
   }
 
   .pretties:hover {
+    font-size: x-small;
     color: $ea-white !important;
     @include characters-hover;
+
+    .subTitleLeadIn {
+      font-size: x-small;
+    }
 
     i {
       color: $ea-red;

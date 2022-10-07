@@ -36,7 +36,8 @@ function Prettiest({ openModal, onClose }) {
                   High Ball
                   <br />
                   <span className="pretties">
-                    anything <i>dark & stormy</i>
+                    <span className="subTitleLeadIn">anything</span>{" "}
+                    <i>dark & stormy</i>
                   </span>
                 </label>
                 <br />
@@ -46,7 +47,8 @@ function Prettiest({ openModal, onClose }) {
                   Coupe
                   <br />
                   <span className="pretties">
-                    necessarily <i>boulevardier</i>
+                    <span className="subTitleLeadIn">necessarily </span>
+                    <i>boulevardier</i>
                   </span>
                 </label>
                 <br />
@@ -60,7 +62,8 @@ function Prettiest({ openModal, onClose }) {
                 <label htmlFor="zombie">
                   Zombie <br />
                   <span className="pretties">
-                    think <i>tequila sunrise</i>
+                    <span className="subTitleLeadIn">think</span>{" "}
+                    <i>tequila sunrise</i>
                   </span>
                 </label>
                 <br />
@@ -69,7 +72,8 @@ function Prettiest({ openModal, onClose }) {
                 <label htmlFor="rocks">
                   Rocks <br />
                   <span className="pretties">
-                    essentially <i>old fashioned</i>
+                    <span className="subTitleLeadIn">essentially</span>{" "}
+                    <i>old fashioned</i>
                   </span>
                 </label>
                 <br />
@@ -84,7 +88,8 @@ function Prettiest({ openModal, onClose }) {
                   Hurricane
                   <br />
                   <span className="pretties">
-                    akin <i>singapore sling</i>
+                    <span className="subTitleLeadIn">akin</span>{" "}
+                    <i>singapore sling</i>
                   </span>
                 </label>
                 <br />
