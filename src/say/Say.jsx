@@ -10,8 +10,8 @@ import phraseGenerator from "./phraseGenerator";
 function Say({ openModal, onClose }) {
   const [phraseToShow, setPhraseToShow] = useState();
 
-  const valueSelected = (evt) => {
-    phraseGenerator(setPhraseToShow, evt.target.value);
+  const valueSelected = (event) => {
+    phraseGenerator(setPhraseToShow, event.target.value);
   };
   return (
     <main>
@@ -126,7 +126,7 @@ function Say({ openModal, onClose }) {
                       </option>
                     </optgroup>
                   </select>
-                  <p>{phraseToShow}</p>
+                  <p className="phraseToShowText">{phraseToShow}</p>
                 </p>
               </fieldset>
 

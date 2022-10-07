@@ -1,6 +1,7 @@
 @import "../variables.module.scss";
 
 .sayCard {
+  background-color: rgba(0, 0, 0, 0.5);
   @include card-space;
 
   button {
@@ -32,6 +33,13 @@
     -moz-appearance: none;
     text-indent: 1px;
     text-overflow: "";
+  }
+
+  .phraseToShowText {
+    color: $ea-red;
+    font-family: Grape Nuts;
+    font-size: 2.75rem;
+    text-shadow: 0.025rem 0.025rem $ea-black;
   }
 
   .submitBtn {
