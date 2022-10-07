@@ -105,7 +105,7 @@ function Pokemon({ openModal, onClose }) {
       })
       .catch((error) => {
         console.error(error);
-        setError("Pokemon Doesn't Exist");
+        setError("Try Again!");
       });
   };
 
@@ -151,10 +151,12 @@ function Pokemon({ openModal, onClose }) {
                 <>
                   <h1>{pokemonName}</h1>
 
-                  <span>
+                  <span className="specDetailsSpan">
                     <section>
                       <img src={pokemon.image} alt="" className="pokemonImg" />
                     </section>
+
+                    {/* pokemon card image courtesy etsy.com */}
 
                     <section>
                       <h2>

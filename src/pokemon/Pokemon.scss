@@ -1,7 +1,15 @@
 @import "../variables.module.scss";
 
 .pokemonsCard {
+  background-color: rgba(255, 43, 0, 0.6);
   @include card-space;
+
+  .specDetailsSpan {
+    background-image: url("./images/pokemon-card.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 
   button {
     @include button-space;
@@ -36,15 +44,19 @@
   }
 
   h1 {
+    text-shadow: 0.2rem 0.2rem black;
     @include text-uppercase;
   }
 
   .pokemonImg {
-    width: 17rem;
+    width: 15rem;
+    margin-top: -$space-lg;
+    margin-left: 3rem;
   }
 
   .nonMainImages {
-    margin-right: -1rem;
+    margin-left: -1.15rem;
+    margin-right: -2rem;
     margin-bottom: -17rem;
   }
 
@@ -59,9 +71,13 @@
 
   .specDetails {
     display: inline;
-    color: $ea-red;
+    color: yellow;
     font-size: x-small;
     text-align: left;
+    letter-spacing: 0.05rem;
+    text-shadow: 0.05rem 0.05rem black;
+
+    margin-left: 11rem;
   }
 
   h2 {
