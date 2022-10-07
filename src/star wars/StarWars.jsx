@@ -12,11 +12,12 @@ import stormtrooper from "./images/stormtrooper.gif";
 function StarWars({ openModal, onClose }) {
   const [starshipName, setStarshipName] = useState("");
   const [starship, setStarship] = useState(null);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
 
   const searchStarship = (event) => {
     event.preventDefault();
-
+    setLoading(true);
     axios
       .get(`https://swapi.dev/api/starships/?search=${starshipName}`)
       .then((response) => {
@@ -45,6 +46,7 @@ function StarWars({ openModal, onClose }) {
           ],
         });
         setError(null);
+        setLoading(false);
       })
       .catch((error) => {
         console.error(error);
@@ -84,7 +86,7 @@ function StarWars({ openModal, onClose }) {
               onClick={searchStarship}
               className="searchBtn"
             >
-              Search Starships
+              {loading ? <>loading...</> : <>Search Starships</>}
             </Button>
           </form>
 
