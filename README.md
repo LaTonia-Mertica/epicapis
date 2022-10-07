@@ -70,6 +70,8 @@ epic apis provides a unique user experience through a medley of colorful apis
 
 ###### **fun find++:** [x mark symbol | dec code v hex code v unicode](https://www.copyandpastesymbols.net/x-symbol.html)
 
+###### **helpful list:** [pokemon wiki](https://pokemon.fandom.com/wiki/List_of_Pok%C3%A9mon)
+
 <br>
 
 ---
