@@ -67,7 +67,7 @@ function StarWars({ openModal, onClose }) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style} className="starWarsCard">
+        {/* <Box sx={style} className="starWarsCard">
           <Button onClick={onClose}>&#x24B3;</Button>
           <form onSubmit={searchStarship}>
             <input
@@ -75,7 +75,7 @@ function StarWars({ openModal, onClose }) {
               name="starshipname"
               id="starshipname"
               placeholder="enter starship name"
-              autoComplete="off"
+              autoComplete="on"
               onChange={(event) => {
                 setStarshipName(event.target.value.toLowerCase());
               }}
@@ -88,11 +88,11 @@ function StarWars({ openModal, onClose }) {
             >
               {loading ? <>loading...</> : <>Search Starships</>}
             </Button>
-          </form>
+          </form> */}
 
-          {/* img credit: stormtrooper / tenor.com */}
+        {/* img credit: stormtrooper / tenor.com */}
 
-          {error ? (
+        {/* {error ? (
             <h1>{error}</h1>
           ) : (
             <>
@@ -197,6 +197,161 @@ function StarWars({ openModal, onClose }) {
               )}
             </>
           )}
+        </Box> */}
+
+        <Box sx={style} className="starWarsCard">
+          <div>
+            <Button onClick={onClose}>&#x24B3;</Button>
+            <form onSubmit={searchStarship}>
+              <input
+                type="text"
+                name="starshipname"
+                id="starshipname"
+                placeholder="enter starship name"
+                autoComplete="off"
+                onChange={(event) => {
+                  setStarshipName(event.target.value.toLowerCase());
+                }}
+              />
+
+              <Button
+                type="submit"
+                onClick={searchStarship}
+                className="searchBtn"
+              >
+                {loading ? <>loading...</> : <>Search Starships</>}
+              </Button>
+              {!starship && (
+                <img
+                  src={stormtrooper}
+                  alt="Stormtrooper"
+                  width="25%"
+                  height="auto"
+                  className="stormtrooperImg"
+                ></img>
+              )}
+            </form>
+          </div>
+
+          <div>
+            <section className="star-wars">
+              <div className="crawl">
+                {/* <div className="title">
+                <p>STAR WARS</p>
+                <h1>List of Starship Specifications</h1>
+              </div> */}
+                {error ? (
+                  <h1>{error}</h1>
+                ) : (
+                  <>
+                    {starship && (
+                      <>
+                        <h1>{starshipName}</h1>
+
+                        <h5>
+                          <span className="specificationsText">
+                            model:&nbsp;
+                          </span>
+                          {starship.model}
+                        </h5>
+                        <h5>
+                          <span className="specificationsText">
+                            class:&nbsp;
+                          </span>
+                          {starship.class}
+                        </h5>
+                        <h5>
+                          <span className="specificationsText">
+                            manufacturer:&nbsp;
+                          </span>
+                          {starship.manufacturer}
+                        </h5>
+
+                        <h5>
+                          <span className="specificationsText">
+                            cost in credits:&nbsp;
+                          </span>
+                          {starship.cost
+                            .toString()
+                            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                        </h5>
+                        <h5>
+                          <span className="specificationsText">
+                            length:&nbsp;
+                          </span>
+                          {starship.length
+                            .toString()
+                            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                        </h5>
+                        <h5>
+                          <span className="specificationsText">
+                            pilots:&nbsp;
+                          </span>
+                          {starship.pilots}
+                        </h5>
+                        <h5>
+                          <span className="specificationsText">
+                            crew:&nbsp;
+                          </span>
+                          {starship.crew}
+                        </h5>
+                        <h5>
+                          <span className="specificationsText">
+                            consumables:&nbsp;
+                          </span>
+                          {starship.consumables}
+                        </h5>
+                        <h5>
+                          <span className="specificationsText">
+                            passenger capacity:&nbsp;
+                          </span>
+                          {starship.capacityPassengers}
+                        </h5>
+                        <h5>
+                          <span className="specificationsText">
+                            cargo capacity:&nbsp;
+                          </span>
+                          {starship.capacityCargo
+                            .toString()
+                            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                        </h5>
+                        <h5>
+                          <span className="specificationsText">
+                            max atmosphering speed:&nbsp;
+                          </span>
+                          {starship.speed
+                            .toString()
+                            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                        </h5>
+                        <h5>
+                          <span className="specificationsText">
+                            hyperdrive:&nbsp;
+                          </span>
+                          {starship.hyperdrive
+                            .toString()
+                            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                        </h5>
+                        <h5>
+                          <span className="specificationsText">
+                            megalights:&nbsp;
+                          </span>
+                          {starship.megalights
+                            .toString()
+                            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                        </h5>
+                        <h5>
+                          <span className="specificationsText">
+                            films:&nbsp;
+                          </span>
+                          {starship.films}
+                        </h5>
+                      </>
+                    )}
+                  </>
+                )}
+              </div>
+            </section>
+          </div>
         </Box>
       </Modal>
     </main>
