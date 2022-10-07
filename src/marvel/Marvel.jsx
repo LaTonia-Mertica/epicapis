@@ -16,11 +16,11 @@ function Marvel({ openModal, onClose }) {
 
   const [name, setName] = useState("");
   const [creators, setCreators] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const getCreators = async (event) => {
     event.preventDefault();
-
-    // const response =
+    setLoading(true);
     fetch(
       `http://gateway.marvel.com/v1/public/creators?ts=${ts}&apikey=${apikey}&hash=${hash}&nameStartsWith=${name}&limit=3&orderBy=-lastName`
     )
@@ -31,10 +31,11 @@ function Marvel({ openModal, onClose }) {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
         setCreators({
           name: data.name,
         });
+        console.log(data);
+        setLoading(false);
       })
       .catch((error) => console.log("ACCESS ERROR!"));
   };
@@ -64,7 +65,7 @@ function Marvel({ openModal, onClose }) {
               }}
             />
             <Button type="submit" onClick={getCreators} className="searchBtn">
-              Get Creator
+              {loading ? <>loading...</> : <>Get Creator</>}
             </Button>
           </form>
 
