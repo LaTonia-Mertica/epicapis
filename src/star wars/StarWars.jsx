@@ -107,17 +107,14 @@ function StarWars({ openModal, onClose }) {
                   <h1>{starshipName}</h1>
 
                   <h5>
-                    {" "}
                     <span className="specificationsText">model:&nbsp;</span>
                     {starship.model}
                   </h5>
                   <h5>
-                    {" "}
                     <span className="specificationsText">class:&nbsp;</span>
                     {starship.class}
                   </h5>
                   <h5>
-                    {" "}
                     <span className="specificationsText">
                       manufacturer:&nbsp;
                     </span>
