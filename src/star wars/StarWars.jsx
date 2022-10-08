@@ -28,7 +28,6 @@ function StarWars({ openModal, onClose }) {
           manufacturer: response.data.results[0].manufacturer,
           cost: response.data.results[0].cost_in_credits,
           length: response.data.results[0].length,
-          pilots: response.data.results[0].pilots,
           crew: response.data.results[0].crew,
           consumables: response.data.results[0].consumables,
           capacityPassengers: response.data.results[0].passengers,
@@ -140,12 +139,6 @@ function StarWars({ openModal, onClose }) {
                           {starship.length
                             .toString()
                             .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                        </h5>
-                        <h5>
-                          <span className="specificationsText">
-                            pilots:&nbsp;
-                          </span>
-                          {starship.pilots}
                         </h5>
                         <h5>
                           <span className="specificationsText">

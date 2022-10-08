@@ -1,7 +1,7 @@
 @import "../variables.module.scss";
 
 .starWarsCard {
-  width: 100%;
+  width: 60% !important;
   height: 70%;
   overflow: hidden;
 
@@ -43,7 +43,8 @@
   }
 
   h1 {
-    width: 100%;
+    width: 150%;
+    font-size: 350% !important;
     @include text-uppercase;
   }
 
@@ -67,12 +68,12 @@
 
   .star-wars {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     position: relative;
     height: 2100px;
     color: #feda4a;
-    font-family: "Pathway Gothic One", sans-serif;
-    font-size: 700%;
+    font-family: $font-pathway-gothic-one, sans-serif;
+    font-size: 900%;
     font-weight: 500;
     letter-spacing: 7px;
     line-height: 100%;
