@@ -72,6 +72,8 @@ epic apis provides a unique user experience through a medley of colorful apis
 
 ###### **helpful list:** [pokemon wiki](https://pokemon.fandom.com/wiki/List_of_Pok%C3%A9mon)
 
+###### **helpful list+:** [star wars spacecrafts](https://en.wikipedia.org/wiki/List_of_Star_Wars_spacecraft)
+
 <br>
 
 ---
