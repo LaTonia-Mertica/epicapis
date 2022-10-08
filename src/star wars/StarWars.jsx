@@ -26,7 +26,6 @@ function StarWars({ openModal, onClose }) {
           model: response.data.results[0].model,
           class: response.data.results[0].starship_class,
           manufacturer: response.data.results[0].manufacturer,
-          // created: response.data.results[0].created,
           cost: response.data.results[0].cost_in_credits,
           length: response.data.results[0].length,
           pilots: response.data.results[0].pilots,
@@ -37,13 +36,6 @@ function StarWars({ openModal, onClose }) {
           speed: response.data.results[0].max_atmosphering_speed,
           hyperdrive: response.data.results[0].hyperdrive_rating,
           megalights: response.data.results[0].MGLT,
-          films: [
-            response.data.results[0].films,
-            // response.data.results[0].films[0].opening_crawl,
-            // response.data.results[0].films[0].director,
-            // response.data.results[0].films[0].producer,
-            // response.data.results[0].films[0].release_date,
-          ],
         });
         setError(null);
         setLoading(false);
@@ -58,7 +50,7 @@ function StarWars({ openModal, onClose }) {
   // axios and fetch are used in the epic apis project for practice with both libraries
   // asycn/await and .then are both used in the epic apis project for familiarity with both types of asynchronous code syntax
   // fetch and async/await are the more modern and preferred methods
-  // console.log(starship);
+
   return (
     <main>
       <Modal
@@ -67,137 +59,7 @@ function StarWars({ openModal, onClose }) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        {/* <Box sx={style} className="starWarsCard">
-          <Button onClick={onClose}>&#x24B3;</Button>
-          <form onSubmit={searchStarship}>
-            <input
-              type="text"
-              name="starshipname"
-              id="starshipname"
-              placeholder="enter starship name"
-              autoComplete="on"
-              onChange={(event) => {
-                setStarshipName(event.target.value.toLowerCase());
-              }}
-            />
-
-            <Button
-              type="submit"
-              onClick={searchStarship}
-              className="searchBtn"
-            >
-              {loading ? <>loading...</> : <>Search Starships</>}
-            </Button>
-          </form> */}
-
         {/* img credit: stormtrooper / tenor.com */}
-
-        {/* {error ? (
-            <h1>{error}</h1>
-          ) : (
-            <>
-              {!starship ? (
-                <img
-                  src={stormtrooper}
-                  alt="Stormtrooper"
-                  width="15%"
-                  height="auto"
-                  className="stormtrooperImg"
-                ></img>
-              ) : (
-                <>
-                  <h1>{starshipName}</h1>
-
-                  <h5>
-                    <span className="specificationsText">model:&nbsp;</span>
-                    {starship.model}
-                  </h5>
-                  <h5>
-                    <span className="specificationsText">class:&nbsp;</span>
-                    {starship.class}
-                  </h5>
-                  <h5>
-                    <span className="specificationsText">
-                      manufacturer:&nbsp;
-                    </span>
-                    {starship.manufacturer}
-                  </h5>
-
-                  <h5>
-                    <span className="specificationsText">
-                      cost in credits:&nbsp;
-                    </span>
-                    {starship.cost
-                      .toString()
-                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                  </h5>
-                  <h5>
-                    <span className="specificationsText">length:&nbsp;</span>
-                    {starship.length
-                      .toString()
-                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                  </h5>
-                  <h5>
-                    <span className="specificationsText">pilots:&nbsp;</span>
-                    {starship.pilots}
-                  </h5>
-                  <h5>
-                    <span className="specificationsText">crew:&nbsp;</span>
-                    {starship.crew}
-                  </h5>
-                  <h5>
-                    <span className="specificationsText">
-                      consumables:&nbsp;
-                    </span>
-                    {starship.consumables}
-                  </h5>
-                  <h5>
-                    <span className="specificationsText">
-                      passenger capacity:&nbsp;
-                    </span>
-                    {starship.capacityPassengers}
-                  </h5>
-                  <h5>
-                    <span className="specificationsText">
-                      cargo capacity:&nbsp;
-                    </span>
-                    {starship.capacityCargo
-                      .toString()
-                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                  </h5>
-                  <h5>
-                    <span className="specificationsText">
-                      max atmosphering speed:&nbsp;
-                    </span>
-                    {starship.speed
-                      .toString()
-                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                  </h5>
-                  <h5>
-                    <span className="specificationsText">
-                      hyperdrive:&nbsp;
-                    </span>
-                    {starship.hyperdrive
-                      .toString()
-                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                  </h5>
-                  <h5>
-                    <span className="specificationsText">
-                      megalights:&nbsp;
-                    </span>
-                    {starship.megalights
-                      .toString()
-                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                  </h5>
-                  <h5>
-                    <span className="specificationsText">films:&nbsp;</span>
-                    {starship.films}
-                  </h5>
-                </>
-              )}
-            </>
-          )}
-        </Box> */}
 
         <Box sx={style} className="starWarsCard">
           <div>
@@ -225,7 +87,7 @@ function StarWars({ openModal, onClose }) {
                 <img
                   src={stormtrooper}
                   alt="Stormtrooper"
-                  width="25%"
+                  width="15%"
                   height="auto"
                   className="stormtrooperImg"
                 ></img>
@@ -233,13 +95,9 @@ function StarWars({ openModal, onClose }) {
             </form>
           </div>
 
-          <div>
+          <div className="fade">
             <section className="star-wars">
               <div className="crawl">
-                {/* <div className="title">
-                <p>STAR WARS</p>
-                <h1>List of Starship Specifications</h1>
-              </div> */}
                 {error ? (
                   <h1>{error}</h1>
                 ) : (
@@ -338,12 +196,6 @@ function StarWars({ openModal, onClose }) {
                           {starship.megalights
                             .toString()
                             .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                        </h5>
-                        <h5>
-                          <span className="specificationsText">
-                            films:&nbsp;
-                          </span>
-                          {starship.films}
                         </h5>
                       </>
                     )}
