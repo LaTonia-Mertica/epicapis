@@ -75,3 +75,32 @@ input[type="text"]::placeholder {
   float: left;
   background-color: transparent;
 } */
+
+.visitCountDiv {
+  margin-left: 1.5rem;
+}
+.visitCountDiv,
+.visit-counter {
+  display: inline;
+
+  color: #545454;
+  font-size: 0.75rem;
+  letter-spacing: 0.05rem;
+  text-shadow: 0.025rem 0.025rem black;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.visit-counter {
+  font-family: cursive;
+}
+#reset {
+  color: white;
+  width: 2.5rem;
+  border: none;
+  padding-top: 0.05rem;
+  padding-bottom: 0.2rem;
+  padding-left: 0.25rem;
+  border-radius: 1rem;
+  font-size: xx-small;
+  text-shadow: 0.05rem 0.05rem black;
+  background-color: #c9e265;
+}

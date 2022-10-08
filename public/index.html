@@ -10,6 +10,7 @@
       content="Site featuring fun, quirky, odd apis - with emphasis on modals, event listeners, and semantic html. "
     />
 
+    <script defer src="visitCount.js"></script>
     <link rel="stylesheet" href="styles.css" />
 
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" type="image/x-icon" />
@@ -71,6 +72,10 @@
       <br /><br />
       <!-- <button onClick="greetUser()" type="submit" id="greetBtn">SUBMIT</button> -->
     </form>
+
+    <div class="visitCountDiv">visit count</div>
+    <div class="visit-counter"></div>
+    <button type="reset" id="reset">reset</button>
 
     <script>
       function darkMode() {
