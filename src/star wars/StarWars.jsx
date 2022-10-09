@@ -134,7 +134,7 @@ function StarWars({ openModal, onClose }) {
                         </h5>
                         <h5>
                           <span className="specificationsText">
-                            length:&nbsp;
+                            length in meters:&nbsp;
                           </span>
                           {starship.length
                             .toString()
@@ -168,7 +168,7 @@ function StarWars({ openModal, onClose }) {
                         </h5>
                         <h5>
                           <span className="specificationsText">
-                            max atmosphering speed:&nbsp;
+                            max atmosphering speed in km/h:&nbsp;
                           </span>
                           {starship.speed
                             .toString()
@@ -176,7 +176,7 @@ function StarWars({ openModal, onClose }) {
                         </h5>
                         <h5>
                           <span className="specificationsText">
-                            hyperdrive:&nbsp;
+                            hyperdrive in faster-than-light speeds:&nbsp;
                           </span>
                           {starship.hyperdrive
                             .toString()
@@ -184,7 +184,7 @@ function StarWars({ openModal, onClose }) {
                         </h5>
                         <h5>
                           <span className="specificationsText">
-                            megalights:&nbsp;
+                            megalights/h:&nbsp;
                           </span>
                           {starship.megalights
                             .toString()
