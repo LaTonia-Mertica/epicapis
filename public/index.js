@@ -26,7 +26,7 @@ deleteUserName.addEventListener("click", function () {
 function userNameDisplayStatus() {
   if (localStorage.getItem("name")) {
     let name = localStorage.getItem("name");
-    h1.textContent = `Welcome, ${name}!`;
+    h1.textContent = `Welcome, ${name}`;
     greeting.textContent = ``;
 
     deleteUserName.style.display = "block";
