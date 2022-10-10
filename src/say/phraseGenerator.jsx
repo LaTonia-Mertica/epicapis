@@ -1,6 +1,6 @@
 const phraseGenerator = (setPhraseToShow, value) => {
   if (value === "age") {
-    setPhraseToShow("'young folk always ruin everything'");
+    setPhraseToShow("'we are seeking new, ... young, ... inexperienced'");
   } else if (value === "arrest record") {
     setPhraseToShow("'what'd you do, are you dangerous'");
   } else if (value === "audible expression") {
