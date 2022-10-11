@@ -40,8 +40,6 @@ function Marvel({ openModal, onClose }) {
       .catch((error) => console.log("ACCESS ERROR!"));
   };
 
-  // "Data provided by Marvel. © 2014 Marvel"
-
   return (
     <main>
       <Modal
@@ -69,11 +67,24 @@ function Marvel({ openModal, onClose }) {
             </Button>
           </form>
 
-          <div>
+          <section>
             <p>
               {creators.firstName} {creators.lastName}
             </p>
-          </div>
+          </section>
+
+          <section>
+            <p className="marvelApiLinkPara">
+              <a
+                className="marvelApiLinkAnchor"
+                href="http://marvel.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Data provided by Marvel. © 2014 Marvel
+              </a>
+            </p>
+          </section>
           <img src={skyline} alt="Skyline" className="skyline" />
         </Box>
       </Modal>
