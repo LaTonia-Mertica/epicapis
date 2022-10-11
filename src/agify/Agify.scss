@@ -30,8 +30,8 @@
   }
 
   input[type="text"]::placeholder {
-    color: $ea-white !important;
     @include input-text-placeholder;
+    color: $ea-white;
   }
 
   input[type="text"] {

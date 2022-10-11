@@ -1,7 +1,6 @@
 @import "../variables.module.scss";
 
 .pokemonsCard {
-  background-color: rgba(255, 43, 0, 0.6);
   @include card-space;
 
   .specDetailsSpan {
@@ -31,8 +30,8 @@
   }
 
   input[type="text"]::placeholder {
-    color: $ea-white !important;
     @include input-text-placeholder;
+    color: $ea-white;
   }
 
   input[type="text"] {

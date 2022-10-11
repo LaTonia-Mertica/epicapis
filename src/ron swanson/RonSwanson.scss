@@ -7,12 +7,15 @@
 
   button {
     cursor: pointer;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-family: $font-rubik-dirt;
+    text-shadow: 0.15rem 0.15rem 0.15rem $ea-black;
     @include button-space;
-    @include button-submit;
   }
 
   Button {
-    color: #ff1694 !important;
+    color: #ff1694;
     @include button-x-custom-1;
   }
 
@@ -39,7 +42,7 @@
   background-color: rgba(0, 0, 255, 0.3);
 }
 .manly Button {
-  color: deepskyblue !important;
+  color: deepskyblue;
 }
 .manly p {
   color: deepskyblue;

@@ -13,15 +13,20 @@ body {
   width: 17rem;
 }
 .epic-mode a,
-.epic-mode .apisOfEpicapis,
+.epic-mode .apisOfEpicapis {
+  color: black;
+}
+
+/* link lives in app.js */
 .epic-mode .selectionsSubmitBtn {
   color: black !important;
 }
+
 .epic-mode .myName {
   font-size: 0.7rem;
 }
 button.epicModeBtn {
-  color: #fff !important;
+  color: #fff;
   border: none;
   border-radius: 1rem;
   background-color: yellowgreen;
@@ -35,7 +40,7 @@ button.epicModeBtn {
   left: 1.5rem;
 }
 .epic-mode button.epicModeBtn {
-  color: yellowgreen !important;
+  color: yellowgreen;
   border: none;
   border-radius: 1rem;
   background-color: #fff;

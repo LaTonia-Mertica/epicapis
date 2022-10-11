@@ -36,14 +36,14 @@
   }
 
   .pretties {
-    color: yellow !important;
     @include character-subheads;
+    color: yellow;
     font-size: xx-small;
   }
 
   .pretties:hover {
     font-size: x-small;
-    color: $ea-white !important;
+    color: $ea-white;
     @include characters-hover;
 
     .subTitleLeadIn {

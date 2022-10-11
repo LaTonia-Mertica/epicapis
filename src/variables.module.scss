@@ -35,7 +35,7 @@ $space-input-border-bottom: 0.2rem solid #fff;
 
 // BUTTON STYLE SET
 @mixin button-submit {
-  color: $ea-red !important;
+  color: $ea-red;
   font-size: 2.5rem;
   text-transform: uppercase;
   font-family: $font-rubik-dirt;
@@ -43,7 +43,7 @@ $space-input-border-bottom: 0.2rem solid #fff;
 }
 
 @mixin button-submit-input-inline {
-  color: $ea-red !important;
+  color: $ea-red;
   font-size: 2.25rem;
   margin: 1% 25%;
   text-transform: uppercase;
