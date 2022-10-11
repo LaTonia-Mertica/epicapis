@@ -3,13 +3,6 @@
 .pokemonsCard {
   @include card-space;
 
-  .specDetailsSpan {
-    background-image: url("./images/pokemon-card.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-
   button {
     @include button-space;
     @include button-submit-input-inline;
@@ -48,9 +41,8 @@
   }
 
   .pokemonImg {
-    width: 15rem;
-    margin-top: -$space-lg;
-    margin-left: 3rem;
+    width: 17%;
+    margin-right: -3.25rem;
   }
 
   .nonMainImages {
@@ -59,8 +51,10 @@
     margin-bottom: -17rem;
   }
 
+  .pokemonImg:hover,
   .nonMainImages:hover {
     transform: scale(1.5);
+    transition: 1.5s ease-in-out;
   }
 
   span {

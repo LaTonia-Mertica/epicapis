@@ -149,15 +149,17 @@ function Pokemon({ openModal, onClose }) {
                 randomGif
               ) : (
                 <>
-                  <h1>{pokemonName}</h1>
+                  <span>
+                    <img
+                      src={pokemon.front_shiny}
+                      alt=""
+                      className="pokemonImg"
+                    />
+
+                    <h1>{pokemonName}</h1>
+                  </span>
 
                   <span className="specDetailsSpan">
-                    <section>
-                      <img src={pokemon.image} alt="" className="pokemonImg" />
-                    </section>
-
-                    {/* pokemon card image courtesy etsy.com */}
-
                     <section>
                       <h2>
                         <span className="specDetails">species:&nbsp;</span>
@@ -195,7 +197,7 @@ function Pokemon({ openModal, onClose }) {
 
                     <section className="nonMainImagesSection">
                       <img
-                        src={pokemon.front_shiny}
+                        src={pokemon.image}
                         alt=""
                         className="nonMainImages"
                       />
