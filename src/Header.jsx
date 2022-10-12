@@ -5,8 +5,8 @@ const Header = ({ epicMode, setEpicMode }) => {
 
   const [enteredUserName, setEnteredUserName] = useState("");
 
-  const formSubmitted = (evt) => {
-    evt.preventDefault();
+  const formSubmitted = (event) => {
+    event.preventDefault();
     localStorage.setItem("name", `Welcome, ${enteredUserName}`);
     setName(`Welcome, ${enteredUserName}`);
   };
@@ -27,34 +27,33 @@ const Header = ({ epicMode, setEpicMode }) => {
       <button onClick={toggleEpicMode} class="epicModeBtn">
         EPIC MODE
       </button>
-
-      <div>
-        <p class="custom-greeting"></p>
-
-        <div class="visitCountDiv">visit count</div>
-        <div class="visit-counter"></div>
-        <button type="reset" id="reset">
-          reset
-        </button>
-      </div>
-
       <h1 class="epicApisH1">{name}</h1>
       <form id="greetForm" onSubmit={formSubmitted}>
         <div class="store">
           <label for="enterusername"></label>
           {name ? (
             <div class="delete">
-              <label for="deleteusername" onClick={clearName}>
+              <label
+                for="deleteusername"
+                onClick={clearName}
+                id="deleteUserName"
+              >
                 do not store name
               </label>
               <input type="reset" id="deleteUserName" value="" />
+
+              <div class="visitCountDiv">visit count</div>
+              <div class="visit-counter"></div>
+              <button type="reset" id="reset">
+                reset
+              </button>
             </div>
           ) : (
             <>
               <input
                 value={enteredUserName}
-                onChange={(evt) => {
-                  setEnteredUserName(evt.target.value);
+                onChange={(event) => {
+                  setEnteredUserName(event.target.value);
                 }}
                 id="enterUserName"
                 type="text"

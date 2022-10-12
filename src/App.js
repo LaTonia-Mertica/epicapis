@@ -93,8 +93,9 @@ const App = () => {
 
   return (
     <main className={epicMode === "true" ? "epic-mode" : ""}>
-      <Header epicMode={epicMode} setEpicMode={setEpicMode} />
       <div className="logoAndNavDiv">
+        <Header epicMode={epicMode} setEpicMode={setEpicMode} />
+        {/* eslint-disable-next-line */}
         <a href="#">
           <img
             src={epicapisLogo}
@@ -107,7 +108,11 @@ const App = () => {
         <nav>
           <ul className="unorderedList">
             <li>
-              <a href="https://trello.com/b/YLTdkWTR/epicapis" target="_blank">
+              <a
+                href="https://trello.com/b/YLTdkWTR/epicapis"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <span className="listWordFont listWordColor">trello</span> board
               </a>
             </li>
@@ -115,12 +120,17 @@ const App = () => {
               <a
                 href="https://github.com/LaTonia-Mertica/epicapis"
                 target="_blank"
+                rel="noreferrer"
               >
                 <span className="listWordColor repoText">repo</span> sitory
               </a>
             </li>
             <li className="dotDevSiteText">
-              <a href="https://www.latoniamertica.dev/" target="_blank">
+              <a
+                href="https://www.latoniamertica.dev/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <span className="listWordFont listWordColor">dot dev</span> site
               </a>
             </li>

@@ -9,22 +9,17 @@ html {
   user-select: none;
 }
 body {
+  margin: 0;
   background-color: white;
 }
 div.logoAndNavDiv {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: -5rem;
-  margin-top: -10rem;
 }
 #epicapislogo {
   width: 17rem;
   height: 100%;
-  margin-top: -11rem;
-}
-ul.unorderedList {
-  margin-top: -9rem;
 }
 ul > li {
   list-style: none;
@@ -128,13 +123,11 @@ button.epicModeBtn {
   color: #545454;
   font-family: Passions Conflict;
   font-size: 3.5rem;
-  margin-left: 1.5rem;
-  margin-top: 13.5rem;
-  margin-bottom: 0;
+  margin-left: -20.5rem;
+  margin-bottom: -1rem;
 }
 input[type="text"] {
   width: 13.5rem;
-  // margin-left: 1.5rem;
   background-color: transparent;
   border: none;
   border-bottom: 0.05rem solid #c8c4bd;
@@ -156,8 +149,12 @@ button#reset {
   top: 13rem;
   left: 6rem;
 }
-input[type="reset"],
 .delete {
+  color: #c8c4bd;
+  font-size: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+input[type="reset"] {
   border: none;
   color: #c8c4bd;
   text-shadow: 0.015rem 0.015rem black;
@@ -270,6 +267,5 @@ Button.selectionsSubmitBtn {
   margin-bottom: 1rem;
 }
 .apiImgDiv {
-  margin-top: 3rem;
   text-align: center;
 }
