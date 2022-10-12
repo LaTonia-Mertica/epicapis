@@ -12,6 +12,11 @@
     @include button-hover;
   }
 
+  .changeWowBtn {
+    font-size: 1.5rem;
+    @include button-recall-api;
+  }
+
   video {
     @include border-box-shadow;
   }

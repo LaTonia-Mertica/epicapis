@@ -14,7 +14,6 @@ function DonaldTrump({ openModal, onClose }) {
 
   useEffect(() => {
     getData();
-    // disable rule
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -43,6 +42,9 @@ function DonaldTrump({ openModal, onClose }) {
           <Button onClick={onClose} className="donaldCloseBtn">
             &#x2612;
           </Button>
+          <button className="changeQuoteBtn" onClick={getData}>
+            change quote
+          </button>
           <div>
             <p className="quoteText">' {quote.quote}'</p>
           </div>

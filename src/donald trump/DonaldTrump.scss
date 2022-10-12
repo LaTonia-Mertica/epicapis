@@ -11,10 +11,17 @@
   Button.donaldCloseBtn {
     color: #ffdd42;
     @include button-x-custom-3;
+    font-size: 4.75rem;
   }
 
   button:hover {
     @include button-hover;
+  }
+
+  .changeQuoteBtn {
+    color: #ffdd42;
+    font-size: 1.35rem;
+    @include button-recall-api;
   }
 
   .quoteText {

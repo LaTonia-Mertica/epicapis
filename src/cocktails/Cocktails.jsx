@@ -11,17 +11,19 @@ function Cocktails({ openModal, onClose }) {
 
   const apikey = require("./apikey");
 
-  useEffect(() => {
-    (async () => {
-      const data = await fetch(
-        `https://www.thecocktaildb.com/api/json/v2/${apikey}/random.php`
-      );
+  const getDrink = async () => {
+    const data = await fetch(
+      `https://www.thecocktaildb.com/api/json/v2/${apikey}/random.php`
+    );
 
-      const json = await data.json();
-      // test
-      // console.log(json);
-      setCocktail(json.drinks[0]);
-    })();
+    const json = await data.json();
+
+    setCocktail(json.drinks[0]);
+  };
+
+  useEffect(() => {
+    getDrink();
+    // eslint-disable-next-line
   }, [apikey]);
 
   return (
@@ -38,7 +40,11 @@ function Cocktails({ openModal, onClose }) {
           {cocktail && (
             <div className="detailsDiv">
               <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
+
               <h2>{cocktail.strDrink}</h2>
+              <button onClick={getDrink} className="refreshDrinkBtn">
+                refresh drink
+              </button>
 
               <div>
                 <h3>

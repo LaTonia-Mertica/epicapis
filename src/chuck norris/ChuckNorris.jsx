@@ -14,7 +14,6 @@ function ChuckNorris({ openModal, onClose }) {
 
   useEffect(() => {
     getData();
-    // disable rule
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -44,6 +43,9 @@ function ChuckNorris({ openModal, onClose }) {
           <Button onClick={onClose} className="chuckCloseBtn">
             &#x2620;
           </Button>
+          <button className="changeJokeBtn" onClick={getData}>
+            change joke
+          </button>
           <div>
             <p className="jokeText">{joke.joke}</p>
           </div>

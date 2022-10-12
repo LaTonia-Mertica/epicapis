@@ -17,6 +17,12 @@
     @include button-hover;
   }
 
+  .changeJokeBtn {
+    color: orangered;
+    font-size: 1.5rem;
+    @include button-recall-api;
+  }
+
   .jokeText {
     color: $ea-white;
     text-shadow: 0.05rem 0.05rem orangered;

@@ -16,6 +16,17 @@
     @include button-hover;
   }
 
+  .refreshDrinkBtn {
+    color: greenyellow;
+    font-size: 1.25rem;
+    margin: 0 auto;
+    @include button-recall-api;
+  }
+
+  .refreshDrinkBtn:hover {
+    transform: scale(1.75);
+  }
+
   img {
     max-width: 10rem;
     max-height: 10rem;

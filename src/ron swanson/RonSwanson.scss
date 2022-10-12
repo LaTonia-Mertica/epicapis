@@ -19,6 +19,15 @@
     @include button-x-custom-1;
   }
 
+  .changeQuoteBtn {
+    font-size: 1.45rem;
+    @include button-recall-api;
+  }
+
+  .changeQuoteBtn:hover {
+    transform: scale(1.25);
+  }
+
   .manlyModeBtn {
     font-size: 1.25rem;
     margin-bottom: 1.25rem;

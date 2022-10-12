@@ -21,27 +21,30 @@ function RonSwanson({ openModal, onClose }) {
   }, []);
 
   React.useEffect(() => {
-    if (manlyMode) {
-      document.body.classList.add("manly");
-    } else {
-      document.body.classList.remove("manly");
-    }
+    // if (manlyMode) {
+    //   document.body.classList.add("manly");
+    // } else {
+    //   document.body.classList.remove("manly");
+    // }
     const json = JSON.stringify(manlyMode);
     localStorage.setItem("site-manly-mode", json);
   }, [manlyMode]);
 
+  const getQuote = async () => {
+    const data = await fetch(
+      `https://ron-swanson-quotes.herokuapp.com/v2/quotes`
+    );
+
+    const json = await data.json();
+    setQuote(json[0]);
+  };
+
   useEffect(() => {
-    (async () => {
-      const data = await fetch(
-        `https://ron-swanson-quotes.herokuapp.com/v2/quotes`
-      );
-      const json = await data.json();
-      setQuote(json[0]);
-    })();
+    getQuote();
   }, []);
 
   return (
-    <main>
+    <main className={manlyMode ? "manly" : ""}>
       <Modal
         open={openModal === "RonSwanson"}
         onClose={onClose}
@@ -50,6 +53,9 @@ function RonSwanson({ openModal, onClose }) {
       >
         <Box sx={style} className="ronsCard">
           <Button onClick={onClose}>&#x1F167;</Button>
+          <button className="changeQuoteBtn" onClick={getQuote}>
+            change quote
+          </button>
 
           <div>
             <p>
