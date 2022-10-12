@@ -11,7 +11,6 @@
     />
 
     <script defer src="visitCount.js"></script>
-    <link rel="stylesheet" href="styles.css" />
 
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" type="image/x-icon" />
 
@@ -58,37 +57,6 @@
   </head>
 
   <body>
-    <button onClick="epicMode()" class="epicModeBtn">EPIC MODE</button>
-
-    <header>
-      <h1 class="epicApisH1"></h1>
-      <form #greetForm>
-        <div class="store">
-          <label for="enterusername"></label>
-          <input
-            id="enterUserName"
-            type="text"
-            placeholder="enter name"
-            autocomplete="on"
-            required
-          />
-          <input id="submitUserName" type="submit" value="submit" />
-        </div>
-        <div class="delete">
-          <label for="deleteusername">do not store name</label>
-          <input type="reset" id="deleteUserName" value="" />
-        </div>
-      </form>
-    </header>
-
-    <main>
-      <p class="custom-greeting"></p>
-
-      <div class="visitCountDiv">visit count</div>
-      <div class="visit-counter"></div>
-      <button type="reset" id="reset">reset</button>
-    </main>
-
     <!-- epic mode javascript -->
     <script>
       function epicMode() {

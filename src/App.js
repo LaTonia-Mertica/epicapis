@@ -8,6 +8,7 @@ import Button from "@mui/material/Button";
 // route import necessary for jsx and scss files
 import { Route } from "@mui/icons-material";
 
+import Header from "./Header";
 import epicapisLogo from "./images/epicapisLogo.png";
 import epicapisposter from "./images/epicapisposter.pdf";
 
@@ -67,6 +68,9 @@ function App() {
   const closeModal = () => {
     setOpenModal(false);
   };
+  const [epicMode, setEpicMode] = useState(
+    localStorage.getItem("epicMode") || "false"
+  );
 
   const state = {
     email: {
@@ -88,7 +92,8 @@ function App() {
   // const [funnyestSelection, setFunnyestSelection] = useState("");
 
   return (
-    <main>
+    <main className={epicMode === "true" ? "epic-mode" : ""}>
+      <Header epicMode={epicMode} setEpicMode={setEpicMode} />
       <div className="logoAndNavDiv">
         <a href="#">
           <img
