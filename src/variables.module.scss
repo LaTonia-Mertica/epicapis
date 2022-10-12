@@ -85,6 +85,12 @@ $space-input-border-bottom: 0.2rem solid #fff;
   margin-bottom: -1.5rem;
 }
 
+@mixin button-recall-api {
+  position: absolute;
+  top: 3rem;
+  right: 5.5rem;
+}
+
 // CARD
 @mixin card-space {
   text-align: center;
