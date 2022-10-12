@@ -91,7 +91,7 @@
   }
 
   p {
-    margin-top: -5rem;
+    margin-top: -$space-lg;
     font-size: 11rem;
     font-family: $font-abril-fatface;
   }
@@ -113,6 +113,6 @@
     top: 7rem;
 
     background-color: rgba(255, 0, 0, 0.7);
-    padding: 1rem;
+    padding: $space-sm;
   }
 }

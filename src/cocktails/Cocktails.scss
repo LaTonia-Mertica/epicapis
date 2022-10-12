@@ -31,7 +31,7 @@
     max-width: 10rem;
     max-height: 10rem;
     margin-left: 1.75rem;
-    margin-right: -1rem;
+    margin-right: -$space-sm;
     margin-bottom: 1.75rem;
     @include border-box-shadow;
   }
@@ -51,7 +51,7 @@
     text-align: left;
     margin-left: 1.25rem;
     margin-top: 2.025rem;
-    text-shadow: 0.15rem 0.15rem 0.15rem $ea-black;
+    text-shadow: $space-xsm $space-xsm $space-xsm $ea-black;
 
     animation: glow 1.5s ease-in-out infinite;
   }

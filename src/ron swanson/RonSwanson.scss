@@ -10,7 +10,7 @@
     font-size: 2.5rem;
     text-transform: uppercase;
     font-family: $font-rubik-dirt;
-    text-shadow: 0.15rem 0.15rem 0.15rem $ea-black;
+    text-shadow: $space-xsm $space-xsm $space-xsm $ea-black;
     @include button-space;
   }
 
@@ -35,7 +35,7 @@
 
   p {
     color: deeppink;
-    text-shadow: $ea-black 0.15rem 0.15rem;
+    text-shadow: $ea-black $space-xsm $space-xsm;
     font-size: 2.25rem;
     line-height: 3rem;
     font-family: "Aggressive";
