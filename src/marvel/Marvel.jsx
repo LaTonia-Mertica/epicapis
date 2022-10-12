@@ -15,7 +15,7 @@ function Marvel({ openModal, onClose }) {
   const hash = md5(ts + privateapikey + apikey);
 
   const [name, setName] = useState("");
-  const [creators, setCreators] = useState("");
+  const [creators, setCreators] = useState();
   const [loading, setLoading] = useState(false);
 
   const getCreators = async (event) => {
@@ -67,25 +67,32 @@ function Marvel({ openModal, onClose }) {
             </Button>
           </form>
 
-          <section>
-            <p>
-              {creators.firstName} {creators.lastName}
-            </p>
-          </section>
+          <>
+            {!getCreators ? (
+              <></>
+            ) : (
+              <>
+                <section>
+                  <h1>{name.toUpperCase()}</h1>
+                </section>
+              </>
+            )}
 
-          <section>
-            <p className="marvelApiLinkPara">
-              <a
-                className="marvelApiLinkAnchor"
-                href="http://marvel.com"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Data provided by Marvel. © 2014 Marvel
-              </a>
-            </p>
-          </section>
-          <img src={skyline} alt="Skyline" className="skyline" />
+            <section>
+              <p className="marvelApiLinkPara">
+                <a
+                  className="marvelApiLinkAnchor"
+                  href="http://marvel.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Data provided by Marvel. © 2014 Marvel
+                </a>
+              </p>
+            </section>
+
+            <img src={skyline} alt="Skyline" className="skyline" />
+          </>
         </Box>
       </Modal>
     </main>
