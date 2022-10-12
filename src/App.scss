@@ -6,11 +6,9 @@
 
 html {
   scroll-behavior: smooth;
-
   user-select: none;
 }
 body {
-  margin-bottom: -150rem;
   background-color: white;
 }
 div.logoAndNavDiv {
@@ -18,6 +16,7 @@ div.logoAndNavDiv {
   justify-content: center;
   align-items: center;
   margin-bottom: -5rem;
+  margin-top: -10rem;
 }
 #epicapislogo {
   width: 17rem;
@@ -61,6 +60,144 @@ a.listWordColor {
   font-family: Arial, Helvetica, sans-serif;
   font-size: small;
 }
+
+// start of persisted content header styles
+.epic-mode {
+  background-color: yellowgreen;
+}
+.epic-mode .listWordColor {
+  color: #fff;
+  font-size: 1.25rem;
+}
+.epic-mode #epicapislogo {
+  filter: drop-shadow(0.15rem 0.15rem 0.15rem #222);
+  width: 17rem;
+}
+.epic-mode a,
+.epic-mode .apisOfEpicapis {
+  color: black;
+}
+
+.epic-mode .selectionsSubmitBtn {
+  color: black !important;
+}
+
+.epic-mode .myName {
+  font-size: 0.7rem;
+}
+button.epicModeBtn {
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  background-color: yellowgreen;
+  text-shadow: black 0.025rem 0.025rem;
+
+  width: 7rem;
+  padding: 0.5rem 1rem;
+
+  position: absolute;
+  top: 4.25rem;
+  left: 1.5rem;
+}
+.epic-mode button.epicModeBtn {
+  color: yellowgreen;
+  border: none;
+  border-radius: 1rem;
+  background-color: #fff;
+  text-shadow: black 0.025rem 0.025rem;
+}
+.epic-mode input[type="text"]::placeholder,
+.epic-mode .delete {
+  color: #fff;
+}
+.epic-mode input[type="text"] {
+  border-bottom: 0.05rem solid #fff;
+}
+.epic-mode .epicApisH1,
+.epic-mode .visitCountDiv,
+.epic-mode .visit-counter {
+  color: black;
+}
+.epic-mode input[type="reset"],
+.epic-mode #submitUserName {
+  color: #fff;
+}
+
+#greetForm,
+.epicApisH1 {
+  color: #545454;
+  font-family: Passions Conflict;
+  font-size: 3.5rem;
+  margin-left: 1.5rem;
+  margin-top: 13.5rem;
+  margin-bottom: 0;
+}
+input[type="text"] {
+  width: 13.5rem;
+  // margin-left: 1.5rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.05rem solid #c8c4bd;
+}
+input[type="text"]::placeholder {
+  color: #c8c4bd;
+  font-size: x-small;
+}
+#submitUserName {
+  color: #c8c4bd;
+  font-size: x-small;
+  border: none;
+  cursor: pointer;
+
+  background-color: transparent;
+}
+button#reset {
+  position: absolute;
+  top: 13rem;
+  left: 6rem;
+}
+input[type="reset"],
+.delete {
+  border: none;
+  color: #c8c4bd;
+  text-shadow: 0.015rem 0.015rem black;
+  font-size: 0.5rem;
+  background-color: transparent;
+}
+
+.visitCountDiv {
+  font-size: 0.75rem;
+  position: absolute;
+  top: 13rem;
+  left: 1.75rem;
+}
+.visitCountDiv,
+.visit-counter {
+  display: inline;
+
+  color: #545454;
+  letter-spacing: 0.05rem;
+  text-shadow: 0.025rem 0.025rem black;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.visit-counter {
+  font-family: cursive;
+  font-size: 1.25rem;
+}
+#reset {
+  color: white;
+  width: 2.5rem;
+  border: none;
+  padding-top: 0.05rem;
+  padding-bottom: 0.2rem;
+  padding-left: 0.25rem;
+  border-radius: 1rem;
+  font-size: xx-small;
+  text-shadow: 0.05rem 0.05rem black;
+  background-color: #c9e265;
+}
+// end of persisted content header styles
+
 .agify,
 .chuck,
 .cocktails,
