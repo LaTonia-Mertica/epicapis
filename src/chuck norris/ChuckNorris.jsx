@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 import "./ChuckNorris.scss";
 import { style } from "../mui.js";
 
-function ChuckNorris({ openModal, onClose }) {
+const ChuckNorris = ({ openModal, onClose }) => {
   const [joke, setJoke] = useState({
     joke: "",
   });
@@ -53,5 +53,5 @@ function ChuckNorris({ openModal, onClose }) {
       </Modal>
     </main>
   );
-}
+};
 export default ChuckNorris;

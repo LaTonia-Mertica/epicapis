@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import "./RonSwanson.scss";
 import { style } from "../mui.js";
 
-function RonSwanson({ openModal, onClose }) {
+const RonSwanson = ({ openModal, onClose }) => {
   const [manlyMode, setManlyMode] = React.useState(false);
   const [quote, setQuote] = useState();
 
@@ -73,5 +73,5 @@ function RonSwanson({ openModal, onClose }) {
       </Modal>
     </main>
   );
-}
+};
 export default RonSwanson;

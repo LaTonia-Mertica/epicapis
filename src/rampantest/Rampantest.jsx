@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import "./Rampantest.scss";
 import { style } from "../mui.js";
 
-function Rampantest({ openModal, onClose }) {
+const Rampantest = ({ openModal, onClose }) => {
   return (
     <main>
       <Modal
@@ -48,5 +48,5 @@ function Rampantest({ openModal, onClose }) {
       </Modal>
     </main>
   );
-}
+};
 export default Rampantest;

@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import "./Last.scss";
 import { style } from "../mui.js";
 
-function Last({ openModal, onClose }) {
+const Last = ({ openModal, onClose }) => {
   return (
     <main>
       <Modal
@@ -103,5 +103,5 @@ function Last({ openModal, onClose }) {
       </Modal>
     </main>
   );
-}
+};
 export default Last;

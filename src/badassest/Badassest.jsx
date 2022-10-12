@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import "./Badassest.scss";
 import { style } from "../mui.js";
 
-function Badassest({ openModal, onClose }) {
+const Badassest = ({ openModal, onClose }) => {
   return (
     <main>
       <Modal
@@ -77,5 +77,5 @@ function Badassest({ openModal, onClose }) {
       </Modal>
     </main>
   );
-}
+};
 export default Badassest;

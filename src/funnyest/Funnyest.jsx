@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import "./Funnyest.scss";
 import { style } from "../mui.js";
 
-function Funnyest({ openModal, onClose, funnyest, setFunnyest }) {
+const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
   const submit = () => {
     console.log(funnyest);
   };
@@ -137,5 +137,5 @@ function Funnyest({ openModal, onClose, funnyest, setFunnyest }) {
       </Modal>
     </main>
   );
-}
+};
 export default Funnyest;

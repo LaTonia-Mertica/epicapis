@@ -8,7 +8,7 @@ import "./Marvel.scss";
 import { style } from "../mui.js";
 import skyline from "./images/skyline.png";
 
-function Marvel({ openModal, onClose }) {
+const Marvel = ({ openModal, onClose }) => {
   const ts = require("./ts");
   const apikey = require("./apikey");
   const privateapikey = require("./privateApikey");
@@ -97,5 +97,5 @@ function Marvel({ openModal, onClose }) {
       </Modal>
     </main>
   );
-}
+};
 export default Marvel;

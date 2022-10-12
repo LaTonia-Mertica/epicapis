@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import "./Agify.scss";
 import { style } from "../mui.js";
 
-function Agify({ openModal, onClose }) {
+const Agify = ({ openModal, onClose }) => {
   const [name, setName] = useState("");
   const [ageByName, setAgeByName] = useState({
     age: "",
@@ -92,5 +92,5 @@ function Agify({ openModal, onClose }) {
       </Modal>
     </main>
   );
-}
+};
 export default Agify;

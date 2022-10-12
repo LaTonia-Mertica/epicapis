@@ -22,7 +22,7 @@ import sensible from "./images/sensible.png";
 import simple from "./images/simple.png";
 import testseasy from "./images/tests-easy.png";
 
-function Beautiful({ openModal, onClose }) {
+const Beautiful = ({ openModal, onClose }) => {
   return (
     <main>
       <Modal
@@ -62,5 +62,5 @@ function Beautiful({ openModal, onClose }) {
       </Modal>
     </main>
   );
-}
+};
 export default Beautiful;

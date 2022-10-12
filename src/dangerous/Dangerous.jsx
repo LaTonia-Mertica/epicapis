@@ -21,7 +21,7 @@ import uninspiring from "./images/uninspiring.png";
 import unrelatable from "./images/unrelatable.png";
 import unwieldy from "./images/unwieldy.png";
 
-function Dangerous({ openModal, onClose }) {
+const Dangerous = ({ openModal, onClose }) => {
   return (
     <main>
       <Modal
@@ -60,5 +60,5 @@ function Dangerous({ openModal, onClose }) {
       </Modal>
     </main>
   );
-}
+};
 export default Dangerous;

@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import "./Epic.scss";
 import { style } from "../mui.js";
 
-function Epic({ openModal, onClose }) {
+const Epic = ({ openModal, onClose }) => {
   return (
     <main>
       <Modal
@@ -27,5 +27,5 @@ function Epic({ openModal, onClose }) {
       </Modal>
     </main>
   );
-}
+};
 export default Epic;

@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import "./OwenWilson.scss";
 import { style } from "../mui.js";
 
-function OwenWilson({ openModal, onClose }) {
+const OwenWilson = ({ openModal, onClose }) => {
   const [movie, setMovie] = useState();
 
   const getWow = async () => {
@@ -50,5 +50,5 @@ function OwenWilson({ openModal, onClose }) {
       </Modal>
     </main>
   );
-}
+};
 export default OwenWilson;

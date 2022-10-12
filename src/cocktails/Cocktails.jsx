@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import "./Cocktails.scss";
 import { style } from "../mui.js";
 
-function Cocktails({ openModal, onClose }) {
+const Cocktails = ({ openModal, onClose }) => {
   const [cocktail, setCocktail] = useState();
 
   const apikey = require("./apikey");
@@ -106,5 +106,5 @@ function Cocktails({ openModal, onClose }) {
       </Modal>
     </main>
   );
-}
+};
 export default Cocktails;

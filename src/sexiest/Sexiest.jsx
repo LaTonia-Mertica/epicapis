@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import "./Sexiest.scss";
 import { style } from "../mui.js";
 
-function Sexiest({ openModal, onClose }) {
+const Sexiest = ({ openModal, onClose }) => {
   return (
     <main>
       <Modal
@@ -130,5 +130,5 @@ function Sexiest({ openModal, onClose }) {
       </Modal>
     </main>
   );
-}
+};
 export default Sexiest;

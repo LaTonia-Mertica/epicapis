@@ -12,7 +12,7 @@ import martini from "./images/martini.gif";
 import mimosa from "./images/mimosa.gif";
 import tomcollins from "./images/tomcollins.gif";
 
-function Prettiest({ openModal, onClose }) {
+const Prettiest = ({ openModal, onClose }) => {
   return (
     <main>
       <Modal
@@ -140,5 +140,5 @@ function Prettiest({ openModal, onClose }) {
       </Modal>
     </main>
   );
-}
+};
 export default Prettiest;

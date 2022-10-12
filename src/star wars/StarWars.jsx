@@ -9,7 +9,7 @@ import { style } from "../mui.js";
 
 import stormtrooper from "./images/stormtrooper.gif";
 
-function StarWars({ openModal, onClose }) {
+const StarWars = ({ openModal, onClose }) => {
   const [starshipName, setStarshipName] = useState("");
   const [starship, setStarship] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -201,5 +201,5 @@ function StarWars({ openModal, onClose }) {
       </Modal>
     </main>
   );
-}
+};
 export default StarWars;

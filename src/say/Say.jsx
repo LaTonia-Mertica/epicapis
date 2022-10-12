@@ -7,7 +7,7 @@ import "./Say.scss";
 import { style } from "../mui.js";
 import phraseGenerator from "./phraseGenerator";
 
-function Say({ openModal, onClose }) {
+const Say = ({ openModal, onClose }) => {
   const [phraseToShow, setPhraseToShow] = useState();
 
   const valueSelected = (event) => {
@@ -139,5 +139,5 @@ function Say({ openModal, onClose }) {
       </Modal>
     </main>
   );
-}
+};
 export default Say;

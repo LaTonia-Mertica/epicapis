@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import "./Grittiest.scss";
 import { style } from "../mui.js";
 
-function Grittiest({ openModal, onClose }) {
+const Grittiest = ({ openModal, onClose }) => {
   return (
     <main>
       <Modal
@@ -48,5 +48,5 @@ function Grittiest({ openModal, onClose }) {
       </Modal>
     </main>
   );
-}
+};
 export default Grittiest;

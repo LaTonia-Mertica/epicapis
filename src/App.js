@@ -63,7 +63,7 @@ import Beautiful from "./beautiful/Beautiful";
 import Api from "./api/Api";
 import Dangerous from "./dangerous/Dangerous";
 
-function App() {
+const App = () => {
   const [openModal, setOpenModal] = useState();
   const closeModal = () => {
     setOpenModal(false);
@@ -494,7 +494,7 @@ function App() {
       </footer>
     </main>
   );
-}
+};
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);

@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import "./Api.scss";
 import { style } from "../mui.js";
 
-function Api({ openModal, onClose }) {
+const Api = ({ openModal, onClose }) => {
   return (
     <main>
       <Modal
@@ -27,5 +27,5 @@ function Api({ openModal, onClose }) {
       </Modal>
     </main>
   );
-}
+};
 export default Api;

@@ -6,6 +6,7 @@
   button {
     @include button-space;
     @include button-submit-input-inline;
+    font-size: 3.25rem;
   }
 
   button:hover {

@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 import "./FOAAS.scss";
 import { style } from "../mui.js";
 
-function FOAAS({ openModal, onClose }) {
+const FOAAS = ({ openModal, onClose }) => {
   async function foaas(input) {
     const url = "https://foaas.com";
     const response = await axios(`${url}${input}`);
@@ -38,5 +38,5 @@ function FOAAS({ openModal, onClose }) {
       </Modal>
     </main>
   );
-}
+};
 export default FOAAS;

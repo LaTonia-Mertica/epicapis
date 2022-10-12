@@ -56,7 +56,7 @@ const pokemonGifs = [
 let randomGif = Math.floor(Math.random() * (pokemonGifs.length + 1));
 randomGif = pokemonGifs[randomGif];
 
-function Pokemon({ openModal, onClose }) {
+const Pokemon = ({ openModal, onClose }) => {
   const [pokemonName, setPokemonName] = useState("");
   const [pokemonShow, setPokemonShow] = useState(false);
   const [pokemon, setPokemon] = useState({
@@ -221,5 +221,5 @@ function Pokemon({ openModal, onClose }) {
       </Modal>
     </main>
   );
-}
+};
 export default Pokemon;

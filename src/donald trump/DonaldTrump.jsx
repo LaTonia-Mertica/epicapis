@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 import "./DonaldTrump.scss";
 import { style } from "../mui.js";
 
-function DonaldTrump({ openModal, onClose }) {
+const DonaldTrump = ({ openModal, onClose }) => {
   const [quote, setQuote] = useState({
     quote: "",
   });
@@ -52,5 +52,5 @@ function DonaldTrump({ openModal, onClose }) {
       </Modal>
     </main>
   );
-}
+};
 export default DonaldTrump;

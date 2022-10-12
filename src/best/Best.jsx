@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import "./Best.scss";
 import { style } from "../mui.js";
 
-function Best({ openModal, onClose }) {
+const Best = ({ openModal, onClose }) => {
   return (
     <main>
       <Modal
@@ -64,5 +64,5 @@ function Best({ openModal, onClose }) {
       </Modal>
     </main>
   );
-}
+};
 export default Best;

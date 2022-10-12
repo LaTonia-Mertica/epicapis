@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import "./Greatest.scss";
 import { style } from "../mui.js";
 
-function Greatest({ openModal, onClose }) {
+const Greatest = ({ openModal, onClose }) => {
   return (
     <main>
       <Modal
@@ -131,5 +131,5 @@ function Greatest({ openModal, onClose }) {
       </Modal>
     </main>
   );
-}
+};
 export default Greatest;
