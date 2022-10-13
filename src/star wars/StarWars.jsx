@@ -103,7 +103,7 @@ const StarWars = ({ openModal, onClose }) => {
           </div>
 
           {starship && (
-            <div className="fade">
+            <div className="fade specsDiv">
               <section className="star-wars">
                 <div className="crawl">
                   {error ? (
