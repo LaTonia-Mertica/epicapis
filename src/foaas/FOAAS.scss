@@ -1,6 +1,7 @@
 @import "../variables.module.scss";
 
 .foaasCard {
+  background-color: rgba(255, 255, 255, 0.5);
   @include card-space;
 
   button {
@@ -9,11 +10,28 @@
   }
 
   Button {
-    // color: #03989e;
+    color: #03989e;
     font-size: $space-xmd;
   }
 
   button:hover {
     @include button-hover;
+  }
+
+  .changeFoaasBtn {
+    font-size: 1.45rem;
+    @include button-recall-api;
+  }
+
+  h1 {
+    color: $ea-white;
+    font-size: 3.05rem;
+    text-shadow: 0.1rem 0.1rem $ea-black;
+  }
+
+  p {
+    color: $ea-white;
+    font-size: x-small;
+    text-shadow: 0.05rem 0.05rem $ea-black;
   }
 }

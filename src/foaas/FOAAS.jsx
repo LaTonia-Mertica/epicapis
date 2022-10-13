@@ -40,12 +40,12 @@ const FOAAS = ({ openModal, onClose }) => {
         <Box sx={style} className="foaasCard">
           <Button onClick={onClose}>&#x1E8A;</Button>
           <button className="changeFoaasBtn" onClick={getFoaas}>
-            change foaas
+            temper
           </button>
           {foaas && (
             <div>
               <h1>{foaas.message}</h1>
-              <p> {foaas.subtitle}</p>
+              <p> {foaas.subtitle}&nbsp;-</p>
             </div>
           )}
         </Box>
