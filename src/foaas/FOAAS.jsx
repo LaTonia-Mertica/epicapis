@@ -1,5 +1,4 @@
-import React from "react";
-import axios from "axios";
+import React, { useEffect, useState } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -8,18 +7,27 @@ import "./FOAAS.scss";
 import { style } from "../mui.js";
 
 const FOAAS = ({ openModal, onClose }) => {
-  async function foaas(input) {
-    const url = "https://foaas.com";
-    const response = await axios(`${url}${input}`);
-    console.log(`${response.data.message} ${response.data.subtitle}`);
-  }
+  const [foaas, setFoaas] = useState();
+  const { options } = require("./options");
 
-  // **note:** reasons this api uses axios:
-  // axios and fetch are used in the epic apis project for practice with both libraries
-  // asycn/await and .then are both used in the epic apis project for familiarity with both types of asynchronous code syntax
-  // fetch and async/await are the more modern and preferred methods
+  const getFoaas = async () => {
+    const option = options[Math.floor(Math.random() * options.length)];
 
-  // foaas("/ahole/La'Tonia Mertica");
+    const response = await fetch(
+      `https://foaas.com/${option}/Bad Code Day aka Ranting Baby`,
+      {
+        headers: { Accept: "application/json" },
+      }
+    );
+    const data = await response.json();
+    setFoaas(data);
+
+    console.log(data);
+  };
+
+  useEffect(() => {
+    getFoaas();
+  }, []);
 
   return (
     <main>
@@ -31,9 +39,15 @@ const FOAAS = ({ openModal, onClose }) => {
       >
         <Box sx={style} className="foaasCard">
           <Button onClick={onClose}>&#x1E8A;</Button>
-          <div>
-            <p className="foaasText">{foaas.message}</p>
-          </div>
+          <button className="changeFoaasBtn" onClick={getFoaas}>
+            change foaas
+          </button>
+          {foaas && (
+            <div>
+              <h1>{foaas.message}</h1>
+              <p> {foaas.subtitle}</p>
+            </div>
+          )}
         </Box>
       </Modal>
     </main>
