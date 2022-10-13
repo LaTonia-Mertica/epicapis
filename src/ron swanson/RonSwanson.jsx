@@ -24,18 +24,19 @@ const RonSwanson = ({ openModal, onClose }) => {
   useEffect(() => {
     const checkModeStatus = JSON.parse(localStorage.getItem("manly-mode"));
     if (checkModeStatus === null) {
-      localStorage.setItem("manly-mode", JSON.stringify(false));
+      localStorage.setItem("manly-mode", "false");
     } else {
       setManlyMode(checkModeStatus);
     }
   }, []);
 
   useEffect(() => {
-    if (manlyMode) {
-      localStorage.setItem("manly-mode", JSON.stringify(true));
-    } else {
-      localStorage.setItem("manly-mode", JSON.stringify(false));
-    }
+    localStorage.setItem("manly-mode", `${manlyMode}`);
+    // if (manlyMode) {
+    //   localStorage.setItem("manly-mode", JSON.stringify(true));
+    // } else {
+    //   localStorage.setItem("manly-mode", JSON.stringify(false));
+    // }
   }, [manlyMode]);
 
   return (
