@@ -57,36 +57,6 @@
   </head>
 
   <body>
-    <!-- epic mode javascript -->
-    <script>
-      function epicMode() {
-        let page = document.body;
-        page.classList.toggle("epic-mode");
-
-        let mode;
-
-        if (page.classList.contains("epic-mode")) {
-          console.log("EPIC MODE");
-          mode = "EPIC";
-        } else {
-          console.log("NON EPIC MODE");
-          mode = "NON EPIC";
-        }
-
-        localStorage.setItem("pageMode", JSON.stringify(mode));
-      }
-
-      let getMode = JSON.parse(localStorage.getItem("pageMode"));
-      console.log(getMode);
-
-      if (getMode === "EPIC") {
-        document.body.classList = "epic-mode";
-      }
-    </script>
-
-    <!-- persist user name input javascript -->
-    <script src="index.js"></script>
-
     <!-- inform user web page requires JavaScript to function -->
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>

@@ -41,12 +41,6 @@ const Header = ({ epicMode, setEpicMode }) => {
                 do not store name
               </label>
               <input type="reset" id="deleteUserName" value="" />
-
-              <div class="visitCountDiv">visit count</div>
-              <div class="visit-counter"></div>
-              <button type="reset" id="reset">
-                reset
-              </button>
             </div>
           ) : (
             <>

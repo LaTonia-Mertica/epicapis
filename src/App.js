@@ -72,6 +72,16 @@ const App = () => {
     localStorage.getItem("epicMode") || "false"
   );
 
+  const [count, setCount] = useState(localStorage.getItem("count") || 1);
+  const addOneToCount = () => {
+    let visitCount = Number(localStorage.getItem("count")) || 1;
+    localStorage.setItem("count", Number(count) + 1);
+  };
+  const deleteCount = () => {
+    setCount(1);
+    localStorage.removeItem("count");
+  };
+
   const state = {
     email: {
       to: "",
@@ -92,7 +102,16 @@ const App = () => {
   // const [funnyestSelection, setFunnyestSelection] = useState("");
 
   return (
-    <main className={epicMode === "true" ? "epic-mode" : ""}>
+    <main
+      className={epicMode === "true" ? "epic-mode" : ""}
+      onLoad={addOneToCount}
+    >
+      <div class="visitCountDiv">visit count</div>
+      <p class="visitCountPara">{count}</p>
+      <button type="reset" id="reset" onClick={deleteCount}>
+        reset
+      </button>
+
       <div className="logoAndNavDiv">
         <Header epicMode={epicMode} setEpicMode={setEpicMode} />
         {/* eslint-disable-next-line */}
