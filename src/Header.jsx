@@ -24,17 +24,17 @@ const Header = ({ epicMode, setEpicMode }) => {
 
   return (
     <header>
-      <button onClick={toggleEpicMode} class="epicModeBtn">
+      <button onClick={toggleEpicMode} className="epicModeBtn">
         EPIC MODE
       </button>
-      <h1 class="epicApisH1">{name}</h1>
+      <h1 className="epicApisH1">{name}</h1>
       <form id="greetForm" onSubmit={formSubmitted}>
-        <div class="store">
-          <label for="enterusername"></label>
+        <div className="store">
+          <label htmlFor="enterusername"></label>
           {name ? (
-            <div class="delete">
+            <div className="delete">
               <label
-                for="deleteusername"
+                htmlFor="deleteusername"
                 onClick={clearName}
                 id="deleteUserName"
               >
@@ -52,7 +52,7 @@ const Header = ({ epicMode, setEpicMode }) => {
                 id="enterUserName"
                 type="text"
                 placeholder="enter name"
-                autocomplete="on"
+                autoComplete="on"
                 required
               />
               <input id="submitUserName" type="submit" value="submit" />
