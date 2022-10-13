@@ -67,6 +67,7 @@ import Dangerous from "./dangerous/Dangerous";
 
 const App = () => {
   const [openModal, setOpenModal] = useState();
+
   const closeModal = () => {
     setOpenModal(false);
   };
