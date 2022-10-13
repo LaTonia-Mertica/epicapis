@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
 // styles import necessary for jsx and scss files
+// eslint-disable-next-line
 import styles from "./App.scss";
 import Masonry from "react-masonry-css";
 import Button from "@mui/material/Button";
 // route import necessary for jsx and scss files
+// eslint-disable-next-line
 import { Route } from "@mui/icons-material";
 
 import Header from "./Header";
@@ -74,6 +76,7 @@ const App = () => {
 
   const [count, setCount] = useState(localStorage.getItem("count") || 1);
   const addOneToCount = () => {
+    // eslint-disable-next-line
     let visitCount = Number(localStorage.getItem("count")) || 1;
     localStorage.setItem("count", Number(count) + 1);
   };
@@ -106,8 +109,8 @@ const App = () => {
       className={epicMode === "true" ? "epic-mode" : ""}
       onLoad={addOneToCount}
     >
-      <div class="visitCountDiv">visit count</div>
-      <p class="visitCountPara">{count}</p>
+      <div className="visitCountDiv">visit count</div>
+      <p className="visitCountPara">{count}</p>
       <button type="reset" id="reset" onClick={deleteCount}>
         reset
       </button>
