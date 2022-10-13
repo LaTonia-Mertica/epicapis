@@ -7,45 +7,41 @@ import "./RonSwanson.scss";
 import { style } from "../mui.js";
 
 const RonSwanson = ({ openModal, onClose }) => {
-  const [manlyMode, setManlyMode] = React.useState(false);
   const [quote, setQuote] = useState();
-
-  React.useEffect(() => {
-    const json = localStorage.getItem("site-manly-mode");
-    const currentMode = JSON.parse(json);
-    if (currentMode) {
-      setManlyMode(true);
-    } else {
-      setManlyMode(false);
-    }
-  }, []);
-
-  React.useEffect(() => {
-    // if (manlyMode) {
-    //   document.body.classList.add("manly");
-    // } else {
-    //   document.body.classList.remove("manly");
-    // }
-    const json = JSON.stringify(manlyMode);
-    localStorage.setItem("site-manly-mode", json);
-  }, [manlyMode]);
+  const [manlyMode, setManlyMode] = useState(false);
 
   const getQuote = async () => {
     const data = await fetch(
       `https://ron-swanson-quotes.herokuapp.com/v2/quotes`
     );
-
     const json = await data.json();
     setQuote(json[0]);
   };
-
   useEffect(() => {
     getQuote();
   }, []);
 
+  useEffect(() => {
+    const checkModeStatus = JSON.parse(localStorage.getItem("manly-mode"));
+    if (checkModeStatus === null) {
+      localStorage.setItem("manly-mode", JSON.stringify(false));
+    } else {
+      setManlyMode(checkModeStatus);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (manlyMode) {
+      localStorage.setItem("manly-mode", JSON.stringify(true));
+    } else {
+      localStorage.setItem("manly-mode", JSON.stringify(false));
+    }
+  }, [manlyMode]);
+
   return (
-    <main className={manlyMode ? "manly" : ""}>
+    <main>
       <Modal
+        className={manlyMode ? "manly" : ""}
         open={openModal === "RonSwanson"}
         onClose={onClose}
         aria-labelledby="modal-modal-title"
@@ -62,8 +58,10 @@ const RonSwanson = ({ openModal, onClose }) => {
               '{quote}'
               <br />
               <button
-                onClick={() => setManlyMode(!manlyMode)}
-                className="manlyModeBtn lineUpEffect"
+                className="manly manlyModeBtn lineUpEffect"
+                onClick={() => {
+                  setManlyMode(!manlyMode);
+                }}
               >
                 MANLY MODE&nbsp;&nbsp;|&nbsp;&nbsp;2 THOUGHTS
               </button>

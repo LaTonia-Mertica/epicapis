@@ -1,4 +1,3 @@
-@import "../App.scss";
 @import "../variables.module.scss";
 
 .ronsCard {
@@ -57,7 +56,6 @@
   color: deepskyblue;
 }
 
-// text effects
 .lineUpEffect {
   animation: 2.5s anim-lineUp ease-out infinite;
 }
