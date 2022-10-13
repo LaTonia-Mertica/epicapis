@@ -13,14 +13,14 @@ _some apis simply output content_:
 - Chuck Norris (random joke)
 - CockTails (random drink)
 - Donald Trump (random quote)
+- FOAAS (random eff-off)
 - Owen Wilson (random wow)
 - Ron Swanson (random quote)
 
 _other apis accept input to produce a result_:
 
 - Agify (accepts person name)
-- FOAAS (accepts XXXXX)
-- Marvel (accepts XXXXX)
+- Marvel (accepts creator name)
 - Pokemon (accepts pokemon name)
 - Star Wars (accepts starship name)
 
@@ -48,7 +48,7 @@ epic apis provides a unique user experience through a medley of colorful apis
 
 ### <p>[COCKTAILS:](https://www.thecocktaildb.com/) info re: mature drinks</p>
 
-### <p>FOAAS: f\*\*\* off statements</p>
+### <p>[FOAAS:](https://foaas.com/) f\*\*\* off statements</p>
 
 ### <p>[MARVEL:](https://developer.marvel.com/) library of comics info</p>
 
@@ -72,7 +72,9 @@ epic apis provides a unique user experience through a medley of colorful apis
 
 ###### **helpful list:** [pokemon wiki](https://pokemon.fandom.com/wiki/List_of_Pok%C3%A9mon)
 
-###### **helpful list+:** [star wars spacecrafts](https://en.wikipedia.org/wiki/List_of_Star_Wars_spacecraft)
+###### **helpful list+:** [marvel creators](https://www.marvel.com/comics/creators)
+
+###### **helpful list++:** [star wars spacecrafts](https://en.wikipedia.org/wiki/List_of_Star_Wars_spacecraft)
 
 <br>
 
@@ -257,6 +259,28 @@ alert ("Hello Code World!");
 'You can name custom events anything you want, but as a best practice, you should use all lowercase characters. Event names are case-sensitive, and the property names on elements are case-insensitive and converted to lowercase by the browser. This can create conflicts if uses on\* listeners on elements.<br>
 
 ###### | _definition courtesy general online search_
+
+<br>
+
+### **CODE CAVALRY**
+
+###### _<p style="text-align: justify">my mentors rock. max has been and remains primary re: project-based code/web dev while also helping initiate me into the code world of algorithms. max was among my first instructors as i began my coding journey in hack upstate 'careers in code.' adam, danny, and jess have been exceptional supports re: expanding my knowledge and skillset to include algorithms and advanced project-work. they are part of the team assigned to pair program 1:1 with me through underdog devs 'project underdog.' thank you each tremendously for being you and doing what you do.</p>_
+
+#### \* ADAM FLETCHER, Bit.io Chief Executive Officer / Founder
+
+#### \* DANNY JACOSHENK, Pilot Software Engineer
+
+#### \* JESS BONANNO, Slack Software Engineer
+
+#### \* MAX MATTHEWS, Tuzag Chief Technology Officer
+
+<br>
+
+### **NEXT STEPS**
+
+- **_email api_**: allow users to select parts of their activity/selections to email (versus default to all)
+
+- **_media queries_**: optimize for devices/screens under medium size
 
 <br>
 
