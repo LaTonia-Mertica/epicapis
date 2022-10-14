@@ -45,12 +45,10 @@ const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
                   <input
                     type="checkbox"
                     name="funnyest"
-                    id="cedrictheentertainer"
-                    value="cedrictheentertainer"
+                    id="jamiefoxx"
+                    value="jamiefoxx"
                   />
-                  <label htmlFor="cedrictheentertainer">
-                    Cedric 'The Entertainer'
-                  </label>
+                  <label htmlFor="jamiefoxx">Jamie Foxx</label>
                   <br />
 
                   <input
