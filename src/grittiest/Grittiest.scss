@@ -38,12 +38,21 @@
     font-size: x-small;
   }
 
+  input[type="number"] {
+    width: $space-md;
+    @include input-number-and-text-format;
+  }
+
   input[type="text"]::placeholder {
     color: $ea-white;
+    @include input-number-and-text-format;
   }
 
   input[type="text"] {
     border-bottom: $space-input-border-bottom;
+    color: $ea-white;
+    font-size: small;
+    margin-top: -0.05rem;
   }
 
   .grittiestArmy {
