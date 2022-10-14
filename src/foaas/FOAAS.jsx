@@ -21,8 +21,6 @@ const FOAAS = ({ openModal, onClose }) => {
     );
     const data = await response.json();
     setFoaas(data);
-
-    console.log(data);
   };
 
   useEffect(() => {
