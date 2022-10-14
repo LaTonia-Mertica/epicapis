@@ -5,6 +5,7 @@ import Button from "@mui/material/Button";
 
 import "./Funnyest.scss";
 import { style } from "../mui.js";
+import { AcUnitRounded } from "@mui/icons-material";
 
 const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
   const submit = () => {
@@ -39,7 +40,12 @@ const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
                     id="anthonyanderson"
                     value="anthonyanderson"
                   />
-                  <label htmlFor="anthonyanderson">Anthony Anderson</label>
+                  <label
+                    htmlFor="anthonyanderson"
+                    title="image property of variety.com"
+                  >
+                    Anthony Anderson
+                  </label>
                   <br />
 
                   <input
@@ -48,7 +54,9 @@ const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
                     id="jamiefoxx"
                     value="jamiefoxx"
                   />
-                  <label htmlFor="jamiefoxx">Jamie Foxx</label>
+                  <label htmlFor="jamiefoxx" title="image property of aurn.com">
+                    Jamie Foxx
+                  </label>
                   <br />
 
                   <input
@@ -57,7 +65,12 @@ const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
                     id="whoopigoldberg"
                     value="whoopigoldberg"
                   />
-                  <label htmlFor="whoopigoldberg">Whoopi Goldberg</label>
+                  <label
+                    htmlFor="whoopigoldberg"
+                    title="image property of celebtattler.com"
+                  >
+                    Whoopi Goldberg
+                  </label>
                   <br />
 
                   <input
@@ -66,7 +79,12 @@ const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
                     id="orlandojones"
                     value="orlandojones"
                   />
-                  <label htmlFor="orlandojones">Orlando Jones</label>
+                  <label
+                    htmlFor="orlandojones"
+                    title="image property of app.blacklivingknowledge.com"
+                  >
+                    Orlando Jones
+                  </label>
                   <br />
 
                   <input
@@ -75,7 +93,12 @@ const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
                     id="berniemac"
                     value="berniemac"
                   />
-                  <label htmlFor="berniemac">Bernie Mac</label>
+                  <label
+                    htmlFor="berniemac"
+                    title="image property of thecinemaholic.com"
+                  >
+                    Bernie Mac
+                  </label>
                   <br />
                 </p>
 
@@ -86,7 +109,12 @@ const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
                     id="davidmann"
                     value="davidmann"
                   />
-                  <label htmlFor="davidmann">David Mann</label>
+                  <label
+                    htmlFor="davidmann"
+                    title="image property of hellobeautiful.com"
+                  >
+                    David Mann
+                  </label>
                   <br />
 
                   <input
@@ -95,7 +123,12 @@ const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
                     id="eddiemurphy"
                     value="eddiemurphy"
                   />
-                  <label htmlFor="eddiemurphy">Eddie Murphy</label>
+                  <label
+                    htmlFor="eddiemurphy"
+                    title="image property of oseiagyemang.com"
+                  >
+                    Eddie Murphy
+                  </label>
                   <br />
 
                   <input
@@ -104,7 +137,12 @@ const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
                     id="lawandapage"
                     value="lawandapage"
                   />
-                  <label htmlFor="lawandapage">LaWanda Page</label>
+                  <label
+                    htmlFor="lawandapage"
+                    title="image property of celebritynetworths.org"
+                  >
+                    LaWanda Page
+                  </label>
                   <br />
 
                   <input
@@ -113,7 +151,12 @@ const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
                     id="wandasykes"
                     value="wandasykes"
                   />
-                  <label htmlFor="wandasykes">Wanda Sykes</label>
+                  <label
+                    htmlFor="wandasykes"
+                    title="image property of pridesource.com"
+                  >
+                    Wanda Sykes
+                  </label>
                   <br />
 
                   <input
@@ -122,7 +165,12 @@ const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
                     id="roberttownsend"
                     value="roberttownsend"
                   />
-                  <label htmlFor="roberttownsend">Robert Townsend</label>
+                  <label
+                    htmlFor="roberttownsend"
+                    title="image property of kut.org"
+                  >
+                    Robert Townsend
+                  </label>
                   <br />
                 </p>
               </span>
@@ -137,3 +185,17 @@ const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
   );
 };
 export default Funnyest;
+
+// IMAGE CREDITS
+
+// anthony anderson - variety.com
+// jamie foxx - aurn.com
+// whoopi goldberg - celebtattler.com
+// orlando jones - app.blacklivingknowledge.com
+// bernie mac - thecinemaholic.com
+
+// david mann - hellobeautiful.com
+// eddie murphy - oseiagyemang.com
+// lawanda page - celebritynetworths.org
+// wanda sykes - pridesource.com
+// robert townsend - kut.org

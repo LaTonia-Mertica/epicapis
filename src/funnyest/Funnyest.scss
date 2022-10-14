@@ -56,6 +56,96 @@
     width: 50%;
   }
 
+  #anthonyanderson:hover::after {
+    content: url(images/anthonyanderson.png);
+    zoom: 15%;
+    position: absolute;
+    top: 70rem;
+    left: 7rem;
+    @include border-box-shadow;
+  }
+
+  #jamiefoxx:hover::after {
+    content: url(images/jamiefoxx.png);
+    zoom: 15%;
+    position: absolute;
+    top: 85rem;
+    left: 7rem;
+    @include border-box-shadow;
+  }
+
+  #whoopigoldberg:hover::after {
+    content: url(images/whoopigoldberg.png);
+    zoom: 15%;
+    position: absolute;
+    top: 100rem;
+    left: 7rem;
+    @include border-box-shadow;
+  }
+
+  #orlandojones:hover::after {
+    content: url(images/orlandojones.png);
+    zoom: 15%;
+    position: absolute;
+    top: 117rem;
+    left: 7rem;
+    @include border-box-shadow;
+  }
+
+  #berniemac:hover::after {
+    content: url(images/berniemac.png);
+    zoom: 15%;
+    position: absolute;
+    top: 130rem;
+    left: 7rem;
+    @include border-box-shadow;
+  }
+
+  #davidmann:hover::after {
+    content: url(images/davidmann.png);
+    zoom: 15%;
+    position: absolute;
+    top: 70rem;
+    right: 7rem;
+    @include border-box-shadow;
+  }
+
+  #eddiemurphy:hover::after {
+    content: url(images/eddiemurphy.png);
+    zoom: 15%;
+    position: absolute;
+    top: 85rem;
+    right: 7rem;
+    @include border-box-shadow;
+  }
+
+  #lawandapage:hover::after {
+    content: url(images/lawandapage.png);
+    zoom: 15%;
+    position: absolute;
+    top: 100rem;
+    right: 7rem;
+    @include border-box-shadow;
+  }
+
+  #wandasykes:hover::after {
+    content: url(images/wandasykes.png);
+    zoom: 15%;
+    position: absolute;
+    top: 117rem;
+    right: 7rem;
+    @include border-box-shadow;
+  }
+
+  #roberttownsend:hover::after {
+    content: url(images/roberttownsend.png);
+    zoom: 15%;
+    position: absolute;
+    top: 155rem;
+    right: 7rem;
+    @include border-box-shadow;
+  }
+
   .submitBtn {
     @include button-submit;
   }
