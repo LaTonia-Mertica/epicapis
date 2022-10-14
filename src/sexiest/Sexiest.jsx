@@ -19,9 +19,7 @@ const Sexiest = ({ openModal, onClose }) => {
           <Button onClick={onClose}>&#x274C;</Button>
           <div className="fieldsetDiv">
             <fieldset>
-              <legend className="feminineLegend">
-                Sexiest Feminine Alter Ego
-              </legend>
+              <legend className="feminineLegend">Sexiest Feminine</legend>
               <p className="sexiestPara para1">
                 <input
                   type="radio"
@@ -52,9 +50,7 @@ const Sexiest = ({ openModal, onClose }) => {
             </fieldset>
 
             <fieldset>
-              <legend className="masculineLegend">
-                Sexiest Masculine Alter Ego
-              </legend>
+              <legend className="masculineLegend">Sexiest Masculine</legend>
               <p className="sexiestPara para2">
                 <input
                   type="radio"
@@ -88,9 +84,7 @@ const Sexiest = ({ openModal, onClose }) => {
             </fieldset>
 
             <fieldset>
-              <legend className="nonbinaryLegend">
-                Sexiest Non Binary Alter Ego
-              </legend>
+              <legend className="nonbinaryLegend">Sexiest Non Binary</legend>
               <p className="sexiestPara para3">
                 <input
                   type="radio"
