@@ -198,6 +198,12 @@ $font-rubik-distressed: Rubik Distressed;
   color: #c9e265;
 }
 
+@mixin input-number-and-text-format {
+  font-size: small;
+  height: 1rem;
+  margin-top: 0.5rem;
+}
+
 // LIST STYLE SET
 @mixin list-word {
   font-family: cursive;
