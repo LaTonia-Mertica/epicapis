@@ -8,14 +8,17 @@ import { style } from "../mui.js";
 
 const OwenWilson = ({ openModal, onClose }) => {
   const [movie, setMovie] = useState();
+  const [loading, setLoading] = useState(false);
 
   const getWow = async () => {
+    setLoading(true);
     const data = await fetch(
       `https://owen-wilson-wow-api.herokuapp.com/wows/random`
     );
 
     const json = await data.json();
     setMovie(json[0]);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -33,14 +36,14 @@ const OwenWilson = ({ openModal, onClose }) => {
         <Box sx={style} className="owensCard">
           <Button onClick={onClose}>&#x2573;</Button>
           <button className="changeWowBtn" onClick={getWow}>
-            change wow
+            {loading ? <>loading...</> : <>change wow</>}
           </button>
           {movie && (
             <div>
               <video src={movie.video["480p"]} autoPlay controls loop />
               <br />
               <br />
-              <span className="contextText">context: </span>
+              <span className="contextText">context:&nbsp;</span>
               <span className="wowText">{movie.full_line}</span>
               <br />
               <br />
