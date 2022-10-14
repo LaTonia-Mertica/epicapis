@@ -41,7 +41,7 @@ const StarWars = ({ openModal, onClose }) => {
 
         setTimeout(() => {
           setStarship(null);
-        }, 15000);
+        }, 16000);
       })
       .catch((error) => {
         console.error(error);
