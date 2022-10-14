@@ -25,6 +25,7 @@
   label {
     color: orangered;
     cursor: pointer;
+    font-size: 1.75rem;
   }
 
   p.prettiestPara {
@@ -39,6 +40,7 @@
     @include character-subheads;
     color: yellow;
     font-size: xx-small;
+    display: block;
   }
 
   .pretties:hover {
@@ -48,6 +50,7 @@
 
     .subTitleLeadIn {
       font-size: x-small;
+      display: block;
     }
 
     i {

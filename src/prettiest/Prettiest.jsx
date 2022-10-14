@@ -36,7 +36,7 @@ const Prettiest = ({ openModal, onClose }) => {
                   High Ball
                   <br />
                   <span className="pretties">
-                    <span className="subTitleLeadIn">anything</span>{" "}
+                    <span className="subTitleLeadIn">anything&nbsp;</span>
                     <i>dark & stormy</i>
                   </span>
                 </label>
@@ -47,7 +47,7 @@ const Prettiest = ({ openModal, onClose }) => {
                   Coupe
                   <br />
                   <span className="pretties">
-                    <span className="subTitleLeadIn">necessarily </span>
+                    <span className="subTitleLeadIn">necessarily&nbsp;</span>
                     <i>boulevardier</i>
                   </span>
                 </label>
@@ -62,7 +62,7 @@ const Prettiest = ({ openModal, onClose }) => {
                 <label htmlFor="zombie">
                   Zombie <br />
                   <span className="pretties">
-                    <span className="subTitleLeadIn">think</span>{" "}
+                    <span className="subTitleLeadIn">think&nbsp;</span>
                     <i>tequila sunrise</i>
                   </span>
                 </label>
@@ -72,7 +72,7 @@ const Prettiest = ({ openModal, onClose }) => {
                 <label htmlFor="rocks">
                   Rocks <br />
                   <span className="pretties">
-                    <span className="subTitleLeadIn">essentially</span>{" "}
+                    <span className="subTitleLeadIn">essentially&nbsp;</span>
                     <i>old fashioned</i>
                   </span>
                 </label>
@@ -88,7 +88,7 @@ const Prettiest = ({ openModal, onClose }) => {
                   Hurricane
                   <br />
                   <span className="pretties">
-                    <span className="subTitleLeadIn">akin</span>{" "}
+                    <span className="subTitleLeadIn">akin&nbsp;</span>
                     <i>singapore sling</i>
                   </span>
                 </label>
