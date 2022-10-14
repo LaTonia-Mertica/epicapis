@@ -10,7 +10,6 @@
   }
 
   Button {
-    color: #03989e;
     font-size: $space-xmd;
   }
 
@@ -26,12 +25,15 @@
   h1 {
     color: $ea-white;
     font-size: 3.05rem;
+    font-family: $font-rubik-glitch;
     text-shadow: 0.1rem 0.1rem $ea-black;
   }
 
   p {
     color: $ea-white;
-    font-size: x-small;
+    font-size: small;
+    color: $ea-red;
+    font-family: $font-bebas-neue;
     text-shadow: 0.05rem 0.05rem $ea-black;
   }
 }
