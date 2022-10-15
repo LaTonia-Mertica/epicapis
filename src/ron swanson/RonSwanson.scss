@@ -57,7 +57,7 @@
 }
 
 .lineUpEffect {
-  animation: 2.5s anim-lineUp ease-out infinite;
+  @include line-up-effect1;
 }
 @keyframes anim-lineUp {
   0% {
