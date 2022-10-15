@@ -205,6 +205,13 @@ $font-rubik-glitch: Rubik Glitch;
   margin-top: 0.5rem;
 }
 
+@mixin input-combo-number-text-format {
+  border-bottom: $space-input-border-bottom;
+  color: $ea-white;
+  font-size: small;
+  margin-top: -0.05rem;
+}
+
 // LIST STYLE SET
 @mixin list-word {
   font-family: cursive;
