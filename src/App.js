@@ -19,6 +19,11 @@ import chuck from "./images/chuck.png";
 import cocktails from "./images/cocktails.png";
 import foaas from "./images/foaas.png";
 import adultadvisory from "./images/adultadvisory.png";
+import effoffentry from "./images/effoffentry.png";
+import ohmy from "./images/ohmy.png";
+import saywhatwhat from "./images/saywhatwhat.png";
+import understood from "./images/understood.png";
+import wow from "./images/wow.png";
 import marvel from "./images/marvel.png";
 import owen from "./images/owen.png";
 import pokemon from "./images/pokemon.png";
@@ -66,6 +71,18 @@ import Epic from "./epic/Epic";
 import Beautiful from "./beautiful/Beautiful";
 import Api from "./api/Api";
 import Dangerous from "./dangerous/Dangerous";
+
+const foaasImgs = [
+  foaas,
+  adultadvisory,
+  effoffentry,
+  ohmy,
+  saywhatwhat,
+  understood,
+  wow,
+];
+const getRandomFoaasImg = Math.floor(Math.random() * foaasImgs.length);
+let randomFoaasImg = foaasImgs[getRandomFoaasImg];
 
 const App = () => {
   const [openModal, setOpenModal] = useState();
@@ -337,7 +354,7 @@ const App = () => {
           ></img>
 
           <img
-            src={foaas}
+            src={randomFoaasImg}
             alt="Fuck Off As A Service Logo"
             width="500px"
             height="500px"
