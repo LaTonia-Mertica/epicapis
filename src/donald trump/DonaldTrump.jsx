@@ -11,6 +11,7 @@ const DonaldTrump = ({ openModal, onClose }) => {
   const [quote, setQuote] = useState({
     quote: "",
   });
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     getData();
@@ -18,11 +19,13 @@ const DonaldTrump = ({ openModal, onClose }) => {
   }, []);
 
   const getData = async () => {
+    setLoading(true);
     const data = await axios.get(`https://api.tronalddump.io/random/quote`);
     setQuote({
       ...quote,
       quote: data.data.value,
     });
+    setLoading(false);
   };
 
   // **note:** reasons this api uses axios:
@@ -43,7 +46,7 @@ const DonaldTrump = ({ openModal, onClose }) => {
             &#x2612;
           </Button>
           <button className="changeQuoteBtn" onClick={getData}>
-            change quote
+            {loading ? <>loading...</> : <>change quote</>}
           </button>
           <div>
             <p className="quoteText">' {quote.quote}'</p>

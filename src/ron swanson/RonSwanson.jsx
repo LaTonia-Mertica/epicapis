@@ -8,14 +8,17 @@ import { style } from "../mui.js";
 
 const RonSwanson = ({ openModal, onClose }) => {
   const [quote, setQuote] = useState();
+  const [loading, setLoading] = useState(false);
   const [manlyMode, setManlyMode] = useState(false);
 
   const getQuote = async () => {
+    setLoading(true);
     const data = await fetch(
       `https://ron-swanson-quotes.herokuapp.com/v2/quotes`
     );
     const json = await data.json();
     setQuote(json[0]);
+    setLoading(false);
   };
   useEffect(() => {
     getQuote();
@@ -51,7 +54,7 @@ const RonSwanson = ({ openModal, onClose }) => {
         <Box sx={style} className="ronsCard">
           <Button onClick={onClose}>&#x1F167;</Button>
           <button className="changeQuoteBtn" onClick={getQuote}>
-            change quote
+            {loading ? <>loading...</> : <>change quote</>}
           </button>
 
           <div>

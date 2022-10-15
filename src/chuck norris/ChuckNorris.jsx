@@ -11,8 +11,10 @@ const ChuckNorris = ({ openModal, onClose }) => {
   const [joke, setJoke] = useState({
     joke: "",
   });
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     getData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -24,6 +26,7 @@ const ChuckNorris = ({ openModal, onClose }) => {
       ...joke,
       joke: data.data.value,
     });
+    setLoading(false);
   };
 
   // **note:** reasons this api uses axios:
@@ -44,7 +47,7 @@ const ChuckNorris = ({ openModal, onClose }) => {
             &#x2620;
           </Button>
           <button className="changeJokeBtn" onClick={getData}>
-            change joke
+            {loading ? <>loading...</> : <>change joke</>}
           </button>
           <div>
             <p className="jokeText">{joke.joke}</p>

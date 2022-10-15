@@ -8,10 +8,12 @@ import { style } from "../mui.js";
 
 const Cocktails = ({ openModal, onClose }) => {
   const [cocktail, setCocktail] = useState();
+  const [loading, setLoading] = useState(false);
 
   const apikey = require("./apikey");
 
   const getDrink = async () => {
+    setLoading(true);
     const data = await fetch(
       `https://www.thecocktaildb.com/api/json/v2/${apikey}/random.php`
     );
@@ -19,6 +21,7 @@ const Cocktails = ({ openModal, onClose }) => {
     const json = await data.json();
 
     setCocktail(json.drinks[0]);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -43,7 +46,7 @@ const Cocktails = ({ openModal, onClose }) => {
 
               <h2>{cocktail.strDrink}</h2>
               <button onClick={getDrink} className="refreshDrinkBtn">
-                refresh drink
+                {loading ? <>loading...</> : <>refresh drink</>}
               </button>
 
               <div>
