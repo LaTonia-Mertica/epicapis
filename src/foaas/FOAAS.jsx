@@ -8,11 +8,12 @@ import { style } from "../mui.js";
 
 const FOAAS = ({ openModal, onClose }) => {
   const [foaas, setFoaas] = useState();
+  const [loading, setLoading] = useState(false);
   const { options } = require("./options");
 
   const getFoaas = async () => {
     const option = options[Math.floor(Math.random() * options.length)];
-
+    setLoading(true);
     const response = await fetch(
       `https://foaas.com/${option}/Bad Code Day aka Ranting Baby`,
       {
@@ -21,6 +22,7 @@ const FOAAS = ({ openModal, onClose }) => {
     );
     const data = await response.json();
     setFoaas(data);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -39,7 +41,7 @@ const FOAAS = ({ openModal, onClose }) => {
         <Box sx={style} className="foaasCard">
           <Button onClick={onClose}>&#x1E8A;</Button>
           <button className="changeFoaasBtn" onClick={getFoaas}>
-            temper
+            {loading ? <>loading...</> : <>temper time</>}
           </button>
           {foaas && (
             <div>

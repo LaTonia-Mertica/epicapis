@@ -2,6 +2,7 @@
 
 .foaasCard {
   background-color: rgba(255, 255, 255, 0.5);
+  height: 44vh;
   @include card-space;
 
   button {
@@ -22,18 +23,85 @@
     @include button-recall-api;
   }
 
-  h1 {
-    color: $ea-white;
-    font-size: 3.05rem;
-    font-family: $font-rubik-glitch;
-    text-shadow: 0.1rem 0.1rem $ea-black;
-  }
-
   p {
     color: $ea-white;
     font-size: small;
     color: $ea-red;
     font-family: $font-bebas-neue;
     text-shadow: 0.05rem 0.05rem $ea-black;
+
+    position: absolute;
+    top: 2.5rem;
+    right: 6.5rem;
+  }
+
+  h1 {
+    color: $ea-white;
+    font-size: 3.05rem;
+    font-family: $font-rubik-glitch;
+    text-shadow: 0.1rem 0.1rem $ea-black;
+
+    animation: glitch 1s linear infinite;
+  }
+
+  @keyframes glitch {
+    2%,
+    64% {
+      transform: translate(2px, 0) skew(0deg);
+    }
+    4%,
+    60% {
+      transform: translate(-2px, 0) skew(0deg);
+    }
+    62% {
+      transform: translate(0, 0) skew(5deg);
+    }
+  }
+
+  h1:before,
+  h1:after {
+    content: attr(title);
+    position: absolute;
+    left: 0;
+  }
+
+  h1:before {
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  }
+
+  @keyframes glitchTop {
+    2%,
+    64% {
+      transform: translate(2px, -2px);
+    }
+    4%,
+    60% {
+      transform: translate(-2px, 2px);
+    }
+    62% {
+      transform: translate(13px, -1px) skew(-13deg);
+    }
+  }
+
+  h1:after {
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  }
+
+  @keyframes glitchBotom {
+    2%,
+    64% {
+      transform: translate(-2px, 0);
+    }
+    4%,
+    60% {
+      transform: translate(-2px, 0);
+    }
+    62% {
+      transform: translate(-22px, 5px) skew(21deg);
+    }
   }
 }
