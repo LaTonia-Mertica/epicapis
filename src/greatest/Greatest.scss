@@ -1,6 +1,7 @@
 @import "../variables.module.scss";
 
 .greatestCard {
+  background-color: rgba(255, 215, 0, 0.5);
   @include card-space;
 
   button {
@@ -25,23 +26,41 @@
   }
 
   input[type="checkbox"] {
-    width: 22%;
+    width: 7%;
     height: 1.5rem;
   }
 
   label {
     cursor: pointer;
-    background: -webkit-linear-gradient(45deg, blue, whitesmoke, #00ff95 80%);
+    background: -webkit-linear-gradient(
+      45deg,
+      goldenrod,
+      whitesmoke,
+      $ea-red 80%
+    );
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0.15rem 0.15rem $ea-black);
   }
 
   .greatestPara {
     @include character-para-xsm;
   }
 
+  fieldset label:hover {
+    background: -webkit-linear-gradient(
+      47deg,
+      $ea-red,
+      whitesmoke,
+      goldenrod 80%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   .greatestPara {
     text-align: left;
+    font-size: 1.5rem;
   }
 
   .para1 {
@@ -52,6 +71,96 @@
   .para2 {
     float: right;
     width: 50%;
+  }
+
+  #theprincessbride:hover::after {
+    content: url(images/theprincessbride.png);
+    zoom: 15%;
+    position: absolute;
+    top: 70rem;
+    left: 12rem;
+    @include border-box-shadow;
+  }
+
+  #aliceinwonderland:hover::after {
+    content: url(images/aliceinwonderland.png);
+    zoom: 19%;
+    position: absolute;
+    top: 60rem;
+    left: 10rem;
+    @include border-box-shadow;
+  }
+
+  #legend:hover::after {
+    content: url(images/legend.png);
+    zoom: 19%;
+    position: absolute;
+    top: 70rem;
+    left: 9rem;
+    @include border-box-shadow;
+  }
+
+  #panslabyrinth:hover::after {
+    content: url(images/panslabyrinth.png);
+    zoom: 15%;
+    position: absolute;
+    top: 105rem;
+    left: 7rem;
+    @include border-box-shadow;
+  }
+
+  #theneverendingstory:hover::after {
+    content: url(images/theneverendingstory.png);
+    zoom: 19%;
+    position: absolute;
+    top: 100rem;
+    left: 9rem;
+    @include border-box-shadow;
+  }
+
+  #chittychittybangbang:hover::after {
+    content: url(images/chittychittybangbang.png);
+    zoom: 15%;
+    position: absolute;
+    top: 67rem;
+    right: 7rem;
+    @include border-box-shadow;
+  }
+
+  #jasonandtheargonauts:hover::after {
+    content: url(images/jasonandtheargonauts.png);
+    zoom: 21%;
+    position: absolute;
+    top: 55rem;
+    right: 7rem;
+    @include border-box-shadow;
+  }
+
+  #thewiz:hover::after {
+    content: url(images/thewiz.png);
+    zoom: 23%;
+    position: absolute;
+    top: 57rem;
+    right: 5rem;
+    @include border-box-shadow;
+  }
+
+  #thedarkcrystal:hover::after {
+    content: url(images/thedarkcrystal.png);
+    zoom: 19%;
+    position: absolute;
+    top: 73rem;
+    right: 5rem;
+    @include border-box-shadow;
+  }
+
+  #whoframedrogerrabbit:hover::after {
+    content: url(images/whoframedrogerrabbit.png);
+    zoom: 23%;
+    position: absolute;
+    top: 90rem;
+    right: 5rem;
+    @include border-box-shadow;
   }
 
   .submitBtn {
