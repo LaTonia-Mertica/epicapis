@@ -18,6 +18,7 @@ import agify from "./images/agify.png";
 import chuck from "./images/chuck.png";
 import cocktails from "./images/cocktails.png";
 import foaas from "./images/foaas.png";
+import adultadvisory from "./images/adultadvisory.png";
 import marvel from "./images/marvel.png";
 import owen from "./images/owen.png";
 import pokemon from "./images/pokemon.png";
@@ -60,6 +61,7 @@ import RonSwanson from "./ron swanson/RonSwanson";
 import Rampantest from "./rampantest/Rampantest";
 import Marvel from "./marvel/Marvel";
 import Sexiest from "./sexiest/Sexiest";
+
 import Epic from "./epic/Epic";
 import Beautiful from "./beautiful/Beautiful";
 import Api from "./api/Api";

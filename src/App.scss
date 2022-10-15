@@ -236,7 +236,9 @@ input[type="reset"] {
 .semanticFillerImg:hover {
   transform: scale(1.05);
   transition: 0.75s;
+  cursor: pointer;
 }
+
 .selectionsForm {
   display: flex;
   flex-direction: column;
