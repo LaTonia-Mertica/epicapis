@@ -11,10 +11,6 @@ import pokemonGifs from "./pokemonGifs";
 let randomGif = Math.floor(Math.random() * (pokemonGifs.length + 1));
 randomGif = pokemonGifs[randomGif];
 
-for (const pokemon in pokemonGifs) {
-  console.log(pokemon);
-}
-
 const Pokemon = ({ openModal, onClose }) => {
   const [pokemonName, setPokemonName] = useState("");
   const [pokemonShow, setPokemonShow] = useState(false);
@@ -68,6 +64,25 @@ const Pokemon = ({ openModal, onClose }) => {
       });
   };
 
+  const getGifMatch = () => {
+    let gifMatch;
+    const gifOpps = [];
+
+    pokemonGifs.forEach(function (gif) {
+      let src = String(gif.props.src);
+
+      if (src.includes(pokemonName.toLowerCase())) {
+        gifOpps.push(gif);
+      }
+    });
+
+    if (gifOpps.length > 0) {
+      gifMatch = gifOpps[0];
+    } else if (!gifMatch.length) {
+      <p>No Gif Match Found</p>;
+    }
+  };
+
   // **note:** reasons this api uses axios:
   // axios and fetch are used in the epic apis project for practice with both libraries
   // asycn/await and .then are both used in the epic apis project for familiarity with both types of asynchronous code syntax
@@ -117,6 +132,14 @@ const Pokemon = ({ openModal, onClose }) => {
 
                     <h1>{pokemonName}</h1>
                   </span>
+
+                  <section>
+                    {getGifMatch !== null || getGifMatch !== undefined ? (
+                      getGifMatch()
+                    ) : (
+                      <p>No Gif Match Found</p>
+                    )}
+                  </section>
 
                   <span className="specDetailsSpan">
                     <section>
