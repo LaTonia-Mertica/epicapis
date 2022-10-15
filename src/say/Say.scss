@@ -1,7 +1,6 @@
 @import "../variables.module.scss";
 
 .sayCard {
-  background-color: rgba(255, 255, 255, 0.7);
   @include card-space;
 
   button {
@@ -36,10 +35,11 @@
   }
 
   .phraseToShowText {
-    color: $ea-black;
-    font-family: Grape Nuts;
-    font-size: 2.75rem;
+    color: $ea-white;
+    font-family: $font-bebas-neue;
+    font-size: 3.25rem;
     text-shadow: 0.025rem 0.025rem $ea-black;
+    @include line-up-effect2;
   }
 
   .submitBtn {

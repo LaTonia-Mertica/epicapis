@@ -290,6 +290,14 @@ $font-rubik-glitch: Rubik Glitch;
   font-size: x-small;
 }
 
+@mixin line-up-effect1 {
+  animation: 2.5s anim-lineUp ease-out infinite;
+}
+
+@mixin line-up-effect2 {
+  animation: 7.3s anim-lineUp ease-in-out infinite;
+}
+
 // SECTION STYLE SET
 @mixin section-basic-format {
   display: flex;
