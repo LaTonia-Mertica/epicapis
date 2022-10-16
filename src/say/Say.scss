@@ -30,7 +30,7 @@
 
     -webkit-appearance: none;
     -moz-appearance: none;
-    text-indent: 1px;
+    text-indent: 0.063rem;
     text-overflow: "";
   }
 
@@ -38,7 +38,7 @@
     color: $ea-white;
     font-family: $font-bebas-neue;
     font-size: 3.25rem;
-    text-shadow: 0.025rem 0.025rem $ea-black;
+    text-shadow: 0.15rem 0.15rem $ea-black;
     @include line-up-effect2;
   }
 

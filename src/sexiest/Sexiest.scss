@@ -21,8 +21,14 @@
     align-items: left;
   }
 
-  input[type="text"] {
-    text-align: left;
+  // input[type="radio"] {
+  //   text-align: left;
+  //   accent-color: $ea-red;
+  //   width: 1.25rem;
+  // }
+
+  .arrowRight {
+    font-size: 1.85rem;
   }
 
   p.sexiestPara {
@@ -31,7 +37,7 @@
 
   .sexiestPara {
     @include character-para-sm;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   .feminineLegend,

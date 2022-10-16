@@ -74,10 +74,10 @@
 
     @keyframes glow {
       from {
-        text-shadow: 0 0 20px greenyellow;
+        text-shadow: 0 0 1.25rem greenyellow;
       }
       to {
-        text-shadow: 0 0 30px greenyellow, 0 0 10px greenyellow;
+        text-shadow: 0 0 1.875rem greenyellow, 0 0 0.625rem greenyellow;
       }
     }
   }

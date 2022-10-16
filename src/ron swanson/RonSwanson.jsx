@@ -35,11 +35,6 @@ const RonSwanson = ({ openModal, onClose }) => {
 
   useEffect(() => {
     localStorage.setItem("manly-mode", `${manlyMode}`);
-    // if (manlyMode) {
-    //   localStorage.setItem("manly-mode", JSON.stringify(true));
-    // } else {
-    //   localStorage.setItem("manly-mode", JSON.stringify(false));
-    // }
   }, [manlyMode]);
 
   return (

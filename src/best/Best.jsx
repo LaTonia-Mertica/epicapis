@@ -20,7 +20,7 @@ const Best = ({ openModal, onClose }) => {
           <div>
             <fieldset>
               <p className="bestPara">
-                <input type="radio" name="young" id="young" value="young" />
+                <input type="radio" name="best" id="young" value="young" />
                 <label htmlFor="young">
                   young<span className="parens">(</span>er
                   <span className="parens">)</span>
@@ -32,7 +32,7 @@ const Best = ({ openModal, onClose }) => {
 
                 <input
                   type="radio"
-                  name="middling"
+                  name="best"
                   id="middling"
                   value="middling"
                 />
@@ -45,7 +45,7 @@ const Best = ({ openModal, onClose }) => {
                 </label>
                 <br />
 
-                <input type="radio" name="old" id="old" value="old" />
+                <input type="radio" name="best" id="old" value="old" />
                 <label htmlFor="old">
                   old<span className="parens">(</span>er
                   <span className="parens">)</span>

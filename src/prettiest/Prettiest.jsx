@@ -2,6 +2,7 @@ import React from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+import WhatshotIcon from "@mui/icons-material/Whatshot";
 
 import "./Prettiest.scss";
 import { style } from "../mui.js";
@@ -26,12 +27,13 @@ const Prettiest = ({ openModal, onClose }) => {
           <div className="radioFieldsetDiv">
             <fieldset className="prettiestFieldset">
               <p className="prettiestPara">
-                <input
+                {/* <input
                   type="radio"
                   name="prettiest"
                   id="highball"
                   value="highball"
-                />
+                /> */}
+                <WhatshotIcon className="whatshot" />
                 <label htmlFor="highball">
                   High Ball
                   <br />
@@ -42,7 +44,9 @@ const Prettiest = ({ openModal, onClose }) => {
                 </label>
                 <br />
 
-                <input type="radio" name="prettiest" id="coupe" value="coupe" />
+                {/* <input type="radio" name="prettiest" id="coupe" value="coupe" />
+                 */}
+                <WhatshotIcon className="whatshot" />
                 <label htmlFor="coupe">
                   Coupe
                   <br />
@@ -53,12 +57,13 @@ const Prettiest = ({ openModal, onClose }) => {
                 </label>
                 <br />
 
-                <input
+                {/* <input
                   type="radio"
                   name="prettiest"
                   id="zombie"
                   value="zombie"
-                />
+                /> */}
+                <WhatshotIcon className="whatshot" />
                 <label htmlFor="zombie">
                   Zombie <br />
                   <span className="pretties">
@@ -68,7 +73,8 @@ const Prettiest = ({ openModal, onClose }) => {
                 </label>
                 <br />
 
-                <input type="radio" name="prettiest" id="rocks" value="rocks" />
+                {/* <input type="radio" name="prettiest" id="rocks" value="rocks" /> */}
+                <WhatshotIcon className="whatshot" />
                 <label htmlFor="rocks">
                   Rocks <br />
                   <span className="pretties">
@@ -78,12 +84,13 @@ const Prettiest = ({ openModal, onClose }) => {
                 </label>
                 <br />
 
-                <input
+                {/* <input
                   type="radio"
                   name="prettiest"
                   id="hurricane"
                   value="hurricane"
-                />
+                /> */}
+                <WhatshotIcon className="whatshot" />
                 <label htmlFor="hurricane">
                   Hurricane
                   <br />

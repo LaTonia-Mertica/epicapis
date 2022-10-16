@@ -43,12 +43,12 @@
 
   .fa-lg:active {
     transform: scale(1.2);
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.3);
 
     border-radius: 50%;
     background-color: $ea-red;
-    box-shadow: 0 0 7px 2.25px $ea-red, 0 0 7px 5px $ea-white,
-      0 0 10px 7px $ea-red;
+    box-shadow: 0 0 0.438rem 0.141rem $ea-red, 0 0 0.438rem 0.313rem $ea-white,
+      0 0 0.625rem 0.438rem $ea-red;
   }
 
   label {

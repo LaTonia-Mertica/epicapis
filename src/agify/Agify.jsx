@@ -23,7 +23,7 @@ const Agify = ({ openModal, onClose }) => {
 
     if (data.age === null) {
       setAgeByName({
-        age: "Apologies!",
+        age: "Try Again",
       });
     } else {
       setAgeByName({
