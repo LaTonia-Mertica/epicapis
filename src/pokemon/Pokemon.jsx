@@ -64,24 +64,24 @@ const Pokemon = ({ openModal, onClose }) => {
       });
   };
 
-  const getGifMatch = () => {
-    let gifMatch;
-    const gifOpps = [];
+  // const getGifMatch = () => {
+  //   let gifMatch;
+  //   const gifOpps = [];
 
-    pokemonGifs.forEach(function (gif) {
-      let src = String(gif.props.src);
+  //   pokemonGifs.forEach(function (gif) {
+  //     let src = String(gif.props.src);
 
-      if (src.includes(pokemonName.toLowerCase())) {
-        gifOpps.push(gif);
-      }
-    });
+  //     if (src.includes(pokemonName.toLowerCase())) {
+  //       gifOpps.push(gif);
+  //     }
+  //   });
 
-    if (gifOpps.length > 0) {
-      gifMatch = gifOpps[0];
-    } else if (!gifMatch.length) {
-      <p>No Gif Match Found</p>;
-    }
-  };
+  //   if (gifOpps.length > 0) {
+  //     gifMatch = gifOpps[0];
+  //   } else if (!gifMatch.length) {
+  //     <p>No Gif Match Found</p>;
+  //   }
+  // };
 
   // **note:** reasons this api uses axios:
   // axios and fetch are used in the epic apis project for practice with both libraries
@@ -133,13 +133,13 @@ const Pokemon = ({ openModal, onClose }) => {
                     <h1>{pokemonName}</h1>
                   </span>
 
-                  <section>
+                  {/* <section>
                     {getGifMatch !== null || getGifMatch !== undefined ? (
                       getGifMatch()
                     ) : (
                       <p>No Gif Match Found</p>
                     )}
-                  </section>
+                  </section> */}
 
                   <span className="specDetailsSpan">
                     <section>
