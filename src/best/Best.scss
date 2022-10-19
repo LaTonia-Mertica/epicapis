@@ -1,6 +1,7 @@
 @import "../variables.module.scss";
 
 .bestCard {
+  background-color: $background-rgba-red3;
   @include card-space;
 
   button {
