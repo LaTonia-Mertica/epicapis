@@ -358,6 +358,7 @@ const App = () => {
             alt="Fuck Off As A Service Logo"
             width="500px"
             height="500px"
+            title="Fuck Off As A Service"
             className="foaas box"
             onClick={() => {
               setOpenModal("FOAAS");
