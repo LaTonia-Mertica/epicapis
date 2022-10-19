@@ -4,13 +4,13 @@ const phraseGenerator = (setPhraseToShow, value) => {
   } else if (value === "arrest record") {
     setPhraseToShow("'what'd you do, are you dangerous'");
   } else if (value === "audible expression") {
-    setPhraseToShow("'speak english, can't understand a word you saying'");
+    setPhraseToShow("speak english");
   } else if (value === "color") {
     setPhraseToShow("'your skin's so dark, can i touch it'");
   } else if (value === "conviction record") {
     setPhraseToShow("'how do we know you're not violent'");
   } else if (value === "creed") {
-    setPhraseToShow("'can hardly be called human with beliefs like that'");
+    setPhraseToShow("can hardly be called human");
   } else if (value === "employment") {
     setPhraseToShow("'you wouldn't be a good cultural fit here'");
   } else if (value === "national origin") {
