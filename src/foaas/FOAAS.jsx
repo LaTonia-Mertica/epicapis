@@ -3,13 +3,14 @@ import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 
+import options from "./options";
+
 import "./FOAAS.scss";
 import { style } from "../mui.js";
 
 const FOAAS = ({ openModal, onClose }) => {
   const [foaas, setFoaas] = useState();
   const [loading, setLoading] = useState(false);
-  const { options } = require("./options");
 
   const getFoaas = async () => {
     const option = options[Math.floor(Math.random() * options.length)];
@@ -29,6 +30,12 @@ const FOAAS = ({ openModal, onClose }) => {
     getFoaas();
     // eslint-disable-next-line
   }, []);
+
+  useEffect(() => {
+    if (!openModal) {
+      getFoaas();
+    }
+  }, [openModal]);
 
   return (
     <main>

@@ -52,4 +52,4 @@ const options = [
   "zero",
 ];
 
-module.exports = { options };
+export default options;
