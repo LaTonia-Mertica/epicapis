@@ -278,7 +278,11 @@ alert ("Hello Code World!");
 
 ### **NEXT STEPS**
 
+- **_reusable code_**: per import/export for functions and state used in multiple components
+
 - **_email api_**: allow users to select parts of their activity/selections to email (versus default to all)
+
+- **_accessibility optimization_**: regarding code and styles
 
 - **_media queries_**: optimize for devices/screens under medium size
 
