@@ -19,6 +19,12 @@ const ChuckNorris = ({ openModal, onClose }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() => {
+    if (!openModal) {
+      getData();
+    }
+  }, [openModal]);
+
   const getData = async () => {
     const data = await axios.get(`https://api.chucknorris.io/jokes/random`);
 

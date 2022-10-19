@@ -25,6 +25,12 @@ const OwenWilson = ({ openModal, onClose }) => {
     getWow();
   }, []);
 
+  useEffect(() => {
+    if (!openModal) {
+      getWow();
+    }
+  }, [openModal]);
+
   return (
     <main>
       <Modal

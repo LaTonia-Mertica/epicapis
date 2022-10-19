@@ -28,6 +28,12 @@ const DonaldTrump = ({ openModal, onClose }) => {
     setLoading(false);
   };
 
+  useEffect(() => {
+    if (!openModal) {
+      getData();
+    }
+  }, [openModal]);
+
   // **note:** reasons this api uses axios:
   // axios and fetch are used in the epic apis project for practice with both libraries
   // asycn/await and .then are both used in the epic apis project for familiarity with both types of asynchronous code syntax
