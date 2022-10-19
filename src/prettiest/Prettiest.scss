@@ -26,6 +26,11 @@
   .whatshot {
     color: yellow;
     cursor: pointer;
+    font-size: large;
+  }
+
+  .whatshot:active {
+    @include icon-click-effect;
   }
 
   label {
