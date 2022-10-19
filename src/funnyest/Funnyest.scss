@@ -1,6 +1,7 @@
 @import "../variables.module.scss";
 
 .funnyestCard {
+  background-color: $background-rgba-black6;
   @include card-space;
 
   button {

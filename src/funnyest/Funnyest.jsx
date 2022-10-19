@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 
 import "./Funnyest.scss";
 import { style } from "../mui.js";
-import { AcUnitRounded } from "@mui/icons-material";
 
 const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
   const submit = () => {
