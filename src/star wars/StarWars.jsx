@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
@@ -48,6 +48,12 @@ const StarWars = ({ openModal, onClose }) => {
         setError("No Such Starship!");
       });
   };
+
+  useEffect(() => {
+    if (!openModal) {
+      setStarship();
+    }
+  }, [openModal]);
 
   // **note:** reasons this api uses axios:
   // axios and fetch are used in the epic apis project for practice with both libraries
