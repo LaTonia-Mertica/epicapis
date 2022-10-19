@@ -26,10 +26,12 @@
   input[type="text"]::placeholder {
     @include input-text-placeholder;
     color: $ea-white;
+    @include input-number-and-text-format;
   }
 
   input[type="text"] {
     border-bottom: $space-input-border-bottom;
+    @include input-combo-number-text-format;
   }
 
   input[type="text"]::selection {
@@ -41,21 +43,16 @@
     @include text-uppercase;
   }
 
+  .mapImg {
+    width: 50%;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    bottom: -13.15rem;
+  }
+
   .pokemonImg {
-    width: 17%;
-    margin-right: -3.25rem;
-  }
-
-  .nonMainImages {
-    margin-left: -1.15rem;
-    margin-right: -2rem;
-    margin-bottom: -17rem;
-  }
-
-  .pokemonImg:hover,
-  .nonMainImages:hover {
-    transform: scale(1.5);
-    transition: 1.5s ease-in-out;
+    width: 7rem;
   }
 
   span {
@@ -63,15 +60,19 @@
     justify-content: center;
   }
 
+  .gifMatchGif {
+    width: 7rem;
+  }
+
   .specDetails {
     display: inline;
     color: yellow;
-    font-size: x-small;
+    font-size: small;
     text-align: left;
     letter-spacing: 0.05rem;
     text-shadow: 0.05rem 0.05rem black;
 
-    margin-left: 11rem;
+    margin-left: 31.5rem;
   }
 
   h2 {

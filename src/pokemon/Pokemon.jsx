@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
@@ -7,9 +7,10 @@ import Button from "@mui/material/Button";
 import "./Pokemon.scss";
 import { style } from "../mui.js";
 import pokemonGifs from "./pokemonGifs";
+import pokemonworldmap from "./images/pokemonworldmap.png";
 
-let randomGif = Math.floor(Math.random() * (pokemonGifs.length + 1));
-randomGif = pokemonGifs[randomGif];
+// let randomGif = Math.floor(Math.random() * (pokemonGifs.length + 1));
+// randomGif = pokemonGifs[randomGif];
 
 const Pokemon = ({ openModal, onClose }) => {
   const [pokemonName, setPokemonName] = useState("");
@@ -28,6 +29,7 @@ const Pokemon = ({ openModal, onClose }) => {
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
+  const [pokemonImage, setPokemonImage] = useState();
 
   const searchPokemon = (event) => {
     event.preventDefault();
@@ -54,6 +56,18 @@ const Pokemon = ({ openModal, onClose }) => {
           ],
           weight: response.data.weight,
         });
+        const matchGifs = pokemonGifs.filter((gif) =>
+          gif.includes(pokemonName.toLowerCase())
+        );
+        let randomGifMatch = Math.floor(Math.random() * (matchGifs.length + 1));
+        setPokemonImage(
+          <img
+            src={matchGifs[randomGifMatch]}
+            alt="Pokemon"
+            className="gifMatchGif"
+          />
+        );
+
         setError(null);
         setPokemonShow(true);
         setLoading(false);
@@ -64,24 +78,19 @@ const Pokemon = ({ openModal, onClose }) => {
       });
   };
 
-  // const getGifMatch = () => {
-  //   let gifMatch;
-  //   const gifOpps = [];
+  const getGifMatch = () => {
+    let randomGifMatch = Math.floor(Math.random() * (pokemonGifs.length + 1));
+    let gifMatch = pokemonGifs[randomGifMatch];
+    return <img src={gifMatch} alt="Pokemon" className="gifMatchGif" />;
+  };
 
-  //   pokemonGifs.forEach(function (gif) {
-  //     let src = String(gif.props.src);
-
-  //     if (src.includes(pokemonName.toLowerCase())) {
-  //       gifOpps.push(gif);
-  //     }
-  //   });
-
-  //   if (gifOpps.length > 0) {
-  //     gifMatch = gifOpps[0];
-  //   } else if (!gifMatch.length) {
-  //     <p>No Gif Match Found</p>;
+  // SET RESET
+  // useEffect(() => {
+  //   if (!openModal) {
+  // setPokemon({});
+  // setPokemonImage(getGifMatch())
   //   }
-  // };
+  // }, [openModal]);
 
   // **note:** reasons this api uses axios:
   // axios and fetch are used in the epic apis project for practice with both libraries
@@ -120,31 +129,31 @@ const Pokemon = ({ openModal, onClose }) => {
           ) : (
             <>
               {!pokemonShow ? (
-                randomGif
+                pokemonImage
               ) : (
                 <>
                   <span>
-                    <img
-                      src={pokemon.front_shiny}
-                      alt=""
-                      className="pokemonImg"
-                    />
-
                     <h1>{pokemonName}</h1>
                   </span>
 
-                  {/* <section>
-                    {getGifMatch !== null || getGifMatch !== undefined ? (
-                      getGifMatch()
-                    ) : (
-                      <p>No Gif Match Found</p>
-                    )}
-                  </section> */}
+                  <section>{pokemonImage}</section>
 
                   <span className="specDetailsSpan">
                     <section>
+                      <img
+                        src={pokemonworldmap}
+                        alt="Pokemon World Map"
+                        className="mapImg"
+                      />
+                      <img
+                        src={pokemon.image}
+                        alt=""
+                        className="nonMainImages"
+                      />
                       <h2>
-                        <span className="specDetails">species:&nbsp;</span>
+                        <span className="specDetails species">
+                          species:&nbsp;
+                        </span>
                         {pokemon.species}
                       </h2>
                       <h2>
@@ -175,24 +184,6 @@ const Pokemon = ({ openModal, onClose }) => {
                         <span className="specDetails">weight:&nbsp;</span>
                         {pokemon.weight}
                       </h2>
-                    </section>
-
-                    <section className="nonMainImagesSection">
-                      <img
-                        src={pokemon.image}
-                        alt=""
-                        className="nonMainImages"
-                      />
-                      <img
-                        src={pokemon.image_back}
-                        alt=""
-                        className="nonMainImages"
-                      />
-                      <img
-                        src={pokemon.back_shiny}
-                        alt=""
-                        className="nonMainImages"
-                      />
                     </section>
                   </span>
                 </>
