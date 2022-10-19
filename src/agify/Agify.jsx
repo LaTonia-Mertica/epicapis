@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -18,7 +18,9 @@ const Agify = ({ openModal, onClose }) => {
   const getAgeMyName = async (event) => {
     event.preventDefault();
     setLoading(true);
-    const response = await fetch(`https://api.agify.io?name=${name}`);
+    const response = await fetch(
+      `https://api.agify.io?name=${name.replace(/\W/g, "")}`
+    );
     const data = await response.json();
 
     if (data.age === null) {
@@ -28,12 +30,23 @@ const Agify = ({ openModal, onClose }) => {
     } else {
       setAgeByName({
         age: data.age,
-        name: data.name,
+        name: name,
         count: data.count,
       });
     }
     setLoading(false);
   };
+
+  useEffect(() => {
+    if (!openModal) {
+      setName("");
+      setAgeByName({
+        age: "",
+        name: "",
+        count: "",
+      });
+    }
+  }, [openModal]);
 
   return (
     <main>
