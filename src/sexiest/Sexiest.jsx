@@ -2,7 +2,7 @@ import React from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import { ArrowRight } from "@mui/icons-material";
+import { Deblur } from "@mui/icons-material";
 
 import "./Sexiest.scss";
 import { style } from "../mui.js";
@@ -28,7 +28,7 @@ const Sexiest = ({ openModal, onClose }) => {
                   id="catwoman"
                   value="catwoman"
                 /> */}
-                <ArrowRight className="arrowRight" />
+                <Deblur className="deblur" />
                 <label htmlFor="catwoman">Catwoman</label>
               </p>
               <p className="sexiestPara para1">
@@ -38,7 +38,7 @@ const Sexiest = ({ openModal, onClose }) => {
                   id="shera"
                   value="shera"
                 /> */}
-                <ArrowRight className="arrowRight" />
+                <Deblur className="deblur" />
                 <label htmlFor="shera">She-Ra</label>
               </p>
               <p className="sexiestPara para1">
@@ -48,7 +48,7 @@ const Sexiest = ({ openModal, onClose }) => {
                   id="wonderwoman"
                   value="wonderwoman"
                 /> */}
-                <ArrowRight className="arrowRight" />
+                <Deblur className="deblur" />
                 <label htmlFor="wonderwoman">Wonder Woman</label>
               </p>
             </fieldset>
@@ -62,7 +62,7 @@ const Sexiest = ({ openModal, onClose }) => {
                   id="batman"
                   value="batman"
                 /> */}
-                <ArrowRight className="arrowRight" />
+                <Deblur className="deblur" />
                 <label htmlFor="batman">Batman</label>
                 <br />
               </p>
@@ -73,7 +73,7 @@ const Sexiest = ({ openModal, onClose }) => {
                   id="spiderman"
                   value="spiderman"
                 /> */}
-                <ArrowRight className="arrowRight" />
+                <Deblur className="deblur" />
                 <label htmlFor="spiderman">Spider-Man</label>
                 <br />
               </p>
@@ -84,7 +84,7 @@ const Sexiest = ({ openModal, onClose }) => {
                   id="superman"
                   value="superman"
                 /> */}
-                <ArrowRight className="arrowRight" />
+                <Deblur className="deblur" />
                 <label htmlFor="superman">Superman</label>
                 <br />
               </p>
@@ -99,7 +99,7 @@ const Sexiest = ({ openModal, onClose }) => {
                   id="snowflake"
                   value="snowflake"
                 /> */}
-                <ArrowRight className="arrowRight" />
+                <Deblur className="deblur" />
                 <label htmlFor="snowflake">Snow Flake</label>
                 <br />
               </p>
@@ -110,7 +110,7 @@ const Sexiest = ({ openModal, onClose }) => {
                   id="brotherken"
                   value="brotherken"
                 /> */}
-                <ArrowRight className="arrowRight" />
+                <Deblur className="deblur" />
                 <label htmlFor="brotherken">Brother Ken</label>
                 <br />
               </p>
@@ -121,7 +121,7 @@ const Sexiest = ({ openModal, onClose }) => {
                   id="kidquick"
                   value="kidquick"
                 /> */}
-                <ArrowRight className="arrowRight " />
+                <Deblur className="deblur" />
                 <label htmlFor="kidquick">Kid Quick</label>
                 <br />
               </p>
