@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import md5 from "js-md5";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
@@ -15,14 +15,14 @@ const Marvel = ({ openModal, onClose }) => {
   const hash = md5(ts + privateapikey + apikey);
 
   const [name, setName] = useState("");
-  const [creators, setCreators] = useState();
+  const [creator, setCreator] = useState();
   const [loading, setLoading] = useState(false);
 
-  const getCreators = async (event) => {
+  const getCreator = async (event) => {
     event.preventDefault();
     setLoading(true);
     fetch(
-      `http://gateway.marvel.com/v1/public/creators?ts=${ts}&apikey=${apikey}&hash=${hash}&nameStartsWith=${name}&limit=3&orderBy=-lastName`
+      `http://gateway.marvel.com/v1/public/creators?ts=${ts}&apikey=${apikey}&hash=${hash}&nameStartsWith=${name}&limit=1`
     )
       .then((response) => {
         if (!response.ok) {
@@ -31,14 +31,26 @@ const Marvel = ({ openModal, onClose }) => {
         return response.json();
       })
       .then((data) => {
-        setCreators({
+        setCreator({
           name: data.name,
+          id: data.id,
+          comics: data.comics,
+          series: data.series,
+          stories: data.stories,
         });
+
         console.log(data);
         setLoading(false);
       })
       .catch((error) => console.log("ACCESS ERROR!"));
   };
+
+  // SET RESET
+  // useEffect(() => {
+  //   if (!openModal) {
+  //     setCreator();
+  //   }
+  // }, [openModal]);
 
   return (
     <main>
@@ -50,7 +62,7 @@ const Marvel = ({ openModal, onClose }) => {
       >
         <Box sx={style} className="marvelCard">
           <button onClick={onClose}>&#x24E7;</button>
-          <form onSubmit={getCreators}>
+          <form onSubmit={getCreator}>
             <input
               type="text"
               name="marvel"
@@ -62,13 +74,13 @@ const Marvel = ({ openModal, onClose }) => {
                 setName(event.target.value.toLowerCase());
               }}
             />
-            <Button type="submit" onClick={getCreators} className="searchBtn">
+            <Button type="submit" onClick={getCreator} className="searchBtn">
               {loading ? <>loading...</> : <>Get Creator</>}
             </Button>
           </form>
 
           <>
-            {!getCreators ? (
+            {!getCreator ? (
               <></>
             ) : (
               <>
