@@ -1,6 +1,7 @@
 @import "../variables.module.scss";
 
 .lastCard {
+  background-color: $background-rgba-red2;
   @include card-space;
 
   button {
@@ -12,16 +13,10 @@
     @include button-hover;
   }
 
-  .lastDiv {
-    margin-left: 9rem;
-  }
-
   fieldset {
     border: $space-border-none-all;
-  }
-
-  .lastFieldset {
-    margin-left: $space-lg;
+    display: flex;
+    justify-content: center;
   }
 
   p {
@@ -43,8 +38,7 @@
   }
 
   .fa-lg:active {
-    transform: scale(1.2);
-    box-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.3);
+    @include icon-click-effect;
 
     border-radius: 50%;
     background-color: $ea-red;
@@ -55,25 +49,21 @@
   label {
     color: $ea-red;
     cursor: pointer;
+    font-size: larger;
     text-shadow: $space-xsm $space-xsm black;
   }
 
-  .lastPara {
+  .bothPara {
     @include character-para-xsm;
-  }
-
-  .lastPara {
-    text-align: left;
   }
 
   .para1 {
     float: left;
-    width: 50%;
+    margin-right: 2.25rem;
   }
 
   .para2 {
     float: right;
-    width: 50%;
   }
 
   .submitBtn {

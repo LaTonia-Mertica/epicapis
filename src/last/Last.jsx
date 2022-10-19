@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -22,7 +22,7 @@ const Last = ({ openModal, onClose }) => {
           <div className="lastDiv">
             <fieldset>
               <span>
-                <p className="lastPara para1">
+                <p className="para1 bothPara">
                   {/* <input
                     type="checkbox"
                     name="last"
@@ -34,7 +34,7 @@ const Last = ({ openModal, onClose }) => {
                     className="fa-lg"
                     type="submit"
                   />
-                  <label htmlFor="chance">Not Be Given a Chance</label>
+                  <label htmlFor="chance">No Chance</label>
                   <br />
 
                   {/* <input
@@ -57,7 +57,7 @@ const Last = ({ openModal, onClose }) => {
                     className="fa-lg"
                     type="submit"
                   />
-                  <label htmlFor="quit">Another Reason to Quit</label>
+                  <label htmlFor="quit">Reasons to Quit</label>
                   <br />
 
                   {/* <input
@@ -71,7 +71,7 @@ const Last = ({ openModal, onClose }) => {
                     className="fa-lg"
                     type="submit"
                   />
-                  <label htmlFor="matters">Nothing I Do Matters</label>
+                  <label htmlFor="matters">Not to Try</label>
                   <br />
 
                   {/* <input type="checkbox" name="last" id="alone" value="alone" /> */}
@@ -80,11 +80,11 @@ const Last = ({ openModal, onClose }) => {
                     className="fa-lg"
                     type="submit"
                   />
-                  <label htmlFor="alone">Be Alone in The World</label>
+                  <label htmlFor="alone">Having No One</label>
                   <br />
                 </p>
 
-                <p className="lastPara para2">
+                <p className="para2 bothPara">
                   {/* <input
                     type="checkbox"
                     name="last"
@@ -110,7 +110,7 @@ const Last = ({ openModal, onClose }) => {
                     className="fa-lg"
                     type="submit"
                   />
-                  <label htmlFor="illintent">Ill Intent Against Me</label>
+                  <label htmlFor="illintent">Ill Intent For Me</label>
                   <br />
 
                   {/* <input type="checkbox" name="last" id="time" value="time" /> */}
@@ -128,7 +128,7 @@ const Last = ({ openModal, onClose }) => {
                     className="fa-lg"
                     type="submit"
                   />
-                  <label htmlFor="hope">Lose Sight of Hope</label>
+                  <label htmlFor="hope">No Sight of Hope</label>
                   <br />
 
                   {/* <input
@@ -142,7 +142,7 @@ const Last = ({ openModal, onClose }) => {
                     className="fa-lg"
                     type="submit"
                   />
-                  <label htmlFor="surprises">Horrible Surprises</label>
+                  <label htmlFor="surprises">Bad Surprises</label>
                   <br />
                 </p>
               </span>
