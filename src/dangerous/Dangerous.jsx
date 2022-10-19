@@ -6,20 +6,20 @@ import Button from "@mui/material/Button";
 import "./Dangerous.scss";
 import { style } from "../mui.js";
 
-import alienating from "./images/alienating.png";
-import boastful from "./images/boastful.png";
-import boring from "./images/boring.png";
-import chaotic from "./images/chaotic.png";
-import cluttered from "./images/cluttered.png";
-import disfunctional from "./images/disfunctional.png";
-import limiting from "./images/limiting.png";
-import malicious from "./images/malicious.png";
-import misleading from "./images/misleading.png";
-import slow from "./images/slow.png";
-import toonested from "./images/too-nested.png";
-import uninspiring from "./images/uninspiring.png";
-import unrelatable from "./images/unrelatable.png";
-import unwieldy from "./images/unwieldy.png";
+// alienating
+// boastful
+// boring
+// chaotic
+// cluttered
+// disfunctional
+// limiting
+// malicious
+// misleading
+// too nested
+// slow
+// uninspiring
+// unrelatable
+// unwieldy
 
 const Dangerous = ({ openModal, onClose }) => {
   return (
@@ -32,30 +32,29 @@ const Dangerous = ({ openModal, onClose }) => {
       >
         <Box sx={style} className="dangerousCard">
           <Button onClick={onClose}>&#x274C;</Button>
-          <div>
+          <>
             <section>
-              <img src={alienating} alt="" width="9%" height="auto" />
-              <img src={boastful} alt="" width="9%" height="auto" />
-              <img src={boring} alt="" width="9%" height="auto" />
-              <img src={chaotic} alt="" width="9%" height="auto" />
-              <img src={cluttered} alt="" width="9%" height="auto" />
-              <img src={disfunctional} alt="" width="9%" height="auto" />
-              <img src={limiting} alt="" width="9%" height="auto" />
+              <label htmlFor="dangerous">
+                change to paragraph with definition
+              </label>
+              <input
+                type="checkbox"
+                name="dangerous"
+                id="dangerous"
+                value="dangerous"
+              />
+            </section>
+            {/* add placeholder to prompt user to enter their own definition */}
+            {/* only reveal textbox if user selects sad face */}
+            {/* disable input for textbox if user selects happy face */}
+            <section>
+              <input type="textbox" />
             </section>
 
-            <section>
-              <img src={malicious} alt="" width="9%" height="auto" />
-              <img src={misleading} alt="" width="9%" height="auto" />
-              <img src={slow} alt="" width="9%" height="auto" />
-              <img src={toonested} alt="" width="9%" height="auto" />
-              <img src={uninspiring} alt="" width="9%" height="auto" />
-              <img src={unrelatable} alt="" width="9%" height="auto" />
-              <img src={unwieldy} alt="" width="9%" height="auto" />
-            </section>
             <Button type="button" className="submitBtn">
               submit
             </Button>
-          </div>
+          </>
         </Box>
       </Modal>
     </main>

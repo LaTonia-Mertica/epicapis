@@ -1,6 +1,9 @@
 @import "../variables.module.scss";
 
 .dangerousCard {
+  background-color: #1a191e;
+  padding: 0;
+  margin: 0;
   @include card-space;
 
   button {
@@ -22,6 +25,73 @@
 
   img:hover {
     @include img-basic-structure-hover;
+  }
+
+  label {
+    color: #0ba041;
+    letter-spacing: 0.1rem;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    margin-left: -11rem;
+  }
+
+  input[type="checkbox"] {
+    appearance: none;
+    background-color: #222127;
+    height: 2.5rem;
+    width: 6.25rem;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    box-shadow: 1.125rem 0.75rem 1.125rem -0.313rem rgba(0, 0, 0, 0.35);
+    border-radius: 2.5rem;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  input[type="checkbox"]:before {
+    position: absolute;
+    content: "";
+    height: 0.313rem;
+    width: 0.313rem;
+    background-color: #0ba041;
+    border-radius: 50%;
+    top: 0.563rem;
+    left: 0.688rem;
+    box-shadow: 0 1.063rem 0 0 #0ba041, 4.688rem 1.063rem 0 0 $ea-gray-light,
+      4.688rem 0 0 0 $ea-gray-light;
+  }
+
+  input[type="checkbox"]:after {
+    position: absolute;
+    content: "";
+    height: 0.719rem;
+    width: 0.313rem;
+    border: 0.25rem solid #0ba041;
+    border-left: none;
+    border-radius: 0 1.438rem 1.438rem 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 1.563rem;
+    transition: 0.3s;
+  }
+
+  input[type="checkbox"]:checked:after {
+    left: 4.375rem;
+    border-color: $ea-gray-light;
+  }
+
+  input[type="checkbox"]:checked {
+    box-shadow: -1.125rem 0.75rem 1.125rem -0.313rem rgba(0, 0, 0, 0.35);
+  }
+
+  input[type="textbox"] {
+    position: absolute;
+    top: 13rem;
   }
 
   .submitBtn {
