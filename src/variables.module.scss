@@ -13,6 +13,13 @@
   display: block;
 }
 
+// BACKGROUND MODAL STYLE SET
+$background-rgba-red2: rgba(255, 0, 0, 0.2);
+$background-rgba-red3: rgba(255, 0, 0, 0.3);
+$background-rgba-black3: rgba(0, 0, 0, 0.3);
+$background-rgba-black4: rgba(0, 0, 0, 0.4);
+$background-rgba-black6: rgba(0, 0, 0, 0.6);
+
 // BORDER REMOVE BORDER STYLE SET
 @mixin border-none {
   border-top: 0;
@@ -167,6 +174,12 @@ $font-rubik-glitch: Rubik Glitch;
 @mixin img-basic-structure-hover {
   transform: scale((1.03));
   background-color: $ea-green;
+}
+
+// CUSTOM ICON STYLE SET
+@mixin icon-click-effect {
+  transform: scale(1.2);
+  box-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.3);
 }
 
 // INPUT STYLE SET
