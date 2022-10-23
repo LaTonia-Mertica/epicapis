@@ -4,6 +4,34 @@ _collection of fun, odd, quirky application programming interfaces paired with c
 
 <br>
 
+---
+
+### **CODE CAVALRY**
+
+###### _<p style="text-align: justify">but first, my mentors rock.</p>_
+
+###### _<p style="text-align: justify">max has been and remains primary re: project-based code/web dev while also helping initiate me into the code world of algorithms. max was among my first instructors as i began my coding journey in hack upstate 'careers in code.' max demos a rare blend of know-how and get-to in his role as a code master. and he doesn't shy from telling me i already know when he sees my confidence hiding, he doesn't shy from settling into his lecture mode when he sees me lacking self care, he doesn't shy from being someone to just listen when it's clear that's what's needed at that time.</p>_
+
+###### _<p style="text-align: justify">danny has been a tremendous support re: debugging miscellaneous errors and warnings in the console - including introducing me to advanced concepts in chrome and react-specific dev tools. this is especially notable because it helps my growth mindset push beyond just getting my code to work. but instead pursuing a sense of elegant code integrity.</p>_
+
+###### _<p style="text-align: justify">danny, adam - insane skills re: code refactoring, and jess - inspiring code flow that impeccably reflects novice-coder mindset dressed in raw mastery, have been exceptional supports re: expanding my knowledge and skillset to include algorithms and advanced project-work. they are part of the team assigned to pair program 1:1 with me through underdog devs 'project underdog.'</p>_
+
+###### _<p style="text-align: justify">each of these mentors excel in part, in my experience-informed opinion, because they consistently share compassion, patience, and sincere interest in my code/web dev ambitions. they make me feel like i can, and they do what they can to ensure i do/will.</p>_
+
+###### _my mentors (and peers) include gems. thank you adam, danny, jess, max, and others for being you and doing what you do.</p>_
+
+#### \* [ADAM FLETCHER](https://www.linkedin.com/in/adam-w-fletcher/), Bit.io Chief Executive Officer / Founder
+
+#### \* [DANNY JACOSHENK](https://github.com/djacoshenk), Pilot Software Engineer
+
+#### \* [JESS BONANNO](https://github.com/JessBonanno), Slack Software Engineer
+
+#### \* [MAX MATTHEWS](https://github.com/maxmatthews), Tuzag Chief Technology Officer
+
+---
+
+<br>
+
 ### **HOW IT WORKS**
 
 per the api setup of each api. each api is built into an engaging user interface.
@@ -150,13 +178,18 @@ count: data.count,
 ### **BASIC STRUCTURE: API KEY | HASH | TS**
 
 - create a file to store the api key (ie. apikey.js) . ..
-  `module.exports = apikeyhere`
+  `module.exports = apikeyhere` **or** `export default "apikeyhere";`. while `module.exports =` works, it is the previous method and requires a `require("filenamewithextensionhere")` statement in the receiving file. more modern is `export default` that requires an import in the receiving file.
 
 - add that file to the gitignore file.
   `apikey.js`
 
-- in the file using the api key, assign a variable to the api key as a require statement.
+- in the file using the api key aka the receiving file, assign a variable to the api key as a require statement:
   `const apikey = require("./apikey");`
+  **OR**
+- in the file using the api key aka the receiving file, import the file containing the apikey at/near the top of the file:
+  `import apikey.js`
+
+###### **note:** again, import/export is the more modern and recommended implemenation method. both are included here for posterity of demonstration - ie. if you see or work in legacy code
 
 - use the variable assigned to the api key in every instance the actual api key would normally be used.
   `http://gateway.marvel.com/v1/public/creators?ts=1&apikey=${apikey}`
@@ -261,20 +294,6 @@ alert ("Hello Code World!");
 'You can name custom events anything you want, but as a best practice, you should use all lowercase characters. Event names are case-sensitive, and the property names on elements are case-insensitive and converted to lowercase by the browser. This can create conflicts if uses on\* listeners on elements.<br>
 
 ###### | _definition courtesy general online search_
-
-<br>
-
-### **CODE CAVALRY**
-
-###### _<p style="text-align: justify">my mentors rock. max has been and remains primary re: project-based code/web dev while also helping initiate me into the code world of algorithms. max was among my first instructors as i began my coding journey in hack upstate 'careers in code.' adam, danny, and jess have been exceptional supports re: expanding my knowledge and skillset to include algorithms and advanced project-work. they are part of the team assigned to pair program 1:1 with me through underdog devs 'project underdog.' thank you each tremendously for being you and doing what you do.</p>_
-
-#### \* ADAM FLETCHER, Bit.io Chief Executive Officer / Founder
-
-#### \* DANNY JACOSHENK, Pilot Software Engineer
-
-#### \* JESS BONANNO, Slack Software Engineer
-
-#### \* MAX MATTHEWS, Tuzag Chief Technology Officer
 
 <br>
 
