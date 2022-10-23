@@ -4,11 +4,12 @@ import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 
+import apikey from "./apikey";
+import privateApikey from "./privateApikey";
+
 import "./Marvel.scss";
 import { style } from "../mui.js";
 import skyline from "./images/skyline.png";
-import apikey from "./apikey";
-import privateApikey from "./privateApikey";
 
 const Marvel = ({ openModal, onClose }) => {
   const ts = require("./ts");
