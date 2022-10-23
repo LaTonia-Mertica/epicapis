@@ -7,13 +7,12 @@ import Button from "@mui/material/Button";
 import "./Marvel.scss";
 import { style } from "../mui.js";
 import skyline from "./images/skyline.png";
+import apikey from "./apikey";
+import privateApikey from "./privateApikey";
 
 const Marvel = ({ openModal, onClose }) => {
   const ts = require("./ts");
-  const apikey = require("./apikey");
-  const privateapikey = require("./privateApikey");
-  const hash = md5(ts + privateapikey + apikey);
-
+  const hash = md5(ts + privateApikey + apikey);
   const [name, setName] = useState("");
   const [creator, setCreator] = useState();
   const [loading, setLoading] = useState(false);
