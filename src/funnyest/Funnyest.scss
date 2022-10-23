@@ -32,14 +32,15 @@
   }
 
   input[type="checkbox"] {
-    accent-color: bisque;
+    accent-color: $ea-black;
   }
 
   label {
     font-size: 1.75rem;
-    color: bisque;
+    color: $ea-white;
+    letter-spacing: 0.2rem;
     font-family: $font-rubik-distressed;
-    text-shadow: 0.15rem 0.1rem $ea-black;
+    text-shadow: 0.05rem 0.05rem $ea-gray-dark;
     cursor: pointer;
   }
 

@@ -1,6 +1,7 @@
 @import "../variables.module.scss";
 
 .prettiestCard {
+  background-color: rgba(255, 192, 203, 0.2);
   @include card-space;
 
   button {
@@ -31,6 +32,7 @@
 
   .whatshot:active {
     @include icon-click-effect;
+    color: orangered;
   }
 
   label {

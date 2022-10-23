@@ -35,6 +35,7 @@
 
   .deblur:active {
     @include icon-click-effect;
+    color: $ea-red;
   }
 
   label {
