@@ -85,13 +85,13 @@ const getRandomFoaasImg = Math.floor(Math.random() * foaasImgs.length);
 let randomFoaasImg = foaasImgs[getRandomFoaasImg];
 
 const App = () => {
-  const [openModal, setOpenModal] = useState();
+  const [openModal, setOpenModal] = useState(false);
 
   const closeModal = () => {
     setOpenModal(false);
   };
   const [epicMode, setEpicMode] = useState(
-    localStorage.getItem("epicMode") || "false"
+    JSON.parse(localStorage.getItem("epicMode")) || false
   );
 
   const [count, setCount] = useState(localStorage.getItem("count") || 1);
@@ -126,7 +126,8 @@ const App = () => {
 
   return (
     <main
-      className={epicMode === "true" ? "epic-mode" : ""}
+      // className={epicMode === "true" ? "epic-mode" : ""}
+      className={epicMode ? "epic-mode" : ""}
       onLoad={addOneToCount}
     >
       <div className="visitCountDiv">visit count</div>
@@ -460,36 +461,70 @@ const App = () => {
           ></img>
         </div>
       </Masonry>
+
+      {/* continuous mount modal option */}
       <OwenWilson openModal={openModal} onClose={closeModal} />
-      <Funnyest
-        openModal={openModal}
-        onClose={closeModal}
-        // arrange elements for email
-        // funnyest={funnyestSelection}
-        // setFunnyest={setFunnyestSelection}
-      />
       <ChuckNorris openModal={openModal} onClose={closeModal} />
-      <Badassest openModal={openModal} onClose={closeModal} />
       <Pokemon openModal={openModal} onClose={closeModal} />
-      <Greatest openModal={openModal} onClose={closeModal} />
       <StarWars openModal={openModal} onClose={closeModal} />
-      <Grittiest openModal={openModal} onClose={closeModal} />
       <Cocktails openModal={openModal} onClose={closeModal} />
-      <Prettiest openModal={openModal} onClose={closeModal} />
       <DonaldTrump openModal={openModal} onClose={closeModal} />
-      <Say openModal={openModal} onClose={closeModal} />
       <Agify openModal={openModal} onClose={closeModal} />
-      <Best openModal={openModal} onClose={closeModal} />
       <FOAAS openModal={openModal} onClose={closeModal} />
-      <Last openModal={openModal} onClose={closeModal} />
       <RonSwanson openModal={openModal} onClose={closeModal} />
-      <Rampantest openModal={openModal} onClose={closeModal} />
       <Marvel openModal={openModal} onClose={closeModal} />
-      <Sexiest openModal={openModal} onClose={closeModal} />
-      <Epic openModal={openModal} onClose={closeModal} />
-      <Beautiful openModal={openModal} onClose={closeModal} />
-      <Api openModal={openModal} onClose={closeModal} />
-      <Dangerous openModal={openModal} onClose={closeModal} />
+
+      {/* unmount modal option */}
+      {openModal === "Funnyest" && (
+        <Funnyest
+          openModal={openModal}
+          onClose={closeModal}
+          // arrange elements for email
+          // funnyest={funnyestSelection}
+          // setFunnyest={setFunnyestSelection}
+        />
+      )}
+      {openModal === "Badassest" && (
+        <Badassest openModal={openModal} onClose={closeModal} />
+      )}
+      {openModal === "Greatest" && (
+        <Greatest openModal={openModal} onClose={closeModal} />
+      )}
+      {openModal === "Grittiest" && (
+        <Grittiest openModal={openModal} onClose={closeModal} />
+      )}
+      {openModal === "Prettiest" && (
+        <Prettiest openModal={openModal} onClose={closeModal} />
+      )}
+      {openModal === "Say" && (
+        <Say openModal={openModal} onClose={closeModal} />
+      )}
+      {openModal === "Best" && (
+        <Best openModal={openModal} onClose={closeModal} />
+      )}
+      {openModal === "Last" && (
+        <Last openModal={openModal} onClose={closeModal} />
+      )}
+      {openModal === "Rampantest" && (
+        <Rampantest openModal={openModal} onClose={closeModal} />
+      )}
+      {openModal === "Sexiest" && (
+        <Sexiest openModal={openModal} onClose={closeModal} />
+      )}
+
+      {openModal === "Epic" && (
+        <Epic openModal={openModal} onClose={closeModal} />
+      )}
+      {openModal === "Beautiful" && (
+        <Beautiful openModal={openModal} onClose={closeModal} />
+      )}
+      {openModal === "Api" && (
+        <Api openModal={openModal} onClose={closeModal} />
+      )}
+      {openModal === "Dangerous" && (
+        <Dangerous openModal={openModal} onClose={closeModal} />
+      )}
+
       <form className="selectionsForm">
         <input
           type="email"
