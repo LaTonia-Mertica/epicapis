@@ -9,9 +9,6 @@ import { style } from "../mui.js";
 import pokemonGifs from "./pokemonGifs";
 import pokemonworldmap from "./images/pokemonworldmap.png";
 
-// let randomGif = Math.floor(Math.random() * (pokemonGifs.length + 1));
-// randomGif = pokemonGifs[randomGif];
-
 const Pokemon = ({ openModal, onClose }) => {
   const [pokemonName, setPokemonName] = useState("");
   const [pokemonShow, setPokemonShow] = useState(false);
@@ -27,9 +24,9 @@ const Pokemon = ({ openModal, onClose }) => {
     moves: "",
     weight: "",
   });
+  const [pokemonImage, setPokemonImage] = useState();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
-  const [pokemonImage, setPokemonImage] = useState();
 
   const searchPokemon = (event) => {
     event.preventDefault();
@@ -37,60 +34,75 @@ const Pokemon = ({ openModal, onClose }) => {
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/` + pokemonName)
       .then((response) => {
-        setPokemon({
-          name: pokemonName,
-          species: response.data.species.name,
-          types: response.data.types[0].type.name,
-          image: response.data.sprites.front_default,
-          image_back: response.data.sprites.back_default,
-          back_shiny: response.data.sprites.back_shiny,
-          front_shiny: response.data.sprites.front_shiny,
-          abilities: [
-            response.data.abilities[0].ability.name,
-            response.data.abilities[1].ability.name,
-          ],
-          moves: [
-            response.data.moves[0].move.name,
-            response.data.moves[1].move.name,
-            response.data.moves[2].move.name,
-          ],
-          weight: response.data.weight,
-        });
-        const matchGifs = pokemonGifs.filter((gif) =>
-          gif.includes(pokemonName.toLowerCase())
-        );
-        let randomGifMatch = Math.floor(Math.random() * (matchGifs.length + 1));
-        setPokemonImage(
-          <img
-            src={matchGifs[randomGifMatch]}
-            alt="Pokemon"
-            className="gifMatchGif"
-          />
-        );
+        if (response?.data?.species?.name) {
+          setPokemon({
+            name: pokemonName,
+            species: response.data.species.name,
+            types: response.data.types[0].type.name,
+            image: response.data.sprites.front_default,
+            image_back: response.data.sprites.back_default,
+            back_shiny: response.data.sprites.back_shiny,
+            front_shiny: response.data.sprites.front_shiny,
+            abilities: [
+              response.data.abilities[0].ability.name,
+              response.data.abilities[1].ability.name,
+            ],
+            moves: [
+              response.data.moves[0].move.name,
+              response.data.moves[1].move.name,
+              response.data.moves[2].move.name,
+            ],
+            weight: response.data.weight,
+          });
+          const matchGifs = pokemonGifs.filter((gif) =>
+            gif.includes(pokemonName.toLowerCase())
+          );
 
-        setError(null);
-        setPokemonShow(true);
+          if (matchGifs.length > 0) {
+            let randomGifMatch = Math.floor(Math.random() * matchGifs.length);
+
+            setPokemonImage(
+              <img
+                src={matchGifs[randomGifMatch]}
+                alt="Pokemon"
+                className="gifMatchGif"
+              />
+            );
+
+            setError(null);
+            setPokemonShow(true);
+          } else {
+            setPokemonImage(null);
+            setPokemonShow(true);
+          }
+        } else {
+          //api returned data but name was not set
+          setError("Try Again!");
+          setPokemonShow(false);
+          setLoading(false);
+        }
         setLoading(false);
       })
       .catch((error) => {
+        //api threw error, likely 404 because pokemon does not exist
         console.error(error);
         setError("Try Again!");
+        setLoading(false);
       });
   };
 
   const getGifMatch = () => {
-    let randomGifMatch = Math.floor(Math.random() * (pokemonGifs.length + 1));
+    let randomGifMatch = Math.floor(Math.random() * pokemonGifs.length);
     let gifMatch = pokemonGifs[randomGifMatch];
     return <img src={gifMatch} alt="Pokemon" className="gifMatchGif" />;
   };
 
-  // SET RESET
-  // useEffect(() => {
-  //   if (!openModal) {
-  // setPokemon({});
-  // setPokemonImage(getGifMatch())
-  //   }
-  // }, [openModal]);
+  useEffect(() => {
+    if (openModal) {
+      setPokemonImage(getGifMatch());
+      setPokemonShow(false);
+    }
+  }, [openModal]);
 
   // **note:** reasons this api uses axios:
   // axios and fetch are used in the epic apis project for practice with both libraries
@@ -98,7 +110,7 @@ const Pokemon = ({ openModal, onClose }) => {
   // fetch is the more modern and preferred method
 
   return (
-    <main>
+    <main id="pokemon">
       <Modal
         open={openModal === "Pokemon"}
         onClose={onClose}
@@ -136,7 +148,10 @@ const Pokemon = ({ openModal, onClose }) => {
                     <h1>{pokemonName}</h1>
                   </span>
 
-                  <section>{pokemonImage}</section>
+                  <section>
+                    {/* {getGifMatch !== undefined ? getGifMatch() : ""} */}
+                    {pokemonImage || null}
+                  </section>
 
                   <span className="specDetailsSpan">
                     <section>
@@ -150,6 +165,7 @@ const Pokemon = ({ openModal, onClose }) => {
                         alt=""
                         className="nonMainImages"
                       />
+
                       <h2>
                         <span className="specDetails species">
                           species:&nbsp;

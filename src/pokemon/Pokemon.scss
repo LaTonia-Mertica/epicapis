@@ -1,6 +1,7 @@
 @import "../variables.module.scss";
 
 .pokemonsCard {
+  background-color: rgba(0, 0, 255, 0.1);
   @include card-space;
 
   button {
@@ -44,11 +45,9 @@
   }
 
   .mapImg {
-    width: 50%;
+    width: 37%;
     z-index: -1;
-    position: absolute;
-    left: 0;
-    bottom: -13.15rem;
+    margin-left: -23rem;
   }
 
   .pokemonImg {
@@ -61,7 +60,9 @@
   }
 
   .gifMatchGif {
-    width: 7rem;
+    width: 11rem;
+    margin-top: -6.25rem;
+    margin-left: -17rem;
   }
 
   .specDetails {
