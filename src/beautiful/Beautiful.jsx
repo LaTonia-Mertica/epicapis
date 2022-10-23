@@ -33,25 +33,31 @@ const Beautiful = ({ openModal, onClose }) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="beautifulCard">
-          <Button onClick={onClose}>&#x274C;</Button>
           <>
+            <Button onClick={onClose}>&#x274C;</Button>
+
             <section>
-              <label htmlFor="beautiful">
-                change to paragraph with definition
-              </label>
+              <p>
+                bold. consistent. clear in what it does, when, and how. free of
+                code clutter. fun. doesn't shy from stating code simply.
+                <br />
+                <br />
+                beautiful code makes you feel welcome.
+              </p>
+
+              <label htmlFor="beautiful"></label>
               <input
                 type="checkbox"
                 name="beautiful"
                 id="beautiful"
                 value="beautiful"
               />
+
+              <input type="textbox" />
             </section>
             {/* add placeholder to prompt user to enter their own definition */}
             {/* only reveal textbox if user selects sad face */}
             {/* disable input for textbox if user selects happy face */}
-            <section>
-              <input type="textbox" />
-            </section>
 
             <Button type="button" className="submitBtn">
               submit

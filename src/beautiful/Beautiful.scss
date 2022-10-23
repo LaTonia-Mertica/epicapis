@@ -1,7 +1,8 @@
 @import "../variables.module.scss";
 
 .beautifulCard {
-  background-color: #1a191e;
+  // background-color: #1a191e;
+  background-color: rgba(26, 25, 30, 0.7);
   padding: 0;
   margin: 0;
   @include card-space;
@@ -9,6 +10,7 @@
   button {
     @include button-space;
     @include button-submit;
+    margin-bottom: 3rem;
   }
 
   button:hover {
@@ -17,6 +19,14 @@
 
   section {
     @include section-centered;
+  }
+
+  p {
+    width: 30%;
+    text-align: justify;
+    position: absolute;
+    top: 8rem;
+    left: 3rem;
   }
 
   label {
@@ -29,8 +39,8 @@
   input[type="checkbox"] {
     appearance: none;
     background-color: #222127;
-    height: 2.5rem;
-    width: 6.25rem;
+    height: $space-lg;
+    width: 12.5rem;
     position: absolute;
     margin: auto;
     left: 0;
@@ -47,33 +57,33 @@
   input[type="checkbox"]:before {
     position: absolute;
     content: "";
-    height: 0.313rem;
-    width: 0.313rem;
+    height: 0.625rem;
+    width: 0.625rem;
     background-color: #0ba041;
     border-radius: 50%;
-    top: 0.563rem;
-    left: 0.688rem;
-    box-shadow: 0 1.063rem 0 0 #0ba041, 4.688rem 1.063rem 0 0 $ea-gray-light,
-      4.688rem 0 0 0 $ea-gray-light;
+    top: 1.25rem;
+    left: 1.688rem;
+    box-shadow: 0 2.063rem 0 0 #0ba041, 8.438rem 2.063rem 0 0 $ea-gray-light,
+      8.438rem 0 0 0 $ea-gray-light;
   }
 
   input[type="checkbox"]:after {
     position: absolute;
     content: "";
-    height: 0.719rem;
-    width: 0.313rem;
+    height: 1.438rem;
+    width: 0.625rem;
     border: 0.25rem solid #0ba041;
     border-left: none;
     border-radius: 0 1.438rem 1.438rem 0;
     margin: auto;
     top: 0;
     bottom: 0;
-    left: 1.563rem;
+    left: 3.125rem;
     transition: 0.3s;
   }
 
   input[type="checkbox"]:checked:after {
-    left: 4.375rem;
+    left: 8.625rem;
     border-color: $ea-gray-light;
   }
 
@@ -81,7 +91,22 @@
     box-shadow: -1.125rem 0.75rem 1.125rem -0.313rem rgba(0, 0, 0, 0.35);
   }
 
+  input[type="textbox"] {
+    width: 21%;
+    height: 80%;
+    padding: 3rem;
+    // reveal per toggle to sad
+    // display: none;
+    position: absolute;
+    top: 0;
+    right: 0.1rem;
+    background-color: rgba(26, 25, 30, 0.9);
+
+    color: $ea-gray-light;
+  }
+
   .submitBtn {
     @include button-submit;
+    margin-top: 10rem;
   }
 }
