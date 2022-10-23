@@ -31,12 +31,19 @@ const Dangerous = ({ openModal, onClose }) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} className="dangerousCard">
-          <Button onClick={onClose}>&#x274C;</Button>
           <>
+            <Button onClick={onClose}>&#x274C;</Button>
+
             <section>
-              <label htmlFor="dangerous">
-                change to paragraph with definition
-              </label>
+              <p>
+                boastful. unwieldy. alienating in what it does, when, and how.
+                misleading. maybe even malicious. slow.
+                <br />
+                <br />
+                dangerous code makes you feel exhausted.
+              </p>
+
+              <label htmlFor="dangerous"></label>
               <input
                 type="checkbox"
                 name="dangerous"
