@@ -12,21 +12,25 @@ _collection of fun, odd, quirky application programming interfaces paired with c
 
 ###### _<p style="text-align: justify">max has been and remains primary re: project-based code/web dev while also helping initiate me into the code world of algorithms. max was among my first instructors as i began my coding journey in hack upstate 'careers in code.' max demos a rare blend of know-how and get-to in his role as a code master. and he doesn't shy from telling me i already know when he sees my confidence hiding, he doesn't shy from settling into his lecture mode when he sees me lacking self care, he doesn't shy from being someone to just listen when it's clear that's what's needed at that time.</p>_
 
+###### _<p style="text-align: justify">adam has insane skills re: code refactoring, as routine outlines theory versus application/implementation, and enthusiastically encourages me to own my code.</p>_
+
 ###### _<p style="text-align: justify">danny has been a tremendous support re: debugging miscellaneous errors and warnings in the console - including introducing me to advanced concepts in chrome and react-specific dev tools. this is especially notable because it helps my growth mindset push beyond just getting my code to work. but instead pursuing a sense of elegant code integrity.</p>_
 
-###### _<p style="text-align: justify">danny, adam - insane skills re: code refactoring, and jess - inspiring code flow that impeccably reflects novice-coder mindset dressed in raw mastery, have been exceptional supports re: expanding my knowledge and skillset to include algorithms and advanced project-work. they are part of the team assigned to pair program 1:1 with me through underdog devs 'project underdog.'</p>_
+###### _<p style="text-align: justify">jess has inspiring code flow that impeccably reflects novice-coder mindset dressed in raw mastery, and is dogged re: producing optimized code output.</p>_
+
+###### _<p style="text-align: justify">adam, danny, and jess have been exceptional supports re: expanding my knowledge and skillset to include algorithms and advanced project-work. they are part of the team assigned to pair program 1:1 with me through underdog devs 'project underdog.'</p>_
 
 ###### _<p style="text-align: justify">each of these mentors excel in part, in my experience-informed opinion, because they consistently share compassion, patience, and sincere interest in my code/web dev ambitions. they make me feel like i can, and they do what they can to ensure i do/will.</p>_
 
 ###### _my mentors (and peers) include gems. thank you adam, danny, jess, max, and others for being you and doing what you do.</p>_
+
+#### \* [MAX MATTHEWS](https://github.com/maxmatthews), Tuzag Chief Technology Officer
 
 #### \* [ADAM FLETCHER](https://www.linkedin.com/in/adam-w-fletcher/), Bit.io Chief Executive Officer / Founder
 
 #### \* [DANNY JACOSHENK](https://github.com/djacoshenk), Pilot Software Engineer
 
 #### \* [JESS BONANNO](https://github.com/JessBonanno), Slack Software Engineer
-
-#### \* [MAX MATTHEWS](https://github.com/maxmatthews), Tuzag Chief Technology Officer
 
 ---
 
