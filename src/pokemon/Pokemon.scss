@@ -27,7 +27,7 @@
   input[type="text"]::placeholder {
     @include input-text-placeholder;
     // color: $ea-white;
-    @include input-number-and-text-format;
+    // @include input-number-and-text-format;
   }
 
   input[type="text"] {
