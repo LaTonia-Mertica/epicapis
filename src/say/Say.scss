@@ -1,7 +1,7 @@
 @import "../variables.module.scss";
 
 .sayCard {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 255, 0.3);
   @include card-space;
 
   button {
@@ -40,6 +40,7 @@
     color: $ea-white;
     font-family: $font-bebas-neue;
     font-size: 2rem;
+    text-shadow: 0.05rem 0.05rem blue;
   }
 
   .submitBtn {
