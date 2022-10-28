@@ -54,7 +54,7 @@ const Header = ({ epicMode, setEpicMode }) => {
                 id="enterUserName"
                 type="text"
                 placeholder="enter name"
-                autoComplete="on"
+                autoComplete="off"
                 required
               />
               <input id="submitUserName" type="submit" value="submit" />
