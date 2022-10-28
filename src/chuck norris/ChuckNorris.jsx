@@ -16,7 +16,6 @@ const ChuckNorris = ({ openModal, onClose }) => {
   useEffect(() => {
     setLoading(true);
     getData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

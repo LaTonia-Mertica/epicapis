@@ -28,7 +28,6 @@ const FOAAS = ({ openModal, onClose }) => {
 
   useEffect(() => {
     getFoaas();
-    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {

@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
 // styles import necessary for jsx and scss files
-// eslint-disable-next-line
 import styles from "./App.scss";
 import Masonry from "react-masonry-css";
 import Button from "@mui/material/Button";
 // route import necessary for jsx and scss files
-// eslint-disable-next-line
 import { Route } from "@mui/icons-material";
 
 import Header from "./Header";
@@ -96,7 +94,6 @@ const App = () => {
 
   const [count, setCount] = useState(localStorage.getItem("count") || 1);
   const addOneToCount = () => {
-    // eslint-disable-next-line
     let visitCount = Number(localStorage.getItem("count")) || 1;
     localStorage.setItem("count", Number(count) + 1);
   };
@@ -125,11 +122,7 @@ const App = () => {
   // const [funnyestSelection, setFunnyestSelection] = useState("");
 
   return (
-    <main
-      // className={epicMode === "true" ? "epic-mode" : ""}
-      className={epicMode ? "epic-mode" : ""}
-      onLoad={addOneToCount}
-    >
+    <main className={epicMode ? "epic-mode" : ""} onLoad={addOneToCount}>
       <div className="visitCountDiv">visit count</div>
       <p className="visitCountPara">{count}</p>
       <button type="reset" id="reset" onClick={deleteCount}>
@@ -138,7 +131,6 @@ const App = () => {
 
       <div className="logoAndNavDiv">
         <Header epicMode={epicMode} setEpicMode={setEpicMode} />
-        {/* eslint-disable-next-line */}
         <a href="#">
           <img
             src={epicapisLogo}
@@ -474,7 +466,7 @@ const App = () => {
       <RonSwanson openModal={openModal} onClose={closeModal} />
       <Marvel openModal={openModal} onClose={closeModal} />
 
-      {/* unmount modal option */}
+      {/* unmount modal when modal not open option */}
       {openModal === "Funnyest" && (
         <Funnyest
           openModal={openModal}
@@ -562,24 +554,6 @@ const App = () => {
           email selections
         </Button>
       </form>
-
-      <footer className="copyrightText">
-        {/* &copy;
-        <a
-          href={epicapisposter}
-          className="epicapisCopyrightText listWordColor"
-          target="_blank"  rel="noreferrer"
-        >
-          EPIC<strong className="apisOfEpicapis">APIS</strong>
-        </a>{" "}
-        <a
-          href="https://www.latoniamertica.dev/"
-          className="listWordColor"
-          target="_blank"  rel="noreferrer"
-        >
-          La'Tonia Mertica
-        </a> */}
-      </footer>
     </main>
   );
 };

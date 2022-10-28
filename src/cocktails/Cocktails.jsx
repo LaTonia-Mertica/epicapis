@@ -26,7 +26,6 @@ const Cocktails = ({ openModal, onClose }) => {
 
   useEffect(() => {
     getDrink();
-    // eslint-disable-next-line
   }, [apikey]);
 
   useEffect(() => {
