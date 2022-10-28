@@ -36,6 +36,7 @@ const Grittiest = ({ openModal, onClose }) => {
                   name="grittiestArmy"
                   id="grittiestArmy"
                   placeholder="enter name of army"
+                  autoComplete="off"
                   className="grittiestArmy"
                 />
               </p>

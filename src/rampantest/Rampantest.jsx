@@ -36,6 +36,7 @@ const Rampantest = ({ openModal, onClose }) => {
                   name="rampantestEntry"
                   id="rampantestEntry"
                   placeholder="if not hercule poirot, then who .. ."
+                  autoComplete="off"
                   className="rampantestEntry"
                 />
               </p>
