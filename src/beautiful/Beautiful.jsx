@@ -6,24 +6,18 @@ import Button from "@mui/material/Button";
 import "./Beautiful.scss";
 import { style } from "../mui.js";
 
-// appropriate
-// bold
-// clean
-// clear
-// comfy
-// readable
-// consistent
-// efficient
-// elegant
-// fun
-// functional
-// modular
-// reusable
-// sensible
-// simple
-// tests easy
-
 const Beautiful = ({ openModal, onClose }) => {
+  // function setToggle() {
+  //   let checkbx = document.getElementById("theCheckBx");
+  //   let txtarea = document.getElementById("theTxtArea");
+
+  //   if (checkbx.checked === true) {
+  //     txtarea.style.display = "block";
+  //   } else {
+  //     txtarea.style.display = "none";
+  //   }
+  // }
+
   return (
     <main>
       <Modal
@@ -49,13 +43,20 @@ const Beautiful = ({ openModal, onClose }) => {
               <input
                 type="checkbox"
                 name="beautiful"
-                id="beautiful"
                 value="beautiful"
+                // id="theCheckBx"
+                // onClick={setToggle()}
               />
-
-              <input type="textbox" />
+              <form action="/enterplaceinputwilllivehere" method="get">
+                <label htmlFor="beautifulCode"></label>
+                <textarea
+                  type="textbox"
+                  // id="theTxtArea"
+                  placeholder="enter your definition of beautiful code here ..."
+                ></textarea>
+              </form>
             </section>
-            {/* add placeholder to prompt user to enter their own definition */}
+
             {/* only reveal textbox if user selects sad face */}
             {/* disable input for textbox if user selects happy face */}
 

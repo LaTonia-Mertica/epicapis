@@ -6,22 +6,18 @@ import Button from "@mui/material/Button";
 import "./Dangerous.scss";
 import { style } from "../mui.js";
 
-// alienating
-// boastful
-// boring
-// chaotic
-// cluttered
-// disfunctional
-// limiting
-// malicious
-// misleading
-// too nested
-// slow
-// uninspiring
-// unrelatable
-// unwieldy
-
 const Dangerous = ({ openModal, onClose }) => {
+  // function setToggle() {
+  //   let checkbx = document.getElementById("theCheckBx");
+  //   let txtarea = document.getElementById("theTxtArea");
+
+  //   if (checkbx.checked === true) {
+  //     txtarea.style.display = "block";
+  //   } else {
+  //     txtarea.style.display = "none";
+  //   }
+  // }
+
   return (
     <main>
       <Modal
@@ -47,16 +43,22 @@ const Dangerous = ({ openModal, onClose }) => {
               <input
                 type="checkbox"
                 name="dangerous"
-                id="dangerous"
                 value="dangerous"
+                // id="theCheckBx"
+                // onClick={setToggle()}
               />
+              <form action="/enterplaceinputwilllivehere" method="get">
+                <label htmlFor="dangerousCode"></label>
+                <textarea
+                  type="textbox"
+                  id="theTxtArea"
+                  placeholder="enter your definition of dangerous code here ..."
+                ></textarea>
+              </form>
             </section>
-            {/* add placeholder to prompt user to enter their own definition */}
+
             {/* only reveal textbox if user selects sad face */}
             {/* disable input for textbox if user selects happy face */}
-            <section>
-              <input type="textbox" />
-            </section>
 
             <Button type="button" className="submitBtn">
               submit

@@ -1,7 +1,6 @@
 @import "../variables.module.scss";
 
 .dangerousCard {
-  // background-color: #1a191e;
   background-color: rgba(26, 25, 30, 0.7);
   padding: 0;
   margin: 0;
@@ -27,13 +26,6 @@
     position: absolute;
     top: 8rem;
     left: 3rem;
-  }
-
-  label {
-    color: #0ba041;
-    letter-spacing: 0.1rem;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    margin-left: -11rem;
   }
 
   input[type="checkbox"] {
@@ -87,22 +79,30 @@
     border-color: $ea-gray-light;
   }
 
-  input[type="checkbox"]:checked {
-    box-shadow: -1.125rem 0.75rem 1.125rem -0.313rem rgba(0, 0, 0, 0.35);
-  }
-
-  input[type="textbox"] {
-    width: 21%;
-    height: 80%;
+  textarea {
+    width: 34%;
+    height: 100%;
     padding: 3rem;
-    // reveal per toggle to sad
-    // display: none;
+    resize: none;
+    box-sizing: border-box;
+
     position: absolute;
     top: 0;
     right: 0.1rem;
+    color: $ea-gray-light;
     background-color: rgba(26, 25, 30, 0.9);
 
-    color: $ea-gray-light;
+    // display: none;
+  }
+
+  textarea:focus,
+  textarea:active {
+    background-color: $ea-white;
+  }
+
+  input[type="checkbox"]:checked + textarea {
+    display: block;
+    box-shadow: -1.125rem 0.75rem 1.125rem -0.313rem rgba(0, 0, 0, 0.35);
   }
 
   .submitBtn {
