@@ -57,7 +57,7 @@
 }
 
 .lineUpEffect {
-  @include line-up-effect1;
+  @include line-up-effect;
 }
 @keyframes anim-lineUp {
   0% {
