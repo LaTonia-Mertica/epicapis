@@ -47,7 +47,7 @@ const Say = ({ openModal, onClose }) => {
                         hidden
                         className="optionClickPrompt"
                       >
-                        select what matters most to you
+                        select your #1 never say
                       </option>
 
                       <option value="age" id="age">

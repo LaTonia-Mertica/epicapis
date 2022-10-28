@@ -2,15 +2,15 @@ const phraseGenerator = (setPhraseToShow, value) => {
   if (value === "age") {
     setPhraseToShow("'we are seeking new, ... young, ... inexperienced'");
   } else if (value === "arrest record") {
-    setPhraseToShow("'what'd you do, are you dangerous'");
+    setPhraseToShow("'what'd you do'");
   } else if (value === "audible expression") {
-    setPhraseToShow("speak english");
+    setPhraseToShow("'speak english'");
   } else if (value === "color") {
-    setPhraseToShow("'your skin's so dark, can i touch it'");
+    setPhraseToShow("'you will not replace us'");
   } else if (value === "conviction record") {
-    setPhraseToShow("'how do we know you're not violent'");
+    setPhraseToShow("'are you dangerous'");
   } else if (value === "creed") {
-    setPhraseToShow("can hardly be called human");
+    setPhraseToShow("'barbarians think like that'");
   } else if (value === "employment") {
     setPhraseToShow("'you wouldn't be a good cultural fit here'");
   } else if (value === "national origin") {
@@ -18,7 +18,7 @@ const phraseGenerator = (setPhraseToShow, value) => {
   } else if (value === "race") {
     setPhraseToShow("'you are a credit to your people'");
   } else if (value === "religion") {
-    setPhraseToShow("'how can you worship false gods'");
+    setPhraseToShow("'you worship false gods'");
   } else if (value === "weight") {
     setPhraseToShow("'you always been this big'");
   } else if (value === "disability") {
@@ -38,11 +38,11 @@ const phraseGenerator = (setPhraseToShow, value) => {
   } else if (value === "mental health status") {
     setPhraseToShow("'there's nothing wrong with you'");
   } else if (value === "predisposing genetic characteristics") {
-    setPhraseToShow("'you got a bad seed huh'");
+    setPhraseToShow("'you got a bad seed'");
   } else if (value === "sex") {
-    setPhraseToShow("'it's your fault this happened'");
+    setPhraseToShow("'it's your own fault'");
   } else if (value === "sexual orientation") {
-    setPhraseToShow("'sure you're gay, you don't look homosexual'");
+    setPhraseToShow("'sure you're gay, you don't it'");
   }
 };
 
