@@ -139,7 +139,6 @@ $ea-transparent: transparent;
 }
 
 // FONT
-$font-align: center;
 $font-style-serif: cursive;
 $font-style-sans: Arial, Helvetica, sans-serif;
 
@@ -147,7 +146,6 @@ $font-abril-fatface: Abril Fatface;
 $font-amatic-sc: Amatic SC;
 $font-bangers: Bangers;
 $font-bebas-neue: Bebas Neue;
-$font-grape-nuts: Grape Nuts;
 $font-luckiest-guy: Luckiest Guy;
 $font-pathway-gothic-one: Pathway Gothic One;
 $font-rubik-dirt: Rubik Dirt;
@@ -303,12 +301,8 @@ $font-rubik-glitch: Rubik Glitch;
   font-size: x-small;
 }
 
-@mixin line-up-effect1 {
+@mixin line-up-effect {
   animation: 2.5s anim-lineUp ease-out infinite;
-}
-
-@mixin line-up-effect2 {
-  animation: 7.3s anim-lineUp ease-in-out infinite;
 }
 
 // SECTION STYLE SET
