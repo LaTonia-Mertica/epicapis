@@ -50,6 +50,24 @@
     @include text-uppercase;
   }
 
+  h2.errorText {
+    font-size: x-large;
+  }
+
+  .unfoundName {
+    font-size: 3rem;
+    text-shadow: 0.15rem 0.15rem $ea-black;
+  }
+
+  .noEntryText {
+    letter-spacing: 0.08rem;
+  }
+
+  .nameSearchCount {
+    font-size: medium;
+    margin-top: -13.5rem;
+  }
+
   summary.disclaimerSummary {
     font-size: xx-small;
     color: $ea-red;

@@ -24,8 +24,21 @@ const Agify = ({ openModal, onClose }) => {
     const data = await response.json();
 
     if (data.age === null) {
+      setLoading(false);
       setAgeByName({
-        age: "Try Again",
+        name: (
+          <h2 className="errorText">
+            <span className="unfoundName">
+              &#10075;&nbsp;
+              {name}&nbsp;&#10076;
+            </span>
+            <br />
+            <span className="noEntryText">no entry found</span>
+            <br />
+            please try again
+          </h2>
+        ),
+        count: "",
       });
     } else {
       setAgeByName({
@@ -100,6 +113,13 @@ const Agify = ({ openModal, onClose }) => {
           <div className="nameAgeDiv">
             <h1>{ageByName.name}</h1>
             <p className="agePara">{ageByName.age}</p>
+            <p className="nameSearchCount">
+              {ageByName.count < 1 ? (
+                <></>
+              ) : (
+                <>search count:&nbsp;&nbsp;{ageByName.count}</>
+              )}
+            </p>
           </div>
         </Box>
       </Modal>
