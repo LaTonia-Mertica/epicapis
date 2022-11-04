@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Modal from "@mui/material/Modal";
+import Select from "react-select";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Select from "react-select";
 
 import "./Pokemon.scss";
 import { style } from "../mui.js";
@@ -36,7 +36,7 @@ const Pokemon = ({ openModal, onClose }) => {
       .get(`https://pokeapi.co/api/v2/pokemon/` + pokemonName)
       .then((response) => {
         if (response?.data?.species?.name) {
-          console.log(response.data);
+          // console.log(response.data);
           setPokemon({
             name: pokemonName,
             species: response.data.species.name,
@@ -156,7 +156,11 @@ const Pokemon = ({ openModal, onClose }) => {
               options={allPokemon}
               styles={{
                 option: () => ({
-                  color: "black",
+                  color: "#545454",
+                  fontSize: "1.25rem",
+                  fontFamily: "monospace",
+                  textAlign: "left",
+                  paddingLeft: "1rem",
                 }),
               }}
               onChange={(newValue) => {
@@ -164,6 +168,8 @@ const Pokemon = ({ openModal, onClose }) => {
               }}
               openMenuOnFocus={false}
               openMenuOnClick={false}
+              placeholder="start typing pokemon name ..."
+              className="autocompleteSelect"
             />
 
             <Button disabled={true} className="searchBtn">

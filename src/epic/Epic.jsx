@@ -1,5 +1,6 @@
 import React from "react";
 import Modal from "@mui/material/Modal";
+// import Quiz from "react-quiz-component";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 
@@ -18,7 +19,7 @@ const Epic = ({ openModal, onClose }) => {
         <Box sx={style} className="epicCard">
           <Button onClick={onClose}>&#x274C;</Button>
           <div>
-            <p>TEST</p>
+            {/* <Quiz /> */}
             <Button type="button" className="submitBtn">
               submit
             </Button>

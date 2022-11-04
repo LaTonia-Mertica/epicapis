@@ -11,14 +11,12 @@ import { style } from "../mui.js";
 import stormtrooper from "./images/stormtrooper.gif";
 
 const StarWars = ({ openModal, onClose }) => {
-  // const [starshipName, setStarshipName] = useState("");
   const [starship, setStarship] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
   const [allStarships, setAllStarships] = useState([]);
 
   const searchStarship = (starshipURL) => {
-    // event.preventDefault();
     setLoading(true);
     console.log(allStarships, starshipURL);
     const matchingShip = allStarships.find((ship) => ship.url === starshipURL);
@@ -51,45 +49,6 @@ const StarWars = ({ openModal, onClose }) => {
     setError(null);
     setLoading(false);
     setLoading(false);
-    // axios
-    //   .get(starshipURL)
-    //   .then((response) => {
-    //     console.log(response);
-    //     if (response?.data?.results?.name) {
-    //       console.log(response.data);
-    //       setStarship({
-    //         name: response.data.results[0].name,
-    //         model: response.data.results[0].model,
-    //         class: response.data.results[0].starship_class,
-    //         manufacturer: response.data.results[0].manufacturer,
-    //         cost: response.data.results[0].cost_in_credits,
-    //         length: response.data.results[0].length,
-    //         crew: response.data.results[0].crew,
-    //         consumables: response.data.results[0].consumables,
-    //         capacityPassengers: response.data.results[0].passengers,
-    //         capacityCargo: response.data.results[0].cargo_capacity,
-    //         speed: response.data.results[0].max_atmosphering_speed,
-    //         hyperdrive: response.data.results[0].hyperdrive_rating,
-    //         megalights: response.data.results[0].MGLT,
-    //       });
-    //     } else {
-    //       setError("Starship Does Not Exist!");
-    //       setStarship(null);
-    //       setLoading(false);
-    //     }
-
-    //     setError(null);
-    //     setLoading(false);
-
-    //     setTimeout(() => {
-    //       setStarship(null);
-    //     }, 16000);
-    //   })
-    //   .catch((error) => {
-    //     console.error(error);
-    //     setError("Starship Does Not Exist!");
-    //     setLoading(false);
-    //   });
   };
 
   let starshipAggregator = [];
@@ -139,19 +98,6 @@ const StarWars = ({ openModal, onClose }) => {
           <div>
             <Button onClick={onClose}>&#x24B3;</Button>
             <form>
-              {/* {!starship && (
-                <> */}
-              {/* <input
-                    type="text"
-                    name="starshipname"
-                    id="starshipname"
-                    placeholder="enter starship name"
-                    autoComplete="off"
-                    onChange={(event) => {
-                      setStarshipName(event.target.value.toLowerCase());
-                    }}
-                  /> */}
-
               <Select
                 options={allStarships.map((starship) => ({
                   value: starship.url,
@@ -175,22 +121,10 @@ const StarWars = ({ openModal, onClose }) => {
                 className="autocompleteSelect"
               />
 
-              <Button
-                disabled={true}
-                // type="submit"
-                // onClick={searchStarship}
-                className="searchBtn"
-              >
-                {
-                  loading ? <>loading...</> : ""
-                  // (
-                  //   // <>Search Starships</>
-                  //   ""
-                  // )
-                }
+              <Button disabled={true} className="searchBtn">
+                {loading ? <>loading...</> : ""}
               </Button>
-              {/* </>
-              )} */}
+
               {!starship && (
                 <img
                   src={stormtrooper}
@@ -211,7 +145,6 @@ const StarWars = ({ openModal, onClose }) => {
                     <h1>{error}</h1>
                   ) : (
                     <>
-                      {/* <h1>{starshipName}</h1> */}
                       <h1>{starship.name}</h1>
 
                       <h5>

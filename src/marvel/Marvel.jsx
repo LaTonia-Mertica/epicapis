@@ -33,10 +33,10 @@ const Marvel = ({ openModal, onClose }) => {
       .then((data) => {
         setCreator({
           name: data.name,
-          id: data.id,
-          comics: data.comics,
-          series: data.series,
-          stories: data.stories,
+          // id: data.id,
+          // comics: data.results[0].comics.items[0],
+          // series: data.series,
+          // stories: data.stories,
         });
 
         console.log(data);
@@ -92,6 +92,7 @@ const Marvel = ({ openModal, onClose }) => {
 
             <section>
               <p className="marvelApiLinkPara">
+                {/* <p>{creator.comics}</p> */}
                 <a
                   className="marvelApiLinkAnchor"
                   href="http://marvel.com"

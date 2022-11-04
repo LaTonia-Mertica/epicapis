@@ -1,7 +1,7 @@
 @import "../variables.module.scss";
 
 .pokemonsCard {
-  background-color: rgba(0, 0, 255, 0.1);
+  background-color: rgba(0, 0, 255, 0.2);
   @include card-space;
 
   button {
@@ -14,30 +14,51 @@
     @include button-hover;
   }
 
-  Button.searchBtn {
-    font-size: 1.5rem;
-    @include button-search-submit-block-display;
+  .autocompleteSelect {
+    margin: 0 auto;
+    width: 37%;
   }
 
-  input {
-    // color: $ea-white;
-    @include input-basic-format;
+  .gifMatchGif {
+    width: 11rem;
+    margin-top: -9.5rem;
+    margin-left: -33rem;
   }
 
-  input[type="text"]::placeholder {
-    @include input-text-placeholder;
-    // color: $ea-white;
-    // @include input-number-and-text-format;
+  .searchBtn {
+    color: $ea-white;
   }
+  // Button.searchBtn {
+  //   font-size: 1.5rem;
+  //   @include button-search-submit-block-display;
+  // }
 
-  input[type="text"] {
-    border-bottom: $space-input-border-bottom;
-    @include input-combo-number-text-format;
-  }
+  // input {
+  //   // color: $ea-white;
+  //   @include input-basic-format;
+  // }
 
-  input[type="text"]::selection {
-    @include input-text-selection;
-  }
+  // input[type="text"]::placeholder {
+  //   @include input-text-placeholder;
+  //   // color: $ea-white;
+  //   // @include input-number-and-text-format;
+  // }
+
+  // input[type="text"] {
+  //   border-bottom: $space-input-border-bottom;
+  //   @include input-combo-number-text-format;
+  // }
+
+  // input[type="text"]::selection {
+  //   @include input-text-selection;
+  // }
+
+  // .horizontalLine {
+  //   border-top: 0.1rem dashed $ea-white;
+  //   width: 11.5rem;
+  //   margin-left: 26rem;
+  //   z-index: 3;
+  // }
 
   h1 {
     text-shadow: 0.2rem 0.2rem black;
@@ -51,19 +72,6 @@
 
   .pokemonImg {
     width: 7rem;
-  }
-
-  .horizontalLine {
-    border-top: 0.1rem dashed $ea-white;
-    width: 11.5rem;
-    margin-left: 26rem;
-    z-index: 3;
-  }
-
-  .gifMatchGif {
-    width: 11rem;
-    margin-top: -9.5rem;
-    margin-left: -29rem;
   }
 
   .nonGifImage {
