@@ -31,7 +31,7 @@ const Pokemon = ({ openModal, onClose }) => {
   const [allPokemon, setAllPokemon] = useState([]);
 
   const searchPokemon = (pokemonName) => {
-    setLoading(true);
+    // setLoading(true);
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/` + pokemonName)
       .then((response) => {
@@ -84,15 +84,15 @@ const Pokemon = ({ openModal, onClose }) => {
           //api returned data but name was not set
           setError("Try Again!");
           setPokemonShow(false);
-          setLoading(false);
+          // setLoading(false);
         }
-        setLoading(false);
+        // setLoading(false);
       })
       .catch((error) => {
         //api threw error, likely 404 because pokemon does not exist
         console.error(error);
         setError("Try Again!");
-        setLoading(false);
+        // setLoading(false);
       });
   };
 
@@ -115,6 +115,7 @@ const Pokemon = ({ openModal, onClose }) => {
       // TODO 10/25/22 MZM: This is for our autocomplete code, but we need to
       //refactor to use the npm react-select package
       if (allPokemon.length === 0) {
+        setLoading(true);
         axios
           .get(`https://pokeapi.co/api/v2/pokemon/?limit=2000`)
           .then((response) => {
@@ -128,8 +129,9 @@ const Pokemon = ({ openModal, onClose }) => {
             );
           });
       }
+      setLoading(false);
     }
-  }, [openModal]);
+  }, [openModal, allPokemon.length]);
 
   return (
     <main id="pokemon">
@@ -154,24 +156,43 @@ const Pokemon = ({ openModal, onClose }) => {
             /> */}
             <Select
               options={allPokemon}
+              theme={(theme) => ({
+                ...theme,
+                borderRadius: ".5rem",
+                colors: {
+                ...theme.colors,
+                neutral50: "#FFF",
+                primary: '#f8c947',
+                },
+              })}
               styles={{
+                control: (base) => ({
+                  ...base,
+                  color: "#FFF",
+                  background: "transparent",
+                  borderColor: "#f8c947",
+                }),
                 option: () => ({
-                  color: "#545454",
-                  fontSize: "1.25rem",
-                  fontFamily: "monospace",
-                  textAlign: "left",
-                  paddingLeft: "1rem",
+                    color: "#3661ab",
+                    fontSize: "1.25rem",
+                    fontFamily: "Impact",
+                    textAlign: "left",
+                    paddingLeft: "1rem",
+                    background: "#f8c947",
+                    paddingTop: ".5rem",
+                    paddingBottom: ".5rem",
                 }),
               }}
               onChange={(newValue) => {
                 searchPokemon(newValue.value);
               }}
+              isClearable={true}
               openMenuOnFocus={false}
               openMenuOnClick={false}
               placeholder="start typing pokemon name ..."
               className="autocompleteSelect"
+              value={null}
             />
-
             <Button disabled={true} className="searchBtn">
               {loading ? <>loading...</> : ""}
             </Button>

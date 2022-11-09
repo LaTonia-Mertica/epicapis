@@ -3,15 +3,21 @@
 .pokemonsCard {
   background-color: rgba(0, 0, 255, 0.2);
   @include card-space;
+  height: 60vh;
 
   button {
     @include button-space;
     @include button-submit-input-inline;
     font-size: 3.25rem;
+    color: #f8c947;
   }
 
   button:hover {
     @include button-hover;
+  }
+
+  input[type="text"] {
+    color: white !important;
   }
 
   .autocompleteSelect {
