@@ -57,6 +57,10 @@
     @include button-search-submit-block-display;
   }
 
+input[type="text"] {
+  color: $ea-white !important;
+}
+
   h1 {
     font-size: 325% !important;
     @include text-uppercase;

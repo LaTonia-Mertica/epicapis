@@ -9,6 +9,7 @@ import "./StarWars.scss";
 import { style } from "../mui.js";
 
 import stormtrooper from "./images/stormtrooper.gif";
+// import { base64 } from "js-md5";
 
 const StarWars = ({ openModal, onClose }) => {
   const [starship, setStarship] = useState(null);
@@ -70,6 +71,12 @@ const StarWars = ({ openModal, onClose }) => {
     }
   }, [openModal]);
 
+useEffect(() => {
+  if (!openModal) {
+    setStarship(null)
+  }
+})
+
   // **note:** reasons this api uses axios:
   // axios and fetch are used in the epic apis project for practice with both libraries
   // asycn/await and .then are both used in the epic apis project for familiarity with both types of asynchronous code syntax
@@ -94,17 +101,36 @@ const StarWars = ({ openModal, onClose }) => {
                   value: starship.url,
                   label: starship.name,
                 }))}
+                theme={(theme) => ({
+                  ...theme,
+                  borderRadius: ".5rem",
+                  colors: {
+                  ...theme.colors,
+                  neutral50: "#FFF",
+                  primary25: '#FFF',
+                  primary: '#FFF',
+                  },
+                })}
                 styles={{
+                  control: (base) => ({
+                    ...base,
+                    color: "#FFF",
+                    background: "transparent",
+                    borderColor: "#feda4a",
+                    
+                  }),
                   option: () => ({
-                    color: "#545454",
+                    color: "#FFF",
                     fontSize: "1.25rem",
-                    fontFamily: "monospace",
+                    fontFamily: "Impact",
                     textAlign: "left",
                     paddingLeft: "1rem",
-                  }),
-                 
+                    background: "#000",
+                    paddingTop: ".5rem",
+                    paddingBottom: ".5rem",
+                  }),                             
                 }}
-                onChange={(newValue) => {
+               onChange={(newValue) => {
                   searchStarship(newValue.value);
                 }}
                 isClearable={true}
@@ -114,6 +140,8 @@ const StarWars = ({ openModal, onClose }) => {
                 className="autocompleteSelect"
                 value={null}
               />
+
+              {/* TODO: change colors to star wars yellow for background when search returns 'no options' with black text */}
 
               <Button disabled={true} className="searchBtn">
                 {loading ? <>loading...</> : ""}
