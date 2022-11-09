@@ -33,10 +33,14 @@ const Marvel = ({ openModal, onClose }) => {
       .then((data) => {
         setCreator({
           name: data.name,
-          // id: data.id,
-          // comics: data.results[0].comics.items[0],
-          // series: data.series,
-          // stories: data.stories,
+          attribution: data.attributionText,
+          link: data.attributionHTML,
+          copyright: data.copyright,
+          image: data.data.results[0].resourceURI,
+          url: data.data.results[0].urls[0].url,
+          comics: data.data.results[0].comics.items[0].name,
+          series: data.data.results[0].series.items[0].name,
+          stories: data.data.results[0].stories.items[0].name,
         });
 
         console.log(data);
@@ -44,6 +48,8 @@ const Marvel = ({ openModal, onClose }) => {
       })
       .catch((error) => console.log("ACCESS ERROR!"));
   };
+
+  // TODO: map 1) comics, 2) series, 3) stories  to populate array to display content in paragragh; handle if creator has no image
 
   // SET RESET
   // useEffect(() => {
@@ -85,24 +91,27 @@ const Marvel = ({ openModal, onClose }) => {
             ) : (
               <>
                 <section>
-                  <h1>{name.toUpperCase()}</h1>
+                {/* <a href={creator.url} target="_blank">
+                  <h1 className="creatorName">{name.toUpperCase()}</h1>
+                  <img src={creator.image} alt="" />
+                
+                </a>
+                  <p>{creator.comics}</p>
+                  <p>{creator.series}</p>
+                  <p>{creator.stories}</p>
+                  <p className="marvelApiLinkPara">
+                <a
+                  className="marvelApiLinkAnchor"
+                  href={creator.link}
+                  target="_blank"
+                  rel="noreferrer"
+                > 
+                 {creator.attribution}&nbsp;{creator.copyright}
+                </a>
+              </p> */}
                 </section>
               </>
             )}
-
-            <section>
-              <p className="marvelApiLinkPara">
-                {/* <p>{creator.comics}</p> */}
-                <a
-                  className="marvelApiLinkAnchor"
-                  href="http://marvel.com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Data provided by Marvel. © 2014 Marvel
-                </a>
-              </p>
-            </section>
 
             <img src={skyline} alt="Skyline" className="skyline" />
           </>

@@ -11,8 +11,8 @@
 
   Button {
     color: #0bda51;
-    margin-left: 2rem;
-    margin-top: 3rem;
+    // margin-left: 2rem;
+    // margin-top: 3rem;
     @include button-x-custom-1;
   }
 
@@ -23,7 +23,7 @@
 
   input[type="text"] {
     border-bottom: 0.25rem solid #0bda51;
-    margin-top: 1.5rem;
+    // margin-top: 1.5rem;
     @include input-number-and-text-format;
   }
 
@@ -37,15 +37,21 @@
   }
 
   .searchBtn {
-    font-size: $space-sm;
-    margin-top: 0.95rem;
-    margin-left: 0.5rem;
+    font-size: 2rem;
+    // margin-top: 0.95rem;
+    // margin-left: 0.5rem;
+  }
+
+ .creatorName {
+    color: deeppink;
+    font-size: 3.15rem;
+    text-shadow: .1rem .015rem  $ea-black;
   }
 
   .marvelApiLinkPara {
     position: absolute;
-    top: 7rem;
-    left: -5rem;
+    top: 11rem;
+    left: -7rem;
     rotate: calc(-90deg);
   }
 
@@ -70,7 +76,7 @@
     margin-left: -0.65rem;
     margin-bottom: -$space-sm;
 
-    z-index: 7;
+    z-index: -100;
   }
 
   button:hover {
