@@ -87,6 +87,7 @@ const Agify = ({ openModal, onClose }) => {
             />
             <Button type="submit" onClick={getAgeMyName} className="searchBtn">
               {loading ? <>loading...</> : <>Get Age by Name</>}
+   
             </Button>
           </form>
           <details>
