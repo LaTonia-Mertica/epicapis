@@ -2,6 +2,9 @@
 
 _collection of fun, odd, quirky application programming interfaces paired with complementary resources built with semantic html - all peppered in event listeners_
 
+##### [frontend github repo](https://github.com/LaTonia-Mertica/epicapis)
+##### [backend github repo](https://github.com/LaTonia-Mertica/epicapis-db)
+
 <br>
 
 ---
@@ -36,7 +39,7 @@ _collection of fun, odd, quirky application programming interfaces paired with c
 
 <br>
 
-### **HOW IT WORKS**
+### **HOW EPIC APIS WORKS**
 
 per the api setup of each api. each api is built into an engaging user interface.
 
