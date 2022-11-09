@@ -57,25 +57,6 @@
     @include button-search-submit-block-display;
   }
 
-  // input {
-  //   @include input-basic-format;
-  // }
-
-  // input[type="text"] {
-  //   color: $ea-white;
-  //   border-bottom: $space-input-border-bottom;
-  // }
-
-  // input[type="text"]::placeholder {
-  //   @include input-text-placeholder;
-  //   color: $ea-white;
-  //   @include input-number-and-text-format;
-  // }
-
-  // input[type="text"]::selection {
-  //   @include input-text-selection;
-  // }
-
   h1 {
     font-size: 325% !important;
     @include text-uppercase;
@@ -144,7 +125,6 @@
   .crawl {
     margin-left: -60rem;
     position: relative;
-    // top: -5.25rem;
     transform-origin: 40% 100%;
     animation: crawl 17s linear;
   }

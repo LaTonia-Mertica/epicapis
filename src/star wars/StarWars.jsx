@@ -17,10 +17,7 @@ const StarWars = ({ openModal, onClose }) => {
   const [allStarships, setAllStarships] = useState([]);
 
   const searchStarship = (starshipURL) => {
-    // setLoading(true);
-    // console.log(allStarships, starshipURL);
     const matchingShip = allStarships.find((ship) => ship.url === starshipURL);
-    // console.log(matchingShip);
     if (matchingShip) {
       setStarship({
         name: matchingShip.name,
@@ -44,24 +41,12 @@ const StarWars = ({ openModal, onClose }) => {
     else {
       setError("Starship Does Not Exist!");
       setStarship(null);
-      // setLoading(false);
     }
-
-    // setError(null);
-    // setLoading(false);
-    // setLoading(false);
-
-
-   
-    
   };
-
- 
 
   let starshipAggregator = [];
 
   const getNextPage = (nextURL) => {
-    // console.log(nextURL);
     setLoading(true)
     axios.get(nextURL).then((response) => {
       const starshipData = response.data.results;
@@ -69,7 +54,6 @@ const StarWars = ({ openModal, onClose }) => {
       starshipAggregator = [...starshipAggregator, ...starshipData];
 
       if (response.data.next) {
-        //recursive call if there is another page of data
         getNextPage(response.data.next);
       } else {
         setAllStarships(starshipAggregator);
@@ -80,7 +64,6 @@ const StarWars = ({ openModal, onClose }) => {
 
   useEffect(() => {
     if (openModal) {
-      // setLoading(true);
       if (allStarships.length === 0) {
         getNextPage(`https://swapi.dev/api/starships/?limit=1000`);
       }
@@ -130,7 +113,6 @@ const StarWars = ({ openModal, onClose }) => {
                 placeholder="start typing starship name ..."
                 className="autocompleteSelect"
                 value={null}
-
               />
 
               <Button disabled={true} className="searchBtn">
