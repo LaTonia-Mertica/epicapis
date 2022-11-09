@@ -15,13 +15,17 @@
   }
 
   form {
-    display: flex;
-    justify-content: center;
+   margin: 0 auto;
+   width: 50%;
   }
 
   input[type="text"] {
-    border-bottom: 0.25rem solid #0bda51;
-    @include input-number-and-text-format;
+    border-bottom: 0.1rem dotted #0bda51;
+    width: 60%;
+    margin-top: 3.15rem;
+    outline: none;
+    padding-left: .5rem;
+    font-size: medium;
   }
 
   input {
@@ -31,16 +35,99 @@
   input[type="text"]::placeholder {
     color: $ea-white;
     @include input-number-and-text-format;
+    padding-left: .25rem;
   }
 
   .searchBtn {
     font-size: 2rem;
+    margin-top: .4rem;
   }
 
  .creatorName {
     color: deeppink;
     font-size: 3.15rem;
     text-shadow: .1rem .015rem  $ea-black;
+  }
+
+  a.linkToCreatorCreations {
+    position: absolute;
+    top: 20.5rem;
+    right: 18.75rem;
+  }
+
+  .comicsUl {
+    font-size: x-small;
+    text-align: left;
+    width: 25%;
+    font-family: $font-flow-block;
+   
+    position: absolute;
+    top: 17rem;
+    right: 2rem;
+  }
+
+  .comicsUl:hover {
+    width: 37%;
+    font-size: medium;
+    font-family: $font-notable;
+
+    position: absolute;
+    top: 20rem;
+    right: 2rem;
+
+    padding: 1rem;
+    background-color:orangered;
+    border: .75rem solid  rgb(0, 0, 0, 1);
+  }
+
+.seriesUl {
+    font-size: x-small;
+    text-align: left;
+    width: 25%;
+    font-family: $font-flow-block;
+   
+    position: absolute;
+    top: 16.5rem;
+    left: 21.5rem;
+  }
+
+.seriesUl:hover {
+    width: 37%;
+    font-size: medium;
+    font-family: $font-notable;
+
+    position: absolute;
+    top: 20rem;
+    right: 2rem;
+
+    padding: 1rem;
+    background-color:orangered;
+    border: .75rem solid  rgb(0, 0, 0, 1);
+  }
+
+  .storyFromStories {
+    font-size: x-small;
+    text-align: left;
+    width: 87%;
+    font-family: $font-flow-block;
+   
+    position: absolute;
+    top: 7.5rem;
+    left: 4.75rem;
+  }
+
+  .storyFromStories:hover {
+    width: 37%;
+    font-size: medium;
+    font-family: $font-notable;
+
+    position: absolute;
+    top: 2rem;
+    left: 7rem;
+
+    padding: 1rem;
+    background-color:orangered;
+    border: .75rem solid  rgb(0, 0, 0, 1);
   }
 
   .marvelApiLinkPara {

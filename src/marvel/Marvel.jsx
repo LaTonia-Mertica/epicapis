@@ -40,7 +40,6 @@ const Marvel = ({ openModal, onClose }) => {
           series: data.data.results[0].series.items[0].name,
           stories: data.data.results[0].stories.items[0].name,
         });
-
         console.log(data);
         setLoading(false);
       })
@@ -89,14 +88,26 @@ const Marvel = ({ openModal, onClose }) => {
                 <h1 className="creatorName">{name.toUpperCase()}</h1>
              
 
-                {/* <a href={creator.url} target="_blank" rel="noreferrer"> */}
-                   {/* </a> */}
+                <a href={creator.url} target="_blank" rel="noreferrer" className="linkToCreatorCreations">creator creations
+                   </a>
               
                  {/* <img src={creator.image} alt="" rel="noreferrer" /> */}
 
-                  {/* <p>{creator.comics}</p>
-                  <p>{creator.series}</p>
-                  <p>{creator.stories}</p> */}
+                 <ul className="comicsUl">
+                  <li>{creator.comics}</li>
+                  <li>{creator.comics}</li>
+                  <li>{creator.comics}</li>
+                  </ul>
+
+                   <ul className="seriesUl">
+                   <li>{creator.series}</li>
+                   <li>{creator.series}</li>
+                   <li>{creator.series}</li>
+                   <li>{creator.series}</li>
+                   <li>{creator.series}</li>
+                   </ul>
+
+                  <p className="storyFromStories">{creator.stories}</p>
 
                   <p className="marvelApiLinkPara">
                  {creator.attribution}
