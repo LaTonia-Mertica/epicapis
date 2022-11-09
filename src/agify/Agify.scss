@@ -3,6 +3,7 @@
 .agifyCard {
   background-color: $background-rgba-red3;
   @include card-space;
+  height: 67vh;
 
   button {
     @include button-space;
@@ -60,6 +61,7 @@
   }
 
   .noEntryText {
+    color: $ea-gray-light;
     letter-spacing: 0.08rem;
   }
 
