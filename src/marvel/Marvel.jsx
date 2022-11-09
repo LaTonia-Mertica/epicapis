@@ -34,8 +34,6 @@ const Marvel = ({ openModal, onClose }) => {
         setCreator({
           name: data.name,
           attribution: data.attributionText,
-          link: data.attributionHTML,
-          copyright: data.copyright,
           image: data.data.results[0].resourceURI,
           url: data.data.results[0].urls[0].url,
           comics: data.data.results[0].comics.items[0].name,
@@ -49,14 +47,11 @@ const Marvel = ({ openModal, onClose }) => {
       .catch((error) => console.log("ACCESS ERROR!"));
   };
 
-  // TODO: map 1) comics, 2) series, 3) stories  to populate array to display content in paragragh; handle if creator has no image
-
-  // SET RESET
-  // useEffect(() => {
-  //   if (!openModal) {
-  //     setCreator();
-  //   }
-  // }, [openModal]);
+  useEffect(() => {
+    if (!openModal) {
+      setName("");
+    }
+  }, [openModal]);
 
   return (
     <main>
@@ -91,24 +86,21 @@ const Marvel = ({ openModal, onClose }) => {
             ) : (
               <>
                 <section>
-                {/* <a href={creator.url} target="_blank">
-                  <h1 className="creatorName">{name.toUpperCase()}</h1>
-                  <img src={creator.image} alt="" />
-                
-                </a>
-                  <p>{creator.comics}</p>
+                <h1 className="creatorName">{name.toUpperCase()}</h1>
+             
+
+                {/* <a href={creator.url} target="_blank" rel="noreferrer"> */}
+                   {/* </a> */}
+              
+                 {/* <img src={creator.image} alt="" rel="noreferrer" /> */}
+
+                  {/* <p>{creator.comics}</p>
                   <p>{creator.series}</p>
-                  <p>{creator.stories}</p>
+                  <p>{creator.stories}</p> */}
+
                   <p className="marvelApiLinkPara">
-                <a
-                  className="marvelApiLinkAnchor"
-                  href={creator.link}
-                  target="_blank"
-                  rel="noreferrer"
-                > 
-                 {creator.attribution}&nbsp;{creator.copyright}
-                </a>
-              </p> */}
+                 {creator.attribution}
+              </p>
                 </section>
               </>
             )}
@@ -121,3 +113,4 @@ const Marvel = ({ openModal, onClose }) => {
   );
 };
 export default Marvel;
+

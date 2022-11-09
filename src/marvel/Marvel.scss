@@ -11,8 +11,6 @@
 
   Button {
     color: #0bda51;
-    // margin-left: 2rem;
-    // margin-top: 3rem;
     @include button-x-custom-1;
   }
 
@@ -23,7 +21,6 @@
 
   input[type="text"] {
     border-bottom: 0.25rem solid #0bda51;
-    // margin-top: 1.5rem;
     @include input-number-and-text-format;
   }
 
@@ -38,8 +35,6 @@
 
   .searchBtn {
     font-size: 2rem;
-    // margin-top: 0.95rem;
-    // margin-left: 0.5rem;
   }
 
  .creatorName {
@@ -49,14 +44,13 @@
   }
 
   .marvelApiLinkPara {
+    color: #0bda51;
+    text-shadow: .015rem .015rem $ea-black;
+    font-size: x-small;
     position: absolute;
     top: 11rem;
-    left: -7rem;
+    left: -3rem;
     rotate: calc(-90deg);
-  }
-
-  .marvelApiLinkAnchor {
-    font-size: x-small;
   }
 
   .skyline {
