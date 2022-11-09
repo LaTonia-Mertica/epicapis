@@ -26,10 +26,10 @@
       rgba(255, 255, 255, 0.1) 0.125rem,
       transparent 0.313rem
     );
-  background-size: 34.375rem 34.375rem, 21.875rem 21.875rem, 15.625rem 15.625rem,
-    9.375rem 9.375rem;
-  background-position: 0 0, 2.5rem 3.75rem, 8.125rem 16.875rem, 4.375rem 6.25rem;
-  @include card-space;
+    background-size: 34.375rem 34.375rem, 21.875rem 21.875rem, 15.625rem 15.625rem,
+      9.375rem 9.375rem;
+    background-position: 0 0, 2.5rem 3.75rem, 8.125rem 16.875rem, 4.375rem 6.25rem;
+    @include card-space;
 
   .specsDiv {
     display: flex;
@@ -57,9 +57,9 @@
     @include button-search-submit-block-display;
   }
 
-input[type="text"] {
-  color: $ea-white !important;
-}
+  input[type="text"] {
+    color: $ea-white !important;
+  }
 
   h1 {
     font-size: 325% !important;
@@ -102,10 +102,10 @@ input[type="text"] {
         rgba(255, 255, 255, 0.1) 0.125rem,
         transparent 0.313rem
       );
-    background-size: 34.375rem 34.375rem, 21.875rem 21.875rem,
-      15.625rem 15.625rem, 9.375rem 9.375rem;
-    background-position: 0 0, 2.5rem 3.75rem, 8.125rem 16.875rem,
-      4.375rem 6.25rem;
+      background-size: 34.375rem 34.375rem, 21.875rem 21.875rem,
+        15.625rem 15.625rem, 9.375rem 9.375rem;
+      background-position: 0 0, 2.5rem 3.75rem, 8.125rem 16.875rem,
+        4.375rem 6.25rem;
 
     z-index: -1;
   }

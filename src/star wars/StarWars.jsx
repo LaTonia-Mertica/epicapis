@@ -9,7 +9,6 @@ import "./StarWars.scss";
 import { style } from "../mui.js";
 
 import stormtrooper from "./images/stormtrooper.gif";
-// import { base64 } from "js-md5";
 
 const StarWars = ({ openModal, onClose }) => {
   const [starship, setStarship] = useState(null);
@@ -69,13 +68,14 @@ const StarWars = ({ openModal, onClose }) => {
         getNextPage(`https://swapi.dev/api/starships/?limit=1000`);
       }
     }
-  }, [openModal]);
+    // TODO: add in array below comma (,) getNextPage or wrap getNextPage function in callback
+  }, [openModal, allStarships.length]);
 
 useEffect(() => {
   if (!openModal) {
     setStarship(null)
   }
-})
+}, [openModal]);
 
   // **note:** reasons this api uses axios:
   // axios and fetch are used in the epic apis project for practice with both libraries
@@ -90,6 +90,7 @@ useEffect(() => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
+
         {/* img credit: stormtrooper / tenor.com */}
 
         <Box sx={style} className="starWarsCard">
@@ -117,7 +118,6 @@ useEffect(() => {
                     color: "#FFF",
                     background: "transparent",
                     borderColor: "#feda4a",
-                    
                   }),
                   option: () => ({
                     color: "#FFF",
@@ -140,9 +140,6 @@ useEffect(() => {
                 className="autocompleteSelect"
                 value={null}
               />
-
-              {/* TODO: change colors to star wars yellow for background when search returns 'no options' with black text */}
-
               <Button disabled={true} className="searchBtn">
                 {loading ? <>loading...</> : ""}
               </Button>
