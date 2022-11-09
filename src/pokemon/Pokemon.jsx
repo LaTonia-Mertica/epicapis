@@ -8,7 +8,7 @@ import Button from "@mui/material/Button";
 import "./Pokemon.scss";
 import { style } from "../mui.js";
 import pokemonGifs from "./pokemonGifs";
-import pokemonworldmap from "./images/pokemonworldmap.png";
+import pokemongo from "./videos/pokemon-go.mp4";
 
 const Pokemon = ({ openModal, onClose }) => {
   // const [pokemonName, setPokemonName] = useState("");
@@ -23,6 +23,7 @@ const Pokemon = ({ openModal, onClose }) => {
     front_shiny: "",
     abilities: "",
     moves: "",
+    height: "",
     weight: "",
   });
   const [pokemonImage, setPokemonImage] = useState();
@@ -57,6 +58,7 @@ const Pokemon = ({ openModal, onClose }) => {
               response.data.moves[1].move.name,
               response.data.moves[2].move.name,
             ],
+            height: response.data.height,
             weight: response.data.weight,
           });
           const matchGifs = pokemonGifs.filter((gif) =>
@@ -208,6 +210,7 @@ const Pokemon = ({ openModal, onClose }) => {
                 <>
                   <span>
                     <h1>{pokemon.name}</h1>
+                    <img src={pokemon.image} alt="" className="nonGifImage" />
                   </span>
 
                   <section>
@@ -216,18 +219,8 @@ const Pokemon = ({ openModal, onClose }) => {
                   </section>
 
                   <span className="specDetailsSpan">
-                    <section
-                      style={{
-                        backgroundImage: "url(" + pokemonworldmap + ")",
-                        backgroundSize: "contain",
-                        backgroundRepeat: "no-repeat",
-                        width: "37rem",
-                        marginBottom: "-1.25rem",
-                      }}
-                    >
-                      <p className="horizontalLine"></p>
-                      <img src={pokemon.image} alt="" className="nonGifImage" />
-
+                    <section className="row">
+                      <section className="column">
                       <h2>
                         <span className="specDetails species">
                           species:&nbsp;
@@ -238,6 +231,9 @@ const Pokemon = ({ openModal, onClose }) => {
                         <span className="specDetails">type:&nbsp;</span>
                         {pokemon.types}
                       </h2>
+                      </section>
+
+                      <section className="column">
                       <h2>
                         <span className="specDetails">ability:&nbsp;</span>
                         {pokemon.abilities[0]}
@@ -246,6 +242,9 @@ const Pokemon = ({ openModal, onClose }) => {
                         <span className="specDetails">ability:&nbsp;</span>
                         {pokemon.abilities[1]}
                       </h2>
+                      </section>
+
+                      <section className="column">
                       <h2>
                         <span className="specDetails">move:&nbsp;</span>
                         {pokemon.moves[0]}
@@ -258,10 +257,23 @@ const Pokemon = ({ openModal, onClose }) => {
                         <span className="specDetails">move:&nbsp;</span>
                         {pokemon.moves[2]}
                       </h2>
+                      </section>
+
+                      <section className="column">
+                        <h2>
+                          <span className="specDetails">height:&nbsp;</span>{pokemon.height}&nbsp;metre
+                          </h2>
                       <h2>
                         <span className="specDetails">weight:&nbsp;</span>
-                        {pokemon.weight}
+                        {pokemon.weight}&nbsp;kilograms
                       </h2>
+                      </section>
+
+                        {/* video credit: pokemon-go globe / pixabay.com */}
+
+                      <video width="100%" height="auto" autoPlay loop muted>
+                        <source src={pokemongo} type="video/mp4" />
+                      </video>
                     </section>
                   </span>
                 </>
