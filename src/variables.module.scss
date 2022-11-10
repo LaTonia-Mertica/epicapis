@@ -13,13 +13,6 @@
   display: block;
 }
 
-// BACKGROUND MODAL STYLE SET
-$background-rgba-red2: rgba(255, 0, 0, 0.2);
-$background-rgba-red3: rgba(255, 0, 0, 0.3);
-$background-rgba-black3: rgba(0, 0, 0, 0.3);
-$background-rgba-black4: rgba(0, 0, 0, 0.4);
-$background-rgba-black6: rgba(0, 0, 0, 0.6);
-
 // BORDER REMOVE BORDER STYLE SET
 @mixin border-none {
   border-top: 0;
@@ -121,9 +114,7 @@ $ea-red: crimson;
 $ea-gray-dark: #545454;
 $ea-gray-light: #c8c4bd;
 $ea-green: #c9e265;
-$ea-purple: #5e17eb;
 $ea-white: #fff;
-$ea-transparent: transparent;
 
 // FIELDSET STYLE SET
 @mixin fieldset-div-basic-structure {
@@ -139,9 +130,6 @@ $ea-transparent: transparent;
 }
 
 // FONT
-$font-style-serif: cursive;
-$font-style-sans: Arial, Helvetica, sans-serif;
-
 $font-abril-fatface: Abril Fatface;
 $font-amatic-sc: Amatic SC;
 $font-bangers: Bangers;

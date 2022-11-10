@@ -1,7 +1,6 @@
 @import "../variables.module.scss";
 
 .agifyCard {
-  background-color: $background-rgba-red3;
   @include card-space;
   height: 67vh;
 
@@ -40,7 +39,7 @@
 
   input[type="text"] {
     color: $ea-white;
-    border-bottom: .1rem solid $ea-white;
+    border-bottom: 0.1rem solid $ea-white;
     // border-bottom: $space-input-border-bottom;
     font-size: medium;
   }

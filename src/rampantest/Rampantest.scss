@@ -1,7 +1,6 @@
 @import "../variables.module.scss";
 
 .rampantestCard {
-  background-color: $background-rgba-black4;
   @include card-space;
 
   button {

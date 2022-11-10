@@ -1,7 +1,6 @@
 @import "../variables.module.scss";
 
 .greatestCard {
-  background-color: $background-rgba-black3;
   @include card-space;
 
   button {
@@ -41,17 +40,6 @@
   .greatestPara {
     @include character-para-xsm;
   }
-
-  // fieldset label:hover {
-  //   background: -webkit-linear-gradient(
-  //     47deg,
-  //     $ea-red,
-  //     whitesmoke,
-  //     $ea-red 97%
-  //   );
-  //   background-clip: text;
-  //   -webkit-text-fill-color: transparent;
-  // }
 
   .greatestPara {
     text-align: left;

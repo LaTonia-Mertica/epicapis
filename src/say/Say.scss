@@ -1,7 +1,6 @@
 @import "../variables.module.scss";
 
 .sayCard {
-  background-color: rgba(0, 0, 255, 0.3);
   @include card-space;
 
   button {

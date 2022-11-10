@@ -1,7 +1,7 @@
 @import "../variables.module.scss";
 
 .lastCard {
-  background-color: $background-rgba-red2;
+  background-color: rgba(255, 0, 0, 0.2);
   @include card-space;
 
   button {

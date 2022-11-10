@@ -1,7 +1,6 @@
 @import "../variables.module.scss";
 
 .sexiestCard {
-  background-color: $background-rgba-red3;
   @include card-space;
 
   button {
@@ -21,12 +20,6 @@
     @include fieldset-basic-structure;
     align-items: left;
   }
-
-  // input[type="radio"] {
-  //   text-align: left;
-  //   accent-color: $ea-red;
-  //   width: 1.25rem;
-  // }
 
   .deblur {
     font-size: 1.45rem;
