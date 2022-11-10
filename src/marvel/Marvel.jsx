@@ -15,14 +15,14 @@ const Marvel = ({ openModal, onClose }) => {
   const ts = require("./ts");
   const hash = md5(ts + privateApikey + apikey);
   const [name, setName] = useState("");
-  const [creator, setCreator] = useState();
+  const [creator, setCreator] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const getCreator = async (event) => {
     event.preventDefault();
     setLoading(true);
     fetch(
-      `http://gateway.marvel.com/v1/public/creators?ts=${ts}&apikey=${apikey}&hash=${hash}&nameStartsWith=${name}&limit=1`
+      `http://gateway.marvel.com/v1/public/creators?ts=${ts}&apikey=${apikey}&hash=${hash}&nameStartsWith=${name}`
     )
       .then((response) => {
         if (!response.ok) {
@@ -31,14 +31,23 @@ const Marvel = ({ openModal, onClose }) => {
         return response.json();
       })
       .then((data) => {
+        setName("");
         setCreator({
-          name: data.name,
-          attribution: data.attributionText,
-          image: data.data.results[0].resourceURI,
+          name: data.data.results[0].fullName,
+          attributionHTML: data.attributionHTML.replace(
+            "<a",
+            "<a target='_blank'"
+          ),
+          attributionText: data.attributionText,
+          image:
+            data.data.results[0].thumbnail.path +
+            "." +
+            data.data.results[0].thumbnail.extension,
           url: data.data.results[0].urls[0].url,
           comics: data.data.results[0].comics.items[0].name,
           series: data.data.results[0].series.items[0].name,
           stories: data.data.results[0].stories.items[0].name,
+          total: data.data.total,
         });
         console.log(data);
         setLoading(false);
@@ -62,7 +71,7 @@ const Marvel = ({ openModal, onClose }) => {
       >
         <Box sx={style} className="marvelCard">
           <button onClick={onClose}>&#x24E7;</button>
-          <form onSubmit={getCreator}>
+          <form>
             <input
               type="text"
               name="marvel"
@@ -80,33 +89,52 @@ const Marvel = ({ openModal, onClose }) => {
           </form>
 
           <>
-            {!getCreator ? (
-              <></>
-            ) : (
+            {creator ? (
               <>
                 <section>
-                <h1 className="creatorName">{name.toUpperCase()}</h1>
+                  <h1 className="creatorName">{creator.name.toUpperCase()}</h1>
 
-                <img src={`${creator.image}`} alt={name} rel="noreferrer" className="creatorImg" />
+                  <img
+                    src={creator.image}
+                    alt={name}
+                    rel="noreferrer"
+                    className="creatorImg"
+                  />
 
-                <a href={creator.url} target="_blank" rel="noreferrer" className="linkToCreatorCreations">creator creations
-                   </a>
-             
-                 <ul className="comicsUl">
-                  <li>{creator.comics}</li>
+                  <a
+                    href={creator.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="linkToCreatorCreations"
+                  >
+                    creator creations
+                  </a>
+
+                  <ul className="comicsUl">
+                    <li>{creator.comics}</li>
                   </ul>
 
-                   <ul className="seriesUl">
-                   <li>{creator.series}</li>
-                   </ul>
+                  <ul className="seriesUl">
+                    <li>{creator.series}</li>
+                  </ul>
 
                   <p className="storyFromStories">{creator.stories}</p>
 
-                  <p className="marvelApiLinkPara">
-                 {creator.attribution}
-              </p>
+                  <p className="totalResults"> {creator.total}</p>
+
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: creator.attributionHTML,
+                    }}
+                  />
+
+                  {/* <p className="marvelApiLinkPara">
+                    <a href="https://marvel.com">{creator.attributionText}</a>
+                  </p> */}
                 </section>
               </>
+            ) : (
+              <></>
             )}
 
             <img src={skyline} alt="Skyline" className="skyline" />
@@ -117,4 +145,3 @@ const Marvel = ({ openModal, onClose }) => {
   );
 };
 export default Marvel;
-

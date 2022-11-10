@@ -15,8 +15,8 @@
   }
 
   form {
-   margin: 0 auto;
-   width: 50%;
+    margin: 0 auto;
+    width: 50%;
   }
 
   input[type="text"] {
@@ -24,7 +24,7 @@
     width: 60%;
     margin-top: 3.15rem;
     outline: none;
-    padding-left: .5rem;
+    padding-left: 0.5rem;
     font-size: medium;
   }
 
@@ -35,32 +35,34 @@
   input[type="text"]::placeholder {
     color: $ea-white;
     @include input-number-and-text-format;
-    padding-left: .25rem;
+    padding-left: 0.25rem;
   }
 
   .searchBtn {
     font-size: 2rem;
-    margin-top: .4rem;
+    margin-top: 0.4rem;
   }
 
- .creatorName {
+  .creatorName {
     color: deeppink;
     font-size: 3.15rem;
-    text-shadow: .1rem .015rem  $ea-black;
+    text-shadow: 0.1rem 0.015rem $ea-black;
   }
 
   .creatorImg {
+    width: 7%;
     position: absolute;
-    bottom: 3rem;
-    left: 21rem;
+    bottom: 18.5rem;
+    right: 3.7rem;
   }
 
   a.linkToCreatorCreations {
-    color: orangered;
+    color: darkcyan;
     font-family: $font-flow-block;
+
     position: absolute;
-    bottom: .5rem;
-    right: 8.75rem;
+    bottom: 18rem;
+    left: 23rem;
   }
 
   .comicsUl {
@@ -69,10 +71,10 @@
     text-align: left;
     width: 5%;
     font-family: $font-flow-block;
-   
+
     position: absolute;
-    bottom: .7rem;
-    right: 20.25rem;
+    bottom: 18rem;
+    right: 23rem;
   }
 
   .comicsUl:hover {
@@ -85,23 +87,23 @@
     right: 2rem;
 
     padding: 1rem;
-    background-color:orangered;
-    border: .75rem solid  rgb(0, 0, 0, 1);
+    background-color: orangered;
+    border: 0.75rem solid rgb(0, 0, 0, 1);
   }
 
-.seriesUl {
-  color: dodgerblue;
+  .seriesUl {
+    color: dodgerblue;
     font-size: xx-small;
     text-align: left;
     width: 7%;
     font-family: $font-flow-block;
-   
+
     position: absolute;
-    bottom: .2rem;
-    left: 9rem;
+    bottom: 21rem;
+    left: 11rem;
   }
 
-.seriesUl:hover {
+  .seriesUl:hover {
     width: 37%;
     font-size: medium;
     font-family: $font-notable;
@@ -111,20 +113,20 @@
     right: 2rem;
 
     padding: 1rem;
-    background-color:orangered;
-    border: .75rem solid  rgb(0, 0, 0, 1);
+    background-color: orangered;
+    border: 0.75rem solid rgb(0, 0, 0, 1);
   }
 
   .storyFromStories {
-    color: deeppink;
+    color: yellow;
     font-size: x-small;
     text-align: left;
     width: 7%;
     font-family: $font-flow-block;
-   
+
     position: absolute;
-    bottom: .85rem;
-    left: 4.75rem;
+    bottom: 20.25rem;
+    left: 5.7rem;
   }
 
   .storyFromStories:hover {
@@ -137,17 +139,21 @@
     left: 7rem;
 
     padding: 1rem;
-    background-color:orangered;
-    border: .75rem solid  rgb(0, 0, 0, 1);
+    background-color: orangered;
+    border: 0.75rem solid rgb(0, 0, 0, 1);
+  }
+
+  .totalResults {
+    color: aliceblue;
   }
 
   .marvelApiLinkPara {
     color: #0bda51;
-    text-shadow: .015rem .015rem $ea-black;
+    text-shadow: 0.015rem 0.015rem $ea-black;
     font-size: x-small;
     position: absolute;
     top: 11rem;
-    left: -$space-xmd;
+    left: -8rem;
     rotate: calc(-90deg);
   }
 
