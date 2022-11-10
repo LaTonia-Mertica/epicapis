@@ -29,6 +29,7 @@
 
   input {
     @include input-basic-format;
+    outline: none;
   }
 
   input[type="text"]::placeholder {
@@ -39,7 +40,9 @@
 
   input[type="text"] {
     color: $ea-white;
-    border-bottom: $space-input-border-bottom;
+    border-bottom: .1rem solid $ea-white;
+    // border-bottom: $space-input-border-bottom;
+    font-size: medium;
   }
 
   input[type="text"]::selection {

@@ -74,7 +74,7 @@ const Agify = ({ openModal, onClose }) => {
             &#x2612;
           </button>
           <form onSubmit={getAgeMyName}>
-            <input
+           <input
               type="text"
               name="agify"
               id="agify"
@@ -84,12 +84,12 @@ const Agify = ({ openModal, onClose }) => {
               onChange={(event) => {
                 setName(event.target.value.toLowerCase());
               }}
-            />
-            <Button type="submit" onClick={getAgeMyName} className="searchBtn">
+              />
+            <Button type="submit" className="searchBtn" id="searchBtn" onClick={getAgeMyName}>
               {loading ? <>loading...</> : <>Get Age by Name</>}
-   
             </Button>
           </form>
+
           <details>
             <summary
               className="disclaimerSummary animate"
