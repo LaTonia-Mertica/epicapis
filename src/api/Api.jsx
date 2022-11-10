@@ -18,7 +18,6 @@ const Api = ({ openModal, onClose }) => {
         <Box sx={style} className="apiCard">
           <Button onClick={onClose}>&#x274C;</Button>
           <div>
-            <p>TEST</p>
             <Button type="button" className="submitBtn">
               submit
             </Button>
