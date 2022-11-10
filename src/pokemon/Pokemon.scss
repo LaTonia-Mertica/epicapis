@@ -39,26 +39,6 @@
     @include button-search-submit-block-display;
   }
 
-  // input {
-  //   // color: $ea-white;
-  //   @include input-basic-format;
-  // }
-
-  // input[type="text"]::placeholder {
-  //   @include input-text-placeholder;
-  //   // color: $ea-white;
-  //   // @include input-number-and-text-format;
-  // }
-
-  // input[type="text"] {
-  //   border-bottom: $space-input-border-bottom;
-  //   @include input-combo-number-text-format;
-  // }
-
-  // input[type="text"]::selection {
-  //   @include input-text-selection;
-  // }
-
   h1 {
     text-shadow: 0.2rem 0.2rem black;
     @include text-uppercase;
@@ -76,21 +56,17 @@
     margin-right: -27rem;
   }
 
-  // h2 {
-  //   white-space: nowrap;
-  // }
+  .row {
+    margin-left: $space-sm;
+    margin-bottom: -2rem;
+  }
 
-.row {
-  margin-left: $space-sm;
-  margin-bottom: -2rem;
-}
+  .column {
+    float: left;
+    width: 25%;
 
-.column {
-  float: left;
-  width: 25%;
-
-  text-align: left;
-}
+    text-align: left;
+  }
 
   .specDetails {
     color: #f8c947;
@@ -100,12 +76,14 @@
   }
 
   video {
-   position: absolute;
-   top: 0;
-   bottom: 0;
-   left: 0;
-   right: 0;
+    -webkit-box-reflect: below;
 
-   z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    z-index: -1;
   }
 }

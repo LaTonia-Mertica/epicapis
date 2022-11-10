@@ -11,7 +11,6 @@ import pokemonGifs from "./pokemonGifs";
 import pokemongo from "./videos/pokemon-go.mp4";
 
 const Pokemon = ({ openModal, onClose }) => {
-  // const [pokemonName, setPokemonName] = useState("");
   const [pokemonShow, setPokemonShow] = useState(false);
   const [pokemon, setPokemon] = useState({
     name: "",
@@ -32,12 +31,10 @@ const Pokemon = ({ openModal, onClose }) => {
   const [allPokemon, setAllPokemon] = useState([]);
 
   const searchPokemon = (pokemonName) => {
-    // setLoading(true);
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/` + pokemonName)
       .then((response) => {
         if (response?.data?.species?.name) {
-          // console.log(response.data);
           setPokemon({
             name: pokemonName,
             species: response.data.species.name,
@@ -86,15 +83,12 @@ const Pokemon = ({ openModal, onClose }) => {
           //api returned data but name was not set
           setError("Try Again!");
           setPokemonShow(false);
-          // setLoading(false);
         }
-        // setLoading(false);
       })
       .catch((error) => {
         //api threw error, likely 404 because pokemon does not exist
         console.error(error);
         setError("Try Again!");
-        // setLoading(false);
       });
   };
 
@@ -113,9 +107,6 @@ const Pokemon = ({ openModal, onClose }) => {
     if (openModal) {
       setPokemonImage(getGifMatch());
       setPokemonShow(false);
-
-      // TODO 10/25/22 MZM: This is for our autocomplete code, but we need to
-      //refactor to use the npm react-select package
       if (allPokemon.length === 0) {
         setLoading(true);
         axios
@@ -146,25 +137,15 @@ const Pokemon = ({ openModal, onClose }) => {
         <Box sx={style} className="pokemonsCard">
           <button onClick={onClose}>&#x24B3;</button>
           <form onSubmit={searchPokemon}>
-            {/* <input
-              type="text"
-              name="pokemonname"
-              id="pokemonname"
-              placeholder="enter pokemon name"
-              autoComplete="off"
-              onChange={(event) => {
-                setPokemonName(event.target.value.toLowerCase());
-              }}
-            /> */}
             <Select
               options={allPokemon}
               theme={(theme) => ({
                 ...theme,
                 borderRadius: ".5rem",
                 colors: {
-                ...theme.colors,
-                neutral50: "#FFF",
-                primary: '#f8c947',
+                  ...theme.colors,
+                  neutral50: "#FFF",
+                  primary: "#f8c947",
                 },
               })}
               styles={{
@@ -175,14 +156,14 @@ const Pokemon = ({ openModal, onClose }) => {
                   borderColor: "#f8c947",
                 }),
                 option: () => ({
-                    color: "#3661ab",
-                    fontSize: "1.25rem",
-                    fontFamily: "Impact",
-                    textAlign: "left",
-                    paddingLeft: "1rem",
-                    background: "#f8c947",
-                    paddingTop: ".5rem",
-                    paddingBottom: ".5rem",
+                  color: "#3661ab",
+                  fontSize: "1.25rem",
+                  fontFamily: "Impact",
+                  textAlign: "left",
+                  paddingLeft: "1rem",
+                  background: "#f8c947",
+                  paddingTop: ".5rem",
+                  paddingBottom: ".5rem",
                 }),
               }}
               onChange={(newValue) => {
@@ -213,63 +194,61 @@ const Pokemon = ({ openModal, onClose }) => {
                     <img src={pokemon.image} alt="" className="nonGifImage" />
                   </span>
 
-                  <section>
-                    {/* {getGifMatch !== undefined ? getGifMatch() : ""} */}
-                    {pokemonImage || null}
-                  </section>
+                  <section>{pokemonImage || null}</section>
 
                   <span className="specDetailsSpan">
                     <section className="row">
                       <section className="column">
-                      <h2>
-                        <span className="specDetails species">
-                          species:&nbsp;
-                        </span>
-                        {pokemon.species}
-                      </h2>
-                      <h2>
-                        <span className="specDetails">type:&nbsp;</span>
-                        {pokemon.types}
-                      </h2>
-                      </section>
-
-                      <section className="column">
-                      <h2>
-                        <span className="specDetails">ability:&nbsp;</span>
-                        {pokemon.abilities[0]}
-                      </h2>
-                      <h2>
-                        <span className="specDetails">ability:&nbsp;</span>
-                        {pokemon.abilities[1]}
-                      </h2>
-                      </section>
-
-                      <section className="column">
-                      <h2>
-                        <span className="specDetails">move:&nbsp;</span>
-                        {pokemon.moves[0]}
-                      </h2>
-                      <h2>
-                        <span className="specDetails">move:&nbsp;</span>
-                        {pokemon.moves[1]}
-                      </h2>
-                      <h2>
-                        <span className="specDetails">move:&nbsp;</span>
-                        {pokemon.moves[2]}
-                      </h2>
+                        <h2>
+                          <span className="specDetails species">
+                            species:&nbsp;
+                          </span>
+                          {pokemon.species}
+                        </h2>
+                        <h2>
+                          <span className="specDetails">type:&nbsp;</span>
+                          {pokemon.types}
+                        </h2>
                       </section>
 
                       <section className="column">
                         <h2>
-                          <span className="specDetails">height:&nbsp;</span>{pokemon.height}&nbsp;metre
-                          </h2>
-                      <h2>
-                        <span className="specDetails">weight:&nbsp;</span>
-                        {pokemon.weight}&nbsp;kilograms
-                      </h2>
+                          <span className="specDetails">ability:&nbsp;</span>
+                          {pokemon.abilities[0]}
+                        </h2>
+                        <h2>
+                          <span className="specDetails">ability:&nbsp;</span>
+                          {pokemon.abilities[1]}
+                        </h2>
                       </section>
 
-                        {/* video credit: pokemon-go globe / pixabay.com */}
+                      <section className="column">
+                        <h2>
+                          <span className="specDetails">move:&nbsp;</span>
+                          {pokemon.moves[0]}
+                        </h2>
+                        <h2>
+                          <span className="specDetails">move:&nbsp;</span>
+                          {pokemon.moves[1]}
+                        </h2>
+                        <h2>
+                          <span className="specDetails">move:&nbsp;</span>
+                          {pokemon.moves[2]}
+                        </h2>
+                      </section>
+
+                      <section className="column">
+                        <h2>
+                          <span className="specDetails">height:&nbsp;</span>
+                          {pokemon.height}&nbsp;metre
+                        </h2>
+                        <h2>
+                          <span className="specDetails">weight:&nbsp;</span>
+                          {pokemon.weight}&nbsp;kilograms
+                        </h2>
+                      </section>
+
+                      {/* video credit: pokemon-go globe / pixabay.com */}
 
                       <video width="100%" height="auto" autoPlay loop muted>
                         <source src={pokemongo} type="video/mp4" />
