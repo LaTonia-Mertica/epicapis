@@ -49,21 +49,30 @@
     text-shadow: .1rem .015rem  $ea-black;
   }
 
-  a.linkToCreatorCreations {
+  .creatorImg {
     position: absolute;
-    top: 20.5rem;
-    right: 18.75rem;
+    bottom: 3rem;
+    left: 21rem;
+  }
+
+  a.linkToCreatorCreations {
+    color: orangered;
+    font-family: $font-flow-block;
+    position: absolute;
+    bottom: .5rem;
+    right: 8.75rem;
   }
 
   .comicsUl {
+    color: #0bda51;
     font-size: x-small;
     text-align: left;
-    width: 25%;
+    width: 5%;
     font-family: $font-flow-block;
    
     position: absolute;
-    top: 17rem;
-    right: 2rem;
+    bottom: .7rem;
+    right: 20.25rem;
   }
 
   .comicsUl:hover {
@@ -81,14 +90,15 @@
   }
 
 .seriesUl {
-    font-size: x-small;
+  color: dodgerblue;
+    font-size: xx-small;
     text-align: left;
-    width: 25%;
+    width: 7%;
     font-family: $font-flow-block;
    
     position: absolute;
-    top: 16.5rem;
-    left: 21.5rem;
+    bottom: .2rem;
+    left: 9rem;
   }
 
 .seriesUl:hover {
@@ -106,13 +116,14 @@
   }
 
   .storyFromStories {
+    color: deeppink;
     font-size: x-small;
     text-align: left;
-    width: 87%;
+    width: 7%;
     font-family: $font-flow-block;
    
     position: absolute;
-    top: 7.5rem;
+    bottom: .85rem;
     left: 4.75rem;
   }
 
@@ -136,7 +147,7 @@
     font-size: x-small;
     position: absolute;
     top: 11rem;
-    left: -3rem;
+    left: -$space-xmd;
     rotate: calc(-90deg);
   }
 

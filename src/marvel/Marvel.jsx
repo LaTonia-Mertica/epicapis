@@ -86,24 +86,17 @@ const Marvel = ({ openModal, onClose }) => {
               <>
                 <section>
                 <h1 className="creatorName">{name.toUpperCase()}</h1>
-             
+
+                <img src={`${creator.image}`} alt={name} rel="noreferrer" className="creatorImg" />
 
                 <a href={creator.url} target="_blank" rel="noreferrer" className="linkToCreatorCreations">creator creations
                    </a>
-              
-                 {/* <img src={creator.image} alt="" rel="noreferrer" /> */}
-
+             
                  <ul className="comicsUl">
-                  <li>{creator.comics}</li>
-                  <li>{creator.comics}</li>
                   <li>{creator.comics}</li>
                   </ul>
 
                    <ul className="seriesUl">
-                   <li>{creator.series}</li>
-                   <li>{creator.series}</li>
-                   <li>{creator.series}</li>
-                   <li>{creator.series}</li>
                    <li>{creator.series}</li>
                    </ul>
 
