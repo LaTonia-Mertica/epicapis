@@ -77,11 +77,9 @@ a.listWordColor {
 .epic-mode .apisOfEpicapis {
   color: black;
 }
-
 .epic-mode .selectionsSubmitBtn {
   color: black !important;
 }
-
 .epic-mode .myName {
   font-size: 0.7rem;
 }
@@ -244,13 +242,11 @@ input[type="reset"] {
   flex-direction: column;
   align-items: center;
 }
-
 input[type="email"]::placeholder {
   color: #c8c4bd;
   font-size: x-small;
   padding: 0.25rem 0.5rem;
 }
-
 .selectionsInput {
   width: 50%;
   border-color: #545454;
@@ -267,7 +263,7 @@ Button.selectionsSubmitBtn {
 }
 
 /* masonry code */
-/* Do Not need either display below (webkit; flexbox) if autoprefixing */
+/* Do Not Need either display below (webkit; flexbox) if autoprefixing */
 .my-masonry-grid {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -283,4 +279,9 @@ Button.selectionsSubmitBtn {
 }
 .apiImgDiv {
   text-align: center;
+}
+
+/* blur background on modal open */
+.MuiBackdrop-root {
+  backdrop-filter: blur(7px);
 }
