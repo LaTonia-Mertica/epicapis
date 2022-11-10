@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -7,16 +7,11 @@ import "./Dangerous.scss";
 import { style } from "../mui.js";
 
 const Dangerous = ({ openModal, onClose }) => {
-  // function setToggle() {
-  //   let checkbx = document.getElementById("theCheckBx");
-  //   let txtarea = document.getElementById("theTxtArea");
+  const [showTextArea, setShowTextArea] = useState(false);
 
-  //   if (checkbx.checked === true) {
-  //     txtarea.style.display = "block";
-  //   } else {
-  //     txtarea.style.display = "none";
-  //   }
-  // }
+  const setToggle = () => {
+    setShowTextArea(!showTextArea);
+  };
 
   return (
     <main>
@@ -45,16 +40,18 @@ const Dangerous = ({ openModal, onClose }) => {
                 name="dangerous"
                 value="dangerous"
                 // id="theCheckBx"
-                // onClick={setToggle()}
+                onClick={setToggle}
               />
-              <form action="/enterplaceinputwilllivehere" method="get">
-                <label htmlFor="dangerousCode"></label>
-                <textarea
-                  type="textbox"
-                  id="theTxtArea"
-                  placeholder="enter your definition of dangerous code here ..."
-                ></textarea>
-              </form>
+              {showTextArea && (
+                <form action="/enterplaceinputwilllivehere" method="get">
+                  <label htmlFor="dangerousCode"></label>
+                  <textarea
+                    type="textbox"
+                    id="theTxtArea"
+                    placeholder="enter your definition of dangerous code here ..."
+                  ></textarea>
+                </form>
+              )}
             </section>
 
             {/* only reveal textbox if user selects sad face */}
