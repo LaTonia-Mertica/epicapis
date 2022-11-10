@@ -22,6 +22,7 @@ const Agify = ({ openModal, onClose }) => {
       `https://api.agify.io?name=${name.replace(/\W/g, "")}`
     );
     const data = await response.json();
+    setName("");
 
     if (data.age === null) {
       setLoading(false);
@@ -74,7 +75,7 @@ const Agify = ({ openModal, onClose }) => {
             &#x2612;
           </button>
           <form onSubmit={getAgeMyName}>
-           <input
+            <input
               type="text"
               name="agify"
               id="agify"
@@ -84,8 +85,13 @@ const Agify = ({ openModal, onClose }) => {
               onChange={(event) => {
                 setName(event.target.value.toLowerCase());
               }}
-              />
-            <Button type="submit" className="searchBtn" id="searchBtn" onClick={getAgeMyName}>
+            />
+            <Button
+              type="submit"
+              className="searchBtn"
+              id="searchBtn"
+              onClick={getAgeMyName}
+            >
               {loading ? <>loading...</> : <>Get Age by Name</>}
             </Button>
           </form>
