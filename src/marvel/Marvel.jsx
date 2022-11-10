@@ -94,11 +94,16 @@ const Marvel = ({ openModal, onClose }) => {
                 <section>
                   <h1 className="creatorName">{creator.name.toUpperCase()}</h1>
 
+                  <p className="totalResults">
+                    total possible creators for this search:&nbsp;
+                    {creator.total}
+                  </p>
+
                   <img
                     src={creator.image}
                     alt={name}
                     rel="noreferrer"
-                    className="creatorImg"
+                    className="creatorComicCoverImg"
                   />
 
                   <a
@@ -120,17 +125,12 @@ const Marvel = ({ openModal, onClose }) => {
 
                   <p className="storyFromStories">{creator.stories}</p>
 
-                  <p className="totalResults"> {creator.total}</p>
-
                   <p
                     dangerouslySetInnerHTML={{
                       __html: creator.attributionHTML,
                     }}
+                    className="marvelApiLinkPara"
                   />
-
-                  {/* <p className="marvelApiLinkPara">
-                    <a href="https://marvel.com">{creator.attributionText}</a>
-                  </p> */}
                 </section>
               </>
             ) : (

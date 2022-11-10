@@ -49,20 +49,19 @@
     text-shadow: 0.1rem 0.015rem $ea-black;
   }
 
-  .creatorImg {
-    width: 7%;
-    position: absolute;
-    bottom: 18.5rem;
-    right: 3.7rem;
+  .creatorComicCoverImg {
+    width: 17%;
+    margin-left: 9rem;
+    float: left;
+
+    z-index: 1;
   }
 
   a.linkToCreatorCreations {
     color: darkcyan;
     font-family: $font-flow-block;
 
-    position: absolute;
-    bottom: 18rem;
-    left: 23rem;
+    float: right;
   }
 
   .comicsUl {
@@ -72,19 +71,14 @@
     width: 5%;
     font-family: $font-flow-block;
 
-    position: absolute;
-    bottom: 18rem;
-    right: 23rem;
+    float: right;
+    margin-top: 8rem;
   }
 
   .comicsUl:hover {
     width: 37%;
     font-size: medium;
     font-family: $font-notable;
-
-    position: absolute;
-    top: 20rem;
-    right: 2rem;
 
     padding: 1rem;
     background-color: orangered;
@@ -98,19 +92,14 @@
     width: 7%;
     font-family: $font-flow-block;
 
-    position: absolute;
-    bottom: 21rem;
-    left: 11rem;
+    float: right;
+    margin-top: 5rem;
   }
 
   .seriesUl:hover {
     width: 37%;
     font-size: medium;
     font-family: $font-notable;
-
-    position: absolute;
-    top: 20rem;
-    right: 2rem;
 
     padding: 1rem;
     background-color: orangered;
@@ -124,9 +113,8 @@
     width: 7%;
     font-family: $font-flow-block;
 
-    position: absolute;
-    bottom: 20.25rem;
-    left: 5.7rem;
+    float: right;
+    margin-top: 4rem;
   }
 
   .storyFromStories:hover {
@@ -134,17 +122,16 @@
     font-size: medium;
     font-family: $font-notable;
 
-    position: absolute;
-    top: 2rem;
-    left: 7rem;
-
     padding: 1rem;
     background-color: orangered;
     border: 0.75rem solid rgb(0, 0, 0, 1);
   }
 
   .totalResults {
-    color: aliceblue;
+    color: $ea-white;
+    margin-top: -3rem;
+    font-size: xx-small;
+    font-family: $font-notable;
   }
 
   .marvelApiLinkPara {
@@ -152,8 +139,8 @@
     text-shadow: 0.015rem 0.015rem $ea-black;
     font-size: x-small;
     position: absolute;
-    top: 11rem;
-    left: -8rem;
+    top: 17rem;
+    left: -5rem;
     rotate: calc(-90deg);
   }
 
