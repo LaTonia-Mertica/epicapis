@@ -122,7 +122,11 @@ const App = () => {
   // const [funnyestSelection, setFunnyestSelection] = useState("");
 
   return (
-    <main className={epicMode ? "epic-mode" : ""} onLoad={addOneToCount}>
+    <main
+      className={epicMode ? "epic-mode" : ""}
+      onLoad={addOneToCount}
+      id="top"
+    >
       <div className="visitCountDiv">visit count</div>
       <p className="visitCountPara">{count}</p>
       <button type="reset" id="reset" onClick={deleteCount}>
@@ -131,7 +135,7 @@ const App = () => {
 
       <div className="logoAndNavDiv">
         <Header epicMode={epicMode} setEpicMode={setEpicMode} />
-        <a href="#">
+        <a href="#top">
           <img
             src={epicapisLogo}
             alt="Epic Apis Logo"
@@ -182,7 +186,7 @@ const App = () => {
                 EPIC<strong className="apisOfEpicapis">APIS</strong>
               </a>
               <a
-                href="https://www.latoniamertica.dev/"
+                href="https://linktr.ee/latoniamertica"
                 className="myName listWordColor"
                 target="_blank"
                 rel="noreferrer"
