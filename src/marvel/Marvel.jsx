@@ -10,6 +10,8 @@ import privateApikey from "./privateApikey";
 import "./Marvel.scss";
 import { style } from "../mui.js";
 import skyline from "./images/skyline.png";
+import kapow from "./images/kapow.png";
+import pow from "./images/pow.png";
 
 const Marvel = ({ openModal, onClose }) => {
   const ts = require("./ts");
@@ -17,6 +19,7 @@ const Marvel = ({ openModal, onClose }) => {
   const [name, setName] = useState("");
   const [creator, setCreator] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const getCreator = async (event) => {
     event.preventDefault();
@@ -32,24 +35,29 @@ const Marvel = ({ openModal, onClose }) => {
       })
       .then((data) => {
         setName("");
-        setCreator({
-          name: data.data.results[0].fullName,
-          attributionHTML: data.attributionHTML.replace(
-            "<a",
-            "<a target='_blank'"
-          ),
-          attributionText: data.attributionText,
-          image:
-            data.data.results[0].thumbnail.path +
-            "." +
-            data.data.results[0].thumbnail.extension,
-          url: data.data.results[0].urls[0].url,
-          comics: data.data.results[0].comics.items[0].name,
-          events: data.data.results[0].events.items[0].name,
-          series: data.data.results[0].series.items[0].name,
-          stories: data.data.results[0].stories.items[0].name,
-          total: data.data.total,
-        });
+        if (data.data.total === 0) {
+          setError("No Creators Found");
+        } else {
+          setError(null);
+          setCreator({
+            name: data.data.results[0]?.fullName,
+            attributionHTML: data?.attributionHTML.replace(
+              "<a",
+              "<a target='_blank'"
+            ),
+            attributionText: data?.attributionText,
+            image:
+              data.data.results[0]?.thumbnail?.path +
+              "." +
+              data.data.results[0]?.thumbnail?.extension,
+            url: data.data.results[0]?.urls[0]?.url,
+            comics: data.data.results[0]?.comics?.items[0]?.name,
+            events: data.data.results[0]?.events?.items[0]?.name,
+            series: data.data.results[0]?.series?.items[0]?.name,
+            stories: data.data.results[0]?.stories?.items[0]?.name,
+            total: data.data.total,
+          });
+        }
         console.log(data);
         setLoading(false);
       })
@@ -59,6 +67,8 @@ const Marvel = ({ openModal, onClose }) => {
   useEffect(() => {
     if (!openModal) {
       setName("");
+      setError(null);
+      setCreator(null);
     }
   }, [openModal]);
 
@@ -90,61 +100,84 @@ const Marvel = ({ openModal, onClose }) => {
           </form>
 
           <>
-            {creator ? (
+            {error && <p>{error}</p>}
+            {!error && creator ? (
               <>
                 <section>
-                  <h1 className="creatorName">{creator.name.toUpperCase()}</h1>
+                  {creator.name && (
+                    <h1 className="creatorName">
+                      {creator.name.toUpperCase()}
+                    </h1>
+                  )}
 
-                  <p className="totalResults">
-                    total possible creators
-                    <br />
-                    for this search:&nbsp;
-                    {creator.total}
-                  </p>
+                  {creator.total && (
+                    <p className="totalResults">
+                      total possible creators for this search:&nbsp;
+                      {creator.total}
+                    </p>
+                  )}
 
-                  <img
-                    src={creator.image}
-                    alt={name}
-                    rel="noreferrer"
-                    className="creatorComicCoverImg"
-                  />
+                  {/* {creator.image ? <img/> : null} */}
+                  {creator.image && (
+                    <img
+                      src={creator.image}
+                      alt={name}
+                      rel="noreferrer"
+                      className="creatorComicCoverOrPortraitImg"
+                    />
+                  )}
 
-                  <a
-                    href={creator.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="linkToCreatorCreations"
-                  >
-                    creator creations
-                  </a>
+                  <img src={kapow} alt="Color Block" className="kapow" />
+                  <img src={pow} alt="Color Block" className="pow" />
+                  <img src={skyline} alt="Skyline" className="skyline" />
 
-                  <ul className="comicsUl">
-                    <li>{creator.comics}</li>
-                  </ul>
+                  {creator.url && (
+                    <a
+                      href={creator.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="linkToCreatorCreations"
+                    >
+                      creator creations
+                    </a>
+                  )}
 
-                  <ul className="eventsUl">
-                    <li>{creator.events}</li>
-                  </ul>
+                  {creator.comics && (
+                    <ul className="comicsUl">
+                      <li>{creator.comics}</li>
+                    </ul>
+                  )}
 
-                  <ul className="seriesUl">
-                    <li>{creator.series}</li>
-                  </ul>
+                  {creator.events && (
+                    <ul className="eventsUl">
+                      <li>{creator.events}</li>
+                    </ul>
+                  )}
 
-                  <p className="storyFromStories">{creator.stories}</p>
+                  {creator.series && (
+                    <ul className="seriesUl">
+                      <li>{creator.series}</li>
+                    </ul>
+                  )}
 
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: creator.attributionHTML,
-                    }}
-                    className="marvelApiLinkPara"
-                  />
+                  {creator.stories && (
+                    <p className="storyFromStories">{creator.stories}</p>
+                  )}
+
+                  {/* input not sanitized because it is coming from a trusted source and is only running on the frontend */}
+                  {creator.attributionHTML && (
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: creator.attributionHTML,
+                      }}
+                      className="marvelApiLinkPara"
+                    />
+                  )}
                 </section>
               </>
             ) : (
               <></>
             )}
-
-            <img src={skyline} alt="Skyline" className="skyline" />
           </>
         </Box>
       </Modal>

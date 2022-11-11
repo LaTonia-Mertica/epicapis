@@ -1,6 +1,11 @@
 @import "../variables.module.scss";
 
 .marvelCard {
+  height: 70vh;
+  // background-image: radial-gradient(crimson 50%, transparent 50%);
+  // background-position: 0 0 3.125rem 3.125rem;
+  // background-size: 1.05rem 1.05rem;
+
   background-color: deeppink;
   @include card-space;
 
@@ -12,6 +17,10 @@
   Button {
     color: #0bda51;
     @include button-x-custom-1;
+  }
+
+  button:hover {
+    @include button-hover;
   }
 
   form {
@@ -49,30 +58,26 @@
     text-shadow: 0.1rem 0.015rem $ea-black;
   }
 
-  .creatorComicCoverImg {
+  .creatorComicCoverOrPortraitImg {
     width: 17%;
-    float: left;
     position: absolute;
     right: 2.15rem;
-    bottom: 19rem;
+    top: 2rem;
+
+    border: 0.25rem solid greenyellow;
 
     z-index: 1;
-  }
-  .creatorComicCoverImg:hover {
-    transform: scale(1.15);
-    transition: ease-in-out 1.5s;
   }
 
   a.linkToCreatorCreations {
     color: darkcyan;
     font-family: $font-flow-block;
 
-    float: left;
     position: absolute;
-    top: 25.5rem;
-    right: 1rem;
-    bottom: 8.65rem;
+    top: 24.5rem;
+    left: 23rem;
   }
+
   a.linkToCreatorCreations:hover {
     transform: scale(1.1);
     transition: ease-in-out 1.5s;
@@ -84,13 +89,14 @@
     color: #0bda51;
     font-size: x-small;
     text-align: left;
-    width: 5%;
+    width: 5rem;
     font-family: $font-flow-block;
 
     position: absolute;
-    top: 23.5rem;
-    right: 20rem;
+    top: 21.5rem;
+    right: 23rem;
   }
+
   .comicsUl:hover {
     width: 37%;
     font-size: medium;
@@ -98,32 +104,29 @@
 
     position: absolute;
     right: 10rem;
-    top: 27rem;
-
-    padding: 1rem;
-    background-color: orangered;
-    border: 0.75rem solid rgb(0, 0, 0, 1);
+    top: 25rem;
   }
 
   .eventsUl {
-    color: darkblue;
+    color: darkturquoise;
     font-size: x-small;
     text-align: left;
     width: 5%;
     font-family: $font-flow-block;
 
     position: absolute;
-    top: 25rem;
-    left: 20rem;
+    top: 22rem;
+    right: 14rem;
   }
+
   .eventsUl:hover {
     width: 25%;
     font-size: medium;
     font-family: $font-notable;
 
-    padding: 1rem;
-    background-color: orangered;
-    border: 0.75rem solid rgb(0, 0, 0, 1);
+    position: absolute;
+    top: 24rem;
+    right: 3rem;
   }
 
   .seriesUl {
@@ -133,19 +136,19 @@
     width: 7%;
     font-family: $font-flow-block;
 
-    float: right;
     position: absolute;
-    top: 21.15rem;
-    left: 11rem;
+    top: 19.5rem;
+    left: 10rem;
   }
+
   .seriesUl:hover {
     width: 40%;
     font-size: medium;
     font-family: $font-notable;
 
-    padding: 1rem;
-    background-color: orangered;
-    border: 0.75rem solid rgb(0, 0, 0, 1);
+    position: absolute;
+    top: 21rem;
+    left: 8rem;
   }
 
   .storyFromStories {
@@ -155,41 +158,34 @@
     width: 6rem;
     font-family: $font-flow-block;
 
-    float: right;
     position: absolute;
     top: 18rem;
-    left: 5rem;
+    right: 5rem;
   }
 
   .storyFromStories:hover {
-    width: 37%;
+    width: 35%;
     font-size: medium;
     font-family: $font-notable;
-
+    text-align: justify;
+    text-shadow: 0.15rem 0.1rem $ea-black;
+    background-color: greenyellow;
     padding: 1rem;
-    background-color: orangered;
-    border: 0.75rem solid rgb(0, 0, 0, 1);
+    border-top-left-radius: 5%;
   }
 
-  .totalResults {
-    color: $ea-white;
-
+  .kapow {
+    width: 5.7rem;
     position: absolute;
-    right: 0.75rem;
-    bottom: 14.65rem;
-    font-size: 0.3rem;
-    text-align: left;
-    font-family: $font-notable;
+    top: 19rem;
+    left: 3rem;
   }
 
-  .marvelApiLinkPara {
-    color: #0bda51;
-    text-shadow: 0.015rem 0.015rem $ea-black;
-    font-size: x-small;
+  .pow {
+    width: 4.7rem;
     position: absolute;
-    top: 17rem;
-    left: -5rem;
-    rotate: calc(-90deg);
+    top: 21rem;
+    right: 17.5rem;
   }
 
   .skyline {
@@ -212,7 +208,20 @@
     z-index: -100;
   }
 
-  button:hover {
-    @include button-hover;
+  .totalResults {
+    color: $ea-white;
+    font-size: 0.5rem;
+    font-family: $font-notable;
+    margin-top: -3rem;
+  }
+
+  .marvelApiLinkPara {
+    color: #0bda51;
+    text-shadow: 0.015rem 0.015rem $ea-black;
+    font-size: x-small;
+    position: absolute;
+    top: 17rem;
+    left: -5rem;
+    rotate: calc(-90deg);
   }
 }
