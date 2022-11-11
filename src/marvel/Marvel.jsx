@@ -45,6 +45,7 @@ const Marvel = ({ openModal, onClose }) => {
             data.data.results[0].thumbnail.extension,
           url: data.data.results[0].urls[0].url,
           comics: data.data.results[0].comics.items[0].name,
+          events: data.data.results[0].events.items[0].name,
           series: data.data.results[0].series.items[0].name,
           stories: data.data.results[0].stories.items[0].name,
           total: data.data.total,
@@ -95,7 +96,9 @@ const Marvel = ({ openModal, onClose }) => {
                   <h1 className="creatorName">{creator.name.toUpperCase()}</h1>
 
                   <p className="totalResults">
-                    total possible creators for this search:&nbsp;
+                    total possible creators
+                    <br />
+                    for this search:&nbsp;
                     {creator.total}
                   </p>
 
@@ -117,6 +120,10 @@ const Marvel = ({ openModal, onClose }) => {
 
                   <ul className="comicsUl">
                     <li>{creator.comics}</li>
+                  </ul>
+
+                  <ul className="eventsUl">
+                    <li>{creator.events}</li>
                   </ul>
 
                   <ul className="seriesUl">
