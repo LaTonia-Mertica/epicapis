@@ -58,6 +58,10 @@
 
     z-index: 1;
   }
+  .creatorComicCoverImg:hover {
+    transform: scale(1.15);
+    transition: ease-in-out 1.5s;
+  }
 
   a.linkToCreatorCreations {
     color: darkcyan;
@@ -68,6 +72,12 @@
     top: 25.5rem;
     right: 1rem;
     bottom: 8.65rem;
+  }
+  a.linkToCreatorCreations:hover {
+    transform: scale(1.1);
+    transition: ease-in-out 1.5s;
+
+    font-family: Notable;
   }
 
   .comicsUl {
@@ -81,11 +91,14 @@
     top: 23.5rem;
     right: 20rem;
   }
-
   .comicsUl:hover {
     width: 37%;
     font-size: medium;
     font-family: $font-notable;
+
+    position: absolute;
+    right: 10rem;
+    top: 27rem;
 
     padding: 1rem;
     background-color: orangered;
@@ -103,6 +116,15 @@
     top: 25rem;
     left: 20rem;
   }
+  .eventsUl:hover {
+    width: 25%;
+    font-size: medium;
+    font-family: $font-notable;
+
+    padding: 1rem;
+    background-color: orangered;
+    border: 0.75rem solid rgb(0, 0, 0, 1);
+  }
 
   .seriesUl {
     color: dodgerblue;
@@ -116,9 +138,8 @@
     top: 21.15rem;
     left: 11rem;
   }
-
   .seriesUl:hover {
-    width: 37%;
+    width: 40%;
     font-size: medium;
     font-family: $font-notable;
 
