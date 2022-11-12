@@ -58,7 +58,7 @@ const Marvel = ({ openModal, onClose }) => {
             total: data.data.total,
           });
         }
-        console.log(data);
+
         setLoading(false);
       })
       .catch((error) => console.log("ACCESS ERROR!"));
