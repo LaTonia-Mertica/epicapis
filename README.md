@@ -3,6 +3,7 @@
 _collection of fun, odd, quirky application programming interfaces paired with complementary resources built with semantic html - all peppered in event listeners_
 
 ##### [frontend github repo](https://github.com/LaTonia-Mertica/epicapis)
+
 ##### [backend github repo](https://github.com/LaTonia-Mertica/epicapis-db)
 
 <br>
@@ -106,6 +107,10 @@ epic apis provides a unique user experience through a medley of colorful apis
 ###### **fun find++:** [x mark symbol | dec code v hex code v unicode](https://www.copyandpastesymbols.net/x-symbol.html)
 
 ###### **fun find+=:** [happy-sad toggle checkbox](https://codingartistweb.com/2020/01/happy-sad-toggle-switch-custom-css-checkbox/)
+
+###### **bonus find:** [... how many effs i have ...](http://nofuckstogive.today/index.html)
+
+<br>
 
 ###### **helpful list:** [pokemon wiki](https://pokemon.fandom.com/wiki/List_of_Pok%C3%A9mon)
 
