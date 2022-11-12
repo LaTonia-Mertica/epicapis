@@ -1,7 +1,7 @@
 @import "../variables.module.scss";
 
 .beautifulCard {
-  background-color: rgba(26, 25, 30, 0.7);
+  background-color: $ea-filler-black-background;
   padding: 0;
   margin: 0;
   @include card-space;
@@ -21,57 +21,19 @@
   }
 
   p {
-    width: 30%;
-    text-align: justify;
-    position: absolute;
-    top: 8rem;
-    left: 3rem;
+    @include beaut-dang-para-styles;
   }
 
   input[type="checkbox"] {
-    appearance: none;
-    background-color: #222127;
-    height: $space-lg;
-    width: 12.5rem;
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    box-shadow: 1.125rem 0.75rem 1.125rem -0.313rem rgba(0, 0, 0, 0.35);
-    border-radius: 2.5rem;
-    outline: none;
-    cursor: pointer;
-    transition: 0.3s;
+    @include beaut-dang-input-checkbox-styles;
   }
 
   input[type="checkbox"]:before {
-    position: absolute;
-    content: "";
-    height: 0.625rem;
-    width: 0.625rem;
-    background-color: #0ba041;
-    border-radius: 50%;
-    top: 1.25rem;
-    left: 1.688rem;
-    box-shadow: 0 2.063rem 0 0 #0ba041, 8.438rem 2.063rem 0 0 $ea-gray-light,
-      8.438rem 0 0 0 $ea-gray-light;
+    @include beaut-dang-input-checkbox-before-styles;
   }
 
   input[type="checkbox"]:after {
-    position: absolute;
-    content: "";
-    height: 1.438rem;
-    width: 0.625rem;
-    border: 0.25rem solid #0ba041;
-    border-left: none;
-    border-radius: 0 1.438rem 1.438rem 0;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 3.125rem;
-    transition: 0.3s;
+    @include beaut-dang-input-checkbox-after-styles;
   }
 
   input[type="checkbox"]:checked:after {
@@ -80,17 +42,7 @@
   }
 
   textarea {
-    width: 34%;
-    height: 100%;
-    padding: 3rem;
-    resize: none;
-    box-sizing: border-box;
-
-    position: absolute;
-    top: 0;
-    right: 0.1rem;
-    color: $ea-gray-light;
-    background-color: rgba(26, 25, 30, 0.9);
+    @include textarea-toggle-on-styles;
   }
 
   textarea:focus,

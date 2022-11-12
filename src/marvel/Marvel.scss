@@ -72,7 +72,7 @@
   a.linkToCreatorCreations {
     color: darkcyan;
     font-family: $font-flow-block;
-    text-shadow: 0.15rem 0.1rem $ea-black;
+    text-shadow: $space-xsm 0.1rem $ea-black;
 
     position: absolute;
     top: 22rem;
@@ -94,9 +94,9 @@
     color: #0bda51;
     font-size: x-small;
     text-align: left;
-    width: 5rem;
+    width: $space-lg;
     font-family: $font-flow-block;
-    text-shadow: 0.15rem 0.1rem $ea-black;
+    text-shadow: $space-xsm 0.1rem $ea-black;
 
     position: absolute;
     top: 22rem;
@@ -119,7 +119,7 @@
     text-align: left;
     width: 5%;
     font-family: $font-flow-block;
-    text-shadow: 0.15rem 0.1rem $ea-black;
+    text-shadow: $space-xsm 0.1rem $ea-black;
 
     position: absolute;
     top: 24rem;
@@ -142,7 +142,7 @@
     text-align: left;
     width: 7%;
     font-family: $font-flow-block;
-    text-shadow: 0.15rem 0.1rem $ea-black;
+    text-shadow: $space-xsm 0.1rem $ea-black;
 
     position: absolute;
     top: 22rem;
@@ -165,11 +165,11 @@
     text-align: left;
     width: 6rem;
     font-family: $font-flow-block;
-    text-shadow: 0.15rem 0.1rem $ea-black;
+    text-shadow: $space-xsm 0.1rem $ea-black;
 
     position: absolute;
     top: 19rem;
-    right: 5rem;
+    right: $space-lg;
   }
 
   .storyFromStories:hover {
@@ -177,10 +177,10 @@
     font-size: medium;
     font-family: $font-notable;
     text-align: left;
-    text-shadow: 0.15rem 0.1rem $ea-black;
+    text-shadow: $space-xsm 0.1rem $ea-black;
 
     position: absolute;
-    top: 5rem;
+    top: $space-lg;
     left: 4.5rem;
   }
 
@@ -238,9 +238,9 @@
   .errorText {
     color: $ea-black;
     text-shadow: 0.1rem 0.1rem green;
-    font-size: 5rem;
+    font-size: $space-lg;
     font-family: Notable;
     font-variant: small-caps;
-    letter-spacing: 0.15rem;
+    letter-spacing: $space-xsm;
   }
 }

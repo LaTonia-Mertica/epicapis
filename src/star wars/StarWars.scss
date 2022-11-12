@@ -32,8 +32,7 @@
   @include card-space;
 
   .specsDiv {
-    display: flex;
-    justify-content: center;
+    @include p-character-para-center;
   }
 
   button {
