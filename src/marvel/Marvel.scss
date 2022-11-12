@@ -1,8 +1,8 @@
 @import "../variables.module.scss";
 
 .marvelCard {
-  height: 70vh;
-  background-image: radial-gradient(crimson 50%, transparent 50%);
+  height: 77vh;
+  background-image: radial-gradient(orangered 50%, transparent 50%);
   background-position: 0 0 3.125rem 3.125rem;
   background-size: 1.05rem 1.05rem;
 
@@ -72,10 +72,11 @@
   a.linkToCreatorCreations {
     color: darkcyan;
     font-family: $font-flow-block;
+    text-shadow: 0.15rem 0.1rem $ea-black;
 
     position: absolute;
-    top: 24.5rem;
-    left: 23rem;
+    top: 22rem;
+    left: 11rem;
   }
 
   a.linkToCreatorCreations:hover {
@@ -83,6 +84,10 @@
     transition: ease-in-out 1.5s;
 
     font-family: Notable;
+
+    position: absolute;
+    top: 21rem;
+    left: 11rem;
   }
 
   .comicsUl {
@@ -91,10 +96,11 @@
     text-align: left;
     width: 5rem;
     font-family: $font-flow-block;
+    text-shadow: 0.15rem 0.1rem $ea-black;
 
     position: absolute;
-    top: 21.5rem;
-    right: 23rem;
+    top: 22rem;
+    right: 20rem;
   }
 
   .comicsUl:hover {
@@ -113,10 +119,11 @@
     text-align: left;
     width: 5%;
     font-family: $font-flow-block;
+    text-shadow: 0.15rem 0.1rem $ea-black;
 
     position: absolute;
-    top: 22rem;
-    right: 14rem;
+    top: 24rem;
+    right: 2rem;
   }
 
   .eventsUl:hover {
@@ -135,10 +142,11 @@
     text-align: left;
     width: 7%;
     font-family: $font-flow-block;
+    text-shadow: 0.15rem 0.1rem $ea-black;
 
     position: absolute;
-    top: 19.5rem;
-    left: 10rem;
+    top: 22rem;
+    left: 20rem;
   }
 
   .seriesUl:hover {
@@ -147,8 +155,8 @@
     font-family: $font-notable;
 
     position: absolute;
-    top: 21rem;
-    left: 8rem;
+    top: 23rem;
+    left: 19rem;
   }
 
   .storyFromStories {
@@ -157,21 +165,23 @@
     text-align: left;
     width: 6rem;
     font-family: $font-flow-block;
+    text-shadow: 0.15rem 0.1rem $ea-black;
 
     position: absolute;
-    top: 18rem;
+    top: 19rem;
     right: 5rem;
   }
 
   .storyFromStories:hover {
-    width: 35%;
+    width: 25%;
     font-size: medium;
     font-family: $font-notable;
-    text-align: justify;
+    text-align: left;
     text-shadow: 0.15rem 0.1rem $ea-black;
-    background-color: greenyellow;
-    padding: 1rem;
-    border-top-left-radius: 5%;
+
+    position: absolute;
+    top: 5rem;
+    left: 4.5rem;
   }
 
   .kapow {
@@ -185,7 +195,7 @@
     width: 4.7rem;
     position: absolute;
     top: 21rem;
-    right: 17.5rem;
+    right: 14rem;
   }
 
   .skyline {
@@ -220,8 +230,17 @@
     text-shadow: 0.015rem 0.015rem $ea-black;
     font-size: x-small;
     position: absolute;
-    top: 17rem;
+    top: 10rem;
     left: -5rem;
     rotate: calc(-90deg);
+  }
+
+  .errorText {
+    color: $ea-black;
+    text-shadow: 0.1rem 0.1rem green;
+    font-size: 5rem;
+    font-family: Notable;
+    font-variant: small-caps;
+    letter-spacing: 0.15rem;
   }
 }

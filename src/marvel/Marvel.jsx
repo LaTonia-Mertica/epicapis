@@ -36,7 +36,7 @@ const Marvel = ({ openModal, onClose }) => {
       .then((data) => {
         setName("");
         if (data.data.total === 0) {
-          setError("No Creators Found");
+          setError("no creators found");
         } else {
           setError(null);
           setCreator({
@@ -100,7 +100,7 @@ const Marvel = ({ openModal, onClose }) => {
           </form>
 
           <>
-            {error && <p>{error}</p>}
+            {error && <p className="errorText">{error}</p>}
             {!error && creator ? (
               <>
                 <section>
