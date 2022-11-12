@@ -37,8 +37,7 @@ const StarWars = ({ openModal, onClose }) => {
       setTimeout(() => {
         setStarship(null);
       }, 17000);
-    } 
-    else {
+    } else {
       setError("Starship Does Not Exist!");
       setStarship(null);
     }
@@ -47,7 +46,7 @@ const StarWars = ({ openModal, onClose }) => {
   let starshipAggregator = [];
 
   const getNextPage = (nextURL) => {
-    setLoading(true)
+    setLoading(true);
     axios.get(nextURL).then((response) => {
       const starshipData = response.data.results;
 
@@ -71,11 +70,11 @@ const StarWars = ({ openModal, onClose }) => {
     // TODO: add in array below comma (,) getNextPage or wrap getNextPage function in callback
   }, [openModal, allStarships.length]);
 
-useEffect(() => {
-  if (!openModal) {
-    setStarship(null)
-  }
-}, [openModal]);
+  useEffect(() => {
+    if (!openModal) {
+      setStarship(null);
+    }
+  }, [openModal]);
 
   // **note:** reasons this api uses axios:
   // axios and fetch are used in the epic apis project for practice with both libraries
@@ -90,7 +89,6 @@ useEffect(() => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-
         {/* img credit: stormtrooper / tenor.com */}
 
         <Box sx={style} className="starWarsCard">
@@ -106,10 +104,10 @@ useEffect(() => {
                   ...theme,
                   borderRadius: ".5rem",
                   colors: {
-                  ...theme.colors,
-                  neutral50: "#FFF",
-                  primary25: '#FFF',
-                  primary: '#FFF',
+                    ...theme.colors,
+                    neutral50: "#FFF",
+                    primary25: "#FFF",
+                    primary: "#FFF",
                   },
                 })}
                 styles={{
@@ -128,9 +126,9 @@ useEffect(() => {
                     background: "#000",
                     paddingTop: ".5rem",
                     paddingBottom: ".5rem",
-                  }),                             
+                  }),
                 }}
-               onChange={(newValue) => {
+                onChange={(newValue) => {
                   searchStarship(newValue.value);
                 }}
                 isClearable={true}
