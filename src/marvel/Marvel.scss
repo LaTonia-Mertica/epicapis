@@ -2,9 +2,9 @@
 
 .marvelCard {
   height: 70vh;
-  // background-image: radial-gradient(crimson 50%, transparent 50%);
-  // background-position: 0 0 3.125rem 3.125rem;
-  // background-size: 1.05rem 1.05rem;
+  background-image: radial-gradient(crimson 50%, transparent 50%);
+  background-position: 0 0 3.125rem 3.125rem;
+  background-size: 1.05rem 1.05rem;
 
   background-color: deeppink;
   @include card-space;

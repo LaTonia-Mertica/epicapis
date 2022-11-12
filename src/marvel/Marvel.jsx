@@ -109,15 +109,12 @@ const Marvel = ({ openModal, onClose }) => {
                       {creator.name.toUpperCase()}
                     </h1>
                   )}
-
                   {creator.total && (
                     <p className="totalResults">
                       total possible creators for this search:&nbsp;
                       {creator.total}
                     </p>
                   )}
-
-                  {/* {creator.image ? <img/> : null} */}
                   {creator.image && (
                     <img
                       src={creator.image}
@@ -127,10 +124,11 @@ const Marvel = ({ openModal, onClose }) => {
                     />
                   )}
 
+                  {/* image credits: skyline - clipground.com; kapow - icon-library.com; pow - nicepng.com */}
+
                   <img src={kapow} alt="Color Block" className="kapow" />
                   <img src={pow} alt="Color Block" className="pow" />
                   <img src={skyline} alt="Skyline" className="skyline" />
-
                   {creator.url && (
                     <a
                       href={creator.url}
@@ -141,29 +139,24 @@ const Marvel = ({ openModal, onClose }) => {
                       creator creations
                     </a>
                   )}
-
                   {creator.comics && (
                     <ul className="comicsUl">
                       <li>{creator.comics}</li>
                     </ul>
                   )}
-
                   {creator.events && (
                     <ul className="eventsUl">
                       <li>{creator.events}</li>
                     </ul>
                   )}
-
                   {creator.series && (
                     <ul className="seriesUl">
                       <li>{creator.series}</li>
                     </ul>
                   )}
-
                   {creator.stories && (
                     <p className="storyFromStories">{creator.stories}</p>
                   )}
-
                   {/* input not sanitized because it is coming from a trusted source and is only running on the frontend */}
                   {creator.attributionHTML && (
                     <p
