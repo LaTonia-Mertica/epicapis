@@ -1,6 +1,7 @@
 @import "../variables.module.scss";
 
 .epicCard {
+  background-color: #f6f6e9;
   @include card-space;
 
   button {
@@ -12,7 +13,8 @@
     @include button-hover;
   }
 
-  .submitBtn {
-    @include button-submit;
+  img {
+    margin-left: -1rem;
+    margin-bottom: -0.75rem;
   }
 }

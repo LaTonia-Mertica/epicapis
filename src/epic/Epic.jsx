@@ -1,13 +1,11 @@
 import React from "react";
 import Modal from "@mui/material/Modal";
-import Quiz from "react-quiz-component";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 
 import "./Epic.scss";
 import { style } from "../mui.js";
-
-import { quiz } from "./quiz.js";
+import epicModelImg from "./images/epic-model-prototype.png";
 
 const Epic = ({ openModal, onClose }) => {
   return (
@@ -21,10 +19,15 @@ const Epic = ({ openModal, onClose }) => {
         <Box sx={style} className="epicCard">
           <Button onClick={onClose}>&#x274C;</Button>
           <div>
-            <Quiz quiz={quiz} />
-            <Button type="button" className="submitBtn">
-              submit
-            </Button>
+            <a href={epicModelImg} download>
+              <img
+                src={epicModelImg}
+                alt="Epic Model Prototype Resource"
+                width="103%"
+                height="auto"
+                title="click to download"
+              />
+            </a>
           </div>
         </Box>
       </Modal>
