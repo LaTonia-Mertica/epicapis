@@ -20,11 +20,9 @@ const RonSwanson = ({ openModal, onClose }) => {
     setQuote(json[0]);
     setLoading(false);
   };
-  useEffect(() => {
-    getQuote();
-  }, []);
 
   useEffect(() => {
+    getQuote();
     const checkModeStatus = JSON.parse(localStorage.getItem("manly-mode"));
     if (checkModeStatus === null) {
       localStorage.setItem("manly-mode", "false");
