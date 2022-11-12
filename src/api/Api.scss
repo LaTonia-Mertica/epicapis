@@ -12,7 +12,8 @@
     @include button-hover;
   }
 
-  .submitBtn {
-    @include button-submit;
+  img {
+    margin-left: -1rem;
+    margin-bottom: -0.85rem;
   }
 }

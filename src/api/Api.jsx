@@ -5,6 +5,7 @@ import Button from "@mui/material/Button";
 
 import "./Api.scss";
 import { style } from "../mui.js";
+import API from "./images/API.png";
 
 const Api = ({ openModal, onClose }) => {
   return (
@@ -18,9 +19,7 @@ const Api = ({ openModal, onClose }) => {
         <Box sx={style} className="apiCard">
           <Button onClick={onClose}>&#x274C;</Button>
           <div>
-            <Button type="button" className="submitBtn">
-              submit
-            </Button>
+            <img src={API} alt="API Resource" width="103%" height="auto" />
           </div>
         </Box>
       </Modal>
