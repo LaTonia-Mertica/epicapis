@@ -19,6 +19,7 @@ const Say = ({ openModal, onClose }) => {
       setPhraseToShow();
     }
   }, [openModal]);
+
   return (
     <main>
       <Modal
