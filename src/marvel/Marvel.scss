@@ -90,20 +90,24 @@
     left: 11rem;
   }
 
-  .comicsUl {
+  .subtitles {
+    font-variant: small-caps;
+  }
+
+  .comics {
     color: #0bda51;
     font-size: x-small;
     text-align: left;
     width: $space-lg;
     font-family: $font-flow-block;
-    text-shadow: $space-xsm 0.1rem $ea-black;
+    text-shadow: $space-xsm 0.05rem $ea-black;
 
     position: absolute;
     top: 22rem;
     right: 20rem;
   }
 
-  .comicsUl:hover {
+  .comics:hover {
     width: 37%;
     font-size: medium;
     font-family: $font-notable;
@@ -113,20 +117,20 @@
     top: 25rem;
   }
 
-  .eventsUl {
+  .events {
     color: darkturquoise;
     font-size: x-small;
     text-align: left;
     width: 5%;
     font-family: $font-flow-block;
-    text-shadow: $space-xsm 0.1rem $ea-black;
+    text-shadow: $space-xsm 0.05rem $ea-black;
 
     position: absolute;
     top: 24rem;
     right: 2rem;
   }
 
-  .eventsUl:hover {
+  .events:hover {
     width: 25%;
     font-size: medium;
     font-family: $font-notable;
@@ -136,20 +140,20 @@
     right: 3rem;
   }
 
-  .seriesUl {
+  .series {
     color: dodgerblue;
     font-size: xx-small;
     text-align: left;
     width: 7%;
     font-family: $font-flow-block;
-    text-shadow: $space-xsm 0.1rem $ea-black;
+    text-shadow: $space-xsm 0.05rem $ea-black;
 
     position: absolute;
     top: 22rem;
     left: 20rem;
   }
 
-  .seriesUl:hover {
+  .series:hover {
     width: 40%;
     font-size: medium;
     font-family: $font-notable;
@@ -165,7 +169,7 @@
     text-align: left;
     width: 6rem;
     font-family: $font-flow-block;
-    text-shadow: $space-xsm 0.1rem $ea-black;
+    text-shadow: $space-xsm 0.05rem $ea-black;
 
     position: absolute;
     top: 19rem;
@@ -177,7 +181,7 @@
     font-size: medium;
     font-family: $font-notable;
     text-align: left;
-    text-shadow: $space-xsm 0.1rem $ea-black;
+    text-shadow: $space-xsm 0.05rem $ea-black;
 
     position: absolute;
     top: $space-lg;

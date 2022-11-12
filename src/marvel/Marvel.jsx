@@ -140,22 +140,33 @@ const Marvel = ({ openModal, onClose }) => {
                     </a>
                   )}
                   {creator.comics && (
-                    <ul className="comicsUl">
-                      <li>{creator.comics}</li>
-                    </ul>
+                    <p className="comics">
+                      <span className="subtitles">first in comics</span>
+                      <br />
+                      {creator.comics}
+                    </p>
                   )}
                   {creator.events && (
-                    <ul className="eventsUl">
-                      <li>{creator.events}</li>
-                    </ul>
+                    <p className="events">
+                      <span className="subtitles">first in events</span>
+                      <br />
+                      {creator.events}
+                    </p>
                   )}
                   {creator.series && (
-                    <ul className="seriesUl">
-                      <li>{creator.series}</li>
-                    </ul>
+                    <p className="series">
+                      <span className="subtitles">first in series</span>
+                      <br />
+                      {creator.series}
+                    </p>
                   )}
                   {creator.stories && (
-                    <p className="storyFromStories">{creator.stories}</p>
+                    <p className="storyFromStories">
+                      {" "}
+                      <span className="subtitles">first in stories</span>
+                      <br />
+                      {creator.stories}
+                    </p>
                   )}
                   {/* input not sanitized because it is coming from a trusted source and is only running on the frontend */}
                   {creator.attributionHTML && (
