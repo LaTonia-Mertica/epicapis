@@ -16,7 +16,7 @@ _collection of fun, odd, quirky application programming interfaces paired with c
 
 ###### _<p style="text-align: justify">but first, my mentors rock.</p>_
 
-###### _<p style="text-align: justify">max has been and remains primary re: project-based code/web dev while also helping initiate me into the code world of algorithms. max was among my first instructors as i began my coding journey in hack upstate 'careers in code.' max demos a rare blend of know-how and get-to in his role as a code master. and he doesn't shy from telling me i already know when he sees my confidence hiding, he doesn't shy from settling into his lecture mode when he sees me lacking self care, he doesn't shy from being someone to just listen when it's clear that's what's needed at that time.</p>_
+###### _<p style="text-align: justify">max has been and remains primary re: project-based code/web dev while also helping initiate me into the code world of algorithms. max was among my first instructors as i began my coding journey in hack upstate ['careers in code'](https://careersincode.org/). max demos a rare blend of know-how and get-to in his role as a code master. and he doesn't shy from telling me i already know when he sees my confidence hiding, he doesn't shy from settling into his lecture mode when he sees me lacking self care, he doesn't shy from being someone to just listen when it's clear that's what's needed at that time.</p>_
 
 ###### _<p style="text-align: justify">adam has insane skills re: code refactoring, as routine outlines theory versus application/implementation, and enthusiastically encourages me to own my code.</p>_
 
@@ -24,7 +24,7 @@ _collection of fun, odd, quirky application programming interfaces paired with c
 
 ###### _<p style="text-align: justify">jess has inspiring code flow that impeccably reflects novice-coder mindset dressed in raw mastery, and is dogged re: producing optimized code output.</p>_
 
-###### _<p style="text-align: justify">adam, danny, and jess have been exceptional supports re: expanding my knowledge and skillset to include algorithms and advanced project-work. they are part of the team assigned to pair program 1:1 with me through underdog devs 'project underdog.'</p>_
+###### _<p style="text-align: justify">adam, danny, and jess have been exceptional supports re: expanding my knowledge and skillset to include algorithms and advanced project-work. they are part of the team assigned to pair program 1:1 with me through [underdog devs](https://www.underdogdevs.org/) '[project underdog](https://www.underdogdevs.org/project-underdog)'.</p>_
 
 ###### _<p style="text-align: justify">each of these mentors excel in part, in my experience-informed opinion, because they consistently share compassion, patience, and sincere interest in my code/web dev ambitions. they make me feel like i can, and they do what they can to ensure i do/will.</p>_
 
