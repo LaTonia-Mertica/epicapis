@@ -32,6 +32,10 @@ const Dangerous = ({ openModal, onClose }) => {
                 <br />
                 <br />
                 dangerous code makes you feel exhausted.
+                <br />
+                <br />
+                click <i>submit</i> to keep my definition or toggle the smiley
+                face to the un-smiley face to input your own definition.
               </p>
 
               <label htmlFor="dangerous"></label>

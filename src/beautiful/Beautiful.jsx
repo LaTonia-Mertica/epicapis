@@ -32,6 +32,10 @@ const Beautiful = ({ openModal, onClose }) => {
                 <br />
                 <br />
                 beautiful code makes you feel welcome.
+                <br />
+                <br />
+                click <i>submit</i> to keep my definition or toggle the smiley
+                face to the un-smiley face to input your own definition.
               </p>
 
               <label htmlFor="beautiful"></label>
