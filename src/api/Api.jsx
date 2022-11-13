@@ -19,7 +19,7 @@ const Api = ({ openModal, onClose }) => {
         <Box sx={style} className="apiCard">
           <Button onClick={onClose}>&#x274C;</Button>
           <div>
-            <a href={API} download>
+            <a href={API} download title="click to download">
               <img src={API} alt="API Resource" width="103%" height="auto" />
             </a>
           </div>
