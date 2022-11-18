@@ -69,6 +69,7 @@ import Epic from "./epic/Epic";
 import Beautiful from "./beautiful/Beautiful";
 import Api from "./api/Api";
 import Dangerous from "./dangerous/Dangerous";
+import useMinWidth from "./useMinWidth";
 
 const foaasImgs = [
   foaas,
@@ -84,6 +85,7 @@ let randomFoaasImg = foaasImgs[getRandomFoaasImg];
 
 const App = () => {
   const [openModal, setOpenModal] = useState(false);
+  const screenWidth = useMinWidth();
 
   const closeModal = () => {
     setOpenModal(false);
@@ -120,6 +122,10 @@ const App = () => {
   };
   // arrange elements for email
   // const [funnyestSelection, setFunnyestSelection] = useState("");
+
+  if (screenWidth < 670) {
+    return <div>Make yo' screen bigger</div>;
+  }
 
   return (
     <main

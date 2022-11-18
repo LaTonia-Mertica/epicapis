@@ -285,3 +285,19 @@ Button.selectionsSubmitBtn {
 .MuiBackdrop-root {
   backdrop-filter: blur(7px);
 }
+
+.my-masonry-grid {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 670px) {
+  .my-masonry-grid {
+    max-width: 670px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .my-masonry-grid {
+    max-width: 1000px;
+  }
+}
