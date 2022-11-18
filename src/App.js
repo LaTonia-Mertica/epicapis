@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
+import useMinWidth from "./useMinWidth";
 // styles import necessary for jsx and scss files
 import styles from "./App.scss";
 import Masonry from "react-masonry-css";
@@ -69,7 +70,6 @@ import Epic from "./epic/Epic";
 import Beautiful from "./beautiful/Beautiful";
 import Api from "./api/Api";
 import Dangerous from "./dangerous/Dangerous";
-import useMinWidth from "./useMinWidth";
 
 const foaasImgs = [
   foaas,
@@ -124,7 +124,26 @@ const App = () => {
   // const [funnyestSelection, setFunnyestSelection] = useState("");
 
   if (screenWidth < 670) {
-    return <div>Make yo' screen bigger</div>;
+    return (
+      <>
+        <div className="mediaQueryMsg">
+          make yo'
+          <br />
+          <span className="mediaQueryText">screen</span>
+          <br />
+          <span className="mediaQueryText">bigger</span>
+        </div>
+        <div className="mediaQueryMsgToo">
+          for an
+          <br />
+          <span className="optimizedText">optimized</span>
+          <br />
+          epic apis
+          <br />
+          experience
+        </div>
+      </>
+    );
   }
 
   return (

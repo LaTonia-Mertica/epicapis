@@ -286,6 +286,7 @@ Button.selectionsSubmitBtn {
   backdrop-filter: blur(7px);
 }
 
+/* media queries smallest to largest recommended screen sizes */
 .my-masonry-grid {
   margin: 0 auto;
 }
@@ -300,4 +301,32 @@ Button.selectionsSubmitBtn {
   .my-masonry-grid {
     max-width: 1000px;
   }
+}
+
+.mediaQueryMsg {
+  color: greenyellow;
+  font-size: 3rem;
+  text-align: center;
+  font-family: Rubik Glitch;
+  text-shadow: 0.15rem 0.15rem #545454;
+  background-color: #545454;
+
+  padding: 25% 0;
+}
+
+.mediaQueryText {
+  letter-spacing: 0.5rem;
+}
+
+.mediaQueryMsgToo {
+  font-size: 3rem;
+  text-align: center;
+  font-family: Bebas Neue;
+  background-color: greenyellow;
+
+  padding: 25% 0;
+}
+
+.optimizedText {
+  font-family: Rubik Glitch;
 }
