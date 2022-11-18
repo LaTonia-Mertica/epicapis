@@ -12,6 +12,7 @@ import { Route } from "@mui/icons-material";
 import Header from "./Header";
 import epicapisLogo from "./images/epicapisLogo.png";
 import epicapisposter from "./images/epicapisposter.pdf";
+import summary from "./files/epic-apis-summary.pdf";
 
 import agify from "./images/agify.png";
 import chuck from "./images/chuck.png";
@@ -171,6 +172,11 @@ const App = () => {
         </a>
         <nav>
           <ul className="unorderedList">
+            <li className="summaryPdf">
+              <a href={summary} target="_blank" rel="noreferrer">
+                summary
+              </a>
+            </li>
             <li>
               <a
                 href="https://trello.com/b/YLTdkWTR/epicapis"

@@ -2,6 +2,8 @@
 
 _collection of fun, odd, quirky application programming interfaces paired with complementary resources built with semantic html - all peppered in event listeners_
 
+##### [epic apis summary](public/epic-apis-summary.pdf)
+
 ##### [trello project management](https://trello.com/b/YLTdkWTR/epicapis)
 
 ##### [frontend github repo](https://github.com/LaTonia-Mertica/epicapis)
