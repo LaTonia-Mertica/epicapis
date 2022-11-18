@@ -43,31 +43,30 @@ const StarWars = ({ openModal, onClose }) => {
     }
   };
 
-  let starshipAggregator = [];
-
-  const getNextPage = (nextURL) => {
-    setLoading(true);
-    axios.get(nextURL).then((response) => {
-      const starshipData = response.data.results;
-
-      starshipAggregator = [...starshipAggregator, ...starshipData];
-
-      if (response.data.next) {
-        getNextPage(response.data.next);
-      } else {
-        setAllStarships(starshipAggregator);
-        setLoading(false);
-      }
-    });
-  };
-
   useEffect(() => {
+    let starshipAggregator = [];
+
+    const getNextPage = (nextURL) => {
+      setLoading(true);
+      axios.get(nextURL).then((response) => {
+        const starshipData = response.data.results;
+
+        starshipAggregator = [...starshipAggregator, ...starshipData];
+
+        if (response.data.next) {
+          getNextPage(response.data.next);
+        } else {
+          setAllStarships(starshipAggregator);
+          setLoading(false);
+        }
+      });
+    };
+
     if (openModal) {
       if (allStarships.length === 0) {
         getNextPage(`https://swapi.dev/api/starships/?limit=1000`);
       }
     }
-    // TODO: add in array below comma (,) getNextPage or wrap getNextPage function in callback
   }, [openModal, allStarships.length]);
 
   useEffect(() => {
