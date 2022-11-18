@@ -27,12 +27,6 @@ const Prettiest = ({ openModal, onClose }) => {
           <div className="radioFieldsetDiv">
             <fieldset className="prettiestFieldset">
               <p className="prettiestPara">
-                {/* <input
-                  type="radio"
-                  name="prettiest"
-                  id="highball"
-                  value="highball"
-                /> */}
                 <WhatshotIcon className="whatshot" />
                 <label htmlFor="highball">
                   High Ball
@@ -44,8 +38,6 @@ const Prettiest = ({ openModal, onClose }) => {
                 </label>
                 <br />
 
-                {/* <input type="radio" name="prettiest" id="coupe" value="coupe" />
-                 */}
                 <WhatshotIcon className="whatshot" />
                 <label htmlFor="coupe">
                   Coupe
@@ -57,12 +49,6 @@ const Prettiest = ({ openModal, onClose }) => {
                 </label>
                 <br />
 
-                {/* <input
-                  type="radio"
-                  name="prettiest"
-                  id="zombie"
-                  value="zombie"
-                /> */}
                 <WhatshotIcon className="whatshot" />
                 <label htmlFor="zombie">
                   Zombie <br />
@@ -73,7 +59,6 @@ const Prettiest = ({ openModal, onClose }) => {
                 </label>
                 <br />
 
-                {/* <input type="radio" name="prettiest" id="rocks" value="rocks" /> */}
                 <WhatshotIcon className="whatshot" />
                 <label htmlFor="rocks">
                   Rocks <br />
@@ -84,12 +69,6 @@ const Prettiest = ({ openModal, onClose }) => {
                 </label>
                 <br />
 
-                {/* <input
-                  type="radio"
-                  name="prettiest"
-                  id="hurricane"
-                  value="hurricane"
-                /> */}
                 <WhatshotIcon className="whatshot" />
                 <label htmlFor="hurricane">
                   Hurricane

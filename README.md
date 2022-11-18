@@ -205,6 +205,8 @@ count: data.count,
 
 ###### **note:** again, import/export is the more modern and recommended implemenation method. both are included here for posterity of demonstration - ie. if you see or work in legacy code
 
+<br>
+
 - use the variable assigned to the api key in every instance the actual api key would normally be used.
   `http://gateway.marvel.com/v1/public/creators?ts=1&apikey=${apikey}`
 
@@ -217,7 +219,7 @@ Server-side applications must pass two parameters in addition to the apikey para
 
 ts - a timestamp (or other long string which can change on a request-by-request basis)
 
-hash - a md5 digest of the ts parameter, your private key and your public key (e.g. md5(ts+privateKey+publicKey)
+hash - a md5 digest of the ts parameter, your private key and your public key (e.g. md5(ts+privateKey+publicKey))
 
 For example, a user with a public key of "1234" and a private key of "abcd" could construct a valid call as follows: http://gateway.marvel.com/v1/public/creators?ts=1&apikey=1234&hash=ffd275c5130566a2916217b101f26150 (the hash value is the md5 digest of 1abcd1234)'
 
@@ -311,7 +313,7 @@ alert ("Hello Code World!");
 
 <br>
 
-### **NEXT STEPS**
+### **NEXT STEPS (TOP RANKED)**
 
 - **_reusable code_**: per import/export for functions and state used in multiple components
 
@@ -319,7 +321,7 @@ alert ("Hello Code World!");
 
 - **_accessibility optimization_**: regarding code and styles
 
-- **_media queries_**: optimize for devices/screens under medium size
+- **_media queries_**: optimize for devices/screens of all standard sizes, including per mobile first approach
 
 <br>
 

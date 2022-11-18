@@ -43,7 +43,6 @@ const Beautiful = ({ openModal, onClose }) => {
                 type="checkbox"
                 name="beautiful"
                 value="beautiful"
-                // id="theCheckBx"
                 onClick={setToggle}
               />
               {showTextArea && (
@@ -51,15 +50,11 @@ const Beautiful = ({ openModal, onClose }) => {
                   <label htmlFor="beautifulCode"></label>
                   <textarea
                     type="textbox"
-                    // id="theTxtArea"
                     placeholder="enter your definition of beautiful code here ..."
                   ></textarea>
                 </form>
               )}
             </section>
-
-            {/* only reveal textbox if user selects sad face */}
-            {/* disable input for textbox if user selects happy face */}
 
             <Button type="button" className="submitBtn">
               submit

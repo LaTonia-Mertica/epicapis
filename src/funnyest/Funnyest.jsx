@@ -7,6 +7,7 @@ import "./Funnyest.scss";
 import { style } from "../mui.js";
 
 const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
+  // part of wiring for email api
   const submit = () => {
     console.log(funnyest);
   };
@@ -174,6 +175,7 @@ const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
                 </p>
               </span>
             </fieldset>
+            {/* part of wiring for email api */}
             <Button type="submit" className="submitBtn" onClick={submit}>
               submit
             </Button>

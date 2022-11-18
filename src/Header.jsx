@@ -17,9 +17,6 @@ const Header = ({ epicMode, setEpicMode }) => {
   };
 
   const toggleEpicMode = () => {
-    // const newMode = epicMode === "true" ? "false" : "true";
-    // setEpicMode(newMode);
-    // localStorage.setItem("epicMode", newMode);
     setEpicMode(!epicMode);
     localStorage.setItem("epicMode", JSON.stringify(!epicMode));
   };

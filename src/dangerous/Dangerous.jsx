@@ -43,7 +43,6 @@ const Dangerous = ({ openModal, onClose }) => {
                 type="checkbox"
                 name="dangerous"
                 value="dangerous"
-                // id="theCheckBx"
                 onClick={setToggle}
               />
               {showTextArea && (
@@ -51,15 +50,11 @@ const Dangerous = ({ openModal, onClose }) => {
                   <label htmlFor="dangerousCode"></label>
                   <textarea
                     type="textbox"
-                    id="theTxtArea"
                     placeholder="enter your definition of dangerous code here ..."
                   ></textarea>
                 </form>
               )}
             </section>
-
-            {/* only reveal textbox if user selects sad face */}
-            {/* disable input for textbox if user selects happy face */}
 
             <Button type="button" className="submitBtn">
               submit
