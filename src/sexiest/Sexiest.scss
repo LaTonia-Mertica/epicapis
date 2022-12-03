@@ -2,6 +2,7 @@
 
 .sexiestCard {
   @include card-space;
+  height: 60vh;
 
   button {
     @include button-space;
@@ -33,6 +34,7 @@
 
   label {
     cursor: pointer;
+    font-size: 1.45rem;
   }
 
   p.sexiestPara {
@@ -68,6 +70,72 @@
   .nonbinaryLegend {
     text-align: left;
     margin-left: $space-lg;
+  }
+
+  #catwoman:hover:after {
+    content: url(images/catwoman.png);
+    zoom: 65%;
+    position: absolute;
+    left: 1;
+    bottom: 0;
+  }
+
+  #shera:hover:after {
+    content: url(images/she-ra.png);
+    zoom: 65%;
+    position: absolute;
+    top: 0;
+  }
+
+  #wonderwoman:hover:after {
+    content: url(images/wonder-woman.png);
+    zoom: 65%;
+    position: absolute;
+    top: 0;
+  }
+
+  #batman:hover:after {
+    content: url(images/batman.png);
+    zoom: 37%;
+    position: absolute;
+    top: 1;
+  }
+
+  #blackpanther:hover:after {
+    content: url(images/black-panther.png);
+    zoom: 43%;
+    position: absolute;
+    top: 1;
+  }
+
+  #spiderman:hover:after {
+    content: url(images/spiderman.png);
+    zoom: 37%;
+    position: absolute;
+    top: 0;
+  }
+
+  #brotherken:hover:after {
+    content: url(images/nonbinary-representation-gap.png);
+    zoom: 13%;
+    position: absolute;
+    right: 1;
+    bottom: 0;
+  }
+
+  #kidquick:hover:after {
+    content: url(images/kid-quick.png);
+    zoom: 67%;
+    position: absolute;
+    right: 0;
+  }
+
+  #snowflake:hover:after {
+    content: url(images/nonbinary-representation-gap.png);
+    zoom: 13%;
+    position: absolute;
+    right: 1;
+    top: 0;
   }
 
   .submitBtn {
