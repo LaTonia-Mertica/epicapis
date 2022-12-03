@@ -11,7 +11,12 @@ const Best = ({ openModal, onClose }) => {
 
   const submit = () => {
     console.log(bestSelection);
-    window.localStorage.setItem("bestSelection", JSON.stringify(bestSelection));
+    if (bestSelection) {
+      window.localStorage.setItem(
+        "bestSelection",
+        JSON.stringify(bestSelection)
+      );
+    }
   };
 
   return (

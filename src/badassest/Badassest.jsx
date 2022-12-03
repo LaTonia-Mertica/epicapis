@@ -11,10 +11,12 @@ const Badassest = ({ openModal, onClose }) => {
 
   const submit = () => {
     console.log(badassestSelection);
-    window.localStorage.setItem(
-      "badassestSelection",
-      JSON.stringify(badassestSelection)
-    );
+    if (badassestSelection) {
+      window.localStorage.setItem(
+        "badassestSelection",
+        JSON.stringify(badassestSelection)
+      );
+    }
   };
 
   return (

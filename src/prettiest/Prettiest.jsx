@@ -18,10 +18,12 @@ const Prettiest = ({ openModal, onClose }) => {
 
   const submit = () => {
     console.log(prettiestSelection);
-    window.localStorage.setItem(
-      "prettiestSelection",
-      JSON.stringify(prettiestSelection)
-    );
+    if (prettiestSelection) {
+      window.localStorage.setItem(
+        "prettiestSelection",
+        JSON.stringify(prettiestSelection)
+      );
+    }
   };
 
   return (

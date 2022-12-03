@@ -15,14 +15,16 @@ const Sexiest = ({ openModal, onClose }) => {
 
   const submit = () => {
     console.log(sexiestFSelection, sexiestMSelection, sexiestNSelection);
-    window.localStorage.setItem(
-      "sexiestSelections",
-      JSON.stringify({
-        sexiestMSelection,
-        sexiestMSelection,
-        sexiestNSelection,
-      })
-    );
+    if (sexiestFSelection || sexiestMSelection || sexiestNSelection) {
+      window.localStorage.setItem(
+        "sexiestSelections",
+        JSON.stringify({
+          sexiestMSelection,
+          sexiestMSelection,
+          sexiestNSelection,
+        })
+      );
+    }
   };
 
   return (

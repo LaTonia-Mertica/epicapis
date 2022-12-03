@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -7,6 +7,18 @@ import "./Greatest.scss";
 import { style } from "../mui.js";
 
 const Greatest = ({ openModal, onClose }) => {
+  const [greatestSelections, setGreatestSelections] = useState();
+  // TODO: double check state s/b set to array per multiple selections
+  const submit = () => {
+    console.log(greatestSelections);
+    if (greatestSelections) {
+      window.localStorage.setItem(
+        "greatestSelections",
+        JSON.stringify(greatestSelections)
+      );
+    }
+  };
+
   return (
     <main>
       <Modal
@@ -18,14 +30,20 @@ const Greatest = ({ openModal, onClose }) => {
         <Box sx={style} className="greatestCard">
           <Button onClick={onClose}>&#x274C;</Button>
           <div>
-            <fieldset className="greatestFieldset">
+            <fieldset
+              className="greatestFieldset"
+              onChange={(event) => {
+                setGreatestSelections(event.target.value);
+              }}
+            >
               <span>
                 <p className="greatestPara para1">
                   <input
                     type="checkbox"
-                    name="greatest"
+                    // name="greatest"
+                    name="theprincessbride"
                     id="theprincessbride"
-                    value="theprincessbride"
+                    value="The Princess Bride"
                   />
                   <label
                     htmlFor="theprincessbride"
@@ -37,9 +55,10 @@ const Greatest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="greatest"
+                    // name="greatest"
+                    name="aliceinwonderland"
                     id="aliceinwonderland"
-                    value="aliceinwonderland"
+                    value="Alice in Wonderland"
                   />
                   <label
                     htmlFor="aliceinwonderland"
@@ -51,9 +70,10 @@ const Greatest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="greatest"
+                    // name="greatest"
+                    name="legend"
                     id="legend"
-                    value="legend"
+                    value="Legend"
                   />
                   <label
                     htmlFor="legend"
@@ -65,9 +85,10 @@ const Greatest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="greatest"
+                    // name="greatest"
+                    name="panslabyrinth"
                     id="panslabyrinth"
-                    value="panslabyrinth"
+                    value="Pan's Labyrinth"
                   />
                   <label
                     htmlFor="panslabyrinth"
@@ -79,9 +100,10 @@ const Greatest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="greatest"
+                    // name="greatest"
+                    name="theneverendingstory"
                     id="theneverendingstory"
-                    value="theneverendingstory"
+                    value="The Neverending Story"
                   />
                   <label
                     htmlFor="theneverendingstory"
@@ -95,9 +117,10 @@ const Greatest = ({ openModal, onClose }) => {
                 <p className="greatestPara para2">
                   <input
                     type="checkbox"
-                    name="greatest"
+                    // name="greatest"
+                    name="chittychittybangbang"
                     id="chittychittybangbang"
-                    value="chittychittybangbang"
+                    value="Chitty Chitty Bang Bang"
                   />
                   <label
                     htmlFor="chittychittybangbang"
@@ -109,9 +132,10 @@ const Greatest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="greatest"
+                    // name="greatest"
+                    name="jasonandtheargonauts"
                     id="jasonandtheargonauts"
-                    value="jasonandtheargonauts"
+                    value="Jason & The Argonauts"
                   />
                   <label
                     htmlFor="jasonandtheargonauts"
@@ -123,9 +147,10 @@ const Greatest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="greatest"
+                    // name="greatest"
+                    name="thewiz"
                     id="thewiz"
-                    value="thewiz"
+                    value="The Wiz"
                   />
                   <label
                     htmlFor="thewiz"
@@ -137,9 +162,10 @@ const Greatest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="greatest"
+                    // name="greatest"
+                    name="thedarkcrystal"
                     id="thedarkcrystal"
-                    value="thedarkcrystal"
+                    value="The Dark Crystal"
                   />
                   <label
                     htmlFor="thedarkcrystal"
@@ -151,9 +177,10 @@ const Greatest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="greatest"
+                    // name="greatest"
+                    name="whoframedrogerrabbit"
                     id="whoframedrogerrabbit"
-                    value="whoframedrogerrabbit"
+                    value="Who Framed Roger Rabbit"
                   />
                   <label
                     htmlFor="whoframedrogerrabbit"
@@ -165,7 +192,7 @@ const Greatest = ({ openModal, onClose }) => {
                 </p>
               </span>
             </fieldset>
-            <Button type="submit" className="submitBtn">
+            <Button type="submit" className="submitBtn" onClick={submit}>
               submit
             </Button>
           </div>

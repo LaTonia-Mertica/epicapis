@@ -9,9 +9,18 @@ import phraseGenerator from "./phraseGenerator";
 
 const Say = ({ openModal, onClose }) => {
   const [phraseToShow, setPhraseToShow] = useState();
+  const [saySelection, setSaySelection] = useState();
 
   const valueSelected = (event) => {
     phraseGenerator(setPhraseToShow, event.target.value);
+  };
+
+  const submit = (event) => {
+    console.log(saySelection);
+    if (saySelection) {
+      event.preventDefault();
+      window.localStorage.setItem("saySelection", JSON.stringify(saySelection));
+    }
   };
 
   useEffect(() => {
@@ -32,13 +41,20 @@ const Say = ({ openModal, onClose }) => {
           <Button onClick={onClose}>&#x274C;</Button>
           <div>
             <form action="#">
-              <fieldset>
+              <fieldset
+                onChange={(event) => {
+                  setSaySelection(event.target.value);
+                }}
+              >
                 <p className="sayPara">
                   <label htmlFor="neversay"></label>
                   <select
                     name="neversay"
                     id="neversay"
                     onChange={valueSelected}
+                    // onChange={(event) => {
+                    //   setSaySelection(event.target.value);
+                    // }}
                   >
                     <optgroup label="DEMOGRAPHICS" className="optgroup1">
                       <option
@@ -51,84 +67,84 @@ const Say = ({ openModal, onClose }) => {
                         select your #1 never say
                       </option>
 
-                      <option value="age" id="age">
+                      <option value="Age" id="age">
                         age
                       </option>
 
-                      <option value="arrest record" id="arrestRecord">
+                      <option value="Arrest Record" id="arrestRecord">
                         arrest record
                       </option>
-                      <option value="audible expression" id="audibleExpression">
+                      <option value="Audible Expression" id="audibleExpression">
                         audible expression
                       </option>
-                      <option value="color" id="color">
+                      <option value="Color" id="color">
                         color
                       </option>
-                      <option value="conviction record" id="convictionRecord">
+                      <option value="Conviction Record" id="convictionRecord">
                         conviction record
                       </option>
-                      <option value="creed" id="creed">
+                      <option value="Creed" id="creed">
                         creed
                       </option>
-                      <option value="employment" id="employment">
+                      <option value="Employment" id="employment">
                         employment
                       </option>
-                      <option value="national origin" id="nationalOrigin">
+                      <option value="National Origin" id="nationalOrigin">
                         national origin
                       </option>
-                      <option value="race" id="race">
+                      <option value="Race" id="race">
                         race
                       </option>
-                      <option value="religion" id="religion">
+                      <option value="Religion" id="religion">
                         religion
                       </option>
-                      <option value="weight" id="weight">
+                      <option value="Weight" id="weight">
                         weight
                       </option>
                       <option value=""></option>
                     </optgroup>
 
                     <optgroup label="WELLBEING" className="optgroup2">
-                      <option value="disability" id="disability">
+                      <option value="Disability" id="disability">
                         disability
                       </option>
                       <option
-                        value="domestic violence victim status"
+                        value="Domestic Violence Victim Status"
                         id="domesticViolenceVictimStatus"
                       >
                         domestic violence victim status
                       </option>
-                      <option value="employment status" id="employmentStatus">
+                      <option value="Employment Status" id="employmentStatus">
                         employment status
                       </option>
-                      <option value="gender identity" id="genderIdentity">
+                      <option value="Gender Identity" id="genderIdentity">
                         gender identity
                       </option>
-                      <option value="gender expression" id="genderExpression">
+                      <option value="Gender Expression" id="genderExpression">
                         gender expression
                       </option>
-                      <option value="familial status" id="familialStatus">
+                      <option value="Familial Status" id="familialStatus">
                         familial status
                       </option>
-                      <option value="marital status" id="maritalStatus">
+                      <option value="Marital Status" id="maritalStatus">
                         marital status
                       </option>
                       <option
-                        value="mental health status"
+                        value="Mental Health Status"
                         id="mentalHealthStatus"
                       >
                         mental health status
                       </option>
                       <option
-                        value="predisposing genetic characteristics"
+                        value="Predisposing Genetic Characteristics"
                         id="predisposingGeneticCharacteristics"
                       >
                         predisposing genetic characteristics
                       </option>
-                      <option value="sex" id="sex">
+                      <option value="Sex" id="sex">
                         sex
                       </option>
-                      <option value="sexual orientation" id="sexualOrientation">
+                      <option value="Sexual Orientation" id="sexualOrientation">
                         sexual orientation
                       </option>
                     </optgroup>
@@ -137,7 +153,12 @@ const Say = ({ openModal, onClose }) => {
                 </p>
               </fieldset>
 
-              <button type="submit" value="submit" className="submitBtn">
+              <button
+                type="submit"
+                value="submit"
+                className="submitBtn"
+                onClick={submit}
+              >
                 submit
               </button>
             </form>

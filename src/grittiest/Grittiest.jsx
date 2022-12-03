@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -7,6 +7,32 @@ import "./Grittiest.scss";
 import { style } from "../mui.js";
 
 const Grittiest = ({ openModal, onClose }) => {
+  const [grittiestArmy, setGrittiestArmy] = useState();
+  const [grittiestYear, setGrittiestYear] = useState();
+  // TODO: determine how to package year and text input as an object
+  // TODO: use 1) grittiestYear, setGrittiestYear and 2) grittiest, setGrittiest?
+  // EXAMPLE: {grittiestYear: grittiest}
+  const submit = () => {
+    console.log(grittiestArmy, grittiestYear);
+
+    if (!grittiestArmy) {
+      window.localStorage.setItem(
+        "grittiestEntry",
+        JSON.stringify(grittiestYear)
+      );
+    } else if (!grittiestYear) {
+      window.localStorage.setItem(
+        "grittiestEntry",
+        JSON.stringify(grittiestArmy)
+      );
+    } else {
+      window.localStorage.setItem(
+        "grittiestEntry",
+        JSON.stringify(`${grittiestYear}: ${grittiestArmy}`)
+      );
+    }
+  };
+
   return (
     <main>
       <Modal
@@ -18,7 +44,13 @@ const Grittiest = ({ openModal, onClose }) => {
         <Box sx={style} className="grittiestCard">
           <Button onClick={onClose}>&#x274C;</Button>
           <div className="grittiestFieldsetDiv">
-            <fieldset className="grittiestFieldset">
+            <fieldset
+              className="grittiestFieldset"
+              onChange={(event) => {
+                setGrittiestArmy(event.target.value);
+                setGrittiestYear(event.target.value);
+              }}
+            >
               <p className="grittiestPara">
                 <label htmlFor="decade">grittiest decade :&nbsp;&nbsp;</label>
                 <input
@@ -30,6 +62,9 @@ const Grittiest = ({ openModal, onClose }) => {
                   step="10"
                   className="decade"
                   placeholder="select"
+                  value={grittiestYear}
+                  // TODO: determine if selected needed/accurate
+                  selected={grittiestYear === { grittiestYear }}
                 />
                 <input
                   type="text"
@@ -38,10 +73,13 @@ const Grittiest = ({ openModal, onClose }) => {
                   placeholder="enter name of army"
                   autoComplete="off"
                   className="grittiestArmy"
+                  value={grittiestArmy}
+                  // TODO: determine if selected needed/accurate
+                  selected={grittiestArmy === { grittiestArmy }}
                 />
               </p>
             </fieldset>
-            <button type="submit" className="submitBtn">
+            <button type="submit" className="submitBtn" onClick={submit}>
               submit
             </button>
           </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 
 import useMinWidth from "./useMinWidth";
@@ -117,12 +117,64 @@ const App = () => {
   const sendEmail = (event) => {
     event.preventDefault();
     const { email } = this.state;
+    // START OF LOCAL STORAGE FOR HTML (USER INPUTS)
+    const badassestSelection = JSON.parse(
+      window.localStorage.getItem("badassestSelection")
+    );
+    const beautifulEntry = JSON.parse(
+      window.localStorage.getItem("beautifulEntry")
+    );
+    const bestSelection = JSON.parse(
+      window.localStorage.getItem("bestSelection")
+    );
+    const dangerousEntry = JSON.parse(
+      window.localStorage.getItem("dangerousEntry")
+    );
+    const funnyestSelections = JSON.parse(
+      window.localStorage.getItem("funnyestSelections")
+    );
+    const greatestSelections = JSON.parse(
+      window.localStorage.getItem("greatestSelections")
+    );
+    const grittiestEntry = JSON.parse(
+      window.localStorage.getItem("grittiestEntry")
+    );
+    const lastSelection = JSON.parse(
+      window.localStorage.getItem("lastSelection")
+    );
+    const prettiestSelection = JSON.parse(
+      window.localStorage.getItem("prettiestSelection")
+    );
+    const rampantestEntry = JSON.parse(
+      window.localStorage.getItem("rampantestEntry")
+    );
+    const saySelection = JSON.parse(
+      window.localStorage.getItem("saySelection")
+    );
+    const sexiestSelections = JSON.parse(
+      window.localStorage.getItem("sexiestSelections")
+    );
+    // END OF LOCAL STORAGE FOR HTML (USER INPUTS)
+
+    console.log({
+      badassestSelection,
+      beautifulEntry,
+      bestSelection,
+      dangerousEntry,
+      funnyestSelections,
+      greatestSelections,
+      grittiestEntry,
+      lastSelection,
+      prettiestSelection,
+      rampantestEntry,
+      saySelection,
+      sexiestSelections,
+    });
+
     fetch(
       `http://localhost:3001/send-email?to-${email.to}&from-&${email.from}&subject-${email.subject}&html-${email.html}`
     ).catch((error) => console.log(error));
   };
-  // arrange elements for email
-  // const [funnyestSelection, setFunnyestSelection] = useState("");
 
   if (screenWidth < 670) {
     return (
@@ -503,13 +555,7 @@ const App = () => {
 
       {/* unmount modal when modal not open option */}
       {openModal === "Funnyest" && (
-        <Funnyest
-          openModal={openModal}
-          onClose={closeModal}
-          // arrange elements for email
-          // funnyest={funnyestSelection}
-          // setFunnyest={setFunnyestSelection}
-        />
+        <Funnyest openModal={openModal} onClose={closeModal} />
       )}
       {openModal === "Badassest" && (
         <Badassest openModal={openModal} onClose={closeModal} />
@@ -569,7 +615,6 @@ const App = () => {
           // onClick={sendEmail}
           onClick={() => {
             // arrange elements for email
-            // console.log(funnyestSelection);
             fetch(`http://localhost:3001/sendEmail`, {
               method: "POST",
               headers: {

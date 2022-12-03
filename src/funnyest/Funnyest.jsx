@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -6,10 +6,19 @@ import Button from "@mui/material/Button";
 import "./Funnyest.scss";
 import { style } from "../mui.js";
 
-const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
+const Funnyest = ({ openModal, onClose }) => {
+  const [funnyestSelections, setFunnyestSelections] = useState();
   // part of wiring for email api
+  // TODO: need spread operator to manage multiple selections?
+  // TODO: need array or other storage for multiple selections?
   const submit = () => {
-    console.log(funnyest);
+    console.log(funnyestSelections);
+    if (funnyestSelections) {
+      window.localStorage.setItem(
+        "funnyestSelections",
+        JSON.stringify(funnyestSelections)
+      );
+    }
   };
 
   return (
@@ -25,20 +34,24 @@ const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
           <div>
             <fieldset
               className="funnyestFieldset"
+              // TODO: determine viability of name with array (funnyest[])
+              // name="funnyest[]"
               name="funnyest"
               id="funnyest"
-              value={funnyest}
+              value="funnyest"
               onChange={(event) => {
-                setFunnyest(event.target.value);
+                setFunnyestSelections(event.target.value);
               }}
             >
               <span>
                 <p className="funnyestPara para1">
                   <input
                     type="checkbox"
-                    name="funnyest"
+                    // name="funnyest[]"
+                    name="anthonyanderson"
                     id="anthonyanderson"
-                    value="anthonyanderson"
+                    value="Anthony Anderson"
+                    // checked={funnyestSelections === "Anthony Anderson"}
                   />
                   <label
                     htmlFor="anthonyanderson"
@@ -50,9 +63,11 @@ const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
 
                   <input
                     type="checkbox"
-                    name="funnyest"
+                    // name="funnyest[]"
+                    name="jamiefoxx"
                     id="jamiefoxx"
-                    value="jamiefoxx"
+                    value="Jamie Foxx"
+                    // checked={funnyestSelections === "Jamie Foxx"}
                   />
                   <label htmlFor="jamiefoxx" title="image property of aurn.com">
                     Jamie Foxx
@@ -61,9 +76,11 @@ const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
 
                   <input
                     type="checkbox"
-                    name="funnyest"
+                    // name="funnyest[]"
+                    name="whoopigoldberg"
                     id="whoopigoldberg"
-                    value="whoopigoldberg"
+                    value="Whoopi Goldberg"
+                    // checked={funnyestSelections === "Whoopi Goldberg"}
                   />
                   <label
                     htmlFor="whoopigoldberg"
@@ -75,9 +92,11 @@ const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
 
                   <input
                     type="checkbox"
-                    name="funnyest"
+                    // name="funnyest[]"
+                    name="orlandojones"
                     id="orlandojones"
-                    value="orlandojones"
+                    value="Orlando Jones"
+                    // checked={funnyestSelections === "Orlando Jones"}
                   />
                   <label
                     htmlFor="orlandojones"
@@ -89,9 +108,11 @@ const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
 
                   <input
                     type="checkbox"
-                    name="funnyest"
+                    // name="funnyest[]"
+                    name="berniemac"
                     id="berniemac"
-                    value="berniemac"
+                    value="Bernie Mac"
+                    // checked={funnyestSelections === "Bernie Mac"}
                   />
                   <label
                     htmlFor="berniemac"
@@ -105,9 +126,11 @@ const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
                 <p className="funnyestPara para2">
                   <input
                     type="checkbox"
-                    name="funnyest"
+                    // name="funnyest[]"
+                    name="davidmann"
                     id="davidmann"
-                    value="davidmann"
+                    value="David Mann"
+                    // checked={funnyestSelections === "David Mann"}
                   />
                   <label
                     htmlFor="davidmann"
@@ -119,9 +142,11 @@ const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
 
                   <input
                     type="checkbox"
-                    name="funnyest"
+                    // name="funnyest[]"
+                    name="eddiemurphy]"
                     id="eddiemurphy"
-                    value="eddiemurphy"
+                    value="Eddie Murphy"
+                    // checked={funnyestSelections === "Eddie Murphy"}
                   />
                   <label
                     htmlFor="eddiemurphy"
@@ -133,9 +158,11 @@ const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
 
                   <input
                     type="checkbox"
-                    name="funnyest"
+                    // name="funnyest[]"
+                    name="lawandapage"
                     id="lawandapage"
-                    value="lawandapage"
+                    value="LaWanda Page"
+                    // checked={funnyestSelections === "LaWanda Page"}
                   />
                   <label
                     htmlFor="lawandapage"
@@ -147,9 +174,11 @@ const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
 
                   <input
                     type="checkbox"
-                    name="funnyest"
+                    // name="funnyest[]"
+                    name="wandasykes"
                     id="wandasykes"
-                    value="wandasykes"
+                    value="Wanda Sykes"
+                    // checked={funnyestSelections === "Wanda Sykes"}
                   />
                   <label
                     htmlFor="wandasykes"
@@ -161,9 +190,11 @@ const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
 
                   <input
                     type="checkbox"
-                    name="funnyest"
+                    // name="funnyest[]"
+                    name="roberttownsend"
                     id="roberttownsend"
-                    value="roberttownsend"
+                    value="Robert Townsend"
+                    // checked={funnyestSelections === "Robert Townsend"}
                   />
                   <label
                     htmlFor="roberttownsend"
@@ -175,7 +206,7 @@ const Funnyest = ({ openModal, onClose, funnyest, setFunnyest }) => {
                 </p>
               </span>
             </fieldset>
-            {/* part of wiring for email api */}
+
             <Button type="submit" className="submitBtn" onClick={submit}>
               submit
             </Button>
