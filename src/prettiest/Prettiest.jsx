@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -14,6 +14,16 @@ import mimosa from "./images/mimosa.gif";
 import tomcollins from "./images/tomcollins.gif";
 
 const Prettiest = ({ openModal, onClose }) => {
+  const [prettiestSelection, setPrettiestSelection] = useState();
+
+  const submit = () => {
+    console.log(prettiestSelection);
+    window.localStorage.setItem(
+      "prettiestSelection",
+      JSON.stringify(prettiestSelection)
+    );
+  };
+
   return (
     <main>
       <Modal
@@ -25,8 +35,22 @@ const Prettiest = ({ openModal, onClose }) => {
         <Box sx={style} className="prettiestCard">
           <Button onClick={onClose}>&#x274C;</Button>
           <div className="radioFieldsetDiv">
-            <fieldset className="prettiestFieldset">
+            <fieldset
+              className="prettiestFieldset"
+              onChange={(event) => {
+                setPrettiestSelection(event.target.value);
+              }}
+            >
               <p className="prettiestPara">
+                <input
+                  type="radio"
+                  name="prettiest"
+                  value="High Ball (anything 'dark & stormy')"
+                  selected={
+                    prettiestSelection ===
+                    "High Ball (anything 'dark & stormy')"
+                  }
+                />
                 <WhatshotIcon className="whatshot" />
                 <label htmlFor="highball">
                   High Ball
@@ -38,6 +62,14 @@ const Prettiest = ({ openModal, onClose }) => {
                 </label>
                 <br />
 
+                <input
+                  type="radio"
+                  name="prettiest"
+                  value="Coupe (necessarily 'boulevardier')"
+                  selected={
+                    prettiestSelection === "Coupe (necessarily 'boulevardier')"
+                  }
+                />
                 <WhatshotIcon className="whatshot" />
                 <label htmlFor="coupe">
                   Coupe
@@ -49,6 +81,14 @@ const Prettiest = ({ openModal, onClose }) => {
                 </label>
                 <br />
 
+                <input
+                  type="radio"
+                  name="prettiest"
+                  value="Zombie (think 'tequila sunrise')"
+                  selected={
+                    prettiestSelection === "Zombie (think 'tequila sunrise')"
+                  }
+                />
                 <WhatshotIcon className="whatshot" />
                 <label htmlFor="zombie">
                   Zombie <br />
@@ -59,6 +99,14 @@ const Prettiest = ({ openModal, onClose }) => {
                 </label>
                 <br />
 
+                <input
+                  type="radio"
+                  name="prettiest"
+                  value="Rocks (essentially 'old fashioned')"
+                  selected={
+                    prettiestSelection === "Rocks (essentially 'old fashioned')"
+                  }
+                />
                 <WhatshotIcon className="whatshot" />
                 <label htmlFor="rocks">
                   Rocks <br />
@@ -69,6 +117,14 @@ const Prettiest = ({ openModal, onClose }) => {
                 </label>
                 <br />
 
+                <input
+                  type="radio"
+                  name="prettiest"
+                  value="Hurricane (akin 'singapore sling')"
+                  selected={
+                    prettiestSelection === "Hurricane (akin 'singapore sling')"
+                  }
+                />
                 <WhatshotIcon className="whatshot" />
                 <label htmlFor="hurricane">
                   Hurricane
@@ -118,7 +174,7 @@ const Prettiest = ({ openModal, onClose }) => {
                 />
               </p>
             </fieldset>
-            <button type="submit" className="submitBtn">
+            <button type="submit" className="submitBtn" onClick={submit}>
               submit
             </button>
           </div>

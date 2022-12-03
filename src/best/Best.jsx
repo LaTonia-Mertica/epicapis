@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -7,6 +7,13 @@ import "./Best.scss";
 import { style } from "../mui.js";
 
 const Best = ({ openModal, onClose }) => {
+  const [bestSelection, setBestSelection] = useState();
+
+  const submit = () => {
+    console.log(bestSelection);
+    window.localStorage.setItem("bestSelection", JSON.stringify(bestSelection));
+  };
+
   return (
     <main>
       <Modal
@@ -18,9 +25,19 @@ const Best = ({ openModal, onClose }) => {
         <Box sx={style} className="bestCard">
           <Button onClick={onClose}>&#x274C;</Button>
           <div>
-            <fieldset>
+            <fieldset
+              onChange={(event) => {
+                setBestSelection(event.target.value);
+              }}
+            >
               <p className="bestPara">
-                <input type="radio" name="best" id="young" value="young" />
+                <input
+                  type="radio"
+                  name="best"
+                  id="young"
+                  value="young-ish (just starting out)"
+                  selected={bestSelection === "young-ish (just starting out)"}
+                />
                 <label htmlFor="young">
                   young<span className="parens">(</span>er
                   <span className="parens">)</span>
@@ -34,7 +51,11 @@ const Best = ({ openModal, onClose }) => {
                   type="radio"
                   name="best"
                   id="middling"
-                  value="middling"
+                  value="middling (too far in but too far from out)"
+                  selected={
+                    bestSelection ===
+                    "middling (too far in but too far from out)"
+                  }
                 />
                 <label htmlFor="middling">
                   middling
@@ -45,7 +66,13 @@ const Best = ({ openModal, onClose }) => {
                 </label>
                 <br />
 
-                <input type="radio" name="best" id="old" value="old" />
+                <input
+                  type="radio"
+                  name="best"
+                  id="old"
+                  value="old-ish (getting on in years)"
+                  selected={bestSelection === "old-ish (getting on in years)"}
+                />
                 <label htmlFor="old">
                   old<span className="parens">(</span>er
                   <span className="parens">)</span>
@@ -56,7 +83,7 @@ const Best = ({ openModal, onClose }) => {
                 <br />
               </p>
             </fieldset>
-            <button type="submit" className="submitBtn">
+            <button type="submit" className="submitBtn" onClick={submit}>
               submit
             </button>
           </div>
