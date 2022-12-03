@@ -23,6 +23,10 @@
     @include paragraph-basic;
   }
 
+  input[type="radio"] {
+    accent-color: $ea-red;
+  }
+
   .fa-lg {
     color: $ea-red;
     margin-right: 0.33rem;
