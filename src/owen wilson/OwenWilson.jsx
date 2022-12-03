@@ -14,7 +14,8 @@ const OwenWilson = ({ openModal, onClose }) => {
     setLoading(true);
     const data = await fetch(
       `https://owen-wilson-wow-api.herokuapp.com/wows/random`
-    );
+    ).catch((error) => console.log("Oh Wow, Owen's Been Heroku'ed (Too)!"));
+    setLoading(false);
 
     const json = await data.json();
     setMovie(json[0]);
@@ -44,6 +45,18 @@ const OwenWilson = ({ openModal, onClose }) => {
           <button className="changeWowBtn" onClick={getWow}>
             {loading ? <>loading...</> : <>change wow</>}
           </button>
+          {!movie ? (
+            <>
+              <img
+                src="https://media.giphy.com/media/hiEs8sF8KoYnu/giphy.gif"
+                alt="Owen Wows"
+              />
+
+              <p className="errorMsg">Oh Wow, Owen's Been Heroku'ed (Too)!</p>
+            </>
+          ) : (
+            ""
+          )}
           {movie && (
             <div>
               <video src={movie.video["480p"]} autoPlay controls loop />
