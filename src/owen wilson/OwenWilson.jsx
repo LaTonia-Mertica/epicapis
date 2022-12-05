@@ -47,6 +47,7 @@ const OwenWilson = ({ openModal, onClose }) => {
           </button>
           {!movie ? (
             <>
+              {/* GIF/IMG CREDIT: giphy.com */}
               <img
                 src="https://media.giphy.com/media/hiEs8sF8KoYnu/giphy.gif"
                 alt="Owen Wows"
