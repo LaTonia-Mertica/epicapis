@@ -58,91 +58,91 @@
 
   #theprincessbride:hover::after {
     content: url(images/theprincessbride.png);
-    zoom: 15%;
+    zoom: 53%;
     position: absolute;
-    top: 70rem;
-    left: 12rem;
+    top: 10rem;
+    left: 37rem;
     @include border-box-shadow;
   }
 
   #aliceinwonderland:hover::after {
     content: url(images/aliceinwonderland.png);
-    zoom: 19%;
+    zoom: 57%;
     position: absolute;
-    top: 60rem;
-    left: 10rem;
+    top: 15rem;
+    left: 30rem;
     @include border-box-shadow;
   }
 
   #legend:hover::after {
     content: url(images/legend.png);
-    zoom: 19%;
+    zoom: 57%;
     position: absolute;
-    top: 70rem;
-    left: 9rem;
+    top: 17rem;
+    left: 30rem;
     @include border-box-shadow;
   }
 
   #panslabyrinth:hover::after {
     content: url(images/panslabyrinth.png);
-    zoom: 15%;
+    zoom: 51%;
     position: absolute;
-    top: 105rem;
-    left: 7rem;
+    top: 20rem;
+    left: 34rem;
     @include border-box-shadow;
   }
 
   #theneverendingstory:hover::after {
     content: url(images/theneverendingstory.png);
-    zoom: 19%;
+    zoom: 57%;
     position: absolute;
-    top: 100rem;
-    left: 9rem;
+    top: 15rem;
+    left: 30rem;
     @include border-box-shadow;
   }
 
   #chittychittybangbang:hover::after {
     content: url(images/chittychittybangbang.png);
-    zoom: 15%;
+    zoom: 51%;
     position: absolute;
-    top: 67rem;
-    right: 7rem;
+    top: 17rem;
+    right: 2rem;
     @include border-box-shadow;
   }
 
   #jasonandtheargonauts:hover::after {
     content: url(images/jasonandtheargonauts.png);
-    zoom: 21%;
+    zoom: 57%;
     position: absolute;
-    top: 55rem;
-    right: 7rem;
+    top: 20rem;
+    right: 2rem;
     @include border-box-shadow;
   }
 
   #thewiz:hover::after {
     content: url(images/thewiz.png);
-    zoom: 23%;
+    zoom: 59%;
     position: absolute;
-    top: 57rem;
-    right: $space-lg;
+    top: 21rem;
+    right: 2rem;
     @include border-box-shadow;
   }
 
   #thedarkcrystal:hover::after {
     content: url(images/thedarkcrystal.png);
-    zoom: 19%;
+    zoom: 53%;
     position: absolute;
-    top: 73rem;
-    right: $space-lg;
+    top: 23rem;
+    right: 2rem;
     @include border-box-shadow;
   }
 
   #whoframedrogerrabbit:hover::after {
     content: url(images/whoframedrogerrabbit.png);
-    zoom: 23%;
+    zoom: 57%;
     position: absolute;
-    top: 90rem;
-    right: $space-lg;
+    top: 25rem;
+    right: 2rem;
     @include border-box-shadow;
   }
 

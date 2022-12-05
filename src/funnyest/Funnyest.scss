@@ -25,17 +25,14 @@
   }
 
   input[type="checkbox"] {
-    width: 17%;
+    width: 7%;
     height: 1.25rem;
     cursor: pointer;
-  }
-
-  input[type="checkbox"] {
     accent-color: $ea-black;
   }
 
   label {
-    font-size: 1.75rem;
+    font-size: 1.65rem;
     color: $ea-white;
     letter-spacing: 0.2rem;
     font-family: $font-rubik-distressed;
@@ -64,91 +61,91 @@
 
   #anthonyanderson:hover::after {
     content: url(images/anthonyanderson.png);
-    zoom: 15%;
+    zoom: 37%;
     position: absolute;
-    top: 70rem;
-    left: 7rem;
+    top: 30rem;
+    left: 47rem;
     @include border-box-shadow;
   }
 
   #jamiefoxx:hover::after {
     content: url(images/jamiefoxx.png);
-    zoom: 15%;
+    zoom: 37%;
     position: absolute;
-    top: 85rem;
-    left: 7rem;
+    top: 35rem;
+    left: 47rem;
     @include border-box-shadow;
   }
 
   #whoopigoldberg:hover::after {
     content: url(images/whoopigoldberg.png);
-    zoom: 15%;
+    zoom: 37%;
     position: absolute;
-    top: 100rem;
-    left: 7rem;
+    top: 37rem;
+    left: 43rem;
     @include border-box-shadow;
   }
 
   #orlandojones:hover::after {
     content: url(images/orlandojones.png);
-    zoom: 15%;
+    zoom: 37%;
     position: absolute;
-    top: 117rem;
-    left: 7rem;
+    top: 40rem;
+    left: 47rem;
     @include border-box-shadow;
   }
 
   #berniemac:hover::after {
     content: url(images/berniemac.png);
-    zoom: 15%;
+    zoom: 37%;
     position: absolute;
-    top: 130rem;
-    left: 7rem;
+    top: 45rem;
+    left: 47rem;
     @include border-box-shadow;
   }
 
   #davidmann:hover::after {
     content: url(images/davidmann.png);
-    zoom: 15%;
+    zoom: 37%;
     position: absolute;
-    top: 70rem;
-    right: 7rem;
+    top: 25rem;
+    right: 3rem;
     @include border-box-shadow;
   }
 
   #eddiemurphy:hover::after {
     content: url(images/eddiemurphy.png);
-    zoom: 15%;
+    zoom: 37%;
     position: absolute;
-    top: 85rem;
-    right: 7rem;
+    top: 30rem;
+    right: 3rem;
     @include border-box-shadow;
   }
 
   #lawandapage:hover::after {
     content: url(images/lawandapage.png);
-    zoom: 15%;
+    zoom: 37%;
     position: absolute;
-    top: 100rem;
-    right: 7rem;
+    top: 35rem;
+    right: 3rem;
     @include border-box-shadow;
   }
 
   #wandasykes:hover::after {
     content: url(images/wandasykes.png);
-    zoom: 15%;
+    zoom: 37%;
     position: absolute;
-    top: 117rem;
-    right: 7rem;
+    top: 40rem;
+    right: 3rem;
     @include border-box-shadow;
   }
 
   #roberttownsend:hover::after {
     content: url(images/roberttownsend.png);
-    zoom: 15%;
+    zoom: 37%;
     position: absolute;
-    top: 155rem;
-    right: 7rem;
+    top: 50rem;
+    right: 3rem;
     @include border-box-shadow;
   }
 
