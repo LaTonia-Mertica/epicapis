@@ -52,9 +52,6 @@ const Say = ({ openModal, onClose }) => {
                     name="neversay"
                     id="neversay"
                     onChange={valueSelected}
-                    // onChange={(event) => {
-                    //   setSaySelection(event.target.value);
-                    // }}
                   >
                     <optgroup label="DEMOGRAPHICS" className="optgroup1">
                       <option
@@ -67,84 +64,84 @@ const Say = ({ openModal, onClose }) => {
                         select your #1 never say
                       </option>
 
-                      <option value="Age" id="age">
+                      <option value="age" id="age">
                         age
                       </option>
 
-                      <option value="Arrest Record" id="arrestRecord">
+                      <option value="arrest record" id="arrestRecord">
                         arrest record
                       </option>
-                      <option value="Audible Expression" id="audibleExpression">
+                      <option value="audible expression" id="audibleExpression">
                         audible expression
                       </option>
-                      <option value="Color" id="color">
+                      <option value="color" id="color">
                         color
                       </option>
-                      <option value="Conviction Record" id="convictionRecord">
+                      <option value="conviction record" id="convictionRecord">
                         conviction record
                       </option>
-                      <option value="Creed" id="creed">
+                      <option value="creed" id="creed">
                         creed
                       </option>
-                      <option value="Employment" id="employment">
+                      <option value="employment" id="employment">
                         employment
                       </option>
-                      <option value="National Origin" id="nationalOrigin">
+                      <option value="national origin" id="nationalOrigin">
                         national origin
                       </option>
-                      <option value="Race" id="race">
+                      <option value="race" id="race">
                         race
                       </option>
-                      <option value="Religion" id="religion">
+                      <option value="religion" id="religion">
                         religion
                       </option>
-                      <option value="Weight" id="weight">
+                      <option value="weight" id="weight">
                         weight
                       </option>
                       <option value=""></option>
                     </optgroup>
 
                     <optgroup label="WELLBEING" className="optgroup2">
-                      <option value="Disability" id="disability">
+                      <option value="disability" id="disability">
                         disability
                       </option>
                       <option
-                        value="Domestic Violence Victim Status"
+                        value="domestic violence victim status"
                         id="domesticViolenceVictimStatus"
                       >
                         domestic violence victim status
                       </option>
-                      <option value="Employment Status" id="employmentStatus">
+                      <option value="employment status" id="employmentStatus">
                         employment status
                       </option>
-                      <option value="Gender Identity" id="genderIdentity">
+                      <option value="gender identity" id="genderIdentity">
                         gender identity
                       </option>
-                      <option value="Gender Expression" id="genderExpression">
+                      <option value="gender expression" id="genderExpression">
                         gender expression
                       </option>
-                      <option value="Familial Status" id="familialStatus">
+                      <option value="familial status" id="familialStatus">
                         familial status
                       </option>
-                      <option value="Marital Status" id="maritalStatus">
+                      <option value="marital status" id="maritalStatus">
                         marital status
                       </option>
                       <option
-                        value="Mental Health Status"
+                        value="mental health status"
                         id="mentalHealthStatus"
                       >
                         mental health status
                       </option>
                       <option
-                        value="Predisposing Genetic Characteristics"
+                        value="predisposing genetic characteristics"
                         id="predisposingGeneticCharacteristics"
                       >
                         predisposing genetic characteristics
                       </option>
-                      <option value="Sex" id="sex">
+                      <option value="sex" id="sex">
                         sex
                       </option>
-                      <option value="Sexual Orientation" id="sexualOrientation">
+                      <option value="sexual orientation" id="sexualOrientation">
                         sexual orientation
                       </option>
                     </optgroup>
