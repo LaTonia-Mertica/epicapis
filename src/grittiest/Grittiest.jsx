@@ -9,9 +9,7 @@ import { style } from "../mui.js";
 const Grittiest = ({ openModal, onClose }) => {
   const [grittiestArmy, setGrittiestArmy] = useState();
   const [grittiestYear, setGrittiestYear] = useState();
-  // TODO: determine how to package year and text input as an object
-  // TODO: use 1) grittiestYear, setGrittiestYear and 2) grittiest, setGrittiest?
-  // EXAMPLE: {grittiestYear: grittiest}
+
   const submit = () => {
     console.log(grittiestArmy, grittiestYear);
 
@@ -44,13 +42,7 @@ const Grittiest = ({ openModal, onClose }) => {
         <Box sx={style} className="grittiestCard">
           <Button onClick={onClose}>&#x274C;</Button>
           <div className="grittiestFieldsetDiv">
-            <fieldset
-              className="grittiestFieldset"
-              onChange={(event) => {
-                setGrittiestArmy(event.target.value);
-                setGrittiestYear(event.target.value);
-              }}
-            >
+            <fieldset className="grittiestFieldset">
               <p className="grittiestPara">
                 <label htmlFor="decade">grittiest decade :&nbsp;&nbsp;</label>
                 <input
@@ -63,8 +55,9 @@ const Grittiest = ({ openModal, onClose }) => {
                   className="decade"
                   placeholder="select"
                   value={grittiestYear}
-                  // TODO: determine if selected needed/accurate
-                  selected={grittiestYear === { grittiestYear }}
+                  onChange={(event) => {
+                    setGrittiestYear(event.target.value);
+                  }}
                 />
                 <input
                   type="text"
@@ -74,8 +67,9 @@ const Grittiest = ({ openModal, onClose }) => {
                   autoComplete="off"
                   className="grittiestArmy"
                   value={grittiestArmy}
-                  // TODO: determine if selected needed/accurate
-                  selected={grittiestArmy === { grittiestArmy }}
+                  onChange={(event) => {
+                    setGrittiestArmy(event.target.value);
+                  }}
                 />
               </p>
             </fieldset>
