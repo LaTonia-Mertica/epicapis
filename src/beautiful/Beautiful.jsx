@@ -16,16 +16,11 @@ const Beautiful = ({ openModal, onClose }) => {
 
   const submit = () => {
     console.log(beautifulEntry);
-    if (beautifulEntry) {
-      window.localStorage.setItem(
-        "beautifulEntry",
-        JSON.stringify(beautifulEntry)
-      );
-    } else {
-      console.log(
+    window.localStorage.setItem(
+      "beautifulEntry",
+      beautifulEntry ||
         "bold. consistent. clear in what it does, when, and how. free of code clutter. fun. doesn't shy from stating code simply. beautiful code makes you feel welcome."
-      );
-    }
+    );
   };
 
   return (
@@ -40,14 +35,7 @@ const Beautiful = ({ openModal, onClose }) => {
           <>
             <Button onClick={onClose}>&#x274C;</Button>
 
-            <section
-              onChange={(event) => {
-                setBeautifulEntry(event.target.value);
-              }}
-            >
-              {/* TODO: determine how to add preset definition if user does not add their own 
-                  TODO: add value={default} or other to preset definition AND use with ternary to set if add default or user-inputted definition?
-                  */}
+            <section>
               <p>
                 bold. consistent. clear in what it does, when, and how. free of
                 code clutter. fun. doesn't shy from stating code simply.
@@ -65,8 +53,6 @@ const Beautiful = ({ openModal, onClose }) => {
                 type="checkbox"
                 name="beautiful"
                 value="Definition of Beautiful"
-                // TODO: must replace value to reflect if default or user-inputted AND to capture user input
-                // value="beautiful"
                 onClick={setToggle}
               />
               {showTextArea && (
@@ -75,9 +61,10 @@ const Beautiful = ({ openModal, onClose }) => {
                   <textarea
                     type="textbox"
                     placeholder="enter your definition of beautiful code here ..."
-                    // TODO: determine if value usable or how to refactor for functionality
-                    // TODO: determine where word 'on' coming from as first word in textarea when click into it
                     value={beautifulEntry}
+                    onChange={(event) => {
+                      setBeautifulEntry(event.target.value);
+                    }}
                   ></textarea>
                 </form>
               )}

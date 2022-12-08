@@ -22,7 +22,8 @@ const Dangerous = ({ openModal, onClose }) => {
         JSON.stringify(dangerousEntry)
       );
     } else {
-      console.log(
+      window.localStorage.setItem(
+        "dangerousEntry",
         "boastful. unwieldy. alienating in what it does, when, and how. misleading. maybe even malicious. slow. dangerous code makes you feel exhausted."
       );
     }
@@ -40,14 +41,7 @@ const Dangerous = ({ openModal, onClose }) => {
           <>
             <Button onClick={onClose}>&#x274C;</Button>
 
-            <section
-              onChange={(event) => {
-                setDangerousEntry(event.target.value);
-              }}
-            >
-              {/* TODO: determine how to add preset definition if user does not add their own 
-               TODO: add value={default} or other to preset definition AND use with ternary to set if add default or user-inputted definition?
-               */}
+            <section>
               <p>
                 boastful. unwieldy. alienating in what it does, when, and how.
                 misleading. maybe even malicious. slow.
@@ -65,8 +59,6 @@ const Dangerous = ({ openModal, onClose }) => {
                 type="checkbox"
                 name="dangerous"
                 value="Definition of Dangerous"
-                // TODO: must replace value to reflect if default or user-inputted AND to capture user input
-                // value="dangerous"
                 onClick={setToggle}
               />
               {showTextArea && (
@@ -75,9 +67,10 @@ const Dangerous = ({ openModal, onClose }) => {
                   <textarea
                     type="textbox"
                     placeholder="enter your definition of dangerous code here ..."
-                    // TODO: determine if value usable or how to refactor for functionality
-                    // TODO: determine where word 'on' coming from as first word in textarea when click into it
                     value={dangerousEntry}
+                    onChange={(event) => {
+                      setDangerousEntry(event.target.value);
+                    }}
                   ></textarea>
                 </form>
               )}
