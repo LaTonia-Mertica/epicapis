@@ -12,14 +12,17 @@ const OwenWilson = ({ openModal, onClose }) => {
 
   const getWow = async () => {
     setLoading(true);
-    const data = await fetch(
-      `https://owen-wilson-wow-api.herokuapp.com/wows/random`
-    ).catch((error) => console.log("Oh Wow, Owen's Been Heroku'ed (Too)!"));
-    setLoading(false);
+    try {
+      const data = await fetch(
+        `https://owen-wilson-wow-api.herokuapp.com/wows/random`
+      );
 
-    const json = await data.json();
-    setMovie(json[0]);
-    setLoading(false);
+      const json = await data.json();
+      setMovie(json[0]);
+    } catch (error) {
+      console.log("Oh Wow, Owen's Been Heroku'ed (Too)!");
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
