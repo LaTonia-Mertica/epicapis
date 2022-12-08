@@ -19,7 +19,7 @@ const Sexiest = ({ openModal, onClose }) => {
       window.localStorage.setItem(
         "sexiestSelections",
         JSON.stringify({
-          sexiestMSelection,
+          sexiestFSelection,
           sexiestMSelection,
           sexiestNSelection,
         })
