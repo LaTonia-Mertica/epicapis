@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -7,16 +7,22 @@ import "./Greatest.scss";
 import { style } from "../mui.js";
 
 const Greatest = ({ openModal, onClose }) => {
-  const [greatestSelections, setGreatestSelections] = useState();
-  // TODO: double check state s/b set to array per multiple selections
-  const submit = () => {
-    console.log(greatestSelections);
-    if (greatestSelections) {
-      window.localStorage.setItem(
-        "greatestSelections",
-        JSON.stringify(greatestSelections)
-      );
+  const submit = (event) => {
+    event.preventDefault();
+    let selectedGreatestFantasies = [];
+
+    for (const element of event.target.elements) {
+      if (element.checked) {
+        selectedGreatestFantasies.push(element.name);
+      }
     }
+
+    console.log(selectedGreatestFantasies);
+
+    window.localStorage.setItem(
+      "greatestSelections",
+      JSON.stringify(selectedGreatestFantasies)
+    );
   };
 
   return (
@@ -30,17 +36,17 @@ const Greatest = ({ openModal, onClose }) => {
         <Box sx={style} className="greatestCard">
           <Button onClick={onClose}>&#x274C;</Button>
           <div>
-            <fieldset
-              className="greatestFieldset"
-              onChange={(event) => {
-                setGreatestSelections(event.target.value);
-              }}
+            <form
+              className="greatestForm"
+              name="greatest"
+              id="greatest"
+              value="greatest"
+              onSubmit={submit}
             >
               <span>
                 <p className="greatestPara para1">
                   <input
                     type="checkbox"
-                    // name="greatest"
                     name="theprincessbride"
                     id="theprincessbride"
                     value="The Princess Bride"
@@ -55,7 +61,6 @@ const Greatest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    // name="greatest"
                     name="aliceinwonderland"
                     id="aliceinwonderland"
                     value="Alice in Wonderland"
@@ -70,7 +75,6 @@ const Greatest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    // name="greatest"
                     name="legend"
                     id="legend"
                     value="Legend"
@@ -85,7 +89,6 @@ const Greatest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    // name="greatest"
                     name="panslabyrinth"
                     id="panslabyrinth"
                     value="Pan's Labyrinth"
@@ -100,7 +103,6 @@ const Greatest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    // name="greatest"
                     name="theneverendingstory"
                     id="theneverendingstory"
                     value="The Neverending Story"
@@ -117,7 +119,6 @@ const Greatest = ({ openModal, onClose }) => {
                 <p className="greatestPara para2">
                   <input
                     type="checkbox"
-                    // name="greatest"
                     name="chittychittybangbang"
                     id="chittychittybangbang"
                     value="Chitty Chitty Bang Bang"
@@ -132,7 +133,6 @@ const Greatest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    // name="greatest"
                     name="jasonandtheargonauts"
                     id="jasonandtheargonauts"
                     value="Jason & The Argonauts"
@@ -147,7 +147,6 @@ const Greatest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    // name="greatest"
                     name="thewiz"
                     id="thewiz"
                     value="The Wiz"
@@ -162,7 +161,6 @@ const Greatest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    // name="greatest"
                     name="thedarkcrystal"
                     id="thedarkcrystal"
                     value="The Dark Crystal"
@@ -177,7 +175,6 @@ const Greatest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    // name="greatest"
                     name="whoframedrogerrabbit"
                     id="whoframedrogerrabbit"
                     value="Who Framed Roger Rabbit"
@@ -191,10 +188,10 @@ const Greatest = ({ openModal, onClose }) => {
                   <br />
                 </p>
               </span>
-            </fieldset>
-            <Button type="submit" className="submitBtn" onClick={submit}>
-              submit
-            </Button>
+              <Button type="submit" className="submitBtn">
+                submit
+              </Button>
+            </form>
           </div>
         </Box>
       </Modal>
