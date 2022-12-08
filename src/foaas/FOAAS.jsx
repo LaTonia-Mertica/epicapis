@@ -12,18 +12,18 @@ const FOAAS = ({ openModal, onClose }) => {
   const [foaas, setFoaas] = useState();
   const [loading, setLoading] = useState(false);
 
-  const errorMessages = [
-    "Oh My! Server Responded With Error.",
-    "Server Error. Try/Catch says 'Fuck Off'.",
-    "Guess Who's Been Heroku'ed!",
-    "Next Time, Maybe. Server in 'Oh Fuck' Mode.",
-    "Not Happening. Not My Fault. Not Just Saying.",
-    "Here We Are Waiting On a Server That Has No Fucks to Give.",
-    "Worry None. When Server Back Online, You'll Get the Effing Goods.",
-    "BONUS: Since You're Here, Refresh a Few Times. The FOAAS Cover Image is Randomized. That Sh#te is Fucking Awesome. Am I Right?!",
-  ];
-
   const getFoaas = async () => {
+    const errorMessages = [
+      "Oh My! Server Responded With Error.",
+      "Server Error. Try/Catch says 'Fuck Off'.",
+      "Guess Who's Been Heroku'ed!",
+      "Next Time, Maybe. Server in 'Oh Fuck' Mode.",
+      "Not Happening. Not My Fault. Not Just Saying.",
+      "Here We Are Waiting On a Server That Has No Fucks to Give.",
+      "Worry None. When Server Back Online, You'll Get the Effing Goods.",
+      "BONUS: Since You're Here, Refresh a Few Times. The FOAAS Cover Image is Randomized. That Sh#te is Fucking Awesome. Am I Right?!",
+    ];
+
     try {
       const option = options[Math.floor(Math.random() * options.length)];
       setLoading(true);
@@ -58,13 +58,10 @@ const FOAAS = ({ openModal, onClose }) => {
   };
 
   useEffect(() => {
-    getFoaas();
-  }, []);
-
-  useEffect(() => {
-    if (!openModal) {
+    if (openModal) {
       getFoaas();
     }
+    // eslint-disable-next-line
   }, [openModal]);
 
   return (
@@ -86,6 +83,8 @@ const FOAAS = ({ openModal, onClose }) => {
               <p>-&nbsp;{foaas.subtitle}&nbsp;-</p>
             </div>
           )}
+
+          <></>
         </Box>
       </Modal>
     </main>
