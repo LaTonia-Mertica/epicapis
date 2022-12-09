@@ -44,98 +44,119 @@ const Prettiest = ({ openModal, onClose }) => {
               }}
             >
               <p className="prettiestPara">
-                <input
-                  type="radio"
-                  name="prettiest"
-                  value="High Ball (anything 'dark & stormy')"
-                  selected={
-                    prettiestSelection ===
-                    "High Ball (anything 'dark & stormy')"
-                  }
-                />
-                <WhatshotIcon className="whatshot" />
-                <label htmlFor="highball">
-                  High Ball
+                <section>
+                  <label htmlFor="highball">
+                    <WhatshotIcon className="whatshot" />
+                    <input
+                      type="radio"
+                      name="prettiest"
+                      value="High Ball (anything 'dark & stormy')"
+                      selected={
+                        prettiestSelection ===
+                        "High Ball (anything 'dark & stormy')"
+                      }
+                      className="first"
+                    />
+                    High Ball
+                  </label>
                   <br />
                   <span className="pretties">
                     <span className="subTitleLeadIn">anything&nbsp;</span>
                     <i>dark & stormy</i>
                   </span>
-                </label>
+                </section>
                 <br />
 
-                <input
-                  type="radio"
-                  name="prettiest"
-                  value="Coupe (necessarily 'boulevardier')"
-                  selected={
-                    prettiestSelection === "Coupe (necessarily 'boulevardier')"
-                  }
-                />
-                <WhatshotIcon className="whatshot" />
-                <label htmlFor="coupe">
-                  Coupe
+                <section>
+                  <label htmlFor="coupe">
+                    <WhatshotIcon className="whatshot" />
+                    <input
+                      type="radio"
+                      name="prettiest"
+                      value="Coupe (necessarily 'boulevardier')"
+                      selected={
+                        prettiestSelection ===
+                        "Coupe (necessarily 'boulevardier')"
+                      }
+                      className="second"
+                    />
+                    Coupe
+                  </label>
                   <br />
                   <span className="pretties">
                     <span className="subTitleLeadIn">necessarily&nbsp;</span>
                     <i>boulevardier</i>
                   </span>
-                </label>
+                </section>
                 <br />
 
-                <input
-                  type="radio"
-                  name="prettiest"
-                  value="Zombie (think 'tequila sunrise')"
-                  selected={
-                    prettiestSelection === "Zombie (think 'tequila sunrise')"
-                  }
-                />
-                <WhatshotIcon className="whatshot" />
-                <label htmlFor="zombie">
-                  Zombie <br />
+                <section>
+                  <label htmlFor="zombie">
+                    <WhatshotIcon className="whatshot" />
+                    <input
+                      type="radio"
+                      name="prettiest"
+                      value="Zombie (think 'tequila sunrise')"
+                      selected={
+                        prettiestSelection ===
+                        "Zombie (think 'tequila sunrise')"
+                      }
+                      className="third"
+                    />
+                    Zombie
+                  </label>
+                  <br />
                   <span className="pretties">
                     <span className="subTitleLeadIn">think&nbsp;</span>
                     <i>tequila sunrise</i>
                   </span>
-                </label>
+                </section>
                 <br />
 
-                <input
-                  type="radio"
-                  name="prettiest"
-                  value="Rocks (essentially 'old fashioned')"
-                  selected={
-                    prettiestSelection === "Rocks (essentially 'old fashioned')"
-                  }
-                />
-                <WhatshotIcon className="whatshot" />
-                <label htmlFor="rocks">
-                  Rocks <br />
+                <section>
+                  <label htmlFor="rocks">
+                    <WhatshotIcon className="whatshot" />
+                    <input
+                      type="radio"
+                      name="prettiest"
+                      value="Rocks (essentially 'old fashioned')"
+                      selected={
+                        prettiestSelection ===
+                        "Rocks (essentially 'old fashioned')"
+                      }
+                      className="fourth"
+                    />
+                    Rocks
+                  </label>
+                  <br />
                   <span className="pretties">
                     <span className="subTitleLeadIn">essentially&nbsp;</span>
                     <i>old fashioned</i>
                   </span>
-                </label>
+                </section>
                 <br />
 
-                <input
-                  type="radio"
-                  name="prettiest"
-                  value="Hurricane (akin 'singapore sling')"
-                  selected={
-                    prettiestSelection === "Hurricane (akin 'singapore sling')"
-                  }
-                />
-                <WhatshotIcon className="whatshot" />
-                <label htmlFor="hurricane">
-                  Hurricane
+                <section>
+                  <label htmlFor="hurricane">
+                    <WhatshotIcon className="whatshot" />
+                    <input
+                      type="radio"
+                      name="prettiest"
+                      value="Hurricane (akin 'singapore sling')"
+                      selected={
+                        prettiestSelection ===
+                        "Hurricane (akin 'singapore sling')"
+                      }
+                      className="fifth"
+                    />
+                    Hurricane
+                  </label>
                   <br />
                   <span className="pretties">
                     <span className="subTitleLeadIn">akin&nbsp;</span>
                     <i>singapore sling</i>
                   </span>
-                </label>
+                </section>
                 <br />
               </p>
 

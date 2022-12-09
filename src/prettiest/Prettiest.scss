@@ -19,21 +19,66 @@
   }
 
   .whatshot {
-    color: yellow;
-    cursor: pointer;
-    font-size: large;
-  }
+    color: aqua;
+    font-size: 1.5rem;
 
-  .whatshot:active {
-    @include icon-click-effect;
-    color: orangered;
+    z-index: -1;
   }
 
   label {
-    color: orangered;
-    cursor: pointer;
+    display: inline-flex;
+    position: relative;
+
+    color: aqua;
     font-size: 1.75rem;
     margin-right: $space-sm;
+  }
+
+  input[type="radio"] {
+    width: 0.3rem;
+    cursor: pointer;
+    accent-color: aqua;
+
+    @include icon-click-effect;
+  }
+
+  input[type="radio"]:hover {
+    @include icon-click-effect;
+  }
+
+  .first {
+    display: inline-flex;
+    position: absolute;
+    top: -0.05rem;
+    left: 0.15rem;
+  }
+
+  .second {
+    display: inline-flex;
+    position: absolute;
+    top: -0.05rem;
+    left: 0.15rem;
+  }
+
+  .third {
+    display: inline-flex;
+    position: absolute;
+    top: -0.05rem;
+    left: 0.15rem;
+  }
+
+  .fourth {
+    display: inline-flex;
+    position: absolute;
+    top: -0.05rem;
+    left: 0.15rem;
+  }
+
+  .fifth {
+    display: inline-flex;
+    position: absolute;
+    top: -0.05rem;
+    left: 0.15rem;
   }
 
   p.prettiestPara {
@@ -49,6 +94,7 @@
     color: yellow;
     font-size: xx-small;
     display: block;
+    margin-left: 2.5rem;
   }
 
   .pretties:hover {
@@ -62,7 +108,7 @@
     }
 
     i {
-      color: $ea-red;
+      color: orangered;
     }
   }
 
