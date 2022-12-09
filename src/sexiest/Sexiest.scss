@@ -23,17 +23,16 @@
   }
 
   .deblur {
+    color: $ea-white;
     font-size: 1.45rem;
-    cursor: pointer;
-  }
 
-  .deblur:active {
-    @include icon-click-effect;
-    color: $ea-red;
+    z-index: -1;
   }
 
   label {
-    cursor: pointer;
+    display: inline-flex;
+    position: relative;
+
     font-size: 1.45rem;
   }
 
@@ -72,12 +71,31 @@
     margin-left: $space-lg;
   }
 
+  input[type="radio"] {
+    width: 0.65rem;
+    cursor: pointer;
+    accent-color: darkgray;
+
+    @include icon-click-effect;
+  }
+
+  input[type="radio"]:hover {
+    @include icon-click-effect;
+  }
+
+  .customIcon {
+    display: inline-flex;
+    position: absolute;
+    top: 0.15rem;
+    left: 0.15rem;
+  }
+
   #catwoman:hover:after {
     content: url(images/catwoman.png);
     zoom: 65%;
     position: absolute;
     left: 1;
-    bottom: 0;
+    bottom: 1;
   }
 
   #shera:hover:after {
@@ -98,7 +116,7 @@
     content: url(images/batman.png);
     zoom: 37%;
     position: absolute;
-    top: 1;
+    bottom: 1;
   }
 
   #blackpanther:hover:after {
@@ -116,11 +134,11 @@
   }
 
   #brotherken:hover:after {
-    content: url(images/nonbinary-representation-gap.png);
-    zoom: 13%;
+    // content: url(images/nonbinary-representation-gap.png);
+    // zoom: 7%;
     position: absolute;
     right: 1;
-    bottom: 0;
+    bottom: 1;
   }
 
   #kidquick:hover:after {
@@ -131,8 +149,8 @@
   }
 
   #snowflake:hover:after {
-    content: url(images/nonbinary-representation-gap.png);
-    zoom: 13%;
+    // content: url(images/nonbinary-representation-gap.png);
+    // zoom: 7%;
     position: absolute;
     right: 1;
     top: 0;

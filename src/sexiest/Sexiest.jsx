@@ -13,14 +13,6 @@ const Sexiest = ({ openModal, onClose }) => {
   const [sexiestMSelection, setSexiestMSelection] = useState();
   const [sexiestNSelection, setSexiestNSelection] = useState();
 
-  // Female
-  // Male
-  // Nonbinary
-
-  // Female & Male
-  // Female & Nonbinary
-  // Male & Nonbinary
-
   const submit = () => {
     if (sexiestFSelection && sexiestMSelection && sexiestNSelection) {
       window.localStorage.setItem(
@@ -104,40 +96,49 @@ const Sexiest = ({ openModal, onClose }) => {
             >
               <legend className="feminineLegend">Sexiest Feminine</legend>
               <p className="sexiestPara para1">
-                <input
-                  type="radio"
-                  name="feminine"
-                  value="Catwoman"
-                  id="catwoman"
-                  title="image by pluspng.com"
-                  selected={sexiestFSelection === "Catwoman"}
-                />
-                <Deblur className="deblur" />
-                <label htmlFor="catwoman">Catwoman</label>
+                <label htmlFor="catwoman">
+                  <Deblur className="deblur" />
+                  <input
+                    type="radio"
+                    name="feminine"
+                    value="Catwoman"
+                    id="catwoman"
+                    title="image by pluspng.com"
+                    selected={sexiestFSelection === "Catwoman"}
+                    className="customIcon"
+                  />
+                  Catwoman
+                </label>
               </p>
               <p className="sexiestPara para1">
-                <input
-                  type="radio"
-                  name="feminine"
-                  value="She-Ra"
-                  id="shera"
-                  title="image by bluyou.deviantart.com"
-                  selected={sexiestFSelection === "She-Ra"}
-                />
-                <Deblur className="deblur" />
-                <label htmlFor="shera">She-Ra</label>
+                <label htmlFor="shera">
+                  <Deblur className="deblur" />
+                  <input
+                    type="radio"
+                    name="feminine"
+                    value="She-Ra"
+                    id="shera"
+                    title="image by bluyou.deviantart.com"
+                    selected={sexiestFSelection === "She-Ra"}
+                    className="customIcon"
+                  />
+                  She-Ra
+                </label>
               </p>
               <p className="sexiestPara para1">
-                <input
-                  type="radio"
-                  name="feminine"
-                  value="Wonder Woman"
-                  id="wonderwoman"
-                  title="image by pinterest.com"
-                  selected={sexiestFSelection === "Wonder Woman"}
-                />
-                <Deblur className="deblur" />
-                <label htmlFor="wonderwoman">Wonder Woman</label>
+                <label htmlFor="wonderwoman">
+                  <Deblur className="deblur" />
+                  <input
+                    type="radio"
+                    name="feminine"
+                    value="Wonder Woman"
+                    id="wonderwoman"
+                    title="image by pinterest.com"
+                    selected={sexiestFSelection === "Wonder Woman"}
+                    className="customIcon"
+                  />
+                  Wonder Woman
+                </label>
               </p>
             </fieldset>
 
@@ -148,41 +149,50 @@ const Sexiest = ({ openModal, onClose }) => {
             >
               <legend className="masculineLegend">Sexiest Masculine</legend>
               <p className="sexiestPara para2">
-                <input
-                  type="radio"
-                  name="masculine"
-                  value="Batman"
-                  id="batman"
-                  title="image by pngplay.com"
-                  selected={sexiestMSelection === "Batman"}
-                />
-                <Deblur className="deblur" />
-                <label htmlFor="batman">Batman</label>
+                <label htmlFor="batman">
+                  <Deblur className="deblur" />
+                  <input
+                    type="radio"
+                    name="masculine"
+                    value="Batman"
+                    id="batman"
+                    title="image by pngplay.com"
+                    selected={sexiestMSelection === "Batman"}
+                    className="customIcon"
+                  />
+                  Batman
+                </label>
                 <br />
               </p>
               <p className="sexiestPara para2">
-                <input
-                  type="radio"
-                  name="masculine"
-                  value="Black Panther"
-                  id="blackpanther"
-                  title="image by clipart-library.com"
-                  selected={sexiestMSelection === "Black Panther"}
-                />
-                <Deblur className="deblur" />
-                <label htmlFor="blackpanther">Black Panther</label>
+                <label htmlFor="blackpanther">
+                  <Deblur className="deblur" />
+                  <input
+                    type="radio"
+                    name="masculine"
+                    value="Black Panther"
+                    id="blackpanther"
+                    title="image by clipart-library.com"
+                    selected={sexiestMSelection === "Black Panther"}
+                    className="customIcon"
+                  />
+                  Black Panther
+                </label>
                 <br />
               </p>
               <p className="sexiestPara para2">
-                <input
-                  type="radio"
-                  name="masculine"
-                  value="Spider-Man"
-                  id="spiderman"
-                  selected={sexiestMSelection === "Spider-Man"}
-                />
-                <Deblur className="deblur" />
-                <label htmlFor="spiderman">Spider-Man</label>
+                <label htmlFor="spiderman">
+                  <Deblur className="deblur" />
+                  <input
+                    type="radio"
+                    name="masculine"
+                    value="Spider-Man"
+                    id="spiderman"
+                    selected={sexiestMSelection === "Spider-Man"}
+                    className="customIcon"
+                  />
+                  Spider-Man
+                </label>
                 <br />
               </p>
             </fieldset>
@@ -194,39 +204,48 @@ const Sexiest = ({ openModal, onClose }) => {
             >
               <legend className="nonbinaryLegend">Sexiest Non Binary</legend>
               <p className="sexiestPara para3">
-                <input
-                  type="radio"
-                  name="nonbinary"
-                  value="Brother Ken"
-                  id="brotherken"
-                  selected={sexiestNSelection === "Brother Ken"}
-                />
-                <Deblur className="deblur" />
-                <label htmlFor="brotherken">Brother Ken</label>
+                <label htmlFor="brotherken">
+                  <Deblur className="deblur" />
+                  <input
+                    type="radio"
+                    name="nonbinary"
+                    value="Brother Ken"
+                    id="brotherken"
+                    selected={sexiestNSelection === "Brother Ken"}
+                    className="customIcon"
+                  />
+                  Brother Ken
+                </label>
                 <br />
               </p>
               <p className="sexiestPara para3">
-                <input
-                  type="radio"
-                  name="nonbinary"
-                  value="Kid Quick"
-                  id="kidquick"
-                  selected={sexiestNSelection === "Kid Quick"}
-                />
-                <Deblur className="deblur" />
-                <label htmlFor="kidquick">Kid Quick</label>
+                <label htmlFor="kidquick">
+                  <Deblur className="deblur" />
+                  <input
+                    type="radio"
+                    name="nonbinary"
+                    value="Kid Quick"
+                    id="kidquick"
+                    selected={sexiestNSelection === "Kid Quick"}
+                    className="customIcon"
+                  />
+                  Kid Quick
+                </label>
                 <br />
               </p>
               <p className="sexiestPara para3">
-                <input
-                  type="radio"
-                  name="nonbinary"
-                  value="Snow Flake"
-                  id="snowflake"
-                  selected={sexiestNSelection === "Snow Flake"}
-                />
-                <Deblur className="deblur" />
-                <label htmlFor="snowflake">Snow Flake</label>
+                <label htmlFor="snowflake">
+                  <Deblur className="deblur" />
+                  <input
+                    type="radio"
+                    name="nonbinary"
+                    value="Snow Flake"
+                    id="snowflake"
+                    selected={sexiestNSelection === "Snow Flake"}
+                    className="customIcon"
+                  />
+                  Snow Flake
+                </label>
                 <br />
               </p>
             </fieldset>
