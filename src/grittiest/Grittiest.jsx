@@ -11,23 +11,24 @@ const Grittiest = ({ openModal, onClose }) => {
   const [grittiestYear, setGrittiestYear] = useState();
 
   const submit = () => {
-    console.log(grittiestArmy, grittiestYear);
-
     if (!grittiestArmy) {
       window.localStorage.setItem(
         "grittiestEntry",
         JSON.stringify(grittiestYear)
       );
+      console.log(grittiestYear);
     } else if (!grittiestYear) {
       window.localStorage.setItem(
         "grittiestEntry",
         JSON.stringify(grittiestArmy)
       );
+      console.log(grittiestArmy);
     } else {
       window.localStorage.setItem(
         "grittiestEntry",
         JSON.stringify(`${grittiestYear}: ${grittiestArmy}`)
       );
+      console.log(`${grittiestYear}: ${grittiestArmy}`);
     }
   };
 

@@ -11,23 +11,24 @@ const Rampantest = ({ openModal, onClose }) => {
   const [rampantestYear, setRampantestYear] = useState();
 
   const submit = () => {
-    console.log(rampantestStache, rampantestYear);
-
     if (!rampantestStache) {
       window.localStorage.setItem(
         "rampantestEntry",
         JSON.stringify(rampantestYear)
       );
+      console.log(rampantestYear);
     } else if (!rampantestYear) {
       window.localStorage.setItem(
         "rampantestEntry",
         JSON.stringify(rampantestStache)
       );
+      console.log(rampantestStache);
     } else {
       window.localStorage.setItem(
         "rampantestEntry",
         JSON.stringify(`${rampantestYear}: ${rampantestStache}`)
       );
+      console.log(`${rampantestYear}: ${rampantestStache}`);
     }
   };
 

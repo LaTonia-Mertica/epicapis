@@ -13,9 +13,16 @@ const Sexiest = ({ openModal, onClose }) => {
   const [sexiestMSelection, setSexiestMSelection] = useState();
   const [sexiestNSelection, setSexiestNSelection] = useState();
 
+  // Female
+  // Male
+  // Nonbinary
+
+  // Female & Male
+  // Female & Nonbinary
+  // Male & Nonbinary
+
   const submit = () => {
-    console.log(sexiestFSelection, sexiestMSelection, sexiestNSelection);
-    if (sexiestFSelection || sexiestMSelection || sexiestNSelection) {
+    if (sexiestFSelection && sexiestMSelection && sexiestNSelection) {
       window.localStorage.setItem(
         "sexiestSelections",
         JSON.stringify({
@@ -24,6 +31,58 @@ const Sexiest = ({ openModal, onClose }) => {
           sexiestNSelection,
         })
       );
+      console.log(sexiestFSelection, sexiestMSelection, sexiestNSelection);
+    } else if (!sexiestMSelection && !sexiestNSelection) {
+      window.localStorage.setItem(
+        "sexiestSelections",
+        JSON.stringify({
+          sexiestFSelection,
+        })
+      );
+      console.log(sexiestFSelection);
+    } else if (!sexiestFSelection && !sexiestNSelection) {
+      window.localStorage.setItem(
+        "sexiestSelections",
+        JSON.stringify({
+          sexiestMSelection,
+        })
+      );
+      console.log(sexiestMSelection);
+    } else if (!sexiestFSelection && !sexiestMSelection) {
+      window.localStorage.setItem(
+        "sexiestSelections",
+        JSON.stringify({
+          sexiestNSelection,
+        })
+      );
+      console.log(sexiestNSelection);
+    } else if (!sexiestNSelection) {
+      window.localStorage.setItem(
+        "sexiestSelections",
+        JSON.stringify({
+          sexiestFSelection,
+          sexiestMSelection,
+        })
+      );
+      console.log(sexiestFSelection, sexiestMSelection);
+    } else if (!sexiestMSelection) {
+      window.localStorage.setItem(
+        "sexiestSelections",
+        JSON.stringify({
+          sexiestFSelection,
+          sexiestNSelection,
+        })
+      );
+      console.log(sexiestFSelection, sexiestNSelection);
+    } else if (!sexiestFSelection) {
+      window.localStorage.setItem(
+        "sexiestSelections",
+        JSON.stringify({
+          sexiestMSelection,
+          sexiestNSelection,
+        })
+      );
+      console.log(sexiestMSelection, sexiestNSelection);
     }
   };
 
