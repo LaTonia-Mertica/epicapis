@@ -39,143 +39,165 @@ const Last = ({ openModal, onClose }) => {
             >
               <span>
                 <p className="para1 bothPara">
-                  {/* <input type="image" src={faRecordVinyl} value="no chance" /> */}
-                  <input
-                    type="radio"
-                    value="No Chance"
-                    name="last"
-                    selected={lastSelection === "No Chance"}
-                  />
-                  <FontAwesomeIcon icon={faRecordVinyl} className="fa-lg " />
-                  <label htmlFor="chance">No Chance</label>
+                  <label htmlFor="chance">
+                    <FontAwesomeIcon
+                      icon={faRecordVinyl}
+                      className="fa-md rowOne1"
+                    />
+                    <input
+                      type="radio"
+                      value="No Chance"
+                      name="last"
+                      selected={lastSelection === "No Chance"}
+                    />
+                    &nbsp;&nbsp;&nbsp;No Chance
+                  </label>
                   <br />
 
-                  <input
-                    type="radio"
-                    value="Empty Promises"
-                    name="last"
-                    selected={lastSelection === "Empty Promises"}
-                  />
-                  <FontAwesomeIcon
-                    icon={faRecordVinyl}
-                    className="fa-lg"
-                    type="submit"
-                  />
-                  <label htmlFor="promises">Empty Promises</label>
+                  <label htmlFor="promises">
+                    <FontAwesomeIcon
+                      icon={faRecordVinyl}
+                      className="fa-md rowOne2"
+                      type="submit"
+                    />
+                    <input
+                      type="radio"
+                      value="Empty Promises"
+                      name="last"
+                      selected={lastSelection === "Empty Promises"}
+                    />
+                    &nbsp;&nbsp;&nbsp;Empty Promises
+                  </label>
                   <br />
 
-                  <input
-                    type="radio"
-                    value="Reasons to Quit"
-                    name="last"
-                    selected={lastSelection === "Reasons to Quit"}
-                  />
-                  <FontAwesomeIcon
-                    icon={faRecordVinyl}
-                    className="fa-lg"
-                    type="submit"
-                  />
-                  <label htmlFor="quit">Reasons to Quit</label>
+                  <label htmlFor="quit">
+                    <FontAwesomeIcon
+                      icon={faRecordVinyl}
+                      className="fa-md rowOne3"
+                      type="submit"
+                    />
+                    <input
+                      type="radio"
+                      value="Reasons to Quit"
+                      name="last"
+                      selected={lastSelection === "Reasons to Quit"}
+                    />
+                    &nbsp;&nbsp;&nbsp;Reasons to Quit
+                  </label>
                   <br />
 
-                  <input
-                    type="radio"
-                    value="Not to Try"
-                    name="last"
-                    selected={lastSelection === "Not to Try"}
-                  />
-                  <FontAwesomeIcon
-                    icon={faRecordVinyl}
-                    className="fa-lg"
-                    type="submit"
-                  />
-                  <label htmlFor="matters">Not to Try</label>
+                  <label htmlFor="matters">
+                    <FontAwesomeIcon
+                      icon={faRecordVinyl}
+                      className="fa-md rowOne4"
+                      type="submit"
+                    />
+                    <input
+                      type="radio"
+                      value="Not to Try"
+                      name="last"
+                      selected={lastSelection === "Not to Try"}
+                    />
+                    &nbsp;&nbsp;&nbsp;Not to Try
+                  </label>
                   <br />
 
-                  <input
-                    type="radio"
-                    value="Having No One"
-                    name="last"
-                    selected={lastSelection === "Having No Chance"}
-                  />
-                  <FontAwesomeIcon
-                    icon={faRecordVinyl}
-                    className="fa-lg"
-                    type="submit"
-                  />
-                  <label htmlFor="alone">Having No One</label>
+                  <label htmlFor="alone">
+                    <FontAwesomeIcon
+                      icon={faRecordVinyl}
+                      className="fa-md rowOne5"
+                      type="submit"
+                    />
+                    <input
+                      type="radio"
+                      value="Having No One"
+                      name="last"
+                      selected={lastSelection === "Having No Chance"}
+                    />
+                    &nbsp;&nbsp;&nbsp;Having No One
+                  </label>
                   <br />
                 </p>
 
                 <p className="para2 bothPara">
-                  <input
-                    type="radio"
-                    value="Help Less Ness"
-                    name="last"
-                    selected={lastSelection === "Help Less Ness"}
-                  />
-                  <FontAwesomeIcon
-                    icon={faRecordVinyl}
-                    className="fa-lg"
-                    type="submit"
-                  />
-                  <label htmlFor="helplessness">Help Less Ness</label>
+                  <label htmlFor="helplessness">
+                    <FontAwesomeIcon
+                      icon={faRecordVinyl}
+                      className="fa-md rowTwo1"
+                      type="submit"
+                    />
+                    <input
+                      type="radio"
+                      value="Help Less Ness"
+                      name="last"
+                      selected={lastSelection === "Help Less Ness"}
+                    />
+                    &nbsp;&nbsp;&nbsp;Help Less Ness
+                  </label>
                   <br />
 
-                  <input
-                    type="radio"
-                    value="Ill Intent For Me"
-                    name="last"
-                    selected={lastSelection === "Ill Intent For Me"}
-                  />
-                  <FontAwesomeIcon
-                    icon={faRecordVinyl}
-                    className="fa-lg"
-                    type="submit"
-                  />
-                  <label htmlFor="illintent">Ill Intent For Me</label>
+                  <label htmlFor="illintent">
+                    <FontAwesomeIcon
+                      icon={faRecordVinyl}
+                      className="fa-md  rowTwo2"
+                      type="submit"
+                    />
+                    <input
+                      type="radio"
+                      value="Ill Intent For Me"
+                      name="last"
+                      selected={lastSelection === "Ill Intent For Me"}
+                    />
+                    &nbsp;&nbsp;&nbsp;Ill Intent For Me
+                  </label>
                   <br />
 
-                  <input
-                    type="radio"
-                    value="Time Wasted"
-                    name="last"
-                    selected={lastSelection === "Time Wasted"}
-                  />
-                  <FontAwesomeIcon
-                    icon={faRecordVinyl}
-                    className="fa-lg"
-                    type="submit"
-                  />
-                  <label htmlFor="time">Time Wasted</label>
+                  <label htmlFor="time">
+                    <FontAwesomeIcon
+                      icon={faRecordVinyl}
+                      className="fa-md  rowTwo3"
+                      type="submit"
+                    />
+                    <input
+                      type="radio"
+                      value="Time Wasted"
+                      name="last"
+                      selected={lastSelection === "Time Wasted"}
+                    />
+                    &nbsp;&nbsp;&nbsp;Time Wasted
+                  </label>
                   <br />
 
-                  <input
-                    type="radio"
-                    value="No Sight of Hope"
-                    name="last"
-                    selected={lastSelection === "No Sight of Hope"}
-                  />
-                  <FontAwesomeIcon
-                    icon={faRecordVinyl}
-                    className="fa-lg"
-                    type="submit"
-                  />
-                  <label htmlFor="hope">No Sight of Hope</label>
+                  <label htmlFor="hope">
+                    <FontAwesomeIcon
+                      icon={faRecordVinyl}
+                      className="fa-md  rowTwo4"
+                      type="submit"
+                    />{" "}
+                    <input
+                      type="radio"
+                      value="No Sight of Hope"
+                      name="last"
+                      selected={lastSelection === "No Sight of Hope"}
+                    />
+                    &nbsp;&nbsp;&nbsp;No Sight of Hope
+                  </label>
                   <br />
 
-                  <input
-                    type="radio"
-                    value="Bad Surprises"
-                    name="last"
-                    selected={lastSelection === "Bad Surprises"}
-                  />
-                  <FontAwesomeIcon
-                    icon={faRecordVinyl}
-                    className="fa-lg"
-                    type="submit"
-                  />
-                  <label htmlFor="surprises">Bad Surprises</label>
+                  <label htmlFor="surprises">
+                    <FontAwesomeIcon
+                      icon={faRecordVinyl}
+                      className="fa-md  rowTwo5"
+                      type="submit"
+                    />
+                    <input
+                      type="radio"
+                      value="Bad Surprises"
+                      name="last"
+                      selected={lastSelection === "Bad Surprises"}
+                    />
+                    &nbsp;&nbsp;&nbsp;Bad Surprises
+                  </label>
                   <br />
                 </p>
               </span>

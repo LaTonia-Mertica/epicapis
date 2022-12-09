@@ -24,28 +24,101 @@
   }
 
   input[type="radio"] {
+    cursor: pointer;
+    width: 0.25rem;
     accent-color: $ea-red;
   }
 
-  .fa-lg {
+  input[type="radio"]:hover {
+    accent-color: $ea-red;
+    @include icon-click-effect;
+  }
+
+  .fa-md {
     color: $ea-red;
     margin-right: 0.33rem;
     margin-top: 1.25rem;
-    cursor: pointer;
   }
 
-  .fa-lg:active {
-    @include icon-click-effect;
+  .rowOne1 {
+    display: inline-flex;
+    position: absolute;
+    top: -1rem;
+    left: -0.49rem;
+    z-index: -1;
+  }
 
-    border-radius: 50%;
-    background-color: $ea-red;
-    box-shadow: 0 0 0.438rem 0.141rem $ea-red, 0 0 0.438rem 0.313rem $ea-white,
-      0 0 0.625rem 0.438rem $ea-red;
+  .rowOne2 {
+    display: inline-flex;
+    position: absolute;
+    top: -1rem;
+    left: -0.49rem;
+    z-index: -1;
+  }
+  .rowOne3 {
+    display: inline-flex;
+    position: absolute;
+    top: -1rem;
+    left: -0.49rem;
+    z-index: -1;
+  }
+  .rowOne4 {
+    display: inline-flex;
+    position: absolute;
+    top: -1rem;
+    left: -0.49rem;
+    z-index: -1;
+  }
+  .rowOne5 {
+    display: inline-flex;
+    position: absolute;
+    top: -1rem;
+    left: -0.49rem;
+    z-index: -1;
+  }
+
+  .rowTwo1 {
+    display: inline-flex;
+    position: absolute;
+    top: -1rem;
+    left: -0.49rem;
+    z-index: -1;
+  }
+
+  .rowTwo2 {
+    display: inline-flex;
+    position: absolute;
+    top: -1rem;
+    left: -0.49rem;
+    z-index: -1;
+  }
+  .rowTwo3 {
+    display: inline-flex;
+    position: absolute;
+    top: -1rem;
+    left: -0.49rem;
+    z-index: -1;
+  }
+  .rowTwo4 {
+    display: inline-flex;
+    position: absolute;
+    top: -1rem;
+    left: -0.49rem;
+    z-index: -1;
+  }
+  .rowTwo5 {
+    display: inline-flex;
+    position: absolute;
+    top: -1rem;
+    left: -0.49rem;
+    z-index: -1;
   }
 
   label {
+    display: inline-flex;
+    position: relative;
+
     color: $ea-red;
-    cursor: pointer;
     font-size: larger;
     text-shadow: $space-xsm $space-xsm black;
   }
