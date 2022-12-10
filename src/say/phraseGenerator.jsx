@@ -12,7 +12,7 @@ const phraseGenerator = (setPhraseToShow, value) => {
   } else if (value === "creed") {
     setPhraseToShow("'barbarians think like that'");
   } else if (value === "employment") {
-    setPhraseToShow("'you wouldn't be a good cultural fit here'");
+    setPhraseToShow("'you wouldn't be a good cultural fit'");
   } else if (value === "national origin") {
     setPhraseToShow("'go back where you came from'");
   } else if (value === "race") {
@@ -42,7 +42,7 @@ const phraseGenerator = (setPhraseToShow, value) => {
   } else if (value === "sex") {
     setPhraseToShow("'it's your own fault'");
   } else if (value === "sexual orientation") {
-    setPhraseToShow("'sure you're gay, you don't it'");
+    setPhraseToShow("'sure you're gay, you don't look it'");
   }
 };
 
