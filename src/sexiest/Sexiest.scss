@@ -25,14 +25,12 @@
   .deblur {
     color: $ea-white;
     font-size: 1.45rem;
-
     z-index: -1;
   }
 
   label {
     display: inline-flex;
     position: relative;
-
     font-size: 1.45rem;
   }
 
@@ -47,14 +45,16 @@
 
   .feminineLegend,
   .masculineLegend,
-  .nonbinaryLegend {
+  .nonbinaryPoster {
     color: $ea-white;
     font-size: small;
+    font-family: "Courier New", Courier, monospace;
   }
 
   .feminineLegend:hover,
   .masculineLegend:hover,
-  .nonbinaryLegend:hover {
+  .nonbinaryLegend:hover,
+  .nonbinaryPoster:hover {
     color: $ea-red;
     text-shadow: 0.015rem 0.015rem 0.025rem $ea-black;
     transform: scale(2.25);
@@ -75,7 +75,6 @@
     width: 0.65rem;
     cursor: pointer;
     accent-color: darkgray;
-
     @include icon-click-effect;
   }
 
@@ -86,74 +85,57 @@
   .customIcon {
     display: inline-flex;
     position: absolute;
-    top: 0.15rem;
-    left: 0.15rem;
+    top: $space-xsm;
+    left: $space-xsm;
   }
 
   #catwoman:hover:after {
     content: url(images/catwoman.png);
     zoom: 65%;
     position: absolute;
-    left: 1;
-    bottom: 1;
+    top: $space-sm;
+    left: $space-sm;
   }
 
   #shera:hover:after {
     content: url(images/she-ra.png);
     zoom: 65%;
-    position: absolute;
-    top: 0;
+    @include img-basic-position;
   }
 
   #wonderwoman:hover:after {
     content: url(images/wonder-woman.png);
     zoom: 65%;
-    position: absolute;
-    top: 0;
+    @include img-basic-position;
   }
 
   #batman:hover:after {
     content: url(images/batman.png);
     zoom: 37%;
     position: absolute;
-    bottom: 1;
+    top: $space-sm;
+    right: 2rem;
   }
 
   #blackpanther:hover:after {
     content: url(images/black-panther.png);
     zoom: 43%;
     position: absolute;
-    top: 1;
+    top: $space-sm;
   }
 
   #spiderman:hover:after {
     content: url(images/spiderman.png);
     zoom: 37%;
-    position: absolute;
-    top: 0;
-  }
-
-  #brotherken:hover:after {
-    // content: url(images/nonbinary-representation-gap.png);
-    // zoom: 7%;
-    position: absolute;
-    right: 1;
-    bottom: 1;
+    @include img-basic-position;
   }
 
   #kidquick:hover:after {
     content: url(images/kid-quick.png);
     zoom: 67%;
     position: absolute;
-    right: 0;
-  }
-
-  #snowflake:hover:after {
-    // content: url(images/nonbinary-representation-gap.png);
-    // zoom: 7%;
-    position: absolute;
-    right: 1;
-    top: 0;
+    top: $space-sm;
+    right: $space-sm;
   }
 
   .submitBtn {

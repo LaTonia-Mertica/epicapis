@@ -6,6 +6,7 @@ import { Deblur } from "@mui/icons-material";
 
 import "./Sexiest.scss";
 import { style } from "../mui.js";
+import nonbinary from "./images/nonbinary-representation-gap.png";
 
 const Sexiest = ({ openModal, onClose }) => {
   // TODO how do we use the value in localstorage if it exists so when we reopen the modal, the selections are already made
@@ -202,9 +203,18 @@ const Sexiest = ({ openModal, onClose }) => {
                 setSexiestNSelection(event.target.value);
               }}
             >
-              <legend className="nonbinaryLegend">Sexiest Non Binary</legend>
+              <legend className="nonbinaryLegend">
+                <a
+                  href={nonbinary}
+                  target="_blank"
+                  title="download poster"
+                  className="nonbinaryPoster"
+                >
+                  Sexiest Non Binary
+                </a>
+              </legend>
               <p className="sexiestPara para3">
-                <label htmlFor="brotherken">
+                <label htmlFor="brotherken" title="no image accessible">
                   <Deblur className="deblur" />
                   <input
                     type="radio"
@@ -234,7 +244,7 @@ const Sexiest = ({ openModal, onClose }) => {
                 <br />
               </p>
               <p className="sexiestPara para3">
-                <label htmlFor="snowflake">
+                <label htmlFor="snowflake" title="no image accessible">
                   <Deblur className="deblur" />
                   <input
                     type="radio"
