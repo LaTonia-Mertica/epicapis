@@ -207,6 +207,7 @@ const Sexiest = ({ openModal, onClose }) => {
                 <a
                   href={nonbinary}
                   target="_blank"
+                  rel="noreferrer"
                   title="download poster"
                   className="nonbinaryPoster"
                 >
