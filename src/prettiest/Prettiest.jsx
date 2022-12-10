@@ -55,7 +55,7 @@ const Prettiest = ({ openModal, onClose }) => {
                         prettiestSelection ===
                         "High Ball (anything 'dark & stormy')"
                       }
-                      className="first"
+                      className="customIcons"
                     />
                     High Ball
                   </label>
@@ -78,7 +78,7 @@ const Prettiest = ({ openModal, onClose }) => {
                         prettiestSelection ===
                         "Coupe (necessarily 'boulevardier')"
                       }
-                      className="second"
+                      className="customIcons"
                     />
                     Coupe
                   </label>
@@ -101,7 +101,7 @@ const Prettiest = ({ openModal, onClose }) => {
                         prettiestSelection ===
                         "Zombie (think 'tequila sunrise')"
                       }
-                      className="third"
+                      className="customIcons"
                     />
                     Zombie
                   </label>
@@ -124,7 +124,7 @@ const Prettiest = ({ openModal, onClose }) => {
                         prettiestSelection ===
                         "Rocks (essentially 'old fashioned')"
                       }
-                      className="fourth"
+                      className="customIcons"
                     />
                     Rocks
                   </label>
@@ -147,7 +147,7 @@ const Prettiest = ({ openModal, onClose }) => {
                         prettiestSelection ===
                         "Hurricane (akin 'singapore sling')"
                       }
-                      className="fifth"
+                      className="customIcons"
                     />
                     Hurricane
                   </label>

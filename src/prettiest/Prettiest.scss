@@ -21,14 +21,12 @@
   .whatshot {
     color: aqua;
     font-size: 1.5rem;
-
     z-index: -1;
   }
 
   label {
     display: inline-flex;
     position: relative;
-
     color: aqua;
     font-size: 1.75rem;
     margin-right: $space-sm;
@@ -38,7 +36,6 @@
     width: 0.3rem;
     cursor: pointer;
     accent-color: aqua;
-
     @include icon-click-effect;
   }
 
@@ -46,35 +43,7 @@
     @include icon-click-effect;
   }
 
-  .first {
-    display: inline-flex;
-    position: absolute;
-    top: -0.05rem;
-    left: $space-xsm;
-  }
-
-  .second {
-    display: inline-flex;
-    position: absolute;
-    top: -0.05rem;
-    left: $space-xsm;
-  }
-
-  .third {
-    display: inline-flex;
-    position: absolute;
-    top: -0.05rem;
-    left: $space-xsm;
-  }
-
-  .fourth {
-    display: inline-flex;
-    position: absolute;
-    top: -0.05rem;
-    left: $space-xsm;
-  }
-
-  .fifth {
+  .customIcons {
     display: inline-flex;
     position: absolute;
     top: -0.05rem;
