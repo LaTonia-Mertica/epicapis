@@ -165,7 +165,12 @@ $font-rubik-glitch: Rubik Glitch;
   background-color: $ea-green;
 }
 
-// CUSTOM ICON STYLE SET
+@mixin img-basic-position {
+  position: absolute;
+  top: 0;
+}
+
+// ICON (CUSTOM) STYLE SET
 @mixin icon-click-effect {
   transform: scale(1.2);
   box-shadow: 50% 50% 50% rgba(0, 0, 0, 0.3);
