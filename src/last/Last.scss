@@ -40,73 +40,7 @@
     margin-top: 1.25rem;
   }
 
-  .rowOne1 {
-    display: inline-flex;
-    position: absolute;
-    top: -1rem;
-    left: -0.49rem;
-    z-index: -1;
-  }
-
-  .rowOne2 {
-    display: inline-flex;
-    position: absolute;
-    top: -1rem;
-    left: -0.49rem;
-    z-index: -1;
-  }
-  .rowOne3 {
-    display: inline-flex;
-    position: absolute;
-    top: -1rem;
-    left: -0.49rem;
-    z-index: -1;
-  }
-  .rowOne4 {
-    display: inline-flex;
-    position: absolute;
-    top: -1rem;
-    left: -0.49rem;
-    z-index: -1;
-  }
-  .rowOne5 {
-    display: inline-flex;
-    position: absolute;
-    top: -1rem;
-    left: -0.49rem;
-    z-index: -1;
-  }
-
-  .rowTwo1 {
-    display: inline-flex;
-    position: absolute;
-    top: -1rem;
-    left: -0.49rem;
-    z-index: -1;
-  }
-
-  .rowTwo2 {
-    display: inline-flex;
-    position: absolute;
-    top: -1rem;
-    left: -0.49rem;
-    z-index: -1;
-  }
-  .rowTwo3 {
-    display: inline-flex;
-    position: absolute;
-    top: -1rem;
-    left: -0.49rem;
-    z-index: -1;
-  }
-  .rowTwo4 {
-    display: inline-flex;
-    position: absolute;
-    top: -1rem;
-    left: -0.49rem;
-    z-index: -1;
-  }
-  .rowTwo5 {
+  .customIcons {
     display: inline-flex;
     position: absolute;
     top: -1rem;
@@ -117,7 +51,6 @@
   label {
     display: inline-flex;
     position: relative;
-
     color: $ea-red;
     font-size: larger;
     text-shadow: $space-xsm $space-xsm black;

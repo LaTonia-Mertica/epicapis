@@ -42,7 +42,7 @@ const Last = ({ openModal, onClose }) => {
                   <label htmlFor="chance">
                     <FontAwesomeIcon
                       icon={faRecordVinyl}
-                      className="fa-md rowOne1"
+                      className="fa-md customIcons"
                     />
                     <input
                       type="radio"
@@ -57,7 +57,7 @@ const Last = ({ openModal, onClose }) => {
                   <label htmlFor="promises">
                     <FontAwesomeIcon
                       icon={faRecordVinyl}
-                      className="fa-md rowOne2"
+                      className="fa-md customIcons"
                       type="submit"
                     />
                     <input
@@ -73,7 +73,7 @@ const Last = ({ openModal, onClose }) => {
                   <label htmlFor="quit">
                     <FontAwesomeIcon
                       icon={faRecordVinyl}
-                      className="fa-md rowOne3"
+                      className="fa-md customIcons"
                       type="submit"
                     />
                     <input
@@ -89,7 +89,7 @@ const Last = ({ openModal, onClose }) => {
                   <label htmlFor="matters">
                     <FontAwesomeIcon
                       icon={faRecordVinyl}
-                      className="fa-md rowOne4"
+                      className="fa-md customIcons"
                       type="submit"
                     />
                     <input
@@ -105,7 +105,7 @@ const Last = ({ openModal, onClose }) => {
                   <label htmlFor="alone">
                     <FontAwesomeIcon
                       icon={faRecordVinyl}
-                      className="fa-md rowOne5"
+                      className="fa-md customIcons"
                       type="submit"
                     />
                     <input
@@ -123,7 +123,7 @@ const Last = ({ openModal, onClose }) => {
                   <label htmlFor="helplessness">
                     <FontAwesomeIcon
                       icon={faRecordVinyl}
-                      className="fa-md rowTwo1"
+                      className="fa-md customIcons"
                       type="submit"
                     />
                     <input
@@ -139,7 +139,7 @@ const Last = ({ openModal, onClose }) => {
                   <label htmlFor="illintent">
                     <FontAwesomeIcon
                       icon={faRecordVinyl}
-                      className="fa-md  rowTwo2"
+                      className="fa-md  customIcons"
                       type="submit"
                     />
                     <input
@@ -155,7 +155,7 @@ const Last = ({ openModal, onClose }) => {
                   <label htmlFor="time">
                     <FontAwesomeIcon
                       icon={faRecordVinyl}
-                      className="fa-md  rowTwo3"
+                      className="fa-md  customIcons"
                       type="submit"
                     />
                     <input
@@ -171,7 +171,7 @@ const Last = ({ openModal, onClose }) => {
                   <label htmlFor="hope">
                     <FontAwesomeIcon
                       icon={faRecordVinyl}
-                      className="fa-md  rowTwo4"
+                      className="fa-md  customIcons"
                       type="submit"
                     />{" "}
                     <input
@@ -187,7 +187,7 @@ const Last = ({ openModal, onClose }) => {
                   <label htmlFor="surprises">
                     <FontAwesomeIcon
                       icon={faRecordVinyl}
-                      className="fa-md  rowTwo5"
+                      className="fa-md  customIcons"
                       type="submit"
                     />
                     <input
