@@ -111,10 +111,10 @@
 
   #batman:hover:after {
     content: url(images/batman.png);
-    zoom: 37%;
+    zoom: 40%;
     position: absolute;
-    top: $space-sm;
-    right: 2rem;
+    top: $space-md;
+    left: 0;
   }
 
   #blackpanther:hover:after {
