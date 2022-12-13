@@ -630,6 +630,7 @@ const App = () => {
             });
           }}
           className="selectionsSubmitBtn"
+          title="click to email your selections"
         >
           email selections
         </Button>
