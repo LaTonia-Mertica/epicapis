@@ -247,7 +247,7 @@ input[type="reset"] {
   align-items: center;
 }
 input[type="email"]::placeholder {
-  color: #c8c4bd;
+  color: #cae265;
   font-size: x-small;
   padding: 0.25rem 0.5rem;
 }
@@ -257,13 +257,9 @@ input[type="email"]::placeholder {
   border-radius: 0.25rem;
   padding: 0.15rem;
 }
-.selectionsInput:focus {
-  background-color: #c9e265;
-}
 Button.selectionsSubmitBtn {
   color: #c9e265;
   font-size: large;
-  text-shadow: 0.025rem 0.025rem 0.025rem #000;
 }
 
 /* masonry code */

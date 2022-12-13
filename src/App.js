@@ -603,7 +603,7 @@ const App = () => {
           type="email"
           name="email"
           id="email"
-          placeholder="enter email address"
+          placeholder={"enter email address" || " "}
           autoComplete="off"
           className="selectionsInput"
           onChange={(event) => {
