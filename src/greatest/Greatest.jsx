@@ -11,6 +11,10 @@ const Greatest = ({ openModal, onClose }) => {
     event.preventDefault();
     let selectedGreatestFantasies = [];
 
+    // this is an example of an uncontrolled input that uses the DOM to access (instead of state)
+    // controlled input has a value and onChange
+    // uncontrolled input is anything that does not have a value and onChange from which we get the value out of directly using the DOM
+
     for (const element of event.target.elements) {
       if (element.checked) {
         selectedGreatestFantasies.push(element.name);
