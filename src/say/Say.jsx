@@ -15,19 +15,30 @@ const Say = ({ openModal, onClose }) => {
     phraseGenerator(setPhraseToShow, event.target.value);
   };
 
+  useEffect(() => {
+    if (openModal) {
+      const storageString = window.localStorage.getItem("saySelection");
+
+      if (storageString) {
+        setSaySelection(JSON.parse(storageString)) &&
+          setPhraseToShow(valueSelected);
+      }
+    }
+  }, [openModal]);
+
   const submit = (event) => {
-    console.log(saySelection);
+    // console.log(saySelection);
     if (saySelection) {
       event.preventDefault();
       window.localStorage.setItem("saySelection", JSON.stringify(saySelection));
     }
   };
 
-  useEffect(() => {
-    if (!openModal) {
-      setPhraseToShow();
-    }
-  }, [openModal]);
+  // useEffect(() => {
+  //   if (!openModal) {
+  //     setPhraseToShow();
+  //   }
+  // }, [openModal]);
 
   return (
     <main>
@@ -64,84 +75,168 @@ const Say = ({ openModal, onClose }) => {
                         select your #1 never say
                       </option>
 
-                      <option value="age" id="age">
+                      <option
+                        value="age"
+                        id="age"
+                        selected={saySelection === "age"}
+                      >
                         age
                       </option>
 
-                      <option value="arrest record" id="arrestRecord">
+                      <option
+                        value="arrest record"
+                        id="arrestRecord"
+                        selected={saySelection === "arrest record"}
+                      >
                         arrest record
                       </option>
-                      <option value="audible expression" id="audibleExpression">
+                      <option
+                        value="audible expression"
+                        id="audibleExpression"
+                        selected={saySelection === "audible expression"}
+                      >
                         audible expression
                       </option>
-                      <option value="color" id="color">
+                      <option
+                        value="color"
+                        id="color"
+                        selected={saySelection === "color"}
+                      >
                         color
                       </option>
-                      <option value="conviction record" id="convictionRecord">
+                      <option
+                        value="conviction record"
+                        id="convictionRecord"
+                        selected={saySelection === "conviction record"}
+                      >
                         conviction record
                       </option>
-                      <option value="creed" id="creed">
+                      <option
+                        value="creed"
+                        id="creed"
+                        selected={saySelection === "creed"}
+                      >
                         creed
                       </option>
-                      <option value="employment" id="employment">
+                      <option
+                        value="employment"
+                        id="employment"
+                        selected={saySelection === "employment"}
+                      >
                         employment
                       </option>
-                      <option value="national origin" id="nationalOrigin">
+                      <option
+                        value="national origin"
+                        id="nationalOrigin"
+                        selected={saySelection === "national origin"}
+                      >
                         national origin
                       </option>
-                      <option value="race" id="race">
+                      <option
+                        value="race"
+                        id="race"
+                        selected={saySelection === "race"}
+                      >
                         race
                       </option>
-                      <option value="religion" id="religion">
+                      <option
+                        value="religion"
+                        id="religion"
+                        selected={saySelection === "religion"}
+                      >
                         religion
                       </option>
-                      <option value="weight" id="weight">
+                      <option
+                        value="weight"
+                        id="weight"
+                        selected={saySelection === "weight"}
+                      >
                         weight
                       </option>
                       <option value=""></option>
                     </optgroup>
 
                     <optgroup label="WELLBEING" className="optgroup2">
-                      <option value="disability" id="disability">
+                      <option
+                        value="disability"
+                        id="disability"
+                        selected={saySelection === "disability"}
+                      >
                         disability
                       </option>
                       <option
                         value="domestic violence victim status"
                         id="domesticViolenceVictimStatus"
+                        selected={
+                          saySelection === "domestic violence victim status"
+                        }
                       >
                         domestic violence victim status
                       </option>
-                      <option value="employment status" id="employmentStatus">
+                      <option
+                        value="employment status"
+                        id="employmentStatus"
+                        selected={saySelection === "employment status"}
+                      >
                         employment status
                       </option>
-                      <option value="gender identity" id="genderIdentity">
+                      <option
+                        value="gender identity"
+                        id="genderIdentity"
+                        selected={saySelection === "gender identity"}
+                      >
                         gender identity
                       </option>
-                      <option value="gender expression" id="genderExpression">
+                      <option
+                        value="gender expression"
+                        id="genderExpression"
+                        selected={saySelection === "gender expression"}
+                      >
                         gender expression
                       </option>
-                      <option value="familial status" id="familialStatus">
+                      <option
+                        value="familial status"
+                        id="familialStatus"
+                        selected={saySelection === "familial status"}
+                      >
                         familial status
                       </option>
-                      <option value="marital status" id="maritalStatus">
+                      <option
+                        value="marital status"
+                        id="maritalStatus"
+                        selected={saySelection === "marital status"}
+                      >
                         marital status
                       </option>
                       <option
                         value="mental health status"
                         id="mentalHealthStatus"
+                        selected={saySelection === "mental health status"}
                       >
                         mental health status
                       </option>
                       <option
                         value="predisposing genetic characteristics"
                         id="predisposingGeneticCharacteristics"
+                        selected={
+                          saySelection ===
+                          "predisposing genetic characteristics"
+                        }
                       >
                         predisposing genetic characteristics
                       </option>
-                      <option value="sex" id="sex">
+                      <option
+                        value="sex"
+                        id="sex"
+                        selected={saySelection === "sex"}
+                      >
                         sex
                       </option>
-                      <option value="sexual orientation" id="sexualOrientation">
+                      <option
+                        value="sexual orientation"
+                        id="sexualOrientation"
+                        selected={saySelection === "sexual orientation"}
+                      >
                         sexual orientation
                       </option>
                     </optgroup>
