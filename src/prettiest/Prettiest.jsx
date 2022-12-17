@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -16,8 +16,18 @@ import tomcollins from "./images/tomcollins.gif";
 const Prettiest = ({ openModal, onClose }) => {
   const [prettiestSelection, setPrettiestSelection] = useState();
 
+  useEffect(() => {
+    if (openModal) {
+      const storageString = window.localStorage.getItem("prettiestSelection");
+
+      if (storageString) {
+        setPrettiestSelection(JSON.parse(storageString));
+      }
+    }
+  }, [openModal]);
+
   const submit = () => {
-    console.log(prettiestSelection);
+    // console.log(prettiestSelection);
     if (prettiestSelection) {
       window.localStorage.setItem(
         "prettiestSelection",
@@ -51,7 +61,7 @@ const Prettiest = ({ openModal, onClose }) => {
                       type="radio"
                       name="prettiest"
                       value="High Ball (anything 'dark & stormy')"
-                      selected={
+                      checked={
                         prettiestSelection ===
                         "High Ball (anything 'dark & stormy')"
                       }
@@ -74,7 +84,7 @@ const Prettiest = ({ openModal, onClose }) => {
                       type="radio"
                       name="prettiest"
                       value="Coupe (necessarily 'boulevardier')"
-                      selected={
+                      checked={
                         prettiestSelection ===
                         "Coupe (necessarily 'boulevardier')"
                       }
@@ -97,7 +107,7 @@ const Prettiest = ({ openModal, onClose }) => {
                       type="radio"
                       name="prettiest"
                       value="Zombie (think 'tequila sunrise')"
-                      selected={
+                      checked={
                         prettiestSelection ===
                         "Zombie (think 'tequila sunrise')"
                       }
@@ -120,7 +130,7 @@ const Prettiest = ({ openModal, onClose }) => {
                       type="radio"
                       name="prettiest"
                       value="Rocks (essentially 'old fashioned')"
-                      selected={
+                      checked={
                         prettiestSelection ===
                         "Rocks (essentially 'old fashioned')"
                       }
@@ -143,7 +153,7 @@ const Prettiest = ({ openModal, onClose }) => {
                       type="radio"
                       name="prettiest"
                       value="Hurricane (akin 'singapore sling')"
-                      selected={
+                      checked={
                         prettiestSelection ===
                         "Hurricane (akin 'singapore sling')"
                       }
