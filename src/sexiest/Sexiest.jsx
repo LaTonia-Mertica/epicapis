@@ -45,7 +45,6 @@ const Sexiest = ({ openModal, onClose }) => {
           sexiestNSelection,
         })
       );
-      // console.log(sexiestFSelection, sexiestMSelection, sexiestNSelection);
     } else if (!sexiestMSelection && !sexiestNSelection) {
       window.localStorage.setItem(
         "sexiestSelections",
@@ -53,7 +52,6 @@ const Sexiest = ({ openModal, onClose }) => {
           sexiestFSelection,
         })
       );
-      // console.log(sexiestFSelection);
     } else if (!sexiestFSelection && !sexiestNSelection) {
       window.localStorage.setItem(
         "sexiestSelections",
@@ -61,7 +59,6 @@ const Sexiest = ({ openModal, onClose }) => {
           sexiestMSelection,
         })
       );
-      // console.log(sexiestMSelection);
     } else if (!sexiestFSelection && !sexiestMSelection) {
       window.localStorage.setItem(
         "sexiestSelections",
@@ -69,7 +66,6 @@ const Sexiest = ({ openModal, onClose }) => {
           sexiestNSelection,
         })
       );
-      // console.log(sexiestNSelection);
     } else if (!sexiestNSelection) {
       window.localStorage.setItem(
         "sexiestSelections",
@@ -78,7 +74,6 @@ const Sexiest = ({ openModal, onClose }) => {
           sexiestMSelection,
         })
       );
-      // console.log(sexiestFSelection, sexiestMSelection);
     } else if (!sexiestMSelection) {
       window.localStorage.setItem(
         "sexiestSelections",
@@ -87,7 +82,6 @@ const Sexiest = ({ openModal, onClose }) => {
           sexiestNSelection,
         })
       );
-      // console.log(sexiestFSelection, sexiestNSelection);
     } else if (!sexiestFSelection) {
       window.localStorage.setItem(
         "sexiestSelections",
@@ -96,7 +90,6 @@ const Sexiest = ({ openModal, onClose }) => {
           sexiestNSelection,
         })
       );
-      // console.log(sexiestMSelection, sexiestNSelection);
     }
   };
 
@@ -149,7 +142,6 @@ const Sexiest = ({ openModal, onClose }) => {
               </p>
               <p className="sexiestPara para1">
                 <label htmlFor="wonderwoman">
-                  {/* {console.log(sexiestFSelection === "Wonder Woman")} */}
                   <Deblur className="deblur" />
                   <input
                     type="radio"

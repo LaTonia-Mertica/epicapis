@@ -20,7 +20,6 @@ const Best = ({ openModal, onClose }) => {
   }, [openModal]);
 
   const submit = () => {
-    // console.log(bestSelection);
     if (bestSelection) {
       window.localStorage.setItem(
         "bestSelection",

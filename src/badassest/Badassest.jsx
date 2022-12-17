@@ -20,7 +20,6 @@ const Badassest = ({ openModal, onClose }) => {
   }, [openModal]);
 
   const submit = () => {
-    // console.log(badassestSelection);
     if (badassestSelection) {
       window.localStorage.setItem(
         "badassestSelection",

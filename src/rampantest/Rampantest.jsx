@@ -16,19 +16,16 @@ const Rampantest = ({ openModal, onClose }) => {
         "rampantestEntry",
         JSON.stringify(rampantestYear)
       );
-      console.log(rampantestYear);
     } else if (!rampantestYear) {
       window.localStorage.setItem(
         "rampantestEntry",
         JSON.stringify(rampantestStache)
       );
-      console.log(rampantestStache);
     } else {
       window.localStorage.setItem(
         "rampantestEntry",
         JSON.stringify(`${rampantestYear}: ${rampantestStache}`)
       );
-      console.log(`${rampantestYear}: ${rampantestStache}`);
     }
   };
 

@@ -15,7 +15,6 @@ const Beautiful = ({ openModal, onClose }) => {
   };
 
   const submit = () => {
-    console.log(beautifulEntry);
     window.localStorage.setItem(
       "beautifulEntry",
       beautifulEntry ||

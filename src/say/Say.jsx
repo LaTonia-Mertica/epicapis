@@ -27,18 +27,11 @@ const Say = ({ openModal, onClose }) => {
   }, [openModal]);
 
   const submit = (event) => {
-    // console.log(saySelection);
     if (saySelection) {
       event.preventDefault();
       window.localStorage.setItem("saySelection", JSON.stringify(saySelection));
     }
   };
-
-  // useEffect(() => {
-  //   if (!openModal) {
-  //     setPhraseToShow();
-  //   }
-  // }, [openModal]);
 
   return (
     <main>

@@ -15,7 +15,6 @@ const Dangerous = ({ openModal, onClose }) => {
   };
 
   const submit = () => {
-    console.log(dangerousEntry);
     if (dangerousEntry) {
       window.localStorage.setItem(
         "dangerousEntry",

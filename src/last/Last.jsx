@@ -22,7 +22,6 @@ const Last = ({ openModal, onClose }) => {
   }, [openModal]);
 
   const submit = () => {
-    // console.log(lastSelection);
     if (lastSelection) {
       window.localStorage.setItem(
         "lastSelection",

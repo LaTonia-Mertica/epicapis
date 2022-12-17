@@ -27,7 +27,6 @@ const Prettiest = ({ openModal, onClose }) => {
   }, [openModal]);
 
   const submit = () => {
-    // console.log(prettiestSelection);
     if (prettiestSelection) {
       window.localStorage.setItem(
         "prettiestSelection",

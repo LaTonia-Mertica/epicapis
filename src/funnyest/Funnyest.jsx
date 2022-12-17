@@ -7,7 +7,7 @@ import "./Funnyest.scss";
 import { style } from "../mui.js";
 
 const Funnyest = ({ openModal, onClose }) => {
-  let [selectedItems, setSelectedItems] = useState([]);
+  const [selectedItems, setSelectedItems] = useState([]);
 
   const submit = (event) => {
     event.preventDefault();
@@ -16,7 +16,6 @@ const Funnyest = ({ openModal, onClose }) => {
         selectedItems.push(element.name);
       }
     }
-    // console.log(selectedComedianActors);
 
     window.localStorage.setItem(
       "funnyestSelections",
