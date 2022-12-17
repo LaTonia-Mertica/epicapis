@@ -64,10 +64,10 @@ const Greatest = ({ openModal, onClose }) => {
                 <p className="greatestPara para1">
                   <input
                     type="checkbox"
-                    name="theprincessbride"
+                    name="The Princess Bride"
                     id="theprincessbride"
                     value="The Princess Bride"
-                    checked={selectedItems.includes("theprincessbride")}
+                    checked={selectedItems.includes("The Princess Bride")}
                   />
                   <label
                     htmlFor="theprincessbride"
@@ -79,10 +79,10 @@ const Greatest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="aliceinwonderland"
+                    name="Alice in Wonderland"
                     id="aliceinwonderland"
                     value="Alice in Wonderland"
-                    checked={selectedItems.includes("aliceinwonderland")}
+                    checked={selectedItems.includes("Alice in Wonderland")}
                   />
                   <label
                     htmlFor="aliceinwonderland"
@@ -94,10 +94,10 @@ const Greatest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="legend"
+                    name="Legend"
                     id="legend"
                     value="Legend"
-                    checked={selectedItems.includes("legend")}
+                    checked={selectedItems.includes("Legend")}
                   />
                   <label
                     htmlFor="legend"
@@ -109,10 +109,10 @@ const Greatest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="panslabyrinth"
+                    name="Pan's Labyrinth"
                     id="panslabyrinth"
                     value="Pan's Labyrinth"
-                    checked={selectedItems.includes("panslabyrinth")}
+                    checked={selectedItems.includes("Pan's Labyrinth")}
                   />
                   <label
                     htmlFor="panslabyrinth"
@@ -124,10 +124,10 @@ const Greatest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="theneverendingstory"
+                    name="The Neverending Story"
                     id="theneverendingstory"
                     value="The Neverending Story"
-                    checked={selectedItems.includes("theneverendingstory")}
+                    checked={selectedItems.includes("The Neverending Story")}
                   />
                   <label
                     htmlFor="theneverendingstory"
@@ -141,10 +141,10 @@ const Greatest = ({ openModal, onClose }) => {
                 <p className="greatestPara para2">
                   <input
                     type="checkbox"
-                    name="chittychittybangbang"
+                    name="Chitty Chitty Bang Bang"
                     id="chittychittybangbang"
                     value="Chitty Chitty Bang Bang"
-                    checked={selectedItems.includes("chittychittybangbang")}
+                    checked={selectedItems.includes("Chitty Chitty Bang Bang")}
                   />
                   <label
                     htmlFor="chittychittybangbang"
@@ -156,10 +156,10 @@ const Greatest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="jasonandtheargonauts"
+                    name="Jason & The Argonauts"
                     id="jasonandtheargonauts"
                     value="Jason & The Argonauts"
-                    checked={selectedItems.includes("jasonandtheargonauts")}
+                    checked={selectedItems.includes("Jason & The Argonauts")}
                   />
                   <label
                     htmlFor="jasonandtheargonauts"
@@ -171,10 +171,10 @@ const Greatest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="thewiz"
+                    name="The Wiz"
                     id="thewiz"
                     value="The Wiz"
-                    checked={selectedItems.includes("thewiz")}
+                    checked={selectedItems.includes("The Wiz")}
                   />
                   <label
                     htmlFor="thewiz"
@@ -186,10 +186,10 @@ const Greatest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="thedarkcrystal"
+                    name="The Dark Crystal"
                     id="thedarkcrystal"
                     value="The Dark Crystal"
-                    checked={selectedItems.includes("thedarkcrystal")}
+                    checked={selectedItems.includes("The Dark Crystal")}
                   />
                   <label
                     htmlFor="thedarkcrystal"
@@ -201,10 +201,10 @@ const Greatest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="whoframedrogerrabbit"
+                    name="Who Framed Roger Rabbit"
                     id="whoframedrogerrabbit"
                     value="Who Framed Roger Rabbit"
-                    checked={selectedItems.includes("whoframedrogerrabbit")}
+                    checked={selectedItems.includes("Who Framed Roger Rabbit")}
                   />
                   <label
                     htmlFor="whoframedrogerrabbit"

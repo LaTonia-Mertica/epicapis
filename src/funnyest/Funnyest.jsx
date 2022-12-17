@@ -64,10 +64,10 @@ const Funnyest = ({ openModal, onClose }) => {
                 <p className="funnyestPara para1">
                   <input
                     type="checkbox"
-                    name="anthonyanderson"
+                    name="Anthony Anderson"
                     id="anthonyanderson"
                     value="Anthony Anderson"
-                    checked={selectedItems.includes("anthonyanderson")}
+                    checked={selectedItems.includes("Anthony Anderson")}
                   />
                   <label
                     htmlFor="anthonyanderson"
@@ -79,10 +79,10 @@ const Funnyest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="jamiefoxx"
+                    name="Jamie Foxx"
                     id="jamiefoxx"
                     value="Jamie Foxx"
-                    checked={selectedItems.includes("jamiefoxx")}
+                    checked={selectedItems.includes("Jamie Foxx")}
                   />
                   <label htmlFor="jamiefoxx" title="image property of aurn.com">
                     Jamie Foxx
@@ -91,10 +91,10 @@ const Funnyest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="whoopigoldberg"
+                    name="Whoopi Goldberg"
                     id="whoopigoldberg"
                     value="Whoopi Goldberg"
-                    checked={selectedItems.includes("whoopigoldberg")}
+                    checked={selectedItems.includes("Whoopi Goldberg")}
                   />
                   <label
                     htmlFor="whoopigoldberg"
@@ -106,10 +106,10 @@ const Funnyest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="orlandojones"
+                    name="Orlando Jones"
                     id="orlandojones"
                     value="Orlando Jones"
-                    checked={selectedItems.includes("orlandojones")}
+                    checked={selectedItems.includes("Orlando Jones")}
                   />
                   <label
                     htmlFor="orlandojones"
@@ -121,10 +121,10 @@ const Funnyest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="berniemac"
+                    name="Bernie Mac"
                     id="berniemac"
                     value="Bernie Mac"
-                    checked={selectedItems.includes("berniemac")}
+                    checked={selectedItems.includes("Bernie Mac")}
                   />
                   <label
                     htmlFor="berniemac"
@@ -138,10 +138,10 @@ const Funnyest = ({ openModal, onClose }) => {
                 <p className="funnyestPara para2">
                   <input
                     type="checkbox"
-                    name="davidmann"
+                    name="David Mann"
                     id="davidmann"
                     value="David Mann"
-                    checked={selectedItems.includes("davidmann")}
+                    checked={selectedItems.includes("David Mann")}
                   />
                   <label
                     htmlFor="davidmann"
@@ -153,10 +153,10 @@ const Funnyest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="eddiemurphy"
+                    name="Eddie Murphy"
                     id="eddiemurphy"
                     value="Eddie Murphy"
-                    checked={selectedItems.includes("eddiemurphy")}
+                    checked={selectedItems.includes("Eddie Murphy")}
                   />
                   <label
                     htmlFor="eddiemurphy"
@@ -168,10 +168,10 @@ const Funnyest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="lawandapage"
+                    name="LaWanda Page"
                     id="lawandapage"
                     value="LaWanda Page"
-                    checked={selectedItems.includes("lawandapage")}
+                    checked={selectedItems.includes("LaWanda Page")}
                   />
                   <label
                     htmlFor="lawandapage"
@@ -183,10 +183,10 @@ const Funnyest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="wandasykes"
+                    name="Wanda Sykes"
                     id="wandasykes"
                     value="Wanda Sykes"
-                    checked={selectedItems.includes("wandasykes")}
+                    checked={selectedItems.includes("Wanda Sykes")}
                   />
                   <label
                     htmlFor="wandasykes"
@@ -198,10 +198,10 @@ const Funnyest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="roberttownsend"
+                    name="Robert Townsend"
                     id="roberttownsend"
                     value="Robert Townsend"
-                    checked={selectedItems.includes("roberttownsend")}
+                    checked={selectedItems.includes("Robert Townsend")}
                   />
                   <label
                     htmlFor="roberttownsend"
