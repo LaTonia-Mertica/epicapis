@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -9,8 +9,18 @@ import { style } from "../mui.js";
 const Best = ({ openModal, onClose }) => {
   const [bestSelection, setBestSelection] = useState();
 
+  useEffect(() => {
+    if (openModal) {
+      const storageString = window.localStorage.getItem("bestSelection");
+
+      if (storageString) {
+        setBestSelection(JSON.parse(storageString));
+      }
+    }
+  }, [openModal]);
+
   const submit = () => {
-    console.log(bestSelection);
+    // console.log(bestSelection);
     if (bestSelection) {
       window.localStorage.setItem(
         "bestSelection",
@@ -41,7 +51,7 @@ const Best = ({ openModal, onClose }) => {
                   name="best"
                   id="young"
                   value="young-ish (just starting out)"
-                  selected={bestSelection === "young-ish (just starting out)"}
+                  checked={bestSelection === "young-ish (just starting out)"}
                 />
                 <label htmlFor="young">
                   young<span className="parens">(</span>er
@@ -57,7 +67,7 @@ const Best = ({ openModal, onClose }) => {
                   name="best"
                   id="middling"
                   value="middling (too far in but too far from out)"
-                  selected={
+                  checked={
                     bestSelection ===
                     "middling (too far in but too far from out)"
                   }
@@ -76,7 +86,7 @@ const Best = ({ openModal, onClose }) => {
                   name="best"
                   id="old"
                   value="old-ish (getting on in years)"
-                  selected={bestSelection === "old-ish (getting on in years)"}
+                  checked={bestSelection === "old-ish (getting on in years)"}
                 />
                 <label htmlFor="old">
                   old<span className="parens">(</span>er
