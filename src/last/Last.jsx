@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -11,8 +11,18 @@ import { faRecordVinyl } from "@fortawesome/free-solid-svg-icons";
 const Last = ({ openModal, onClose }) => {
   const [lastSelection, setLastSelection] = useState();
 
+  useEffect(() => {
+    if (openModal) {
+      const storageString = window.localStorage.getItem("lastSelection");
+
+      if (storageString) {
+        setLastSelection(JSON.parse(storageString));
+      }
+    }
+  }, [openModal]);
+
   const submit = () => {
-    console.log(lastSelection);
+    // console.log(lastSelection);
     if (lastSelection) {
       window.localStorage.setItem(
         "lastSelection",
@@ -48,7 +58,7 @@ const Last = ({ openModal, onClose }) => {
                       type="radio"
                       value="No Chance"
                       name="last"
-                      selected={lastSelection === "No Chance"}
+                      checked={lastSelection === "No Chance"}
                     />
                     &nbsp;&nbsp;&nbsp;No Chance
                   </label>
@@ -64,7 +74,7 @@ const Last = ({ openModal, onClose }) => {
                       type="radio"
                       value="Empty Promises"
                       name="last"
-                      selected={lastSelection === "Empty Promises"}
+                      checked={lastSelection === "Empty Promises"}
                     />
                     &nbsp;&nbsp;&nbsp;Empty Promises
                   </label>
@@ -80,7 +90,7 @@ const Last = ({ openModal, onClose }) => {
                       type="radio"
                       value="Reasons to Quit"
                       name="last"
-                      selected={lastSelection === "Reasons to Quit"}
+                      checked={lastSelection === "Reasons to Quit"}
                     />
                     &nbsp;&nbsp;&nbsp;Reasons to Quit
                   </label>
@@ -96,7 +106,7 @@ const Last = ({ openModal, onClose }) => {
                       type="radio"
                       value="Not to Try"
                       name="last"
-                      selected={lastSelection === "Not to Try"}
+                      checked={lastSelection === "Not to Try"}
                     />
                     &nbsp;&nbsp;&nbsp;Not to Try
                   </label>
@@ -112,7 +122,7 @@ const Last = ({ openModal, onClose }) => {
                       type="radio"
                       value="Having No One"
                       name="last"
-                      selected={lastSelection === "Having No Chance"}
+                      checked={lastSelection === "Having No Chance"}
                     />
                     &nbsp;&nbsp;&nbsp;Having No One
                   </label>
@@ -130,7 +140,7 @@ const Last = ({ openModal, onClose }) => {
                       type="radio"
                       value="Help Less Ness"
                       name="last"
-                      selected={lastSelection === "Help Less Ness"}
+                      checked={lastSelection === "Help Less Ness"}
                     />
                     &nbsp;&nbsp;&nbsp;Help Less Ness
                   </label>
@@ -146,7 +156,7 @@ const Last = ({ openModal, onClose }) => {
                       type="radio"
                       value="Ill Intent For Me"
                       name="last"
-                      selected={lastSelection === "Ill Intent For Me"}
+                      checked={lastSelection === "Ill Intent For Me"}
                     />
                     &nbsp;&nbsp;&nbsp;Ill Intent For Me
                   </label>
@@ -162,7 +172,7 @@ const Last = ({ openModal, onClose }) => {
                       type="radio"
                       value="Time Wasted"
                       name="last"
-                      selected={lastSelection === "Time Wasted"}
+                      checked={lastSelection === "Time Wasted"}
                     />
                     &nbsp;&nbsp;&nbsp;Time Wasted
                   </label>
@@ -178,7 +188,7 @@ const Last = ({ openModal, onClose }) => {
                       type="radio"
                       value="No Sight of Hope"
                       name="last"
-                      selected={lastSelection === "No Sight of Hope"}
+                      checked={lastSelection === "No Sight of Hope"}
                     />
                     &nbsp;&nbsp;&nbsp;No Sight of Hope
                   </label>
@@ -194,7 +204,7 @@ const Last = ({ openModal, onClose }) => {
                       type="radio"
                       value="Bad Surprises"
                       name="last"
-                      selected={lastSelection === "Bad Surprises"}
+                      checked={lastSelection === "Bad Surprises"}
                     />
                     &nbsp;&nbsp;&nbsp;Bad Surprises
                   </label>
