@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -9,8 +9,18 @@ import { style } from "../mui.js";
 const Badassest = ({ openModal, onClose }) => {
   const [badassestSelection, setBadassestSelection] = useState();
 
+  useEffect(() => {
+    if (openModal) {
+      const storageString = window.localStorage.getItem("badassestSelection");
+
+      if (storageString) {
+        setBadassestSelection(JSON.parse(storageString));
+      }
+    }
+  }, [openModal]);
+
   const submit = () => {
-    console.log(badassestSelection);
+    // console.log(badassestSelection);
     if (badassestSelection) {
       window.localStorage.setItem(
         "badassestSelection",
@@ -42,7 +52,7 @@ const Badassest = ({ openModal, onClose }) => {
                   name="badassest"
                   id="alice"
                   value="Alice (resident evil)"
-                  selected={badassestSelection === "Alice (resident evil)"}
+                  checked={badassestSelection === "Alice (resident evil)"}
                 />
                 <label htmlFor="alice">
                   Alice
@@ -56,9 +66,7 @@ const Badassest = ({ openModal, onClose }) => {
                   name="badassest"
                   id="michonne"
                   value="Michonne (the walking dead)"
-                  selected={
-                    badassestSelection === "Michonne (the walking dead)"
-                  }
+                  checked={badassestSelection === "Michonne (the walking dead)"}
                 />
                 <label htmlFor="michonne">
                   Michonne
@@ -72,7 +80,7 @@ const Badassest = ({ openModal, onClose }) => {
                   name="badassest"
                   id="ellen"
                   value="Ellen (predator)"
-                  selected={badassestSelection === "Ellen (predator)"}
+                  checked={badassestSelection === "Ellen (predator)"}
                 />
                 <label htmlFor="ellen">
                   Ellen <br />
@@ -85,7 +93,7 @@ const Badassest = ({ openModal, onClose }) => {
                   name="badassest"
                   id="gamora"
                   value="Gamora (guardians of the galaxy)"
-                  selected={
+                  checked={
                     badassestSelection === "Gamora (guardians of the galaxy)"
                   }
                 />
@@ -100,7 +108,7 @@ const Badassest = ({ openModal, onClose }) => {
                   name="badassest"
                   id="sarah"
                   value="Sarah (terminator)"
-                  selected={badassestSelection === "Sarah (terminator)"}
+                  checked={badassestSelection === "Sarah (terminator)"}
                 />
                 <label htmlFor="sarah">
                   Sarah
