@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -7,23 +7,32 @@ import "./Funnyest.scss";
 import { style } from "../mui.js";
 
 const Funnyest = ({ openModal, onClose }) => {
+  let [selectedItems, setSelectedItems] = useState([]);
+
   const submit = (event) => {
     event.preventDefault();
-    let selectedComedianActors = [];
-    // this is an example of an uncontrolled input that uses the DOM to access (instead of state)
-    for (const element of event.target.elements) {
+    for (const element of selectedItems) {
       if (element.checked) {
-        selectedComedianActors.push(element.name);
+        selectedItems.push(element.name);
       }
     }
-
-    console.log(selectedComedianActors);
+    // console.log(selectedComedianActors);
 
     window.localStorage.setItem(
       "funnyestSelections",
-      JSON.stringify(selectedComedianActors)
+      JSON.stringify(selectedItems)
     );
   };
+
+  useEffect(() => {
+    if (openModal) {
+      const storageString = window.localStorage.getItem("funnyestSelections");
+
+      if (storageString) {
+        setSelectedItems(JSON.parse(storageString));
+      }
+    }
+  }, [openModal]);
 
   return (
     <main>
@@ -42,6 +51,15 @@ const Funnyest = ({ openModal, onClose }) => {
               id="funnyest"
               value="funnyest"
               onSubmit={submit}
+              onChange={(event) => {
+                if (event.target.checked) {
+                  setSelectedItems([...selectedItems, event.target.name]);
+                } else {
+                  setSelectedItems(
+                    selectedItems.filter((item) => item !== event.target.name)
+                  );
+                }
+              }}
             >
               <span>
                 <p className="funnyestPara para1">
@@ -50,6 +68,7 @@ const Funnyest = ({ openModal, onClose }) => {
                     name="anthonyanderson"
                     id="anthonyanderson"
                     value="Anthony Anderson"
+                    checked={selectedItems.includes("anthonyanderson")}
                   />
                   <label
                     htmlFor="anthonyanderson"
@@ -64,6 +83,7 @@ const Funnyest = ({ openModal, onClose }) => {
                     name="jamiefoxx"
                     id="jamiefoxx"
                     value="Jamie Foxx"
+                    checked={selectedItems.includes("jamiefoxx")}
                   />
                   <label htmlFor="jamiefoxx" title="image property of aurn.com">
                     Jamie Foxx
@@ -75,6 +95,7 @@ const Funnyest = ({ openModal, onClose }) => {
                     name="whoopigoldberg"
                     id="whoopigoldberg"
                     value="Whoopi Goldberg"
+                    checked={selectedItems.includes("whoopigoldberg")}
                   />
                   <label
                     htmlFor="whoopigoldberg"
@@ -89,6 +110,7 @@ const Funnyest = ({ openModal, onClose }) => {
                     name="orlandojones"
                     id="orlandojones"
                     value="Orlando Jones"
+                    checked={selectedItems.includes("orlandojones")}
                   />
                   <label
                     htmlFor="orlandojones"
@@ -103,6 +125,7 @@ const Funnyest = ({ openModal, onClose }) => {
                     name="berniemac"
                     id="berniemac"
                     value="Bernie Mac"
+                    checked={selectedItems.includes("berniemac")}
                   />
                   <label
                     htmlFor="berniemac"
@@ -119,6 +142,7 @@ const Funnyest = ({ openModal, onClose }) => {
                     name="davidmann"
                     id="davidmann"
                     value="David Mann"
+                    checked={selectedItems.includes("davidmann")}
                   />
                   <label
                     htmlFor="davidmann"
@@ -130,9 +154,10 @@ const Funnyest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="eddiemurphy]"
+                    name="eddiemurphy"
                     id="eddiemurphy"
                     value="Eddie Murphy"
+                    checked={selectedItems.includes("eddiemurphy")}
                   />
                   <label
                     htmlFor="eddiemurphy"
@@ -147,6 +172,7 @@ const Funnyest = ({ openModal, onClose }) => {
                     name="lawandapage"
                     id="lawandapage"
                     value="LaWanda Page"
+                    checked={selectedItems.includes("lawandapage")}
                   />
                   <label
                     htmlFor="lawandapage"
@@ -161,6 +187,7 @@ const Funnyest = ({ openModal, onClose }) => {
                     name="wandasykes"
                     id="wandasykes"
                     value="Wanda Sykes"
+                    checked={selectedItems.includes("wandasykes")}
                   />
                   <label
                     htmlFor="wandasykes"
@@ -175,6 +202,7 @@ const Funnyest = ({ openModal, onClose }) => {
                     name="roberttownsend"
                     id="roberttownsend"
                     value="Robert Townsend"
+                    checked={selectedItems.includes("roberttownsend")}
                   />
                   <label
                     htmlFor="roberttownsend"
