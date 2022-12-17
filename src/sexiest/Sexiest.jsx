@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -9,10 +9,31 @@ import { style } from "../mui.js";
 import nonbinary from "./images/nonbinary-representation-gap.png";
 
 const Sexiest = ({ openModal, onClose }) => {
-  // TODO how do we use the value in localstorage if it exists so when we reopen the modal, the selections are already made
   const [sexiestFSelection, setSexiestFSelection] = useState();
   const [sexiestMSelection, setSexiestMSelection] = useState();
   const [sexiestNSelection, setSexiestNSelection] = useState();
+
+  useEffect(() => {
+    if (openModal) {
+      const storageString = window.localStorage.getItem("sexiestSelections");
+
+      if (storageString) {
+        const selections = JSON.parse(storageString);
+
+        if (selections.sexiestFSelection) {
+          setSexiestFSelection(selections.sexiestFSelection);
+        }
+
+        if (selections.sexiestMSelection) {
+          setSexiestMSelection(selections.sexiestMSelection);
+        }
+
+        if (selections.sexiestNSelection) {
+          setSexiestNSelection(selections.sexiestNSelection);
+        }
+      }
+    }
+  }, [openModal]);
 
   const submit = () => {
     if (sexiestFSelection && sexiestMSelection && sexiestNSelection) {
@@ -24,7 +45,7 @@ const Sexiest = ({ openModal, onClose }) => {
           sexiestNSelection,
         })
       );
-      console.log(sexiestFSelection, sexiestMSelection, sexiestNSelection);
+      // console.log(sexiestFSelection, sexiestMSelection, sexiestNSelection);
     } else if (!sexiestMSelection && !sexiestNSelection) {
       window.localStorage.setItem(
         "sexiestSelections",
@@ -32,7 +53,7 @@ const Sexiest = ({ openModal, onClose }) => {
           sexiestFSelection,
         })
       );
-      console.log(sexiestFSelection);
+      // console.log(sexiestFSelection);
     } else if (!sexiestFSelection && !sexiestNSelection) {
       window.localStorage.setItem(
         "sexiestSelections",
@@ -40,7 +61,7 @@ const Sexiest = ({ openModal, onClose }) => {
           sexiestMSelection,
         })
       );
-      console.log(sexiestMSelection);
+      // console.log(sexiestMSelection);
     } else if (!sexiestFSelection && !sexiestMSelection) {
       window.localStorage.setItem(
         "sexiestSelections",
@@ -48,7 +69,7 @@ const Sexiest = ({ openModal, onClose }) => {
           sexiestNSelection,
         })
       );
-      console.log(sexiestNSelection);
+      // console.log(sexiestNSelection);
     } else if (!sexiestNSelection) {
       window.localStorage.setItem(
         "sexiestSelections",
@@ -57,7 +78,7 @@ const Sexiest = ({ openModal, onClose }) => {
           sexiestMSelection,
         })
       );
-      console.log(sexiestFSelection, sexiestMSelection);
+      // console.log(sexiestFSelection, sexiestMSelection);
     } else if (!sexiestMSelection) {
       window.localStorage.setItem(
         "sexiestSelections",
@@ -66,7 +87,7 @@ const Sexiest = ({ openModal, onClose }) => {
           sexiestNSelection,
         })
       );
-      console.log(sexiestFSelection, sexiestNSelection);
+      // console.log(sexiestFSelection, sexiestNSelection);
     } else if (!sexiestFSelection) {
       window.localStorage.setItem(
         "sexiestSelections",
@@ -75,7 +96,7 @@ const Sexiest = ({ openModal, onClose }) => {
           sexiestNSelection,
         })
       );
-      console.log(sexiestMSelection, sexiestNSelection);
+      // console.log(sexiestMSelection, sexiestNSelection);
     }
   };
 
@@ -105,7 +126,7 @@ const Sexiest = ({ openModal, onClose }) => {
                     value="Catwoman"
                     id="catwoman"
                     title="image by pluspng.com"
-                    selected={sexiestFSelection === "Catwoman"}
+                    checked={sexiestFSelection === "Catwoman"}
                     className="customIcon"
                   />
                   Catwoman
@@ -120,7 +141,7 @@ const Sexiest = ({ openModal, onClose }) => {
                     value="She-Ra"
                     id="shera"
                     title="image by bluyou.deviantart.com"
-                    selected={sexiestFSelection === "She-Ra"}
+                    checked={sexiestFSelection === "She-Ra"}
                     className="customIcon"
                   />
                   She-Ra
@@ -128,6 +149,7 @@ const Sexiest = ({ openModal, onClose }) => {
               </p>
               <p className="sexiestPara para1">
                 <label htmlFor="wonderwoman">
+                  {/* {console.log(sexiestFSelection === "Wonder Woman")} */}
                   <Deblur className="deblur" />
                   <input
                     type="radio"
@@ -135,7 +157,7 @@ const Sexiest = ({ openModal, onClose }) => {
                     value="Wonder Woman"
                     id="wonderwoman"
                     title="image by pinterest.com"
-                    selected={sexiestFSelection === "Wonder Woman"}
+                    checked={sexiestFSelection === "Wonder Woman"}
                     className="customIcon"
                   />
                   Wonder Woman
@@ -158,7 +180,7 @@ const Sexiest = ({ openModal, onClose }) => {
                     value="Batman"
                     id="batman"
                     title="image by pngplay.com"
-                    selected={sexiestMSelection === "Batman"}
+                    checked={sexiestMSelection === "Batman"}
                     className="customIcon"
                   />
                   Batman
@@ -174,7 +196,7 @@ const Sexiest = ({ openModal, onClose }) => {
                     value="Black Panther"
                     id="blackpanther"
                     title="image by clipart-library.com"
-                    selected={sexiestMSelection === "Black Panther"}
+                    checked={sexiestMSelection === "Black Panther"}
                     className="customIcon"
                   />
                   Black Panther
@@ -189,7 +211,7 @@ const Sexiest = ({ openModal, onClose }) => {
                     name="masculine"
                     value="Spider-Man"
                     id="spiderman"
-                    selected={sexiestMSelection === "Spider-Man"}
+                    checked={sexiestMSelection === "Spider-Man"}
                     className="customIcon"
                   />
                   Spider-Man
@@ -222,7 +244,7 @@ const Sexiest = ({ openModal, onClose }) => {
                     name="nonbinary"
                     value="Brother Ken"
                     id="brotherken"
-                    selected={sexiestNSelection === "Brother Ken"}
+                    checked={sexiestNSelection === "Brother Ken"}
                     className="customIcon"
                   />
                   Brother Ken
@@ -237,7 +259,7 @@ const Sexiest = ({ openModal, onClose }) => {
                     name="nonbinary"
                     value="Kid Quick"
                     id="kidquick"
-                    selected={sexiestNSelection === "Kid Quick"}
+                    checked={sexiestNSelection === "Kid Quick"}
                     className="customIcon"
                   />
                   Kid Quick
@@ -252,7 +274,7 @@ const Sexiest = ({ openModal, onClose }) => {
                     name="nonbinary"
                     value="Snow Flake"
                     id="snowflake"
-                    selected={sexiestNSelection === "Snow Flake"}
+                    checked={sexiestNSelection === "Snow Flake"}
                     className="customIcon"
                   />
                   Snow Flake
