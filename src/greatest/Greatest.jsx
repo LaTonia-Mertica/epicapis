@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -7,23 +7,31 @@ import "./Greatest.scss";
 import { style } from "../mui.js";
 
 const Greatest = ({ openModal, onClose }) => {
+  const [selectedItems, setSelectedItems] = useState([]);
+
   const submit = (event) => {
     event.preventDefault();
-    let selectedGreatestFantasies = [];
-    // this is an example of an uncontrolled input that uses the DOM to access (instead of state)
-    for (const element of event.target.elements) {
+    for (const element of selectedItems) {
       if (element.checked) {
-        selectedGreatestFantasies.push(element.name);
+        selectedItems.push(element.name);
       }
     }
 
-    console.log(selectedGreatestFantasies);
-
     window.localStorage.setItem(
       "greatestSelections",
-      JSON.stringify(selectedGreatestFantasies)
+      JSON.stringify(selectedItems)
     );
   };
+
+  useEffect(() => {
+    if (openModal) {
+      const storageString = window.localStorage.getItem("greatestSelections");
+
+      if (storageString) {
+        setSelectedItems(JSON.parse(storageString));
+      }
+    }
+  }, [openModal]);
 
   return (
     <main>
@@ -42,6 +50,15 @@ const Greatest = ({ openModal, onClose }) => {
               id="greatest"
               value="greatest"
               onSubmit={submit}
+              onChange={(event) => {
+                if (event.target.checked) {
+                  setSelectedItems([...selectedItems, event.target.name]);
+                } else {
+                  setSelectedItems(
+                    selectedItems.filter((item) => item !== event.target.name)
+                  );
+                }
+              }}
             >
               <span>
                 <p className="greatestPara para1">
@@ -50,6 +67,7 @@ const Greatest = ({ openModal, onClose }) => {
                     name="theprincessbride"
                     id="theprincessbride"
                     value="The Princess Bride"
+                    checked={selectedItems.includes("theprincessbride")}
                   />
                   <label
                     htmlFor="theprincessbride"
@@ -64,6 +82,7 @@ const Greatest = ({ openModal, onClose }) => {
                     name="aliceinwonderland"
                     id="aliceinwonderland"
                     value="Alice in Wonderland"
+                    checked={selectedItems.includes("aliceinwonderland")}
                   />
                   <label
                     htmlFor="aliceinwonderland"
@@ -78,6 +97,7 @@ const Greatest = ({ openModal, onClose }) => {
                     name="legend"
                     id="legend"
                     value="Legend"
+                    checked={selectedItems.includes("legend")}
                   />
                   <label
                     htmlFor="legend"
@@ -92,6 +112,7 @@ const Greatest = ({ openModal, onClose }) => {
                     name="panslabyrinth"
                     id="panslabyrinth"
                     value="Pan's Labyrinth"
+                    checked={selectedItems.includes("panslabyrinth")}
                   />
                   <label
                     htmlFor="panslabyrinth"
@@ -106,6 +127,7 @@ const Greatest = ({ openModal, onClose }) => {
                     name="theneverendingstory"
                     id="theneverendingstory"
                     value="The Neverending Story"
+                    checked={selectedItems.includes("theneverendingstory")}
                   />
                   <label
                     htmlFor="theneverendingstory"
@@ -122,6 +144,7 @@ const Greatest = ({ openModal, onClose }) => {
                     name="chittychittybangbang"
                     id="chittychittybangbang"
                     value="Chitty Chitty Bang Bang"
+                    checked={selectedItems.includes("chittychittybangbang")}
                   />
                   <label
                     htmlFor="chittychittybangbang"
@@ -136,6 +159,7 @@ const Greatest = ({ openModal, onClose }) => {
                     name="jasonandtheargonauts"
                     id="jasonandtheargonauts"
                     value="Jason & The Argonauts"
+                    checked={selectedItems.includes("jasonandtheargonauts")}
                   />
                   <label
                     htmlFor="jasonandtheargonauts"
@@ -150,6 +174,7 @@ const Greatest = ({ openModal, onClose }) => {
                     name="thewiz"
                     id="thewiz"
                     value="The Wiz"
+                    checked={selectedItems.includes("thewiz")}
                   />
                   <label
                     htmlFor="thewiz"
@@ -164,6 +189,7 @@ const Greatest = ({ openModal, onClose }) => {
                     name="thedarkcrystal"
                     id="thedarkcrystal"
                     value="The Dark Crystal"
+                    checked={selectedItems.includes("thedarkcrystal")}
                   />
                   <label
                     htmlFor="thedarkcrystal"
@@ -178,6 +204,7 @@ const Greatest = ({ openModal, onClose }) => {
                     name="whoframedrogerrabbit"
                     id="whoframedrogerrabbit"
                     value="Who Framed Roger Rabbit"
+                    checked={selectedItems.includes("whoframedrogerrabbit")}
                   />
                   <label
                     htmlFor="whoframedrogerrabbit"
