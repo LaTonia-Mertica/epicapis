@@ -15,28 +15,29 @@ const Say = ({ openModal, onClose }) => {
     phraseGenerator(setPhraseToShow, event.target.value);
   };
 
+  const submit = (event) => {
+    if (saySelection) {
+      event.preventDefault();
+      window.localStorage.setItem("saySelection", saySelection);
+    }
+    onClose();
+  };
+
   useEffect(() => {
     if (openModal) {
       const storageString = window.localStorage.getItem("saySelection");
 
       if (storageString) {
-        setSaySelection(JSON.parse(storageString)) &&
-          setPhraseToShow(valueSelected);
+        setSaySelection(storageString);
+        phraseGenerator(setPhraseToShow, storageString);
       }
     }
   }, [openModal]);
 
-  const submit = (event) => {
-    if (saySelection) {
-      event.preventDefault();
-      window.localStorage.setItem("saySelection", JSON.stringify(saySelection));
-    }
-  };
-
   return (
     <main>
       <Modal
-        open={openModal === "Say"}
+        open={openModal === "Say This Neva"}
         onClose={onClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
@@ -44,7 +45,7 @@ const Say = ({ openModal, onClose }) => {
         <Box sx={style} className="sayCard">
           <Button onClick={onClose}>&#x274C;</Button>
           <div>
-            <form action="#">
+            <form>
               <fieldset
                 onChange={(event) => {
                   setSaySelection(event.target.value);
