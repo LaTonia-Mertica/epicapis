@@ -8,8 +8,8 @@ import { style } from "../mui.js";
 import phraseGenerator from "./phraseGenerator";
 
 const Say = ({ openModal, onClose }) => {
-  const [phraseToShow, setPhraseToShow] = useState();
   const [saySelection, setSaySelection] = useState();
+  const [phraseToShow, setPhraseToShow] = useState();
 
   const valueSelected = (event) => {
     phraseGenerator(setPhraseToShow, event.target.value);
