@@ -13,28 +13,6 @@ const Sexiest = ({ openModal, onClose }) => {
   const [sexiestMSelection, setSexiestMSelection] = useState();
   const [sexiestNSelection, setSexiestNSelection] = useState();
 
-  useEffect(() => {
-    if (openModal) {
-      const storageString = window.localStorage.getItem("sexiestSelections");
-
-      if (storageString) {
-        const selections = JSON.parse(storageString);
-
-        if (selections.sexiestFSelection) {
-          setSexiestFSelection(selections.sexiestFSelection);
-        }
-
-        if (selections.sexiestMSelection) {
-          setSexiestMSelection(selections.sexiestMSelection);
-        }
-
-        if (selections.sexiestNSelection) {
-          setSexiestNSelection(selections.sexiestNSelection);
-        }
-      }
-    }
-  }, [openModal]);
-
   const submit = () => {
     if (sexiestFSelection && sexiestMSelection && sexiestNSelection) {
       window.localStorage.setItem(
@@ -91,12 +69,35 @@ const Sexiest = ({ openModal, onClose }) => {
         })
       );
     }
+    onClose();
   };
+
+  useEffect(() => {
+    if (openModal) {
+      const storageString = window.localStorage.getItem("sexiestSelections");
+
+      if (storageString) {
+        const selections = JSON.parse(storageString);
+
+        if (selections.sexiestFSelection) {
+          setSexiestFSelection(selections.sexiestFSelection);
+        }
+
+        if (selections.sexiestMSelection) {
+          setSexiestMSelection(selections.sexiestMSelection);
+        }
+
+        if (selections.sexiestNSelection) {
+          setSexiestNSelection(selections.sexiestNSelection);
+        }
+      }
+    }
+  }, [openModal]);
 
   return (
     <main>
       <Modal
-        open={openModal === "Sexiest"}
+        open={openModal === "Sexiest Alter Ego"}
         onClose={onClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
