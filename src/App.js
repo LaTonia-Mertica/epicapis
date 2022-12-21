@@ -1,13 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
 import useMinWidth from "./useMinWidth";
 // styles import necessary for jsx and scss files
+// eslint-disable-next-line
 import styles from "./App.scss";
 import Masonry from "react-masonry-css";
 import Button from "@mui/material/Button";
 // route import necessary for jsx and scss files
+// eslint-disable-next-line
 import { Route } from "@mui/icons-material";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 
 import Header from "./Header";
 import epicapisLogo from "./images/epicapisLogo.png";
@@ -85,95 +89,29 @@ const getRandomFoaasImg = Math.floor(Math.random() * foaasImgs.length);
 let randomFoaasImg = foaasImgs[getRandomFoaasImg];
 
 const App = () => {
+  const [email, setEmail] = useState("");
   const [openModal, setOpenModal] = useState(false);
   const screenWidth = useMinWidth();
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const closeModal = () => {
     setOpenModal(false);
+    setShowSuccess(openModal);
   };
+
   const [epicMode, setEpicMode] = useState(
     JSON.parse(localStorage.getItem("epicMode")) || false
   );
 
   const [count, setCount] = useState(localStorage.getItem("count") || 1);
   const addOneToCount = () => {
+    // eslint-disable-next-line
     let visitCount = Number(localStorage.getItem("count")) || 1;
     localStorage.setItem("count", Number(count) + 1);
   };
   const deleteCount = () => {
     setCount(1);
     localStorage.removeItem("count");
-  };
-
-  const state = {
-    email: {
-      to: "",
-      from: "",
-      subject: "",
-      html: "",
-    },
-  };
-
-  const sendEmail = (event) => {
-    event.preventDefault();
-    const { email } = this.state;
-    // START OF LOCAL STORAGE FOR HTML (USER INPUTS)
-    const badassestSelection = JSON.parse(
-      window.localStorage.getItem("badassestSelection")
-    );
-    const beautifulEntry = JSON.parse(
-      window.localStorage.getItem("beautifulEntry")
-    );
-    const bestSelection = JSON.parse(
-      window.localStorage.getItem("bestSelection")
-    );
-    const dangerousEntry = JSON.parse(
-      window.localStorage.getItem("dangerousEntry")
-    );
-    const funnyestSelections = JSON.parse(
-      window.localStorage.getItem("funnyestSelections")
-    );
-    const greatestSelections = JSON.parse(
-      window.localStorage.getItem("greatestSelections")
-    );
-    const grittiestEntry = JSON.parse(
-      window.localStorage.getItem("grittiestEntry")
-    );
-    const lastSelection = JSON.parse(
-      window.localStorage.getItem("lastSelection")
-    );
-    const prettiestSelection = JSON.parse(
-      window.localStorage.getItem("prettiestSelection")
-    );
-    const rampantestEntry = JSON.parse(
-      window.localStorage.getItem("rampantestEntry")
-    );
-    const saySelection = JSON.parse(
-      window.localStorage.getItem("saySelection")
-    );
-    const sexiestSelections = JSON.parse(
-      window.localStorage.getItem("sexiestSelections")
-    );
-    // END OF LOCAL STORAGE FOR HTML (USER INPUTS)
-
-    console.log({
-      badassestSelection,
-      beautifulEntry,
-      bestSelection,
-      dangerousEntry,
-      funnyestSelections,
-      greatestSelections,
-      grittiestEntry,
-      lastSelection,
-      prettiestSelection,
-      rampantestEntry,
-      saySelection,
-      sexiestSelections,
-    });
-
-    fetch(
-      `http://localhost:3001/send-email?to-${email.to}&from-&${email.from}&subject-${email.subject}&html-${email.html}`
-    ).catch((error) => console.log(error));
   };
 
   if (screenWidth < 670) {
@@ -280,6 +218,7 @@ const App = () => {
           </ul>
         </nav>
       </div>
+
       <Masonry
         breakpointCols={1}
         className="my-masonry-grid"
@@ -303,7 +242,7 @@ const App = () => {
             height="500px"
             className="funnyest semanticFillerImg"
             onClick={() => {
-              setOpenModal("Funnyest");
+              setOpenModal("Funnyest Ever");
             }}
           ></img>
 
@@ -324,7 +263,7 @@ const App = () => {
             height="500px"
             className="badassest semanticFillerImg"
             onClick={() => {
-              setOpenModal("Badassest");
+              setOpenModal("Badassest On Tv");
             }}
           ></img>
 
@@ -345,7 +284,7 @@ const App = () => {
             height="500px"
             className="greatest semanticFillerImg"
             onClick={() => {
-              setOpenModal("Greatest");
+              setOpenModal("Greatest Fantasy");
             }}
           ></img>
 
@@ -366,7 +305,7 @@ const App = () => {
             height="500px"
             className="grittiest semanticFillerImg"
             onClick={() => {
-              setOpenModal("Grittiest");
+              setOpenModal("Grittiest Army");
             }}
           ></img>
 
@@ -387,7 +326,7 @@ const App = () => {
             height="500px"
             className="prettiest semanticFillerImg"
             onClick={() => {
-              setOpenModal("Prettiest");
+              setOpenModal("Prettiest Drink");
             }}
           ></img>
 
@@ -408,7 +347,7 @@ const App = () => {
             height="500px"
             className="say semanticFillerImg"
             onClick={() => {
-              setOpenModal("Say");
+              setOpenModal("Say This Neva");
             }}
           ></img>
 
@@ -429,7 +368,7 @@ const App = () => {
             height="500px"
             className="best semanticFillerImg"
             onClick={() => {
-              setOpenModal("Best");
+              setOpenModal("Best Age To Be");
             }}
           ></img>
 
@@ -451,7 +390,7 @@ const App = () => {
             height="500px"
             className="last semanticFillerImg"
             onClick={() => {
-              setOpenModal("Last");
+              setOpenModal("Last Thing Need");
             }}
           ></img>
 
@@ -472,7 +411,7 @@ const App = () => {
             height="500px"
             className="rampantest semanticFillerImg"
             onClick={() => {
-              setOpenModal("Rampantest");
+              setOpenModal("Rampantest Lip Wig");
             }}
           ></img>
 
@@ -493,7 +432,7 @@ const App = () => {
             height="500px"
             className="sexiest semanticFillerImg"
             onClick={() => {
-              setOpenModal("Sexiest");
+              setOpenModal("Sexiest Alter Ego");
             }}
           ></img>
 
@@ -514,7 +453,7 @@ const App = () => {
             height="500px"
             className="beautiful semanticFillerImg"
             onClick={() => {
-              setOpenModal("Beautiful");
+              setOpenModal("Beautiful Code");
             }}
           ></img>
 
@@ -535,7 +474,7 @@ const App = () => {
             height="500px"
             className="dangerous semanticFillerImg"
             onClick={() => {
-              setOpenModal("Dangerous");
+              setOpenModal("Dangerous Code");
             }}
           ></img>
         </div>
@@ -554,47 +493,47 @@ const App = () => {
       <Marvel openModal={openModal} onClose={closeModal} />
 
       {/* unmount modal when modal not open option */}
-      {openModal === "Funnyest" && (
+      {openModal === "Funnyest Ever" && (
         <Funnyest openModal={openModal} onClose={closeModal} />
       )}
-      {openModal === "Badassest" && (
+      {openModal === "Badassest On Tv" && (
         <Badassest openModal={openModal} onClose={closeModal} />
       )}
-      {openModal === "Greatest" && (
+      {openModal === "Greatest Fantasy" && (
         <Greatest openModal={openModal} onClose={closeModal} />
       )}
-      {openModal === "Grittiest" && (
+      {openModal === "Grittiest Army" && (
         <Grittiest openModal={openModal} onClose={closeModal} />
       )}
-      {openModal === "Prettiest" && (
+      {openModal === "Prettiest Drink" && (
         <Prettiest openModal={openModal} onClose={closeModal} />
       )}
-      {openModal === "Say" && (
+      {openModal === "Say This Neva" && (
         <Say openModal={openModal} onClose={closeModal} />
       )}
-      {openModal === "Best" && (
+      {openModal === "Best Age To Be" && (
         <Best openModal={openModal} onClose={closeModal} />
       )}
-      {openModal === "Last" && (
+      {openModal === "Last Thing Need" && (
         <Last openModal={openModal} onClose={closeModal} />
       )}
-      {openModal === "Rampantest" && (
+      {openModal === "Rampantest Lip Wig" && (
         <Rampantest openModal={openModal} onClose={closeModal} />
       )}
-      {openModal === "Sexiest" && (
+      {openModal === "Sexiest Alter Ego" && (
         <Sexiest openModal={openModal} onClose={closeModal} />
       )}
 
       {openModal === "Epic" && (
         <Epic openModal={openModal} onClose={closeModal} />
       )}
-      {openModal === "Beautiful" && (
+      {openModal === "Beautiful Code" && (
         <Beautiful openModal={openModal} onClose={closeModal} />
       )}
       {openModal === "Api" && (
         <Api openModal={openModal} onClose={closeModal} />
       )}
-      {openModal === "Dangerous" && (
+      {openModal === "Dangerous Code" && (
         <Dangerous openModal={openModal} onClose={closeModal} />
       )}
 
@@ -606,28 +545,93 @@ const App = () => {
           placeholder={"enter email address" || " "}
           autoComplete="off"
           className="selectionsInput"
+          value={email}
           onChange={(event) => {
-            sendEmail(event.target.value);
+            setEmail(event.target.value);
           }}
         />
         <Button
           type="submit"
           // onClick={sendEmail}
           onClick={() => {
-            // arrange elements for email
+            // START OF LOCAL STORAGE FOR HTML (USER INPUTS)
+            const badassestSelection = JSON.parse(
+              window.localStorage.getItem("badassestSelection")
+            );
+            const beautifulEntry = JSON.parse(
+              window.localStorage.getItem("beautifulEntry")
+            );
+            const bestSelection = JSON.parse(
+              window.localStorage.getItem("bestSelection")
+            );
+            const dangerousEntry = JSON.parse(
+              window.localStorage.getItem("dangerousEntry")
+            );
+            const funnyestSelections = JSON.parse(
+              window.localStorage.getItem("funnyestSelections")
+            );
+            const greatestSelections = JSON.parse(
+              window.localStorage.getItem("greatestSelections")
+            );
+            const grittiestEntry = JSON.parse(
+              window.localStorage.getItem("grittiestEntry")
+            );
+            const lastSelection = JSON.parse(
+              window.localStorage.getItem("lastSelection")
+            );
+            const prettiestSelection = JSON.parse(
+              window.localStorage.getItem("prettiestSelection")
+            );
+            const rampantestEntry = JSON.parse(
+              window.localStorage.getItem("rampantestEntry")
+            );
+            const saySelection = JSON.parse(
+              window.localStorage.getItem("saySelection")
+            );
+            const sexiestSelections = JSON.parse(
+              window.localStorage.getItem("sexiestSelections")
+            );
+            // END OF LOCAL STORAGE FOR HTML (USER INPUTS)
+
             fetch(`http://localhost:3001/sendEmail`, {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
               },
               body: JSON.stringify({
-                // arrange elements for email
-                to: state.email.to,
-                from: state.email.from,
-                subject: state.email.subject,
-                html: state.email.html,
+                email,
+                selections: {
+                  badassestSelection,
+                  beautifulEntry,
+                  bestSelection,
+                  dangerousEntry,
+                  funnyestSelections,
+                  greatestSelections,
+                  grittiestEntry,
+                  lastSelection,
+                  prettiestSelection,
+                  rampantestEntry,
+                  saySelection,
+                  sexiestSelections,
+                },
               }),
             });
+
+            // console.log(
+            //   email,
+            //   badassestSelection,
+            //   beautifulEntry,
+            //   bestSelection,
+            //   dangerousEntry,
+            //   funnyestSelections,
+            //   greatestSelections,
+            //   grittiestEntry,
+            //   lastSelection,
+            //   prettiestSelection,
+            //   rampantestEntry,
+            //   saySelection,
+            //   sexiestSelections
+            // );
           }}
           className="selectionsSubmitBtn"
           title="click to email your selections"
@@ -635,6 +639,17 @@ const App = () => {
           email selections
         </Button>
       </form>
+      <Snackbar
+        open={!!showSuccess}
+        autoHideDuration={3000}
+        onClose={() => {
+          setShowSuccess(false);
+        }}
+      >
+        <Alert severity="success" sx={{ width: "100%" }}>
+          {showSuccess} Submitted!
+        </Alert>
+      </Snackbar>
     </main>
   );
 };
