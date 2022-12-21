@@ -33,7 +33,7 @@
   }
 
   input[type="radio"] {
-    width: 0.3rem;
+    width: 0.5rem;
     cursor: pointer;
     accent-color: aqua;
     @include icon-click-effect;
@@ -46,7 +46,7 @@
   .customIcons {
     display: inline-flex;
     position: absolute;
-    top: -0.05rem;
+    top: -0.25rem;
     left: $space-xsm;
   }
 

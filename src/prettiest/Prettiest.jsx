@@ -16,16 +16,6 @@ import tomcollins from "./images/tomcollins.gif";
 const Prettiest = ({ openModal, onClose }) => {
   const [prettiestSelection, setPrettiestSelection] = useState();
 
-  useEffect(() => {
-    if (openModal) {
-      const storageString = window.localStorage.getItem("prettiestSelection");
-
-      if (storageString) {
-        setPrettiestSelection(JSON.parse(storageString));
-      }
-    }
-  }, [openModal]);
-
   const submit = () => {
     if (prettiestSelection) {
       window.localStorage.setItem(
@@ -33,12 +23,27 @@ const Prettiest = ({ openModal, onClose }) => {
         JSON.stringify(prettiestSelection)
       );
     }
+    onClose();
   };
+
+  useEffect(() => {
+    if (openModal) {
+      const storageString = window.localStorage.getItem("prettiestSelection");
+
+      if (storageString) {
+        const selection = JSON.parse(storageString);
+
+        if (selection) {
+          setPrettiestSelection(selection);
+        }
+      }
+    }
+  }, [openModal]);
 
   return (
     <main>
       <Modal
-        open={openModal === "Prettiest"}
+        open={openModal === "Prettiest Drink"}
         onClose={onClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
