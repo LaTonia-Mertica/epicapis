@@ -9,16 +9,6 @@ import { style } from "../mui.js";
 const Best = ({ openModal, onClose }) => {
   const [bestSelection, setBestSelection] = useState();
 
-  useEffect(() => {
-    if (openModal) {
-      const storageString = window.localStorage.getItem("bestSelection");
-
-      if (storageString) {
-        setBestSelection(JSON.parse(storageString));
-      }
-    }
-  }, [openModal]);
-
   const submit = () => {
     if (bestSelection) {
       window.localStorage.setItem(
@@ -26,12 +16,27 @@ const Best = ({ openModal, onClose }) => {
         JSON.stringify(bestSelection)
       );
     }
+    onClose();
   };
+
+  useEffect(() => {
+    if (openModal) {
+      const storageString = window.localStorage.getItem("bestSelection");
+
+      if (storageString) {
+        const selection = JSON.parse(storageString);
+
+        if (selection) {
+          setBestSelection(selection);
+        }
+      }
+    }
+  }, [openModal]);
 
   return (
     <main>
       <Modal
-        open={openModal === "Best"}
+        open={openModal === "Best Age To Be"}
         onClose={onClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"

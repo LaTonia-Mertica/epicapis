@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -11,28 +11,34 @@ const Grittiest = ({ openModal, onClose }) => {
   const [grittiestYear, setGrittiestYear] = useState();
 
   const submit = () => {
-    if (!grittiestArmy) {
-      window.localStorage.setItem(
-        "grittiestEntry",
-        JSON.stringify(grittiestYear)
-      );
-    } else if (!grittiestYear) {
-      window.localStorage.setItem(
-        "grittiestEntry",
-        JSON.stringify(grittiestArmy)
-      );
-    } else {
-      window.localStorage.setItem(
-        "grittiestEntry",
-        JSON.stringify(`${grittiestYear}: ${grittiestArmy}`)
-      );
-    }
+    window.localStorage.setItem(
+      "grittiestEntry",
+      JSON.stringify({ grittiestYear, grittiestArmy })
+    );
+    onClose();
   };
+
+  useEffect(() => {
+    if (openModal) {
+      const storage = window.localStorage.getItem("grittiestEntry");
+
+      if (storage) {
+        const entries = JSON.parse(storage);
+
+        if (entries.grittiestArmy) {
+          setGrittiestArmy(entries.grittiestArmy);
+        }
+        if (entries.grittiestYear) {
+          setGrittiestYear(entries.grittiestYear);
+        }
+      }
+    }
+  }, [openModal]);
 
   return (
     <main>
       <Modal
-        open={openModal === "Grittiest"}
+        open={openModal === "Grittiest Army"}
         onClose={onClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"

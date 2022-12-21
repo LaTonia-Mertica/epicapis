@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -8,24 +8,56 @@ import { style } from "../mui.js";
 
 const Beautiful = ({ openModal, onClose }) => {
   const [showTextArea, setShowTextArea] = useState(false);
-  const [beautifulEntry, setBeautifulEntry] = useState();
+  const [beautifulEntry, setBeautifulEntry] = useState("");
 
   const setToggle = () => {
     setShowTextArea(!showTextArea);
   };
 
   const submit = () => {
-    window.localStorage.setItem(
-      "beautifulEntry",
-      beautifulEntry ||
-        "bold. consistent. clear in what it does, when, and how. free of code clutter. fun. doesn't shy from stating code simply. beautiful code makes you feel welcome."
-    );
+    if ((showTextArea && !beautifulEntry) || !showTextArea) {
+      // if user toggles and didn't enter anything OR user didn't toggle: use default definition
+      window.localStorage.setItem(
+        "beautifulEntry",
+        JSON.stringify({
+          beautifulEntry:
+            "bold. consistent. clear in what it does, when, and how. free of code clutter. fun. doesn't shy from stating code simply. beautiful code makes you feel welcome.",
+          showTextArea,
+        })
+      );
+    } else if (showTextArea && beautifulEntry) {
+      // if user toggles and entered definition: use what user entered
+      window.localStorage.setItem(
+        "beautifulEntry",
+        JSON.stringify({
+          beautifulEntry,
+          showTextArea: true,
+        })
+      );
+    }
+    onClose();
   };
+
+  useEffect(() => {
+    if (openModal) {
+      const storageString = window.localStorage.getItem("beautifulEntry");
+
+      if (storageString) {
+        const entries = JSON.parse(storageString);
+        if (entries.showTextArea) {
+          setShowTextArea(entries.showTextArea);
+        }
+        if (entries.beautifulEntry) {
+          setBeautifulEntry(entries.beautifulEntry);
+        }
+      }
+    }
+  }, [openModal]);
 
   return (
     <main>
       <Modal
-        open={openModal === "Beautiful"}
+        open={openModal === "Beautiful Code"}
         onClose={onClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
@@ -51,11 +83,11 @@ const Beautiful = ({ openModal, onClose }) => {
               <input
                 type="checkbox"
                 name="beautiful"
-                value="Definition of Beautiful"
+                checked={showTextArea}
                 onClick={setToggle}
               />
               {showTextArea && (
-                <form action="/enterplaceinputwilllivehere" method="get">
+                <form>
                   <label htmlFor="beautifulCode"></label>
                   <textarea
                     type="textbox"

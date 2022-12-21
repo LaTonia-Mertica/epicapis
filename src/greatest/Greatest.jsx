@@ -16,11 +16,11 @@ const Greatest = ({ openModal, onClose }) => {
         selectedItems.push(element.name);
       }
     }
-
     window.localStorage.setItem(
       "greatestSelections",
       JSON.stringify(selectedItems)
     );
+    onClose();
   };
 
   useEffect(() => {
@@ -28,7 +28,11 @@ const Greatest = ({ openModal, onClose }) => {
       const storageString = window.localStorage.getItem("greatestSelections");
 
       if (storageString) {
-        setSelectedItems(JSON.parse(storageString));
+        const selections = JSON.parse(storageString);
+
+        if (selections) {
+          setSelectedItems(selections);
+        }
       }
     }
   }, [openModal]);
@@ -36,7 +40,7 @@ const Greatest = ({ openModal, onClose }) => {
   return (
     <main>
       <Modal
-        open={openModal === "Greatest"}
+        open={openModal === "Greatest Fantasy"}
         onClose={onClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"

@@ -9,16 +9,6 @@ import { style } from "../mui.js";
 const Badassest = ({ openModal, onClose }) => {
   const [badassestSelection, setBadassestSelection] = useState();
 
-  useEffect(() => {
-    if (openModal) {
-      const storageString = window.localStorage.getItem("badassestSelection");
-
-      if (storageString) {
-        setBadassestSelection(JSON.parse(storageString));
-      }
-    }
-  }, [openModal]);
-
   const submit = () => {
     if (badassestSelection) {
       window.localStorage.setItem(
@@ -26,12 +16,27 @@ const Badassest = ({ openModal, onClose }) => {
         JSON.stringify(badassestSelection)
       );
     }
+    onClose();
   };
+
+  useEffect(() => {
+    if (openModal) {
+      const storageString = window.localStorage.getItem("badassestSelection");
+
+      if (storageString) {
+        const selection = JSON.parse(storageString);
+
+        if (selection) {
+          setBadassestSelection(selection);
+        }
+      }
+    }
+  }, [openModal]);
 
   return (
     <main>
       <Modal
-        open={openModal === "Badassest"}
+        open={openModal === "Badassest On Tv"}
         onClose={onClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"

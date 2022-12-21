@@ -11,16 +11,6 @@ import { faRecordVinyl } from "@fortawesome/free-solid-svg-icons";
 const Last = ({ openModal, onClose }) => {
   const [lastSelection, setLastSelection] = useState();
 
-  useEffect(() => {
-    if (openModal) {
-      const storageString = window.localStorage.getItem("lastSelection");
-
-      if (storageString) {
-        setLastSelection(JSON.parse(storageString));
-      }
-    }
-  }, [openModal]);
-
   const submit = () => {
     if (lastSelection) {
       window.localStorage.setItem(
@@ -28,12 +18,27 @@ const Last = ({ openModal, onClose }) => {
         JSON.stringify(lastSelection)
       );
     }
+    onClose();
   };
+
+  useEffect(() => {
+    if (openModal) {
+      const storageString = window.localStorage.getItem("lastSelection");
+
+      if (storageString) {
+        const selection = JSON.parse(storageString);
+
+        if (selection) {
+          setLastSelection(selection);
+        }
+      }
+    }
+  }, [openModal]);
 
   return (
     <main>
       <Modal
-        open={openModal === "Last"}
+        open={openModal === "Last Thing Need"}
         onClose={onClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"

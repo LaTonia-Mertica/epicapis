@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -8,30 +8,53 @@ import { style } from "../mui.js";
 
 const Dangerous = ({ openModal, onClose }) => {
   const [showTextArea, setShowTextArea] = useState(false);
-  const [dangerousEntry, setDangerousEntry] = useState();
+  const [dangerousEntry, setDangerousEntry] = useState("");
 
   const setToggle = () => {
     setShowTextArea(!showTextArea);
   };
 
   const submit = () => {
-    if (dangerousEntry) {
+    if (!showTextArea || (showTextArea && !dangerousEntry)) {
+      // if user didn't toggle OR if user toggles and didn't enter anything: use default definition
       window.localStorage.setItem(
         "dangerousEntry",
-        JSON.stringify(dangerousEntry)
+        JSON.stringify({
+          dangerousEntry:
+            "boastful. unwieldy. alienating in what it does, when, and how. misleading. maybe even malicious. slow. dangerous code makes you feel exhausted.",
+          showTextArea,
+        })
       );
-    } else {
+    } else if (showTextArea && dangerousEntry) {
+      // if user toggles and entered definition: use what user entered
       window.localStorage.setItem(
         "dangerousEntry",
-        "boastful. unwieldy. alienating in what it does, when, and how. misleading. maybe even malicious. slow. dangerous code makes you feel exhausted."
+        JSON.stringify({ dangerousEntry, showTextArea: true })
       );
     }
+    onClose();
   };
+
+  useEffect(() => {
+    if (openModal) {
+      const storageString = window.localStorage.getItem("dangerousEntry");
+
+      if (storageString) {
+        const entries = JSON.parse(storageString);
+        if (entries.showTextArea) {
+          setShowTextArea(entries.showTextArea);
+        }
+        if (entries.dangerousEntry) {
+          setDangerousEntry(entries.dangerousEntry);
+        }
+      }
+    }
+  }, [openModal]);
 
   return (
     <main>
       <Modal
-        open={openModal === "Dangerous"}
+        open={openModal === "Dangerous Code"}
         onClose={onClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
@@ -57,11 +80,11 @@ const Dangerous = ({ openModal, onClose }) => {
               <input
                 type="checkbox"
                 name="dangerous"
-                value="Definition of Dangerous"
+                value={showTextArea}
                 onClick={setToggle}
               />
               {showTextArea && (
-                <form action="/enterplaceinputwilllivehere" method="get">
+                <form>
                   <label htmlFor="dangerousCode"></label>
                   <textarea
                     type="textbox"

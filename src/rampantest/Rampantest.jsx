@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -11,28 +11,34 @@ const Rampantest = ({ openModal, onClose }) => {
   const [rampantestYear, setRampantestYear] = useState();
 
   const submit = () => {
-    if (!rampantestStache) {
-      window.localStorage.setItem(
-        "rampantestEntry",
-        JSON.stringify(rampantestYear)
-      );
-    } else if (!rampantestYear) {
-      window.localStorage.setItem(
-        "rampantestEntry",
-        JSON.stringify(rampantestStache)
-      );
-    } else {
-      window.localStorage.setItem(
-        "rampantestEntry",
-        JSON.stringify(`${rampantestYear}: ${rampantestStache}`)
-      );
-    }
+    window.localStorage.setItem(
+      "rampantestEntry",
+      JSON.stringify({ rampantestYear, rampantestStache })
+    );
+    onClose();
   };
+
+  useEffect(() => {
+    if (openModal) {
+      const storage = window.localStorage.getItem("rampantestEntry");
+
+      if (storage) {
+        const entries = JSON.parse(storage);
+
+        if (entries.rampantestStache) {
+          setRampantestStache(entries.rampantestStache);
+        }
+        if (entries.rampantestYear) {
+          setRampantestYear(entries.rampantestYear);
+        }
+      }
+    }
+  }, [openModal]);
 
   return (
     <main>
       <Modal
-        open={openModal === "Rampantest"}
+        open={openModal === "Rampantest Lip Wig"}
         onClose={onClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"

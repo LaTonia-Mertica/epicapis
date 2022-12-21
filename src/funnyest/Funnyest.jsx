@@ -21,6 +21,7 @@ const Funnyest = ({ openModal, onClose }) => {
       "funnyestSelections",
       JSON.stringify(selectedItems)
     );
+    onClose();
   };
 
   useEffect(() => {
@@ -28,7 +29,11 @@ const Funnyest = ({ openModal, onClose }) => {
       const storageString = window.localStorage.getItem("funnyestSelections");
 
       if (storageString) {
-        setSelectedItems(JSON.parse(storageString));
+        const selections = JSON.parse(storageString);
+
+        if (selections) {
+          setSelectedItems(selections);
+        }
       }
     }
   }, [openModal]);
@@ -36,7 +41,7 @@ const Funnyest = ({ openModal, onClose }) => {
   return (
     <main>
       <Modal
-        open={openModal === "Funnyest"}
+        open={openModal === "Funnyest Ever"}
         onClose={onClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
