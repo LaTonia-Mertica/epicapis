@@ -14,13 +14,14 @@ const OwenWilson = ({ openModal, onClose }) => {
     setLoading(true);
     try {
       const data = await fetch(
-        `https://owen-wilson-wow-api.herokuapp.com/wows/random`
+        `https://owen-wilson-wow-api.onrender.com/wows/random`
       );
 
       const json = await data.json();
       setMovie(json[0]);
+      setLoading(false);
     } catch (error) {
-      console.log("Oh Wow, Owen's Been Heroku'ed (Too)!");
+      console.log("Oh Wow, Owen's API Isn't Working!");
       setLoading(false);
     }
   };
@@ -56,7 +57,7 @@ const OwenWilson = ({ openModal, onClose }) => {
                 alt="Owen Wows"
               />
 
-              <p className="errorMsg">Oh Wow, Owen's Been Heroku'ed (Too)!</p>
+              <p className="errorMsg">Oh Wow, Owen's API Isn't Working!</p>
             </>
           ) : (
             ""
