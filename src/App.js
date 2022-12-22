@@ -94,9 +94,12 @@ const App = () => {
   const screenWidth = useMinWidth();
   const [showSuccess, setShowSuccess] = useState(false);
 
-  const closeModal = () => {
+  const closeModal = (submitted = false) => {
     setOpenModal(false);
-    setShowSuccess(openModal);
+    console.log(submitted);
+    if (submitted === true) {
+      setShowSuccess(openModal);
+    }
   };
 
   const [epicMode, setEpicMode] = useState(
@@ -537,7 +540,99 @@ const App = () => {
         <Dangerous openModal={openModal} onClose={closeModal} />
       )}
 
-      <form className="selectionsForm">
+      <form
+        className="selectionsForm"
+        onSubmit={(event) => {
+          event.preventDefault();
+
+          // START OF LOCAL STORAGE FOR HTML (USER INPUTS)
+          const badassestSelection = JSON.parse(
+            window.localStorage.getItem("badassestSelection")
+          );
+          const beautifulEntry = JSON.parse(
+            window.localStorage.getItem("beautifulEntry")
+          );
+          const bestSelection = JSON.parse(
+            window.localStorage.getItem("bestSelection")
+          );
+          const dangerousEntry = JSON.parse(
+            window.localStorage.getItem("dangerousEntry")
+          );
+          const funnyestSelections = JSON.parse(
+            window.localStorage.getItem("funnyestSelections")
+          );
+          const greatestSelections = JSON.parse(
+            window.localStorage.getItem("greatestSelections")
+          );
+          const grittiestEntry = JSON.parse(
+            window.localStorage.getItem("grittiestEntry")
+          );
+          const lastSelection = JSON.parse(
+            window.localStorage.getItem("lastSelection")
+          );
+          const prettiestSelection = JSON.parse(
+            window.localStorage.getItem("prettiestSelection")
+          );
+          const rampantestEntry = JSON.parse(
+            window.localStorage.getItem("rampantestEntry")
+          );
+          const saySelection = JSON.parse(
+            window.localStorage.getItem("saySelection")
+          );
+          const sexiestSelections = JSON.parse(
+            window.localStorage.getItem("sexiestSelections")
+          );
+          // END OF LOCAL STORAGE FOR HTML (USER INPUTS)
+
+          const keys = window.localStorage;
+          const keysNotClear = ["count", "epicMode"];
+          for (const key in keys) {
+            if (!keysNotClear.includes(key)) {
+              window.localStorage.removeItem(key);
+            }
+          }
+
+          fetch(`http://localhost:3001/sendEmail`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              email,
+              selections: {
+                badassestSelection,
+                beautifulEntry,
+                bestSelection,
+                dangerousEntry,
+                funnyestSelections,
+                greatestSelections,
+                grittiestEntry,
+                lastSelection,
+                prettiestSelection,
+                rampantestEntry,
+                saySelection,
+                sexiestSelections,
+              },
+            }),
+          });
+
+          // console.log(
+          //   email,
+          //   badassestSelection,
+          //   beautifulEntry,
+          //   bestSelection,
+          //   dangerousEntry,
+          //   funnyestSelections,
+          //   greatestSelections,
+          //   grittiestEntry,
+          //   lastSelection,
+          //   prettiestSelection,
+          //   rampantestEntry,
+          //   saySelection,
+          //   sexiestSelections
+          // );
+        }}
+      >
         <input
           type="email"
           name="email"
@@ -553,92 +648,13 @@ const App = () => {
         <Button
           type="submit"
           // onClick={sendEmail}
-          onClick={() => {
-            // START OF LOCAL STORAGE FOR HTML (USER INPUTS)
-            const badassestSelection = JSON.parse(
-              window.localStorage.getItem("badassestSelection")
-            );
-            const beautifulEntry = JSON.parse(
-              window.localStorage.getItem("beautifulEntry")
-            );
-            const bestSelection = JSON.parse(
-              window.localStorage.getItem("bestSelection")
-            );
-            const dangerousEntry = JSON.parse(
-              window.localStorage.getItem("dangerousEntry")
-            );
-            const funnyestSelections = JSON.parse(
-              window.localStorage.getItem("funnyestSelections")
-            );
-            const greatestSelections = JSON.parse(
-              window.localStorage.getItem("greatestSelections")
-            );
-            const grittiestEntry = JSON.parse(
-              window.localStorage.getItem("grittiestEntry")
-            );
-            const lastSelection = JSON.parse(
-              window.localStorage.getItem("lastSelection")
-            );
-            const prettiestSelection = JSON.parse(
-              window.localStorage.getItem("prettiestSelection")
-            );
-            const rampantestEntry = JSON.parse(
-              window.localStorage.getItem("rampantestEntry")
-            );
-            const saySelection = JSON.parse(
-              window.localStorage.getItem("saySelection")
-            );
-            const sexiestSelections = JSON.parse(
-              window.localStorage.getItem("sexiestSelections")
-            );
-            // END OF LOCAL STORAGE FOR HTML (USER INPUTS)
-
-            fetch(`http://localhost:3001/sendEmail`, {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                email,
-                selections: {
-                  badassestSelection,
-                  beautifulEntry,
-                  bestSelection,
-                  dangerousEntry,
-                  funnyestSelections,
-                  greatestSelections,
-                  grittiestEntry,
-                  lastSelection,
-                  prettiestSelection,
-                  rampantestEntry,
-                  saySelection,
-                  sexiestSelections,
-                },
-              }),
-            });
-
-            // console.log(
-            //   email,
-            //   badassestSelection,
-            //   beautifulEntry,
-            //   bestSelection,
-            //   dangerousEntry,
-            //   funnyestSelections,
-            //   greatestSelections,
-            //   grittiestEntry,
-            //   lastSelection,
-            //   prettiestSelection,
-            //   rampantestEntry,
-            //   saySelection,
-            //   sexiestSelections
-            // );
-          }}
           className="selectionsSubmitBtn"
           title="click to email your selections"
         >
           email selections
         </Button>
       </form>
+
       <Snackbar
         open={!!showSuccess}
         autoHideDuration={3000}
