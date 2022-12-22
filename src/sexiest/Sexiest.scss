@@ -137,8 +137,4 @@
     top: $space-sm;
     right: $space-sm;
   }
-
-  .submitBtn {
-    @include button-submit;
-  }
 }
