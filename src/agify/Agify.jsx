@@ -124,7 +124,7 @@ const Agify = ({ openModal, onClose }) => {
               {ageByName.count < 1 ? (
                 <></>
               ) : (
-                <>search count:&nbsp;&nbsp;{ageByName.count}</>
+                <>search count:&nbsp;&nbsp;{ageByName.count.toLocaleString()}</>
               )}
             </p>
           </div>
