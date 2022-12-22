@@ -15,7 +15,7 @@ const Grittiest = ({ openModal, onClose }) => {
       "grittiestEntry",
       JSON.stringify({ grittiestYear, grittiestArmy })
     );
-    onClose();
+    onClose(true);
   };
 
   useEffect(() => {
@@ -45,7 +45,7 @@ const Grittiest = ({ openModal, onClose }) => {
       >
         <Box sx={style} className="grittiestCard">
           <Button onClick={onClose}>&#x274C;</Button>
-          <div className="grittiestFieldsetDiv">
+          <form onSubmit={submit} className="grittiestFieldsetDiv">
             <fieldset className="grittiestFieldset">
               <p className="grittiestPara">
                 <label htmlFor="decade">grittiest decade :&nbsp;&nbsp;</label>
@@ -77,10 +77,10 @@ const Grittiest = ({ openModal, onClose }) => {
                 />
               </p>
             </fieldset>
-            <button type="submit" className="submitBtn" onClick={submit}>
+            <button type="submit" className="submitBtn">
               submit
             </button>
-          </div>
+          </form>
         </Box>
       </Modal>
     </main>

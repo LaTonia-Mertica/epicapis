@@ -35,7 +35,7 @@ const Beautiful = ({ openModal, onClose }) => {
         })
       );
     }
-    onClose();
+    onClose(true);
   };
 
   useEffect(() => {

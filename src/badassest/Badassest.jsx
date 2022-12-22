@@ -16,7 +16,7 @@ const Badassest = ({ openModal, onClose }) => {
         JSON.stringify(badassestSelection)
       );
     }
-    onClose();
+    onClose(true);
   };
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const Badassest = ({ openModal, onClose }) => {
       >
         <Box sx={style} className="badassestCard">
           <Button onClick={onClose}>&#x274C;</Button>
-          <div className="radioFieldsetDiv">
+          <form onSubmit={submit} className="radioFieldsetDiv">
             <fieldset
               className="badassestFieldset"
               onChange={(event) => {
@@ -122,10 +122,10 @@ const Badassest = ({ openModal, onClose }) => {
                 <br />
               </p>
             </fieldset>
-            <button type="submit" className="submitBtn" onClick={submit}>
+            <button type="submit" className="submitBtn">
               submit
             </button>
-          </div>
+          </form>
         </Box>
       </Modal>
     </main>

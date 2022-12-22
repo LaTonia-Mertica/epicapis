@@ -69,7 +69,7 @@ const Sexiest = ({ openModal, onClose }) => {
         })
       );
     }
-    onClose();
+    onClose(true);
   };
 
   useEffect(() => {
@@ -104,7 +104,7 @@ const Sexiest = ({ openModal, onClose }) => {
       >
         <Box sx={style} className="sexiestCard">
           <Button onClick={onClose}>&#x274C;</Button>
-          <div className="fieldsetDiv">
+          <form onSubmit={submit} className="fieldsetDiv">
             <fieldset
               onChange={(event) => {
                 setSexiestFSelection(event.target.value);
@@ -211,6 +211,10 @@ const Sexiest = ({ openModal, onClose }) => {
                 </label>
                 <br />
               </p>
+              {/* button for page submission */}
+              <button type="submit" className="submitBtn">
+                submit
+              </button>
             </fieldset>
 
             <fieldset
@@ -275,10 +279,7 @@ const Sexiest = ({ openModal, onClose }) => {
                 <br />
               </p>
             </fieldset>
-          </div>
-          <button type="submit" className="submitBtn" onClick={submit}>
-            submit
-          </button>
+          </form>
         </Box>
       </Modal>
     </main>

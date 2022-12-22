@@ -20,7 +20,7 @@ const Say = ({ openModal, onClose }) => {
       event.preventDefault();
       window.localStorage.setItem("saySelection", saySelection);
     }
-    onClose();
+    onClose(true);
   };
 
   useEffect(() => {

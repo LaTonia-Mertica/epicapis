@@ -32,7 +32,7 @@ const Dangerous = ({ openModal, onClose }) => {
         JSON.stringify({ dangerousEntry, showTextArea: true })
       );
     }
-    onClose();
+    onClose(true);
   };
 
   useEffect(() => {

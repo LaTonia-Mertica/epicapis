@@ -16,7 +16,7 @@ const Best = ({ openModal, onClose }) => {
         JSON.stringify(bestSelection)
       );
     }
-    onClose();
+    onClose(true);
   };
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const Best = ({ openModal, onClose }) => {
       >
         <Box sx={style} className="bestCard">
           <Button onClick={onClose}>&#x274C;</Button>
-          <div>
+          <form onSubmit={submit}>
             <fieldset
               onChange={(event) => {
                 setBestSelection(event.target.value);
@@ -102,10 +102,10 @@ const Best = ({ openModal, onClose }) => {
                 <br />
               </p>
             </fieldset>
-            <button type="submit" className="submitBtn" onClick={submit}>
+            <button type="submit" className="submitBtn">
               submit
             </button>
-          </div>
+          </form>
         </Box>
       </Modal>
     </main>

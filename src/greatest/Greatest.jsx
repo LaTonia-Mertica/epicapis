@@ -20,7 +20,7 @@ const Greatest = ({ openModal, onClose }) => {
       "greatestSelections",
       JSON.stringify(selectedItems)
     );
-    onClose();
+    onClose(true);
   };
 
   useEffect(() => {

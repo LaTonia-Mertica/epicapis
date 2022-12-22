@@ -18,7 +18,7 @@ const Last = ({ openModal, onClose }) => {
         JSON.stringify(lastSelection)
       );
     }
-    onClose();
+    onClose(true);
   };
 
   useEffect(() => {
@@ -45,7 +45,7 @@ const Last = ({ openModal, onClose }) => {
       >
         <Box sx={style} className="lastCard">
           <Button onClick={onClose}>&#x274C;</Button>
-          <div className="lastDiv">
+          <form onSubmit={submit} className="lastDiv">
             <fieldset
               onChange={(event) => {
                 setLastSelection(event.target.value);
@@ -216,10 +216,10 @@ const Last = ({ openModal, onClose }) => {
                 </p>
               </span>
             </fieldset>
-            <button type="submit" className="submitBtn" onClick={submit}>
+            <button type="submit" className="submitBtn">
               submit
             </button>
-          </div>
+          </form>
         </Box>
       </Modal>
     </main>

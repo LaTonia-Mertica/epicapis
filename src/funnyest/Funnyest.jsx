@@ -21,7 +21,7 @@ const Funnyest = ({ openModal, onClose }) => {
       "funnyestSelections",
       JSON.stringify(selectedItems)
     );
-    onClose();
+    onClose(true);
   };
 
   useEffect(() => {

@@ -15,7 +15,7 @@ const Rampantest = ({ openModal, onClose }) => {
       "rampantestEntry",
       JSON.stringify({ rampantestYear, rampantestStache })
     );
-    onClose();
+    onClose(true);
   };
 
   useEffect(() => {
@@ -45,7 +45,7 @@ const Rampantest = ({ openModal, onClose }) => {
       >
         <Box sx={style} className="rampantestCard">
           <Button onClick={onClose}>&#x274C;</Button>
-          <div>
+          <form onSubmit={submit}>
             <fieldset>
               <p className="rampantestPara">
                 <label htmlFor="decade">rampantest decade :&nbsp;&nbsp;</label>
@@ -77,10 +77,10 @@ const Rampantest = ({ openModal, onClose }) => {
                 />
               </p>
             </fieldset>
-            <button type="submit" className="submitBtn" onClick={submit}>
+            <button type="submit" className="submitBtn">
               submit
             </button>
-          </div>
+          </form>
         </Box>
       </Modal>
     </main>
