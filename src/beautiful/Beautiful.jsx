@@ -87,7 +87,7 @@ const Beautiful = ({ openModal, onClose }) => {
                 onClick={setToggle}
               />
               {showTextArea && (
-                <form>
+                <>
                   <label htmlFor="beautifulCode"></label>
                   <textarea
                     type="textbox"
@@ -97,7 +97,7 @@ const Beautiful = ({ openModal, onClose }) => {
                       setBeautifulEntry(event.target.value);
                     }}
                   ></textarea>
-                </form>
+                </>
               )}
             </section>
 
