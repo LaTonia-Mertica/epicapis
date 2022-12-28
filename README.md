@@ -4,6 +4,8 @@ _collection of fun, odd, quirky application programming interfaces paired with c
 
 ##### [epic apis summary](public/epic-apis-summary.pdf)
 
+##### [epic apis data flow](public/epicapis-dfd.pdf)
+
 ##### [trello project management](https://trello.com/b/YLTdkWTR/epicapis)
 
 ##### [frontend github repo](https://github.com/LaTonia-Mertica/epicapis)
