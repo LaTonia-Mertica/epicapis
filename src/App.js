@@ -17,6 +17,7 @@ import Header from "./Header";
 import epicapisLogo from "./images/epicapisLogo.png";
 import epicapisposter from "./images/epicapisposter.pdf";
 import summary from "./files/epic-apis-summary.pdf";
+import dataFlow from "./files/epicapis-dfd.pdf";
 
 import agify from "./images/agify.png";
 import chuck from "./images/chuck.png";
@@ -96,7 +97,7 @@ const App = () => {
 
   const closeModal = (submitted = false) => {
     setOpenModal(false);
-    console.log(submitted);
+    // console.log(submitted);
     if (submitted === true) {
       setShowSuccess(openModal);
     }
@@ -168,6 +169,11 @@ const App = () => {
             <li className="summaryPdf">
               <a href={summary} target="_blank" rel="noreferrer">
                 summary
+              </a>
+            </li>
+            <li className="dataFlowPdf">
+              <a href={dataFlow} target="_blank" rel="noreferrer">
+                data&nbsp;flow
               </a>
             </li>
             <li>
@@ -585,9 +591,9 @@ const App = () => {
           // END OF LOCAL STORAGE FOR HTML (USER INPUTS)
 
           const keys = window.localStorage;
-          const keysNotClear = ["count", "epicMode"];
+          const keysToNotClear = ["count", "epicMode", "name"];
           for (const key in keys) {
-            if (!keysNotClear.includes(key)) {
+            if (!keysToNotClear.includes(key)) {
               window.localStorage.removeItem(key);
             }
           }
@@ -615,22 +621,6 @@ const App = () => {
               },
             }),
           });
-
-          // console.log(
-          //   email,
-          //   badassestSelection,
-          //   beautifulEntry,
-          //   bestSelection,
-          //   dangerousEntry,
-          //   funnyestSelections,
-          //   greatestSelections,
-          //   grittiestEntry,
-          //   lastSelection,
-          //   prettiestSelection,
-          //   rampantestEntry,
-          //   saySelection,
-          //   sexiestSelections
-          // );
         }}
       >
         <input
@@ -647,12 +637,22 @@ const App = () => {
         />
         <Button
           type="submit"
-          // onClick={sendEmail}
           className="selectionsSubmitBtn"
           title="click to email your selections"
         >
           email selections
         </Button>
+        {/* <Snackbar
+          open={!!showSuccess}
+          autoHideDuration={3000}
+          onSubmit={() => {
+            setShowSuccess(false);
+          }}
+        >
+          <Alert severity="success" sx={{ width: "100%" }}>
+            {showSuccess} Sent!
+          </Alert>
+        </Snackbar> */}
       </form>
 
       <Snackbar
