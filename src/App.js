@@ -173,7 +173,7 @@ const App = () => {
             </li>
             <li className="dataFlowPdf">
               <a href={dataFlow} target="_blank" rel="noreferrer">
-                data&nbsp;flow
+                data={">"}flow
               </a>
             </li>
             <li>
