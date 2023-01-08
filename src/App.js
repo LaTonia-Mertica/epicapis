@@ -18,6 +18,8 @@ import epicapisLogo from "./images/epicapisLogo.png";
 import epicapisposter from "./images/epicapisposter.pdf";
 import summary from "./files/epic-apis-summary.pdf";
 import dataFlow from "./files/epicapis-dfd.pdf";
+import TRY from "./files/TRY.pdf";
+import infoIcon from "./images/info-icon.png";
 
 import agify from "./images/agify.png";
 import chuck from "./images/chuck.png";
@@ -167,12 +169,22 @@ const App = () => {
         <nav>
           <ul className="unorderedList">
             <li className="summaryPdf">
-              <a href={summary} target="_blank" rel="noreferrer">
+              <a
+                href={summary}
+                target="_blank"
+                rel="noreferrer"
+                title="Epic Apis Summary"
+              >
                 summary
               </a>
             </li>
             <li className="dataFlowPdf">
-              <a href={dataFlow} target="_blank" rel="noreferrer">
+              <a
+                href={dataFlow}
+                target="_blank"
+                rel="noreferrer"
+                title="Epic Apis Data Flow"
+              >
                 data={">"}flow
               </a>
             </li>
@@ -212,17 +224,34 @@ const App = () => {
                 className="epicapisCopyrightText listWordColor"
                 target="_blank"
                 rel="noreferrer"
+                title="EPIC Poster Pdf"
               >
                 EPIC<strong className="apisOfEpicapis">APIS</strong>
               </a>
-              <a
-                href="https://linktr.ee/latoniamertica"
-                className="myName listWordColor"
-                target="_blank"
-                rel="noreferrer"
-              >
-                La'Tonia Mertica
-              </a>
+              <br />
+              <span className="myNameInfoIconSpan">
+                <a
+                  href={TRY}
+                  className="myName listWordColor"
+                  target="_blank"
+                  rel="noreferrer"
+                  title="TRY Graphic Art Pdf"
+                >
+                  La'Tonia Mertica
+                </a>
+                <a
+                  href="https://linktr.ee/latoniamertica"
+                  className="myName listWordColor"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src={infoIcon}
+                    className="infoIcon"
+                    title="Link Tree: La'Tonia Mertica / La Walker"
+                  />
+                </a>
+              </span>
             </section>
           </ul>
         </nav>
