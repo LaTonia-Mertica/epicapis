@@ -14,14 +14,18 @@ const Cocktails = ({ openModal, onClose }) => {
 
   const getDrink = async () => {
     setLoading(true);
-    const data = await fetch(
-      `https://www.thecocktaildb.com/api/json/v2/${apikey}/random.php`
-    );
+    try {
+      const data = await fetch(
+        `https://www.thecocktaildb.com/api/json/v2/${apikey}/random.php`
+      );
 
-    const json = await data.json();
+      const json = await data.json();
 
-    setCocktail(json.drinks[0]);
-    setLoading(false);
+      setCocktail(json.drinks[0]);
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {
