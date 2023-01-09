@@ -99,7 +99,6 @@ const App = () => {
 
   const closeModal = (submitted = false) => {
     setOpenModal(false);
-    // console.log(submitted);
     if (submitted === true) {
       setShowSuccess(openModal);
     }
@@ -247,6 +246,7 @@ const App = () => {
                 >
                   <img
                     src={infoIcon}
+                    alt="Information icon"
                     className="infoIcon"
                     title="Link Tree: La'Tonia Mertica / La Walker"
                   />
@@ -671,17 +671,6 @@ const App = () => {
         >
           email selections
         </Button>
-        {/* <Snackbar
-          open={!!showSuccess}
-          autoHideDuration={3000}
-          onSubmit={() => {
-            setShowSuccess(false);
-          }}
-        >
-          <Alert severity="success" sx={{ width: "100%" }}>
-            {showSuccess} Sent!
-          </Alert>
-        </Snackbar> */}
       </form>
 
       <Snackbar
