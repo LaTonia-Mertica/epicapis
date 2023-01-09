@@ -258,6 +258,9 @@ input[type="email"]::placeholder {
   font-size: x-small;
   padding: 0.25rem 0.5rem;
 }
+input#email.selectionsInput {
+  margin-top: 1rem;
+}
 .selectionsInput {
   width: 50%;
   border-color: #545454;
