@@ -54,15 +54,6 @@ const Greatest = ({ openModal, onClose }) => {
               id="greatest"
               value="greatest"
               onSubmit={submit}
-              onChange={(event) => {
-                if (event.target.checked) {
-                  setSelectedItems([...selectedItems, event.target.name]);
-                } else {
-                  setSelectedItems(
-                    selectedItems.filter((item) => item !== event.target.name)
-                  );
-                }
-              }}
             >
               <span>
                 <p className="greatestPara para1">
@@ -72,6 +63,17 @@ const Greatest = ({ openModal, onClose }) => {
                     id="theprincessbride"
                     value="The Princess Bride"
                     checked={selectedItems.includes("The Princess Bride")}
+                    onChange={(event) => {
+                      if (event.target.checked) {
+                        setSelectedItems([...selectedItems, event.target.name]);
+                      } else {
+                        setSelectedItems(
+                          selectedItems.filter(
+                            (item) => item !== event.target.name
+                          )
+                        );
+                      }
+                    }}
                   />
                   <label
                     htmlFor="theprincessbride"
@@ -87,6 +89,17 @@ const Greatest = ({ openModal, onClose }) => {
                     id="aliceinwonderland"
                     value="Alice in Wonderland"
                     checked={selectedItems.includes("Alice in Wonderland")}
+                    onChange={(event) => {
+                      if (event.target.checked) {
+                        setSelectedItems([...selectedItems, event.target.name]);
+                      } else {
+                        setSelectedItems(
+                          selectedItems.filter(
+                            (item) => item !== event.target.name
+                          )
+                        );
+                      }
+                    }}
                   />
                   <label
                     htmlFor="aliceinwonderland"
@@ -102,6 +115,17 @@ const Greatest = ({ openModal, onClose }) => {
                     id="legend"
                     value="Legend"
                     checked={selectedItems.includes("Legend")}
+                    onChange={(event) => {
+                      if (event.target.checked) {
+                        setSelectedItems([...selectedItems, event.target.name]);
+                      } else {
+                        setSelectedItems(
+                          selectedItems.filter(
+                            (item) => item !== event.target.name
+                          )
+                        );
+                      }
+                    }}
                   />
                   <label
                     htmlFor="legend"
@@ -117,6 +141,17 @@ const Greatest = ({ openModal, onClose }) => {
                     id="panslabyrinth"
                     value="Pan's Labyrinth"
                     checked={selectedItems.includes("Pan's Labyrinth")}
+                    onChange={(event) => {
+                      if (event.target.checked) {
+                        setSelectedItems([...selectedItems, event.target.name]);
+                      } else {
+                        setSelectedItems(
+                          selectedItems.filter(
+                            (item) => item !== event.target.name
+                          )
+                        );
+                      }
+                    }}
                   />
                   <label
                     htmlFor="panslabyrinth"
@@ -132,6 +167,17 @@ const Greatest = ({ openModal, onClose }) => {
                     id="theneverendingstory"
                     value="The Neverending Story"
                     checked={selectedItems.includes("The Neverending Story")}
+                    onChange={(event) => {
+                      if (event.target.checked) {
+                        setSelectedItems([...selectedItems, event.target.name]);
+                      } else {
+                        setSelectedItems(
+                          selectedItems.filter(
+                            (item) => item !== event.target.name
+                          )
+                        );
+                      }
+                    }}
                   />
                   <label
                     htmlFor="theneverendingstory"
@@ -149,6 +195,17 @@ const Greatest = ({ openModal, onClose }) => {
                     id="chittychittybangbang"
                     value="Chitty Chitty Bang Bang"
                     checked={selectedItems.includes("Chitty Chitty Bang Bang")}
+                    onChange={(event) => {
+                      if (event.target.checked) {
+                        setSelectedItems([...selectedItems, event.target.name]);
+                      } else {
+                        setSelectedItems(
+                          selectedItems.filter(
+                            (item) => item !== event.target.name
+                          )
+                        );
+                      }
+                    }}
                   />
                   <label
                     htmlFor="chittychittybangbang"
@@ -164,6 +221,17 @@ const Greatest = ({ openModal, onClose }) => {
                     id="jasonandtheargonauts"
                     value="Jason & The Argonauts"
                     checked={selectedItems.includes("Jason & The Argonauts")}
+                    onChange={(event) => {
+                      if (event.target.checked) {
+                        setSelectedItems([...selectedItems, event.target.name]);
+                      } else {
+                        setSelectedItems(
+                          selectedItems.filter(
+                            (item) => item !== event.target.name
+                          )
+                        );
+                      }
+                    }}
                   />
                   <label
                     htmlFor="jasonandtheargonauts"
@@ -179,6 +247,17 @@ const Greatest = ({ openModal, onClose }) => {
                     id="thewiz"
                     value="The Wiz"
                     checked={selectedItems.includes("The Wiz")}
+                    onChange={(event) => {
+                      if (event.target.checked) {
+                        setSelectedItems([...selectedItems, event.target.name]);
+                      } else {
+                        setSelectedItems(
+                          selectedItems.filter(
+                            (item) => item !== event.target.name
+                          )
+                        );
+                      }
+                    }}
                   />
                   <label
                     htmlFor="thewiz"
@@ -194,6 +273,17 @@ const Greatest = ({ openModal, onClose }) => {
                     id="thedarkcrystal"
                     value="The Dark Crystal"
                     checked={selectedItems.includes("The Dark Crystal")}
+                    onChange={(event) => {
+                      if (event.target.checked) {
+                        setSelectedItems([...selectedItems, event.target.name]);
+                      } else {
+                        setSelectedItems(
+                          selectedItems.filter(
+                            (item) => item !== event.target.name
+                          )
+                        );
+                      }
+                    }}
                   />
                   <label
                     htmlFor="thedarkcrystal"
@@ -209,6 +299,17 @@ const Greatest = ({ openModal, onClose }) => {
                     id="whoframedrogerrabbit"
                     value="Who Framed Roger Rabbit"
                     checked={selectedItems.includes("Who Framed Roger Rabbit")}
+                    onChange={(event) => {
+                      if (event.target.checked) {
+                        setSelectedItems([...selectedItems, event.target.name]);
+                      } else {
+                        setSelectedItems(
+                          selectedItems.filter(
+                            (item) => item !== event.target.name
+                          )
+                        );
+                      }
+                    }}
                   />
                   <label
                     htmlFor="whoframedrogerrabbit"

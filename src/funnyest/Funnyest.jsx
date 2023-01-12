@@ -55,15 +55,6 @@ const Funnyest = ({ openModal, onClose }) => {
               id="funnyest"
               value="funnyest"
               onSubmit={submit}
-              onChange={(event) => {
-                if (event.target.checked) {
-                  setSelectedItems([...selectedItems, event.target.name]);
-                } else {
-                  setSelectedItems(
-                    selectedItems.filter((item) => item !== event.target.name)
-                  );
-                }
-              }}
             >
               <span>
                 <p className="funnyestPara para1">
@@ -73,6 +64,17 @@ const Funnyest = ({ openModal, onClose }) => {
                     id="anthonyanderson"
                     value="Anthony Anderson"
                     checked={selectedItems.includes("Anthony Anderson")}
+                    onChange={(event) => {
+                      if (event.target.checked) {
+                        setSelectedItems([...selectedItems, event.target.name]);
+                      } else {
+                        setSelectedItems(
+                          selectedItems.filter(
+                            (item) => item !== event.target.name
+                          )
+                        );
+                      }
+                    }}
                   />
                   <label
                     htmlFor="anthonyanderson"
@@ -88,6 +90,17 @@ const Funnyest = ({ openModal, onClose }) => {
                     id="jamiefoxx"
                     value="Jamie Foxx"
                     checked={selectedItems.includes("Jamie Foxx")}
+                    onChange={(event) => {
+                      if (event.target.checked) {
+                        setSelectedItems([...selectedItems, event.target.name]);
+                      } else {
+                        setSelectedItems(
+                          selectedItems.filter(
+                            (item) => item !== event.target.name
+                          )
+                        );
+                      }
+                    }}
                   />
                   <label htmlFor="jamiefoxx" title="image property of aurn.com">
                     Jamie Foxx
@@ -100,6 +113,17 @@ const Funnyest = ({ openModal, onClose }) => {
                     id="whoopigoldberg"
                     value="Whoopi Goldberg"
                     checked={selectedItems.includes("Whoopi Goldberg")}
+                    onChange={(event) => {
+                      if (event.target.checked) {
+                        setSelectedItems([...selectedItems, event.target.name]);
+                      } else {
+                        setSelectedItems(
+                          selectedItems.filter(
+                            (item) => item !== event.target.name
+                          )
+                        );
+                      }
+                    }}
                   />
                   <label
                     htmlFor="whoopigoldberg"
@@ -115,6 +139,17 @@ const Funnyest = ({ openModal, onClose }) => {
                     id="orlandojones"
                     value="Orlando Jones"
                     checked={selectedItems.includes("Orlando Jones")}
+                    onChange={(event) => {
+                      if (event.target.checked) {
+                        setSelectedItems([...selectedItems, event.target.name]);
+                      } else {
+                        setSelectedItems(
+                          selectedItems.filter(
+                            (item) => item !== event.target.name
+                          )
+                        );
+                      }
+                    }}
                   />
                   <label
                     htmlFor="orlandojones"
@@ -130,6 +165,17 @@ const Funnyest = ({ openModal, onClose }) => {
                     id="berniemac"
                     value="Bernie Mac"
                     checked={selectedItems.includes("Bernie Mac")}
+                    onChange={(event) => {
+                      if (event.target.checked) {
+                        setSelectedItems([...selectedItems, event.target.name]);
+                      } else {
+                        setSelectedItems(
+                          selectedItems.filter(
+                            (item) => item !== event.target.name
+                          )
+                        );
+                      }
+                    }}
                   />
                   <label
                     htmlFor="berniemac"
@@ -147,6 +193,17 @@ const Funnyest = ({ openModal, onClose }) => {
                     id="davidmann"
                     value="David Mann"
                     checked={selectedItems.includes("David Mann")}
+                    onChange={(event) => {
+                      if (event.target.checked) {
+                        setSelectedItems([...selectedItems, event.target.name]);
+                      } else {
+                        setSelectedItems(
+                          selectedItems.filter(
+                            (item) => item !== event.target.name
+                          )
+                        );
+                      }
+                    }}
                   />
                   <label
                     htmlFor="davidmann"
@@ -162,6 +219,17 @@ const Funnyest = ({ openModal, onClose }) => {
                     id="eddiemurphy"
                     value="Eddie Murphy"
                     checked={selectedItems.includes("Eddie Murphy")}
+                    onChange={(event) => {
+                      if (event.target.checked) {
+                        setSelectedItems([...selectedItems, event.target.name]);
+                      } else {
+                        setSelectedItems(
+                          selectedItems.filter(
+                            (item) => item !== event.target.name
+                          )
+                        );
+                      }
+                    }}
                   />
                   <label
                     htmlFor="eddiemurphy"
@@ -177,6 +245,17 @@ const Funnyest = ({ openModal, onClose }) => {
                     id="lawandapage"
                     value="LaWanda Page"
                     checked={selectedItems.includes("LaWanda Page")}
+                    onChange={(event) => {
+                      if (event.target.checked) {
+                        setSelectedItems([...selectedItems, event.target.name]);
+                      } else {
+                        setSelectedItems(
+                          selectedItems.filter(
+                            (item) => item !== event.target.name
+                          )
+                        );
+                      }
+                    }}
                   />
                   <label
                     htmlFor="lawandapage"
@@ -192,6 +271,17 @@ const Funnyest = ({ openModal, onClose }) => {
                     id="wandasykes"
                     value="Wanda Sykes"
                     checked={selectedItems.includes("Wanda Sykes")}
+                    onChange={(event) => {
+                      if (event.target.checked) {
+                        setSelectedItems([...selectedItems, event.target.name]);
+                      } else {
+                        setSelectedItems(
+                          selectedItems.filter(
+                            (item) => item !== event.target.name
+                          )
+                        );
+                      }
+                    }}
                   />
                   <label
                     htmlFor="wandasykes"
@@ -207,6 +297,17 @@ const Funnyest = ({ openModal, onClose }) => {
                     id="roberttownsend"
                     value="Robert Townsend"
                     checked={selectedItems.includes("Robert Townsend")}
+                    onChange={(event) => {
+                      if (event.target.checked) {
+                        setSelectedItems([...selectedItems, event.target.name]);
+                      } else {
+                        setSelectedItems(
+                          selectedItems.filter(
+                            (item) => item !== event.target.name
+                          )
+                        );
+                      }
+                    }}
                   />
                   <label
                     htmlFor="roberttownsend"
