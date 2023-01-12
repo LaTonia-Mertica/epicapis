@@ -18,10 +18,7 @@ const Prettiest = ({ openModal, onClose }) => {
 
   const submit = () => {
     if (prettiestSelection) {
-      window.localStorage.setItem(
-        "prettiestSelection",
-        JSON.stringify(prettiestSelection)
-      );
+      window.localStorage.setItem("prettiestSelection", prettiestSelection);
     }
     onClose(true);
   };
@@ -31,11 +28,7 @@ const Prettiest = ({ openModal, onClose }) => {
       const storageString = window.localStorage.getItem("prettiestSelection");
 
       if (storageString) {
-        const selection = JSON.parse(storageString);
-
-        if (selection) {
-          setPrettiestSelection(selection);
-        }
+        setPrettiestSelection(storageString);
       }
     }
   }, [openModal]);
@@ -51,12 +44,7 @@ const Prettiest = ({ openModal, onClose }) => {
         <Box sx={style} className="prettiestCard">
           <Button onClick={onClose}>&#x274C;</Button>
           <form onSubmit={submit} className="radioFieldsetDiv">
-            <fieldset
-              className="prettiestFieldset"
-              onChange={(event) => {
-                setPrettiestSelection(event.target.value);
-              }}
-            >
+            <fieldset className="prettiestFieldset">
               <p className="prettiestPara">
                 <section>
                   <label htmlFor="highball">
@@ -69,6 +57,9 @@ const Prettiest = ({ openModal, onClose }) => {
                         prettiestSelection ===
                         "High Ball (anything 'dark & stormy')"
                       }
+                      onChange={(event) => {
+                        setPrettiestSelection(event.target.value);
+                      }}
                       className="customIcons"
                     />
                     High Ball
@@ -92,6 +83,9 @@ const Prettiest = ({ openModal, onClose }) => {
                         prettiestSelection ===
                         "Coupe (necessarily 'boulevardier')"
                       }
+                      onChange={(event) => {
+                        setPrettiestSelection(event.target.value);
+                      }}
                       className="customIcons"
                     />
                     Coupe
@@ -115,6 +109,9 @@ const Prettiest = ({ openModal, onClose }) => {
                         prettiestSelection ===
                         "Zombie (think 'tequila sunrise')"
                       }
+                      onChange={(event) => {
+                        setPrettiestSelection(event.target.value);
+                      }}
                       className="customIcons"
                     />
                     Zombie
@@ -138,6 +135,9 @@ const Prettiest = ({ openModal, onClose }) => {
                         prettiestSelection ===
                         "Rocks (essentially 'old fashioned')"
                       }
+                      onChange={(event) => {
+                        setPrettiestSelection(event.target.value);
+                      }}
                       className="customIcons"
                     />
                     Rocks
@@ -161,6 +161,9 @@ const Prettiest = ({ openModal, onClose }) => {
                         prettiestSelection ===
                         "Hurricane (akin 'singapore sling')"
                       }
+                      onChange={(event) => {
+                        setPrettiestSelection(event.target.value);
+                      }}
                       className="customIcons"
                     />
                     Hurricane

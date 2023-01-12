@@ -13,10 +13,7 @@ const Last = ({ openModal, onClose }) => {
 
   const submit = () => {
     if (lastSelection) {
-      window.localStorage.setItem(
-        "lastSelection",
-        JSON.stringify(lastSelection)
-      );
+      window.localStorage.setItem("lastSelection", lastSelection);
     }
     onClose(true);
   };
@@ -26,11 +23,7 @@ const Last = ({ openModal, onClose }) => {
       const storageString = window.localStorage.getItem("lastSelection");
 
       if (storageString) {
-        const selection = JSON.parse(storageString);
-
-        if (selection) {
-          setLastSelection(selection);
-        }
+        setLastSelection(storageString);
       }
     }
   }, [openModal]);
@@ -46,11 +39,7 @@ const Last = ({ openModal, onClose }) => {
         <Box sx={style} className="lastCard">
           <Button onClick={onClose}>&#x274C;</Button>
           <form onSubmit={submit} className="lastDiv">
-            <fieldset
-              onChange={(event) => {
-                setLastSelection(event.target.value);
-              }}
-            >
+            <fieldset>
               <span>
                 <p className="para1 bothPara">
                   <label htmlFor="chance">
@@ -63,6 +52,9 @@ const Last = ({ openModal, onClose }) => {
                       value="No Chance"
                       name="last"
                       checked={lastSelection === "No Chance"}
+                      onChange={(event) => {
+                        setLastSelection(event.target.value);
+                      }}
                     />
                     &nbsp;&nbsp;&nbsp;No Chance
                   </label>
@@ -79,6 +71,9 @@ const Last = ({ openModal, onClose }) => {
                       value="Empty Promises"
                       name="last"
                       checked={lastSelection === "Empty Promises"}
+                      onChange={(event) => {
+                        setLastSelection(event.target.value);
+                      }}
                     />
                     &nbsp;&nbsp;&nbsp;Empty Promises
                   </label>
@@ -95,6 +90,9 @@ const Last = ({ openModal, onClose }) => {
                       value="Reasons to Quit"
                       name="last"
                       checked={lastSelection === "Reasons to Quit"}
+                      onChange={(event) => {
+                        setLastSelection(event.target.value);
+                      }}
                     />
                     &nbsp;&nbsp;&nbsp;Reasons to Quit
                   </label>
@@ -111,6 +109,9 @@ const Last = ({ openModal, onClose }) => {
                       value="Not to Try"
                       name="last"
                       checked={lastSelection === "Not to Try"}
+                      onChange={(event) => {
+                        setLastSelection(event.target.value);
+                      }}
                     />
                     &nbsp;&nbsp;&nbsp;Not to Try
                   </label>
@@ -127,6 +128,9 @@ const Last = ({ openModal, onClose }) => {
                       value="Having No One"
                       name="last"
                       checked={lastSelection === "Having No Chance"}
+                      onChange={(event) => {
+                        setLastSelection(event.target.value);
+                      }}
                     />
                     &nbsp;&nbsp;&nbsp;Having No One
                   </label>
@@ -145,6 +149,9 @@ const Last = ({ openModal, onClose }) => {
                       value="Help Less Ness"
                       name="last"
                       checked={lastSelection === "Help Less Ness"}
+                      onChange={(event) => {
+                        setLastSelection(event.target.value);
+                      }}
                     />
                     &nbsp;&nbsp;&nbsp;Help Less Ness
                   </label>
@@ -161,6 +168,9 @@ const Last = ({ openModal, onClose }) => {
                       value="Ill Intent For Me"
                       name="last"
                       checked={lastSelection === "Ill Intent For Me"}
+                      onChange={(event) => {
+                        setLastSelection(event.target.value);
+                      }}
                     />
                     &nbsp;&nbsp;&nbsp;Ill Intent For Me
                   </label>
@@ -177,6 +187,9 @@ const Last = ({ openModal, onClose }) => {
                       value="Time Wasted"
                       name="last"
                       checked={lastSelection === "Time Wasted"}
+                      onChange={(event) => {
+                        setLastSelection(event.target.value);
+                      }}
                     />
                     &nbsp;&nbsp;&nbsp;Time Wasted
                   </label>
@@ -187,12 +200,15 @@ const Last = ({ openModal, onClose }) => {
                       icon={faRecordVinyl}
                       className="fa-md  customIcons"
                       type="submit"
-                    />{" "}
+                    />
                     <input
                       type="radio"
                       value="No Sight of Hope"
                       name="last"
                       checked={lastSelection === "No Sight of Hope"}
+                      onChange={(event) => {
+                        setLastSelection(event.target.value);
+                      }}
                     />
                     &nbsp;&nbsp;&nbsp;No Sight of Hope
                   </label>
@@ -209,6 +225,9 @@ const Last = ({ openModal, onClose }) => {
                       value="Bad Surprises"
                       name="last"
                       checked={lastSelection === "Bad Surprises"}
+                      onChange={(event) => {
+                        setLastSelection(event.target.value);
+                      }}
                     />
                     &nbsp;&nbsp;&nbsp;Bad Surprises
                   </label>
