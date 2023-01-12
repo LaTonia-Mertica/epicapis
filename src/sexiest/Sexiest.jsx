@@ -105,11 +105,7 @@ const Sexiest = ({ openModal, onClose }) => {
         <Box sx={style} className="sexiestCard">
           <Button onClick={onClose}>&#x274C;</Button>
           <form onSubmit={submit} className="fieldsetDiv">
-            <fieldset
-              onChange={(event) => {
-                setSexiestFSelection(event.target.value);
-              }}
-            >
+            <fieldset>
               <legend className="feminineLegend">Sexiest Feminine</legend>
               <p className="sexiestPara para1">
                 <label htmlFor="catwoman">
@@ -121,6 +117,9 @@ const Sexiest = ({ openModal, onClose }) => {
                     id="catwoman"
                     title="image by pluspng.com"
                     checked={sexiestFSelection === "Catwoman"}
+                    onChange={(event) => {
+                      setSexiestFSelection(event.target.value);
+                    }}
                     className="customIcon"
                   />
                   Catwoman
@@ -136,6 +135,9 @@ const Sexiest = ({ openModal, onClose }) => {
                     id="shera"
                     title="image by bluyou.deviantart.com"
                     checked={sexiestFSelection === "She-Ra"}
+                    onChange={(event) => {
+                      setSexiestFSelection(event.target.value);
+                    }}
                     className="customIcon"
                   />
                   She-Ra
@@ -151,6 +153,9 @@ const Sexiest = ({ openModal, onClose }) => {
                     id="wonderwoman"
                     title="image by pinterest.com"
                     checked={sexiestFSelection === "Wonder Woman"}
+                    onChange={(event) => {
+                      setSexiestFSelection(event.target.value);
+                    }}
                     className="customIcon"
                   />
                   Wonder Woman
@@ -158,11 +163,7 @@ const Sexiest = ({ openModal, onClose }) => {
               </p>
             </fieldset>
 
-            <fieldset
-              onChange={(event) => {
-                setSexiestMSelection(event.target.value);
-              }}
-            >
+            <fieldset>
               <legend className="masculineLegend">Sexiest Masculine</legend>
               <p className="sexiestPara para2">
                 <label htmlFor="batman">
@@ -174,6 +175,9 @@ const Sexiest = ({ openModal, onClose }) => {
                     id="batman"
                     title="image by pngplay.com"
                     checked={sexiestMSelection === "Batman"}
+                    onChange={(event) => {
+                      setSexiestMSelection(event.target.value);
+                    }}
                     className="customIcon"
                   />
                   Batman
@@ -190,6 +194,9 @@ const Sexiest = ({ openModal, onClose }) => {
                     id="blackpanther"
                     title="image by clipart-library.com"
                     checked={sexiestMSelection === "Black Panther"}
+                    onChange={(event) => {
+                      setSexiestMSelection(event.target.value);
+                    }}
                     className="customIcon"
                   />
                   Black Panther
@@ -205,6 +212,9 @@ const Sexiest = ({ openModal, onClose }) => {
                     value="Spider-Man"
                     id="spiderman"
                     checked={sexiestMSelection === "Spider-Man"}
+                    onChange={(event) => {
+                      setSexiestMSelection(event.target.value);
+                    }}
                     className="customIcon"
                   />
                   Spider-Man
@@ -217,11 +227,7 @@ const Sexiest = ({ openModal, onClose }) => {
               </button>
             </fieldset>
 
-            <fieldset
-              onChange={(event) => {
-                setSexiestNSelection(event.target.value);
-              }}
-            >
+            <fieldset>
               <legend className="nonbinaryLegend">
                 <a
                   href={nonbinary}
@@ -242,6 +248,9 @@ const Sexiest = ({ openModal, onClose }) => {
                     value="Brother Ken"
                     id="brotherken"
                     checked={sexiestNSelection === "Brother Ken"}
+                    onChange={(event) => {
+                      setSexiestNSelection(event.target.value);
+                    }}
                     className="customIcon"
                   />
                   Brother Ken
@@ -257,6 +266,9 @@ const Sexiest = ({ openModal, onClose }) => {
                     value="Kid Quick"
                     id="kidquick"
                     checked={sexiestNSelection === "Kid Quick"}
+                    onChange={(event) => {
+                      setSexiestNSelection(event.target.value);
+                    }}
                     className="customIcon"
                   />
                   Kid Quick
@@ -272,6 +284,9 @@ const Sexiest = ({ openModal, onClose }) => {
                     value="Snow Flake"
                     id="snowflake"
                     checked={sexiestNSelection === "Snow Flake"}
+                    onChange={(event) => {
+                      setSexiestNSelection(event.target.value);
+                    }}
                     className="customIcon"
                   />
                   Snow Flake
