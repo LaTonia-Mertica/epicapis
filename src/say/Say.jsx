@@ -18,7 +18,10 @@ const Say = ({ openModal, onClose }) => {
   const submit = (event) => {
     if (saySelection) {
       event.preventDefault();
-      window.localStorage.setItem("saySelection", saySelection);
+      window.localStorage.setItem(
+        "saySelection",
+        JSON.stringify({ saySelection, phraseToShow })
+      );
     }
     onClose(true);
   };
@@ -72,7 +75,7 @@ const Say = ({ openModal, onClose }) => {
                       <option
                         value="age"
                         id="age"
-                        selected={saySelection === "age"}
+                        defaultValue={saySelection === "age"}
                       >
                         age
                       </option>
@@ -80,73 +83,83 @@ const Say = ({ openModal, onClose }) => {
                       <option
                         value="arrest record"
                         id="arrestRecord"
-                        selected={saySelection === "arrest record"}
+                        defaultValue={saySelection === "arrest record"}
                       >
                         arrest record
                       </option>
+
                       <option
                         value="audible expression"
                         id="audibleExpression"
-                        selected={saySelection === "audible expression"}
+                        defaultValue={saySelection === "audible expression"}
                       >
                         audible expression
                       </option>
+
                       <option
                         value="color"
                         id="color"
-                        selected={saySelection === "color"}
+                        defaultValue={saySelection === "color"}
                       >
                         color
                       </option>
+
                       <option
                         value="conviction record"
                         id="convictionRecord"
-                        selected={saySelection === "conviction record"}
+                        defaultValue={saySelection === "conviction record"}
                       >
                         conviction record
                       </option>
+
                       <option
                         value="creed"
                         id="creed"
-                        selected={saySelection === "creed"}
+                        defaultValue={saySelection === "creed"}
                       >
                         creed
                       </option>
+
                       <option
                         value="employment"
                         id="employment"
-                        selected={saySelection === "employment"}
+                        defaultValue={saySelection === "employment"}
                       >
                         employment
                       </option>
+
                       <option
                         value="national origin"
                         id="nationalOrigin"
-                        selected={saySelection === "national origin"}
+                        defaultValue={saySelection === "national origin"}
                       >
                         national origin
                       </option>
+
                       <option
                         value="race"
                         id="race"
-                        selected={saySelection === "race"}
+                        defaultValue={saySelection === "race"}
                       >
                         race
                       </option>
+
                       <option
                         value="religion"
                         id="religion"
-                        selected={saySelection === "religion"}
+                        defaultValue={saySelection === "religion"}
                       >
                         religion
                       </option>
+
                       <option
                         value="weight"
                         id="weight"
-                        selected={saySelection === "weight"}
+                        defaultValue={saySelection === "weight"}
                       >
                         weight
                       </option>
+
                       <option value=""></option>
                     </optgroup>
 
@@ -154,82 +167,92 @@ const Say = ({ openModal, onClose }) => {
                       <option
                         value="disability"
                         id="disability"
-                        selected={saySelection === "disability"}
+                        defaultValue={saySelection === "disability"}
                       >
                         disability
                       </option>
+
                       <option
                         value="domestic violence victim status"
                         id="domesticViolenceVictimStatus"
-                        selected={
+                        defaultValue={
                           saySelection === "domestic violence victim status"
                         }
                       >
                         domestic violence victim status
                       </option>
+
                       <option
                         value="employment status"
                         id="employmentStatus"
-                        selected={saySelection === "employment status"}
+                        defaultValue={saySelection === "employment status"}
                       >
                         employment status
                       </option>
+
                       <option
                         value="gender identity"
                         id="genderIdentity"
-                        selected={saySelection === "gender identity"}
+                        defaultValue={saySelection === "gender identity"}
                       >
                         gender identity
                       </option>
+
                       <option
                         value="gender expression"
                         id="genderExpression"
-                        selected={saySelection === "gender expression"}
+                        defaultValue={saySelection === "gender expression"}
                       >
                         gender expression
                       </option>
+
                       <option
                         value="familial status"
                         id="familialStatus"
-                        selected={saySelection === "familial status"}
+                        defaultValue={saySelection === "familial status"}
                       >
                         familial status
                       </option>
+
                       <option
                         value="marital status"
                         id="maritalStatus"
-                        selected={saySelection === "marital status"}
+                        defaultValue={saySelection === "marital status"}
                       >
                         marital status
                       </option>
+
                       <option
                         value="mental health status"
                         id="mentalHealthStatus"
-                        selected={saySelection === "mental health status"}
+                        defaultValue={saySelection === "mental health status"}
                       >
                         mental health status
                       </option>
+
                       <option
                         value="predisposing genetic characteristics"
                         id="predisposingGeneticCharacteristics"
-                        selected={
+                        defaultValue={
                           saySelection ===
                           "predisposing genetic characteristics"
                         }
                       >
                         predisposing genetic characteristics
                       </option>
+
                       <option
                         value="sex"
                         id="sex"
-                        selected={saySelection === "sex"}
+                        defaultValue={saySelection === "sex"}
                       >
                         sex
                       </option>
+
                       <option
                         value="sexual orientation"
                         id="sexualOrientation"
-                        selected={saySelection === "sexual orientation"}
+                        defaultValue={saySelection === "sexual orientation"}
                       >
                         sexual orientation
                       </option>
