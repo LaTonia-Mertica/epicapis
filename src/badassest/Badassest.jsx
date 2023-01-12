@@ -11,10 +11,7 @@ const Badassest = ({ openModal, onClose }) => {
 
   const submit = () => {
     if (badassestSelection) {
-      window.localStorage.setItem(
-        "badassestSelection",
-        JSON.stringify(badassestSelection)
-      );
+      window.localStorage.setItem("badassestSelection", badassestSelection);
     }
     onClose(true);
   };
@@ -24,11 +21,7 @@ const Badassest = ({ openModal, onClose }) => {
       const storageString = window.localStorage.getItem("badassestSelection");
 
       if (storageString) {
-        const selection = JSON.parse(storageString);
-
-        if (selection) {
-          setBadassestSelection(selection);
-        }
+        setBadassestSelection(storageString);
       }
     }
   }, [openModal]);
@@ -44,12 +37,7 @@ const Badassest = ({ openModal, onClose }) => {
         <Box sx={style} className="badassestCard">
           <Button onClick={onClose}>&#x274C;</Button>
           <form onSubmit={submit} className="radioFieldsetDiv">
-            <fieldset
-              className="badassestFieldset"
-              onChange={(event) => {
-                setBadassestSelection(event.target.value);
-              }}
-            >
+            <fieldset className="badassestFieldset">
               <p className="badassestPara">
                 <input
                   type="radio"
@@ -57,6 +45,9 @@ const Badassest = ({ openModal, onClose }) => {
                   id="alice"
                   value="Alice (resident evil)"
                   checked={badassestSelection === "Alice (resident evil)"}
+                  onChange={(event) => {
+                    setBadassestSelection(event.target.value);
+                  }}
                 />
                 <label htmlFor="alice">
                   Alice
@@ -71,6 +62,9 @@ const Badassest = ({ openModal, onClose }) => {
                   id="michonne"
                   value="Michonne (the walking dead)"
                   checked={badassestSelection === "Michonne (the walking dead)"}
+                  onChange={(event) => {
+                    setBadassestSelection(event.target.value);
+                  }}
                 />
                 <label htmlFor="michonne">
                   Michonne
@@ -85,6 +79,9 @@ const Badassest = ({ openModal, onClose }) => {
                   id="ellen"
                   value="Ellen (predator)"
                   checked={badassestSelection === "Ellen (predator)"}
+                  onChange={(event) => {
+                    setBadassestSelection(event.target.value);
+                  }}
                 />
                 <label htmlFor="ellen">
                   Ellen <br />
@@ -100,6 +97,9 @@ const Badassest = ({ openModal, onClose }) => {
                   checked={
                     badassestSelection === "Gamora (guardians of the galaxy)"
                   }
+                  onChange={(event) => {
+                    setBadassestSelection(event.target.value);
+                  }}
                 />
                 <label htmlFor="gamora">
                   Gamora <br />
@@ -113,6 +113,9 @@ const Badassest = ({ openModal, onClose }) => {
                   id="sarah"
                   value="Sarah (terminator)"
                   checked={badassestSelection === "Sarah (terminator)"}
+                  onChange={(event) => {
+                    setBadassestSelection(event.target.value);
+                  }}
                 />
                 <label htmlFor="sarah">
                   Sarah
