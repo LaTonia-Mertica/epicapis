@@ -83,7 +83,7 @@ const Beautiful = ({ openModal, onClose }) => {
               <input
                 type="checkbox"
                 name="beautiful"
-                checked={showTextArea}
+                defaultChecked={showTextArea}
                 onClick={setToggle}
               />
               {showTextArea && (

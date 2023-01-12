@@ -80,7 +80,7 @@ const Dangerous = ({ openModal, onClose }) => {
               <input
                 type="checkbox"
                 name="dangerous"
-                checked={showTextArea}
+                defaultChecked={showTextArea}
                 onClick={setToggle}
               />
               {showTextArea && (
