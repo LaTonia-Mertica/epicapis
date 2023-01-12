@@ -581,15 +581,12 @@ const App = () => {
           event.preventDefault();
 
           // START OF LOCAL STORAGE FOR HTML (USER INPUTS)
-          const badassestSelection = JSON.parse(
-            window.localStorage.getItem("badassestSelection")
-          );
+          const badassestSelection =
+            window.localStorage.getItem("badassestSelection");
           const beautifulEntry = JSON.parse(
             window.localStorage.getItem("beautifulEntry")
           );
-          const bestSelection = JSON.parse(
-            window.localStorage.getItem("bestSelection")
-          );
+          const bestSelection = window.localStorage.getItem("bestSelection");
           const dangerousEntry = JSON.parse(
             window.localStorage.getItem("dangerousEntry")
           );
@@ -602,12 +599,9 @@ const App = () => {
           const grittiestEntry = JSON.parse(
             window.localStorage.getItem("grittiestEntry")
           );
-          const lastSelection = JSON.parse(
-            window.localStorage.getItem("lastSelection")
-          );
-          const prettiestSelection = JSON.parse(
-            window.localStorage.getItem("prettiestSelection")
-          );
+          const lastSelection = window.localStorage.getItem("lastSelection");
+          const prettiestSelection =
+            window.localStorage.getItem("prettiestSelection");
           const rampantestEntry = JSON.parse(
             window.localStorage.getItem("rampantestEntry")
           );
