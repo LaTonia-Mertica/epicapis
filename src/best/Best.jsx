@@ -11,10 +11,7 @@ const Best = ({ openModal, onClose }) => {
 
   const submit = () => {
     if (bestSelection) {
-      window.localStorage.setItem(
-        "bestSelection",
-        JSON.stringify(bestSelection)
-      );
+      window.localStorage.setItem("bestSelection", bestSelection);
     }
     onClose(true);
   };
@@ -24,11 +21,7 @@ const Best = ({ openModal, onClose }) => {
       const storageString = window.localStorage.getItem("bestSelection");
 
       if (storageString) {
-        const selection = JSON.parse(storageString);
-
-        if (selection) {
-          setBestSelection(selection);
-        }
+        setBestSelection(storageString);
       }
     }
   }, [openModal]);
@@ -44,11 +37,7 @@ const Best = ({ openModal, onClose }) => {
         <Box sx={style} className="bestCard">
           <Button onClick={onClose}>&#x274C;</Button>
           <form onSubmit={submit}>
-            <fieldset
-              onChange={(event) => {
-                setBestSelection(event.target.value);
-              }}
-            >
+            <fieldset>
               <p className="bestPara">
                 <input
                   type="radio"
@@ -56,6 +45,9 @@ const Best = ({ openModal, onClose }) => {
                   id="young"
                   value="young-ish (just starting out)"
                   checked={bestSelection === "young-ish (just starting out)"}
+                  onChange={(event) => {
+                    setBestSelection(event.target.value);
+                  }}
                 />
                 <label htmlFor="young">
                   young<span className="parens">(</span>er
@@ -75,6 +67,9 @@ const Best = ({ openModal, onClose }) => {
                     bestSelection ===
                     "middling (too far in but too far from out)"
                   }
+                  onChange={(event) => {
+                    setBestSelection(event.target.value);
+                  }}
                 />
                 <label htmlFor="middling">
                   middling
@@ -91,6 +86,9 @@ const Best = ({ openModal, onClose }) => {
                   id="old"
                   value="old-ish (getting on in years)"
                   checked={bestSelection === "old-ish (getting on in years)"}
+                  onChange={(event) => {
+                    setBestSelection(event.target.value);
+                  }}
                 />
                 <label htmlFor="old">
                   old<span className="parens">(</span>er
