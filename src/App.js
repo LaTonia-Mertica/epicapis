@@ -78,6 +78,7 @@ import Epic from "./epic/Epic";
 import Beautiful from "./beautiful/Beautiful";
 import Api from "./api/Api";
 import Dangerous from "./dangerous/Dangerous";
+import { SnackbarContent } from "@mui/material";
 
 const foaasImgs = [
   foaas,
@@ -96,12 +97,21 @@ const App = () => {
   const [openModal, setOpenModal] = useState(false);
   const screenWidth = useMinWidth();
   const [showSuccess, setShowSuccess] = useState(false);
+  const [showSubmitted, setShowSubmitted] = useState(false);
 
   const closeModal = (submitted = false) => {
     setOpenModal(false);
     if (submitted === true) {
       setShowSuccess(openModal);
     }
+  };
+
+  // separate snackbar to alert email submitted
+  const handleSubmitted = () => {
+    setShowSubmitted(true);
+  };
+  const handleCloseSubmitted = () => {
+    setShowSubmitted(false);
   };
 
   const [epicMode, setEpicMode] = useState(
@@ -663,9 +673,20 @@ const App = () => {
           type="submit"
           className="selectionsSubmitBtn"
           title="click to email your selections"
+          onClick={handleSubmitted}
         >
           email selections
         </Button>
+        <Snackbar
+          open={showSubmitted}
+          autoHideDuration={3000}
+          onClose={handleCloseSubmitted}
+          message="Email Submitted!"
+        >
+          <Alert severity="success" sx={{ width: "100%" }}>
+            {showSubmitted} Email Submitted!
+          </Alert>
+        </Snackbar>
       </form>
 
       <Snackbar
