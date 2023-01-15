@@ -618,6 +618,7 @@ const App = () => {
           for (const key in keys) {
             if (!keysToNotClear.includes(key)) {
               window.localStorage.removeItem(key);
+              setEmail("");
             }
           }
 
