@@ -78,7 +78,6 @@ import Epic from "./epic/Epic";
 import Beautiful from "./beautiful/Beautiful";
 import Api from "./api/Api";
 import Dangerous from "./dangerous/Dangerous";
-import { SnackbarContent } from "@mui/material";
 
 const foaasImgs = [
   foaas,
@@ -99,6 +98,7 @@ const App = () => {
   const [showSuccess, setShowSuccess] = useState(false);
   const [showSubmitted, setShowSubmitted] = useState(false);
 
+  // snackbar to alert modal selections submitted
   const closeModal = (submitted = false) => {
     setOpenModal(false);
     if (submitted === true) {
@@ -681,10 +681,18 @@ const App = () => {
           open={showSubmitted}
           autoHideDuration={3000}
           onClose={handleCloseSubmitted}
-          message="Email Submitted!"
+          message="Email Sent!"
         >
-          <Alert severity="success" sx={{ width: "100%" }}>
-            {showSubmitted} Email Submitted!
+          <Alert
+            severity=""
+            sx={{
+              width: "100%",
+              color: "#fff",
+              bgcolor: "#000",
+              borderRadius: 0,
+            }}
+          >
+            {showSubmitted} Email Sent!&emsp;
           </Alert>
         </Snackbar>
       </form>
@@ -696,8 +704,19 @@ const App = () => {
           setShowSuccess(false);
         }}
       >
-        <Alert severity="success" sx={{ width: "100%" }}>
-          {showSuccess} Submitted!
+        <Alert
+          severity=""
+          sx={{
+            width: "100%",
+            color: "#c9e265",
+            bgcolor: "#545454",
+            borderRadius: 0,
+            fontSize: 17,
+            fontFamily: "Bebas Neue",
+            letterSpacing: 1.15,
+          }}
+        >
+          {showSuccess} Submitted!&nbsp;&nbsp;
         </Alert>
       </Snackbar>
     </main>
