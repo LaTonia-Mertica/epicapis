@@ -734,15 +734,15 @@ const App = () => {
           severity=""
           sx={{
             width: "100%",
-            color: "#000",
-            bgcolor: "red",
+            color: "#8b0000",
+            bgcolor: "#fe2712",
             borderRadius: 0,
             fontSize: 17,
             fontFamily: "Bebas Neue",
             letterSpacing: 1.15,
           }}
         >
-          EMAIL ERROR: Not Sent - Check Address!&nbsp;&nbsp;
+          EMAIL NOT SENT! CHECK ADDRESS!&nbsp;&nbsp;
         </Alert>
       </Snackbar>
     </main>
