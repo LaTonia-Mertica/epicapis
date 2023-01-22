@@ -97,6 +97,7 @@ const App = () => {
   const screenWidth = useMinWidth();
   const [showSuccess, setShowSuccess] = useState(false);
   const [showSubmitted, setShowSubmitted] = useState(false);
+  const [showEmailError, setShowEmailError] = useState(false);
 
   // snackbar to alert modal selections submitted
   const closeModal = (submitted = false) => {
@@ -106,10 +107,7 @@ const App = () => {
     }
   };
 
-  // separate snackbar to alert email submitted
-  const handleSubmitted = () => {
-    setShowSubmitted(true);
-  };
+  // snackbar to alert email submitted
   const handleCloseSubmitted = () => {
     setShowSubmitted(false);
   };
@@ -587,7 +585,7 @@ const App = () => {
 
       <form
         className="selectionsForm"
-        onSubmit={(event) => {
+        onSubmit={async (event) => {
           event.preventDefault();
 
           // START OF LOCAL STORAGE FOR HTML (USER INPUTS)
@@ -628,11 +626,10 @@ const App = () => {
           for (const key in keys) {
             if (!keysToNotClear.includes(key)) {
               window.localStorage.removeItem(key);
-              setEmail("");
             }
           }
 
-          fetch(`http://localhost:3001/sendEmail`, {
+          const response = await fetch(`http://localhost:3001/sendEmail`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -655,6 +652,13 @@ const App = () => {
               },
             }),
           });
+          const emailData = await response.json();
+          if (emailData.error) {
+            setShowEmailError(true);
+          } else {
+            setShowSubmitted(true);
+            setEmail("");
+          }
         }}
       >
         <input
@@ -673,7 +677,6 @@ const App = () => {
           type="submit"
           className="selectionsSubmitBtn"
           title="click to email your selections"
-          onClick={handleSubmitted}
         >
           email selections
         </Button>
@@ -717,6 +720,29 @@ const App = () => {
           }}
         >
           {showSuccess} Submitted!&nbsp;&nbsp;
+        </Alert>
+      </Snackbar>
+
+      <Snackbar
+        open={!!showEmailError}
+        autoHideDuration={3000}
+        onClose={() => {
+          setShowEmailError(false);
+        }}
+      >
+        <Alert
+          severity=""
+          sx={{
+            width: "100%",
+            color: "#000",
+            bgcolor: "red",
+            borderRadius: 0,
+            fontSize: 17,
+            fontFamily: "Bebas Neue",
+            letterSpacing: 1.15,
+          }}
+        >
+          EMAIL ERROR: Not Sent - Check Address!&nbsp;&nbsp;
         </Alert>
       </Snackbar>
     </main>
