@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import ReactDOM from "react-dom";
-
+import ReCAPTCHA from "react-google-recaptcha";
 import useMinWidth from "./useMinWidth";
 // styles import necessary for jsx and scss files
 // eslint-disable-next-line
@@ -98,6 +98,8 @@ const App = () => {
   const [showSuccess, setShowSuccess] = useState(false);
   const [showSubmitted, setShowSubmitted] = useState(false);
   const [showEmailError, setShowEmailError] = useState(false);
+
+  const recaptchaRef = useRef();
 
   // snackbar to alert modal selections submitted
   const closeModal = (submitted = false) => {
@@ -629,6 +631,8 @@ const App = () => {
             }
           }
 
+          const token = await recaptchaRef.current.executeAsync();
+
           const response = await fetch(`http://localhost:3001/sendEmail`, {
             method: "POST",
             headers: {
@@ -636,6 +640,7 @@ const App = () => {
             },
             body: JSON.stringify({
               email,
+              token,
               selections: {
                 badassestSelection,
                 beautifulEntry,
@@ -661,6 +666,11 @@ const App = () => {
           }
         }}
       >
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          size="invisible"
+          sitekey="6LdZ6g4kAAAAAP52SR3ZJjpV-pfx8NjdWZcdbXCQ"
+        />
         <input
           type="email"
           name="email"
