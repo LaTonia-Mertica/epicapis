@@ -16,12 +16,14 @@ const ChuckNorris = ({ openModal, onClose }) => {
   useEffect(() => {
     setLoading(true);
     getData();
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
     if (!openModal) {
       getData();
     }
+    // eslint-disable-next-line
   }, [openModal]);
 
   const getData = async () => {

@@ -15,6 +15,7 @@ const DonaldTrump = ({ openModal, onClose }) => {
 
   useEffect(() => {
     getData();
+    // eslint-disable-next-line
   }, []);
 
   const getData = async () => {
@@ -31,6 +32,7 @@ const DonaldTrump = ({ openModal, onClose }) => {
     if (!openModal) {
       getData();
     }
+    // eslint-disable-next-line
   }, [openModal]);
 
   // **note:** reasons this api uses axios:
