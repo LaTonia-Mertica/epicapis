@@ -18,7 +18,7 @@ import epicapisLogo from "./images/epicapisLogo.png";
 import epicapisposter from "./images/epicapisposter.pdf";
 import summary from "./files/epic-apis-summary.pdf";
 import dataFlow from "./files/epicapis-dfd.pdf";
-import TRY from "./files/TRY.pdf";
+import TRY from "./files/try.pdf";
 import infoIcon from "./images/info-icon.png";
 
 import agify from "./images/agify.png";
