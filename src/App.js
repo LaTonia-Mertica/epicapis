@@ -98,6 +98,7 @@ const App = () => {
   const [showSuccess, setShowSuccess] = useState(false);
   const [showSubmitted, setShowSubmitted] = useState(false);
   const [showEmailError, setShowEmailError] = useState(false);
+  const [showValidatingEmail, setShowValidatingEmail] = useState(false);
 
   const recaptchaRef = useRef();
 
@@ -107,6 +108,11 @@ const App = () => {
     if (submitted === true) {
       setShowSuccess(openModal);
     }
+  };
+
+  // snackbar to alert validating email
+  const handleShowValidatingEmail = () => {
+    setShowValidatingEmail(true);
   };
 
   // snackbar to alert email submitted
@@ -633,34 +639,40 @@ const App = () => {
 
           const token = await recaptchaRef.current.executeAsync();
 
-          const response = await fetch(`http://localhost:3001/sendEmail`, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              email,
-              token,
-              selections: {
-                badassestSelection,
-                beautifulEntry,
-                bestSelection,
-                dangerousEntry,
-                funnyestSelections,
-                greatestSelections,
-                grittiestEntry,
-                lastSelection,
-                prettiestSelection,
-                rampantestEntry,
-                saySelection,
-                sexiestSelections,
+          const response = await fetch(
+            `http://localhost:3001/sendEmail`,
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
               },
-            }),
-          });
+              body: JSON.stringify({
+                email,
+                token,
+                selections: {
+                  badassestSelection,
+                  beautifulEntry,
+                  bestSelection,
+                  dangerousEntry,
+                  funnyestSelections,
+                  greatestSelections,
+                  grittiestEntry,
+                  lastSelection,
+                  prettiestSelection,
+                  rampantestEntry,
+                  saySelection,
+                  sexiestSelections,
+                },
+              }),
+            },
+            handleShowValidatingEmail()
+          );
           const emailData = await response.json();
           if (emailData.error) {
+            setShowValidatingEmail(false);
             setShowEmailError(true);
           } else {
+            setShowValidatingEmail(false);
             setShowSubmitted(true);
             setEmail("");
           }
@@ -675,7 +687,7 @@ const App = () => {
           type="email"
           name="email"
           id="email"
-          placeholder={"enter email address" || " "}
+          placeholder={"enter email address"}
           autoComplete="off"
           className="selectionsInput"
           value={email}
@@ -730,6 +742,29 @@ const App = () => {
           }}
         >
           {showSuccess} Submitted!&nbsp;&nbsp;
+        </Alert>
+      </Snackbar>
+
+      <Snackbar
+        open={showValidatingEmail}
+        autoHideDuration={1000}
+        onClose={() => {
+          setShowValidatingEmail(false);
+        }}
+      >
+        <Alert
+          severity=""
+          sx={{
+            width: "100%",
+            color: "#000",
+            bgcolor: "#5ce1e6",
+            borderRadius: 0,
+            fontSize: 11,
+            fontStyle: "italic",
+            letterSpacing: 1.15,
+          }}
+        >
+          Validating Email - Please Be Patient!&nbsp;&nbsp;
         </Alert>
       </Snackbar>
 
