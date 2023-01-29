@@ -756,15 +756,14 @@ const App = () => {
           severity=""
           sx={{
             width: "100%",
-            color: "#000",
-            bgcolor: "#5ce1e6",
+            color: "#5ce1e6",
+            bgcolor: "#241571",
             borderRadius: 0,
             fontSize: 11,
-            fontStyle: "italic",
             letterSpacing: 1.15,
           }}
         >
-          Validating Email - Please Be Patient!&nbsp;&nbsp;
+          VALIDATING EMAIL&nbsp;&nbsp;
         </Alert>
       </Snackbar>
 
