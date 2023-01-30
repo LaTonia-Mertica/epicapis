@@ -60,32 +60,6 @@ const Funnyest = ({ openModal, onClose }) => {
                 <p className="funnyestPara para1">
                   <input
                     type="checkbox"
-                    name="Anthony Anderson"
-                    id="anthonyanderson"
-                    value="Anthony Anderson"
-                    checked={selectedItems.includes("Anthony Anderson")}
-                    onChange={(event) => {
-                      if (event.target.checked) {
-                        setSelectedItems([...selectedItems, event.target.name]);
-                      } else {
-                        setSelectedItems(
-                          selectedItems.filter(
-                            (item) => item !== event.target.name
-                          )
-                        );
-                      }
-                    }}
-                  />
-                  <label
-                    htmlFor="anthonyanderson"
-                    title="image property of variety.com"
-                  >
-                    Anthony Anderson
-                  </label>
-                  <br />
-
-                  <input
-                    type="checkbox"
                     name="Jamie Foxx"
                     id="jamiefoxx"
                     value="Jamie Foxx"
@@ -135,10 +109,10 @@ const Funnyest = ({ openModal, onClose }) => {
 
                   <input
                     type="checkbox"
-                    name="Orlando Jones"
-                    id="orlandojones"
-                    value="Orlando Jones"
-                    checked={selectedItems.includes("Orlando Jones")}
+                    name="Moms Mabley"
+                    id="momsmabley"
+                    value="Moms Mabley"
+                    checked={selectedItems.includes("Moms Mabley")}
                     onChange={(event) => {
                       if (event.target.checked) {
                         setSelectedItems([...selectedItems, event.target.name]);
@@ -152,10 +126,10 @@ const Funnyest = ({ openModal, onClose }) => {
                     }}
                   />
                   <label
-                    htmlFor="orlandojones"
-                    title="image property of app.blacklivingknowledge.com"
+                    htmlFor="momsmabley"
+                    title="image property of atlantablackstar.com"
                   >
-                    Orlando Jones
+                    Moms Mabley
                   </label>
                   <br />
 
@@ -184,9 +158,7 @@ const Funnyest = ({ openModal, onClose }) => {
                     Bernie Mac
                   </label>
                   <br />
-                </p>
 
-                <p className="funnyestPara para2">
                   <input
                     type="checkbox"
                     name="David Mann"
@@ -210,6 +182,34 @@ const Funnyest = ({ openModal, onClose }) => {
                     title="image property of hellobeautiful.com"
                   >
                     David Mann
+                  </label>
+                  <br />
+                </p>
+
+                <p className="funnyestPara para2">
+                  <input
+                    type="checkbox"
+                    name="Helen Martin"
+                    id="helenmartin"
+                    value="Helen Martin"
+                    checked={selectedItems.includes("Helen Martin")}
+                    onChange={(event) => {
+                      if (event.target.checked) {
+                        setSelectedItems([...selectedItems, event.target.name]);
+                      } else {
+                        setSelectedItems(
+                          selectedItems.filter(
+                            (item) => item !== event.target.name
+                          )
+                        );
+                      }
+                    }}
+                  />
+                  <label
+                    htmlFor="helenmartin"
+                    title="image property of etinside.com"
+                  >
+                    Helen Martin
                   </label>
                   <br />
 
@@ -332,13 +332,13 @@ export default Funnyest;
 
 // IMAGE CREDITS
 
-// anthony anderson - variety.com
 // jamie foxx - aurn.com
 // whoopi goldberg - celebtattler.com
-// orlando jones - app.blacklivingknowledge.com
+// moms mabley - atlantablackstar.com
 // bernie mac - thecinemaholic.com
-
 // david mann - hellobeautiful.com
+
+// helen martin - etinside.com
 // eddie murphy - oseiagyemang.com
 // lawanda page - celebritynetworths.org
 // wanda sykes - pridesource.com

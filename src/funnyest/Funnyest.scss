@@ -59,20 +59,11 @@
     width: 50%;
   }
 
-  #anthonyanderson:hover::after {
-    content: url(images/anthonyanderson.png);
-    zoom: 37%;
-    position: absolute;
-    top: 30rem;
-    left: 47rem;
-    @include border-box-shadow;
-  }
-
   #jamiefoxx:hover::after {
     content: url(images/jamiefoxx.png);
     zoom: 37%;
     position: absolute;
-    top: 35rem;
+    top: 30rem;
     left: 47rem;
     @include border-box-shadow;
   }
@@ -86,8 +77,8 @@
     @include border-box-shadow;
   }
 
-  #orlandojones:hover::after {
-    content: url(images/orlandojones.png);
+  #momsmabley:hover::after {
+    content: url(images/momsmabley.jpeg);
     zoom: 37%;
     position: absolute;
     top: 40rem;
@@ -106,6 +97,15 @@
 
   #davidmann:hover::after {
     content: url(images/davidmann.png);
+    zoom: 37%;
+    position: absolute;
+    top: 50rem;
+    left: 47rem;
+    @include border-box-shadow;
+  }
+
+  #helenmartin:hover::after {
+    content: url(images/helenmartin.jpg);
     zoom: 37%;
     position: absolute;
     top: 25rem;
