@@ -144,7 +144,11 @@ const Pokemon = ({ openModal, onClose }) => {
                 borderRadius: ".5rem",
                 colors: {
                   ...theme.colors,
+                  neutral0: "transparent",
+                  neutral20: "#f8c947",
+                  neutral40: "crimson",
                   neutral50: "#FFF",
+                  neutral60: "#FFF",
                   primary: "#f8c947",
                 },
               })}
@@ -156,12 +160,12 @@ const Pokemon = ({ openModal, onClose }) => {
                   borderColor: "#f8c947",
                 }),
                 option: () => ({
-                  color: "#3661ab",
+                  color: "#f8c947",
                   fontSize: "1.25rem",
                   fontFamily: "Impact",
                   textAlign: "left",
                   paddingLeft: "1rem",
-                  background: "#f8c947",
+                  background: "transparent",
                   paddingTop: ".5rem",
                   paddingBottom: ".5rem",
                 }),
@@ -175,6 +179,7 @@ const Pokemon = ({ openModal, onClose }) => {
               placeholder="start typing pokemon name ..."
               className="autocompleteSelect"
               value={null}
+              noOptionsMessage={() => "No Pokemon Match Found!"}
             />
             <Button disabled={true} className="searchBtn">
               {loading ? <>loading...</> : ""}

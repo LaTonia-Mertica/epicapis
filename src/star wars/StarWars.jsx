@@ -104,7 +104,11 @@ const StarWars = ({ openModal, onClose }) => {
                   borderRadius: ".5rem",
                   colors: {
                     ...theme.colors,
+                    neutral0: "transparent",
+                    neutral20: "#feda4a",
+                    neutral40: "crimson",
                     neutral50: "#FFF",
+                    neutral60: "#FFF",
                     primary25: "#FFF",
                     primary: "#FFF",
                   },
@@ -136,6 +140,7 @@ const StarWars = ({ openModal, onClose }) => {
                 placeholder="start typing starship name ..."
                 className="autocompleteSelect"
                 value={null}
+                noOptionsMessage={() => "No Starship Match Found!"}
               />
               <Button disabled={true} className="searchBtn">
                 {loading ? <>loading...</> : ""}
