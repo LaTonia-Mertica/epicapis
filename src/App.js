@@ -92,6 +92,7 @@ const getRandomFoaasImg = Math.floor(Math.random() * foaasImgs.length);
 let randomFoaasImg = foaasImgs[getRandomFoaasImg];
 
 const App = () => {
+  let saveSelections = false;
   const [email, setEmail] = useState("");
   const [openModal, setOpenModal] = useState(false);
   const screenWidth = useMinWidth();
@@ -110,14 +111,19 @@ const App = () => {
     }
   };
 
-  // snackbar to alert validating email
-  const handleShowValidatingEmail = () => {
-    setShowValidatingEmail(true);
-  };
-
   // snackbar to alert email submitted
   const handleCloseSubmitted = () => {
     setShowSubmitted(false);
+
+    if (!saveSelections) {
+      const keys = window.localStorage;
+      const keysToNotClear = ["count", "epicMode", "name"];
+      for (const key in keys) {
+        if (!keysToNotClear.includes(key)) {
+          window.localStorage.removeItem(key);
+        }
+      }
+    }
   };
 
   const [epicMode, setEpicMode] = useState(
@@ -596,6 +602,9 @@ const App = () => {
         onSubmit={async (event) => {
           event.preventDefault();
 
+          setShowValidatingEmail(true);
+          saveSelections = false;
+
           // START OF LOCAL STORAGE FOR HTML (USER INPUTS)
           const badassestSelection =
             window.localStorage.getItem("badassestSelection");
@@ -629,50 +638,40 @@ const App = () => {
           );
           // END OF LOCAL STORAGE FOR HTML (USER INPUTS)
 
-          const keys = window.localStorage;
-          const keysToNotClear = ["count", "epicMode", "name"];
-          for (const key in keys) {
-            if (!keysToNotClear.includes(key)) {
-              window.localStorage.removeItem(key);
-            }
-          }
-
           const token = await recaptchaRef.current.executeAsync();
 
-          const response = await fetch(
-            `http://localhost:3001/sendEmail`,
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                email,
-                token,
-                selections: {
-                  badassestSelection,
-                  beautifulEntry,
-                  bestSelection,
-                  dangerousEntry,
-                  funnyestSelections,
-                  greatestSelections,
-                  grittiestEntry,
-                  lastSelection,
-                  prettiestSelection,
-                  rampantestEntry,
-                  saySelection,
-                  sexiestSelections,
-                },
-              }),
+          const response = await fetch(`http://localhost:3001/sendEmail`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
             },
-            handleShowValidatingEmail()
-          );
+            body: JSON.stringify({
+              email,
+              token,
+              selections: {
+                badassestSelection,
+                beautifulEntry,
+                bestSelection,
+                dangerousEntry,
+                funnyestSelections,
+                greatestSelections,
+                grittiestEntry,
+                lastSelection,
+                prettiestSelection,
+                rampantestEntry,
+                saySelection,
+                sexiestSelections,
+              },
+            }),
+          });
+
           const emailData = await response.json();
+
+          setShowValidatingEmail(false);
+          recaptchaRef.current.reset();
           if (emailData.error) {
-            setShowValidatingEmail(false);
             setShowEmailError(true);
           } else {
-            setShowValidatingEmail(false);
             setShowSubmitted(true);
             setEmail("");
           }
@@ -703,8 +702,8 @@ const App = () => {
           email selections
         </Button>
         <Snackbar
-          open={showSubmitted}
-          autoHideDuration={3000}
+          open={!!showSubmitted}
+          autoHideDuration={5000}
           onClose={handleCloseSubmitted}
           message="Email Sent!"
         >
@@ -718,6 +717,17 @@ const App = () => {
             }}
           >
             {showSubmitted} Email Sent!&emsp;
+            <Button
+              size="small"
+              onClick={() => {
+                saveSelections = true;
+              }}
+              sx={{
+                color: "#5ce1e6",
+              }}
+            >
+              Save Selections
+            </Button>
           </Alert>
         </Snackbar>
       </form>
@@ -725,6 +735,7 @@ const App = () => {
       <Snackbar
         open={!!showSuccess}
         autoHideDuration={3000}
+        // code below seems to trigger second submitted message
         onClose={() => {
           setShowSuccess(false);
         }}
@@ -746,7 +757,7 @@ const App = () => {
       </Snackbar>
 
       <Snackbar
-        open={showValidatingEmail}
+        open={!!showValidatingEmail}
         autoHideDuration={1000}
         onClose={() => {
           setShowValidatingEmail(false);
