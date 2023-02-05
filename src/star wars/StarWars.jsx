@@ -140,7 +140,7 @@ const StarWars = ({ openModal, onClose }) => {
                 placeholder="start typing starship name ..."
                 className="autocompleteSelect"
                 value={null}
-                noOptionsMessage={() => "No Starship Match Found!"}
+                noOptionsMessage={() => "NO STARSHIP MATCH FOUND!"}
               />
               <Button disabled={true} className="searchBtn">
                 {loading ? <>loading...</> : ""}

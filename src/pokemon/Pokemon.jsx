@@ -179,7 +179,7 @@ const Pokemon = ({ openModal, onClose }) => {
               placeholder="start typing pokemon name ..."
               className="autocompleteSelect"
               value={null}
-              noOptionsMessage={() => "No Pokemon Match Found!"}
+              noOptionsMessage={() => "NO POKEMON MATCH FOUND!"}
             />
             <Button disabled={true} className="searchBtn">
               {loading ? <>loading...</> : ""}
