@@ -77,6 +77,11 @@
     position: absolute;
     top: 22rem;
     left: 11rem;
+
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
   }
 
   a.linkToCreatorCreations:hover {
@@ -105,6 +110,11 @@
     position: absolute;
     top: 22rem;
     right: 20rem;
+
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
   }
 
   .comics:hover {
@@ -128,6 +138,11 @@
     position: absolute;
     top: 24rem;
     right: 2rem;
+
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
   }
 
   .events:hover {
@@ -151,6 +166,11 @@
     position: absolute;
     top: 22rem;
     left: 20rem;
+
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
   }
 
   .series:hover {
@@ -174,6 +194,11 @@
     position: absolute;
     top: 19rem;
     right: $space-lg;
+
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
   }
 
   .storyFromStories:hover {
