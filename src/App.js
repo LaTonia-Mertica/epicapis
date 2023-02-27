@@ -175,7 +175,6 @@ const App = () => {
       <button type="reset" id="reset" onClick={deleteCount}>
         reset
       </button>
-
       <div className="logoAndNavDiv">
         <Header epicMode={epicMode} setEpicMode={setEpicMode} />
         <a href="#top">
@@ -278,7 +277,6 @@ const App = () => {
           </ul>
         </nav>
       </div>
-
       <Masonry
         breakpointCols={1}
         className="my-masonry-grid"
@@ -539,7 +537,6 @@ const App = () => {
           ></img>
         </div>
       </Masonry>
-
       {/* continuous mount modal option */}
       <OwenWilson openModal={openModal} onClose={closeModal} />
       <ChuckNorris openModal={openModal} onClose={closeModal} />
@@ -551,7 +548,6 @@ const App = () => {
       <FOAAS openModal={openModal} onClose={closeModal} />
       <RonSwanson openModal={openModal} onClose={closeModal} />
       <Marvel openModal={openModal} onClose={closeModal} />
-
       {/* unmount modal when modal not open option */}
       {openModal === "Funnyest Ever" && (
         <Funnyest openModal={openModal} onClose={closeModal} />
@@ -583,7 +579,6 @@ const App = () => {
       {openModal === "Sexiest Alter Ego" && (
         <Sexiest openModal={openModal} onClose={closeModal} />
       )}
-
       {openModal === "Epic" && (
         <Epic openModal={openModal} onClose={closeModal} />
       )}
@@ -596,7 +591,6 @@ const App = () => {
       {openModal === "Dangerous Code" && (
         <Dangerous openModal={openModal} onClose={closeModal} />
       )}
-
       <form
         className="selectionsForm"
         onSubmit={async (event) => {
@@ -731,31 +725,32 @@ const App = () => {
           </Alert>
         </Snackbar>
       </form>
-
       <Snackbar
         open={!!showSuccess}
         autoHideDuration={3000}
-        // code below seems to trigger second submitted message
+        // code below triggers second submitted message
         onClose={() => {
           setShowSuccess(false);
         }}
       >
-        <Alert
-          severity=""
-          sx={{
-            width: "100%",
-            color: "#c9e265",
-            bgcolor: "#545454",
-            borderRadius: 0,
-            fontSize: 17,
-            fontFamily: "Bebas Neue",
-            letterSpacing: 1.15,
-          }}
-        >
-          {showSuccess} Submitted!&nbsp;&nbsp;
-        </Alert>
+        {/* code below stops second submitted message by explicitly telling program to only show the submitted message (including meaning the entire submitted message - not just the word "submitted") when showSuccess is true. this debug should not be needed, though . . . */}
+        {showSuccess && (
+          <Alert
+            severity=""
+            sx={{
+              width: "100%",
+              color: "#c9e265",
+              bgcolor: "#545454",
+              borderRadius: 0,
+              fontSize: 17,
+              fontFamily: "Bebas Neue",
+              letterSpacing: 1.15,
+            }}
+          >
+            {showSuccess} Submitted!&nbsp;&nbsp;
+          </Alert>
+        )}
       </Snackbar>
-
       <Snackbar
         open={!!showValidatingEmail}
         autoHideDuration={1000}
@@ -777,7 +772,6 @@ const App = () => {
           VALIDATING EMAIL&nbsp;&nbsp;
         </Alert>
       </Snackbar>
-
       <Snackbar
         open={!!showEmailError}
         autoHideDuration={3000}
