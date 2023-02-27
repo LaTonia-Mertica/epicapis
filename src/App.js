@@ -733,7 +733,7 @@ const App = () => {
           setShowSuccess(false);
         }}
       >
-        {/* code below stops second submitted message by explicitly telling program to only show the submitted message (including meaning the entire submitted message - not just the word "submitted") when showSuccess is true. this debug should not be needed, though . . . */}
+        {/* code below stops second submitted message by explicitly telling program to only show the submitted message (meaning the first aka entire submitted message - not just the word "submitted") when showSuccess is true. this debug should not be needed, though . . . specifically, when the showSuccess value is updated in state, it triggers - not one, but - two rerenders. only the first rerender is needed and sought in the snackbar to set its "open={}" to false. the second rerender is prevented from showing a second snackbar alert by making the alert not show if/when showSuccess is a false value */}
         {showSuccess && (
           <Alert
             severity=""
