@@ -289,6 +289,7 @@ const App = () => {
             width="258px"
             height="259px"
             className="owen box"
+            title="Owen Wilson API"
             onClick={() => {
               setOpenModal("OwenWilson");
             }}
@@ -299,6 +300,7 @@ const App = () => {
             width="500px"
             height="500px"
             className="funnyest semanticFillerImg"
+            title="Funnyest Ever User Input Modal"
             onClick={() => {
               setOpenModal("Funnyest Ever");
             }}
@@ -310,6 +312,7 @@ const App = () => {
             width="183px"
             height="162px"
             className="chuck box"
+            title="Chuck Norris API"
             onClick={() => {
               setOpenModal("ChuckNorris");
             }}
@@ -320,6 +323,7 @@ const App = () => {
             width="500px"
             height="500px"
             className="badassest semanticFillerImg"
+            title="Badassest On Tv User Input Modal"
             onClick={() => {
               setOpenModal("Badassest On Tv");
             }}
@@ -331,6 +335,7 @@ const App = () => {
             width="266px"
             height="109px"
             className="pokemon box"
+            title="Pokemon API"
             onClick={() => {
               setOpenModal("Pokemon");
             }}
@@ -341,6 +346,7 @@ const App = () => {
             width="500px"
             height="500px"
             className="greatest semanticFillerImg"
+            title="Greatest Fantasy User Input Modal"
             onClick={() => {
               setOpenModal("Greatest Fantasy");
             }}
@@ -352,6 +358,7 @@ const App = () => {
             width="247px"
             height="128px"
             className="starwars box"
+            title="Star Wars API"
             onClick={() => {
               setOpenModal("StarWars");
             }}
@@ -362,6 +369,7 @@ const App = () => {
             width="500px"
             height="500px"
             className="grittiest semanticFillerImg"
+            title="Grittiest Army User Input Modal"
             onClick={() => {
               setOpenModal("Grittiest Army");
             }}
@@ -373,6 +381,7 @@ const App = () => {
             width="500px"
             height="500px"
             className="cocktails box"
+            title="Cocktails API"
             onClick={() => {
               setOpenModal("Cocktails");
             }}
@@ -383,6 +392,7 @@ const App = () => {
             width="500px"
             height="500px"
             className="prettiest semanticFillerImg"
+            title="Prettiest Drink User Input Modal"
             onClick={() => {
               setOpenModal("Prettiest Drink");
             }}
@@ -394,6 +404,7 @@ const App = () => {
             width="188px"
             height="191px"
             className="trump box"
+            title="Tronald Dump API"
             onClick={() => {
               setOpenModal("DonaldTrump");
             }}
@@ -404,6 +415,7 @@ const App = () => {
             width="500px"
             height="500px"
             className="say semanticFillerImg"
+            title="Say This Neva User Input Modal"
             onClick={() => {
               setOpenModal("Say This Neva");
             }}
@@ -415,6 +427,7 @@ const App = () => {
             width="500px"
             height="500px"
             className="agify box"
+            title="Agify API"
             onClick={() => {
               setOpenModal("Agify");
             }}
@@ -425,6 +438,7 @@ const App = () => {
             width="500px"
             height="500px"
             className="best semanticFillerImg"
+            title="Best Age To Be User Input Modal"
             onClick={() => {
               setOpenModal("Best Age To Be");
             }}
@@ -435,7 +449,7 @@ const App = () => {
             alt="Fuck Off As A Service Logo"
             width="500px"
             height="500px"
-            title="Fuck Off As A Service"
+            title="Fuck Off As A Service API"
             className="foaas box"
             onClick={() => {
               setOpenModal("FOAAS");
@@ -447,6 +461,7 @@ const App = () => {
             width="500px"
             height="500px"
             className="last semanticFillerImg"
+            title="Last Thing Need User Input Modal"
             onClick={() => {
               setOpenModal("Last Thing Need");
             }}
@@ -458,6 +473,7 @@ const App = () => {
             width="286px"
             height="160px"
             className="swanson box"
+            title="Ron Swanson API"
             onClick={() => {
               setOpenModal("RonSwanson");
             }}
@@ -468,6 +484,7 @@ const App = () => {
             width="500px"
             height="500px"
             className="rampantest semanticFillerImg"
+            title="Rampantest Lip Wig User Input Modal"
             onClick={() => {
               setOpenModal("Rampantest Lip Wig");
             }}
@@ -479,6 +496,7 @@ const App = () => {
             width="140px"
             height="206px"
             className="marvel box"
+            title="Marvel Comics API"
             onClick={() => {
               setOpenModal("Marvel");
             }}
@@ -489,6 +507,7 @@ const App = () => {
             width="500px"
             height="500px"
             className="sexiest semanticFillerImg"
+            title="Sexiest Alter Ego User Input Modal"
             onClick={() => {
               setOpenModal("Sexiest Alter Ego");
             }}
@@ -500,6 +519,7 @@ const App = () => {
             width="500px"
             height="500px"
             className="epic semanticFillerImg"
+            title="Epic Resource Download"
             onClick={() => {
               setOpenModal("Epic");
             }}
@@ -510,6 +530,7 @@ const App = () => {
             width="500px"
             height="500px"
             className="beautiful semanticFillerImg"
+            title="Beautiful Code Definition Input Modal"
             onClick={() => {
               setOpenModal("Beautiful Code");
             }}
@@ -521,6 +542,7 @@ const App = () => {
             width="500px"
             height="500px"
             className="api semanticFillerImg"
+            title="Api Resource Download"
             onClick={() => {
               setOpenModal("Api");
             }}
@@ -531,6 +553,7 @@ const App = () => {
             width="500px"
             height="500px"
             className="dangerous semanticFillerImg"
+            title="Dangerous Code Definition Input Modal"
             onClick={() => {
               setOpenModal("Dangerous Code");
             }}
