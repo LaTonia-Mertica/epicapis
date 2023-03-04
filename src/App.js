@@ -381,7 +381,7 @@ const App = () => {
             width="500px"
             height="500px"
             className="cocktails box"
-            title="Cocktails API"
+            title="Cocktails DB API"
             onClick={() => {
               setOpenModal("Cocktails");
             }}
