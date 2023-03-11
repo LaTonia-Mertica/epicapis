@@ -15,7 +15,7 @@ const Agify = ({ openModal, onClose }) => {
   });
   const [loading, setLoading] = useState(false);
 
-  const getAgeMyName = async (event) => {
+  const getAgeByName = async (event) => {
     event.preventDefault();
     setLoading(true);
     const response = await fetch(
@@ -74,7 +74,7 @@ const Agify = ({ openModal, onClose }) => {
           <button onClick={onClose} className="closeBtn">
             &#x2612;
           </button>
-          <form onSubmit={getAgeMyName}>
+          <form onSubmit={getAgeByName}>
             <input
               type="text"
               name="agify"
@@ -90,7 +90,7 @@ const Agify = ({ openModal, onClose }) => {
               type="submit"
               className="searchBtn"
               id="searchBtn"
-              onClick={getAgeMyName}
+              onClick={getAgeByName}
             >
               {loading ? <>loading...</> : <>Get Age by Name</>}
             </Button>
