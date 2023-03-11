@@ -657,30 +657,33 @@ const App = () => {
 
           const token = await recaptchaRef.current.executeAsync();
 
-          const response = await fetch(`http://localhost:3001/sendEmail`, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              email,
-              token,
-              selections: {
-                badassestSelection,
-                beautifulEntry,
-                bestSelection,
-                dangerousEntry,
-                funnyestSelections,
-                greatestSelections,
-                grittiestEntry,
-                lastSelection,
-                prettiestSelection,
-                rampantestEntry,
-                saySelection,
-                sexiestSelections,
+          const response = await fetch(
+            `https://epicapis-backend.latoniamertica.dev/sendEmail`,
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
               },
-            }),
-          });
+              body: JSON.stringify({
+                email,
+                token,
+                selections: {
+                  badassestSelection,
+                  beautifulEntry,
+                  bestSelection,
+                  dangerousEntry,
+                  funnyestSelections,
+                  greatestSelections,
+                  grittiestEntry,
+                  lastSelection,
+                  prettiestSelection,
+                  rampantestEntry,
+                  saySelection,
+                  sexiestSelections,
+                },
+              }),
+            }
+          );
 
           const emailData = await response.json();
 

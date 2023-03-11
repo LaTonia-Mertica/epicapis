@@ -31,7 +31,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && rsync --delete --delete-after --exclude=.git --exclude=node_modules -avzhe ssh /Users/sheppardwalker/Documents/epicapis/build/ root@epicapis.latoniamertica.dev:/var/www/epicapis-frontend/"
   },
   "eslintConfig": {
     "extends": [
