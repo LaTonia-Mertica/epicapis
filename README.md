@@ -2,6 +2,8 @@
 
 _collection of fun, odd, quirky application programming interfaces paired with complementary resources built with semantic html - all peppered in event listeners_
 
+[VISIT EPIC APIS LIVE](https://epicapis.latoniamertica.dev/)
+
 ##### [epic apis summary](public/epic-apis-summary.pdf)
 
 ##### [epic apis data flow](public/epicapis-dfd.pdf)
@@ -96,7 +98,7 @@ epic apis provides a unique user experience through a medley of colorful apis
 
 ### <p>[MARVEL:](https://developer.marvel.com/) library of comics info</p>
 
-### <p>[OWEN WILSON:](https://owen-wilson-wow-api.herokuapp.com/) spontaneous wow moments</p>
+### <p>[OWEN WILSON:](https://owen-wilson-wow-api.onrender.com/) spontaneous wow moments</p>
 
 ### <p>[POKEMON:](https://pokeapi.co/) extra-galactical world</p>
 
@@ -125,6 +127,12 @@ epic apis provides a unique user experience through a medley of colorful apis
 ###### **helpful list+:** [marvel creators](https://www.marvel.com/comics/creators)
 
 ###### **helpful list++:** [star wars spacecrafts](https://en.wikipedia.org/wiki/List_of_Star_Wars_spacecraft)
+
+<br>
+
+###### **and because api options make the code world go round:** <br>
+
+###### [public apis for developers](https://rapidapi.com/collection/list-of-free-apis) | [another list of public apis](https://github.com/public-apis/public-apis)
 
 <br>
 
@@ -178,7 +186,7 @@ const data = await axios.get(`https://api.chucknorris.io/jokes/random`);
 ### **BASIC STRUCTURE: FETCH**
 
 ```
-const getAgeMyName = async (event) => { event.preventDefault(); const response = await fetch(`https://api.agify.io?name=${name}`);
+const getAgeByName = async (event) => { event.preventDefault(); const response = await fetch(`https://api.agify.io?name=${name}`);
 
 const data = await response.json();
 setAgeByName({
