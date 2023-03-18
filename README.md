@@ -339,6 +339,27 @@ alert ("Hello Code World!");
 
 <br>
 
+### **DOCKER IMAGE / EPIC APIS FRONTEND CONTAINER**
+
+1. visit [latoniamertica on docker hub](https://hub.docker.com/u/latoniamertica)
+2. click on latoniamertica/epicapis
+3. look to the right for Docker Pull Command
+4. copy the Docker Pull Command
+5. in your termina/CLI, paste the Docker Pull Command
+6. the Docker Pull Command will be formatted as `docker pull` followed by the image name. for example, `docker pull latoniamertica/epicapis`
+   <br>
+
+##### **note:** you can skip steps 1 through 4 if you know the image name
+
+<br>
+
+7. run the command `docker run -p 3000:3000 -it latoniamertica/epicapis`. if successful, the terminal/CLI will note the port (in this example port 3000) where the site is running with a note that you can visit the site in the browser
+   <br>
+
+##### **more notes:** regarding ports, typically the first 3000 in 3000:3000 specifies the port on your local device (aka your Mac) while the second 3000 in 3000:3000 must match what the author of the container listed for the container runtime port (in this example 3000). however, if no port is specified in the container then you can use any port. for example, the image/container for the epic apis frontend does not specify a set of ports, which means you can use any port(s) to run the image/container from your local device.
+
+<br>
+
 ---
 
 # **CREATE A REACT APP**
