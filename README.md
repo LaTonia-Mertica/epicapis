@@ -358,6 +358,8 @@ alert ("Hello Code World!");
 
 ##### **more notes:** regarding ports, typically the first 3000 in 3000:3000 specifies the port on your local device (aka your Mac) while the second 3000 in 3000:3000 must match what the author of the container listed for the container runtime port (in this example 3000). however, if no port is specified in the container then you can use any port. for example, the image/container for the epic apis frontend does not specify a set of ports, which means you can use any port(s) to run the image/container from your local device.
 
+###### [helpful article re: containerizing a react app front end](https://medium.com/@ebenwoodward/dockerizing-a-react-front-end-a63cedaa61ad)
+
 <br>
 
 ---
