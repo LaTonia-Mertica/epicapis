@@ -25,7 +25,7 @@ const Marvel = ({ openModal, onClose }) => {
     event.preventDefault();
     setLoading(true);
     fetch(
-      `http://gateway.marvel.com/v1/public/creators?ts=${ts}&apikey=${apikey}&hash=${hash}&nameStartsWith=${name}`
+      `https://gateway.marvel.com/v1/public/creators?ts=${ts}&apikey=${apikey}&hash=${hash}&nameStartsWith=${name}`
     )
       .then((response) => {
         if (!response.ok) {
